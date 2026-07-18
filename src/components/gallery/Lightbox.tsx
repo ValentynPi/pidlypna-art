@@ -1,6 +1,7 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Artwork } from '../../types';
+import { getArtworkImages } from '../../data/artworks';
 import { LazyImage } from '../ui/LazyImage';
 
 interface LightboxProps {
@@ -17,16 +18,31 @@ export function Lightbox({
   onNavigate,
 }: LightboxProps) {
   const artwork = artworks[currentIndex];
+  const views = artwork ? getArtworkImages(artwork) : [];
+  const [viewIndex, setViewIndex] = useState(0);
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < artworks.length - 1;
+  const hasMultipleViews = views.length > 1;
+
+  useEffect(() => {
+    setViewIndex(0);
+  }, [currentIndex]);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
       if (e.key === 'ArrowLeft' && hasPrev) onNavigate(currentIndex - 1);
       if (e.key === 'ArrowRight' && hasNext) onNavigate(currentIndex + 1);
+      if (e.key === 'ArrowUp' && hasMultipleViews) {
+        e.preventDefault();
+        setViewIndex((i) => (i > 0 ? i - 1 : views.length - 1));
+      }
+      if (e.key === 'ArrowDown' && hasMultipleViews) {
+        e.preventDefault();
+        setViewIndex((i) => (i < views.length - 1 ? i + 1 : 0));
+      }
     },
-    [onClose, onNavigate, currentIndex, hasPrev, hasNext],
+    [onClose, onNavigate, currentIndex, hasPrev, hasNext, hasMultipleViews, views.length],
   );
 
   useEffect(() => {
@@ -40,27 +56,29 @@ export function Lightbox({
 
   if (!artwork) return null;
 
+  const activeView = views[viewIndex] ?? views[0];
+
   return (
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-ink/90 p-4 md:p-8"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-ink/95 p-4 md:p-8"
         onClick={onClose}
       >
         <motion.div
           key={artwork.id}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.3 }}
-          className="relative flex max-h-[90vh] w-full max-w-5xl flex-col overflow-hidden bg-cream md:flex-row"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+          className="relative flex max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden bg-ink md:flex-row"
           onClick={(e) => e.stopPropagation()}
         >
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center text-ink/60 transition-colors hover:text-ink"
+            className="absolute top-5 right-5 z-10 flex h-10 w-10 items-center justify-center text-cream/50 transition-colors hover:text-cream"
             aria-label="Close lightbox"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -68,44 +86,83 @@ export function Lightbox({
             </svg>
           </button>
 
-          <div className="flex-1 bg-cream-dark">
-            <LazyImage
-              src={artwork.image}
-              alt={artwork.imageAlt}
-              className="max-h-[60vh] object-contain md:max-h-[90vh]"
-              wrapperClassName="h-full min-h-[300px] md:min-h-[500px]"
-            />
+          <div className="flex flex-1 flex-col bg-ink">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`${artwork.id}-${viewIndex}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
+                className="flex-1"
+              >
+                <LazyImage
+                  src={activeView.src}
+                  alt={activeView.alt}
+                  className="max-h-[50vh] object-contain md:max-h-[78vh]"
+                  wrapperClassName="h-full min-h-[280px] md:min-h-[480px]"
+                />
+              </motion.div>
+            </AnimatePresence>
+
+            {hasMultipleViews && (
+              <div className="flex gap-2 overflow-x-auto border-t border-cream/10 p-3">
+                {views.map((view, i) => (
+                  <button
+                    key={view.src}
+                    type="button"
+                    onClick={() => setViewIndex(i)}
+                    className={`relative h-16 w-14 shrink-0 overflow-hidden border transition-colors ${
+                      i === viewIndex
+                        ? 'border-gold'
+                        : 'border-cream/20 opacity-60 hover:opacity-100'
+                    }`}
+                    aria-label={`View ${i + 1} of ${views.length}`}
+                  >
+                    <img
+                      src={view.src}
+                      alt=""
+                      className="h-full w-full object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
-          <div className="flex w-full flex-col justify-center p-8 md:w-80 md:p-10">
-            <p className="mb-2 text-xs tracking-widest text-terracotta uppercase">
-              {currentIndex + 1} / {artworks.length}
+          <div className="flex w-full flex-col justify-center border-t border-cream/10 p-8 md:w-96 md:border-t-0 md:border-l md:p-12">
+            <p className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
+              {String(currentIndex + 1).padStart(2, '0')} /{' '}
+              {String(artworks.length).padStart(2, '0')}
             </p>
-            <h3 className="font-serif text-3xl text-ink">{artwork.title}</h3>
-            <div className="mt-4 space-y-1 text-sm text-ink-soft">
+            <h3 className="display-heading mt-4 text-3xl text-cream md:text-4xl">
+              {artwork.title}
+            </h3>
+            <div className="mt-6 space-y-2 border-t border-cream/10 pt-6 text-sm text-cream/50">
               <p>{artwork.medium}</p>
               <p>{artwork.size}</p>
+              {hasMultipleViews && (
+                <p className="pt-2 text-gold/80">
+                  View {viewIndex + 1} of {views.length} — same painting, different angle
+                </p>
+              )}
             </div>
-            <div className="mt-8 flex gap-3">
+            <div className="mt-10 flex gap-2">
               <button
                 onClick={() => onNavigate(currentIndex - 1)}
                 disabled={!hasPrev}
-                className="flex h-11 w-11 items-center justify-center border border-ink/20 transition-colors hover:border-terracotta disabled:opacity-30"
+                className="flex h-12 flex-1 items-center justify-center border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold disabled:opacity-20"
                 aria-label="Previous artwork"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M15 18l-6-6 6-6" />
-                </svg>
+                ← Prev
               </button>
               <button
                 onClick={() => onNavigate(currentIndex + 1)}
                 disabled={!hasNext}
-                className="flex h-11 w-11 items-center justify-center border border-ink/20 transition-colors hover:border-terracotta disabled:opacity-30"
+                className="flex h-12 flex-1 items-center justify-center border border-cream/20 text-cream/70 transition-colors hover:border-gold hover:text-gold disabled:opacity-20"
                 aria-label="Next artwork"
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
+                Next →
               </button>
             </div>
           </div>

@@ -3,6 +3,7 @@
 const base = '/images';
 
 export const photos = {
+  // Original set
   abstractTealMetallic: `${base}/photo_2026-07-08_12-34-17.jpg`,
   treeStudio: `${base}/photo_2026-07-08_12-34-21.jpg`,
   treeFramed: `${base}/photo_2026-07-08_12-34-23.jpg`,
@@ -24,6 +25,44 @@ export const photos = {
   cityscapeFront: `${base}/photo_2026-07-08_12-34-57.jpg`,
   colorfulPortrait: `${base}/photo_2026-07-08_12-34-59.jpg`,
   oceanWoman: `${base}/photo_2026-07-08_12-35-02.jpg`,
+
+  // New curated set (July 2026)
+  floralCrownClean: `${base}/InShot_20260717_155018888.jpg`,
+  tigerBloom: `${base}/InShot_20260717_163612621.jpg`,
+  sunflowers: `${base}/PXL_20260716_162330625.jpg`,
+  sunflowersAngle: `${base}/PXL_20260716_162551315.jpg`,
+  soyFuerte: `${base}/PXL_20260716_163536870.jpg`,
+  soyFuerteAngle: `${base}/PXL_20260716_163540648.jpg`,
+  petrykivkaBurgundy: `${base}/PXL_20260716_164638581.jpg`,
+  petrykivkaBurgundyAlt: `${base}/PXL_20260716_164643661.jpg`,
+  petrykivkaBlueGold: `${base}/PXL_20260716_164912575.jpg`,
+  inkHills: `${base}/PXL_20260716_165148176.jpg`,
+  inkCircle: `${base}/PXL_20260716_171356057.jpg`,
+  inkCircleAlt: `${base}/PXL_20260716_171403839.jpg`,
+  inkPastelLandscape: `${base}/PXL_20260716_171921324.jpg`,
+  petrykivkaPair: `${base}/PXL_20260716_172137396.jpg`,
+  petrykivkaBlueSmall: `${base}/PXL_20260716_172254485.jpg`,
+  petrykivkaBlueRed: `${base}/PXL_20260716_172319507.jpg`,
+  colorfulPortraitNew: `${base}/PXL_20260717_124415399.jpg`,
+  snowPeaks: `${base}/PXL_20260717_124836905.jpg`,
+  heritageFace: `${base}/PXL_20260717_125059587.jpg`,
+  tigerBloomAngle: `${base}/PXL_20260717_125449352.jpg`,
+  lilacsNew: `${base}/PXL_20260717_125625503.jpg`,
+  sunsetNew: `${base}/PXL_20260717_125842654.jpg`,
+  moonHorizonNew: `${base}/PXL_20260717_130157124.jpg`,
+  thoughts: `${base}/PXL_20260717_130624498.jpg`,
+  oceanWomanNew: `${base}/PXL_20260717_130808285.jpg`,
+  heritageFaceAlt: `${base}/PXL_20260717_131107572.jpg`,
+  balloonCastle: `${base}/PXL_20260717_131259051.jpg`,
+  goldArcsHome: `${base}/PXL_20260717_132013708.jpg`,
+  goldArcs: `${base}/PXL_20260717_132516436.jpg`,
+  goldArcsAlt: `${base}/PXL_20260717_132931176.jpg`,
+  goldCircleDiptych: `${base}/PXL_20260717_133109716.jpg`,
+  floralCrownNew: `${base}/PXL_20260717_134616395.jpg`,
+  heritageFaceClose: `${base}/PXL_20260717_135350481.jpg`,
+  workshopDetail: `${base}/PXL_20260717_124740342.jpg`,
+  workshopDetail2: `${base}/PXL_20260717_125711965.jpg`,
+  goldArcsDetail: `${base}/PXL_20260717_132600851.jpg`,
 } as const;
 
 export type PhotoKey = keyof typeof photos;

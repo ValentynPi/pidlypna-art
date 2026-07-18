@@ -2,47 +2,83 @@ import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
-    <footer className="border-t border-ink/10 bg-cream-dark">
-      <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
-        <div className="grid gap-12 md:grid-cols-3">
-          <div>
-            <h3 className="font-serif text-2xl text-ink">Viktoria Pidlypna</h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-              Contemporary Ukrainian artist living and creating in Castellón, Spain.
+    <footer className="bg-ink text-cream">
+      <div className="mx-auto max-w-[90rem] px-6 py-20 md:px-10 lg:px-16">
+        <div className="grid gap-16 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center border border-cream/20 font-serif text-sm">
+                PA
+              </span>
+              <h3 className="font-serif text-2xl">Pidlypna Art</h3>
+            </div>
+            <p className="mt-6 max-w-xs text-sm leading-relaxed text-cream/50">
+              Contemporary Ukrainian art living and creating in Castellón,
+              Spain. Paintings that bridge two worlds.
+            </p>
+            <p className="mt-8 font-serif text-lg italic text-gold/80">
+              Art bridges what words cannot.
             </p>
           </div>
 
-          <div>
-            <h4 className="text-xs tracking-widest text-terracotta uppercase">Explore</h4>
-            <ul className="mt-4 space-y-2">
-              {[
-                { to: '/gallery', label: 'Gallery' },
-                { to: '/workshops', label: 'Workshops' },
-                { to: '/exhibitions', label: 'Exhibitions' },
-                { to: '/journey', label: 'Creative Journey' },
-              ].map((link) => (
-                <li key={link.to}>
-                  <Link
-                    to={link.to}
-                    className="text-sm text-ink-soft transition-colors hover:text-terracotta"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="grid grid-cols-2 gap-10 md:col-span-4 md:col-start-7">
+            <div>
+              <h4 className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
+                Explore
+              </h4>
+              <ul className="mt-5 space-y-3">
+                {[
+                  { to: '/gallery', label: 'Gallery' },
+                  { to: '/about', label: 'About' },
+                  { to: '/workshops', label: 'Workshops' },
+                  { to: '/exhibitions', label: 'Exhibitions' },
+                ].map((link) => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="text-sm text-cream/50 transition-colors hover:text-cream"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
+                More
+              </h4>
+              <ul className="mt-5 space-y-3">
+                {[
+                  { to: '/journey', label: 'Creative Journey' },
+                  { to: '/press', label: 'Press' },
+                  { to: '/contact', label: 'Contact' },
+                ].map((link) => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="text-sm text-cream/50 transition-colors hover:text-cream"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <h4 className="text-xs tracking-widest text-terracotta uppercase">Connect</h4>
-            <ul className="mt-4 space-y-2 text-sm text-ink-soft">
+          <div className="md:col-span-3 md:col-start-10">
+            <h4 className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
+              Connect
+            </h4>
+            <ul className="mt-5 space-y-3 text-sm text-cream/50">
               <li>Castellón, Spain</li>
               <li>
                 <a
-                  href="mailto:hello@viktoriapidlypna.com"
-                  className="transition-colors hover:text-terracotta"
+                  href="mailto:hello@pidlypna.art"
+                  className="transition-colors hover:text-cream"
                 >
-                  hello@viktoriapidlypna.com
+                  hello@pidlypna.art
                 </a>
               </li>
               <li>
@@ -50,7 +86,7 @@ export function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors hover:text-terracotta"
+                  className="transition-colors hover:text-cream"
                 >
                   Instagram
                 </a>
@@ -59,9 +95,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-ink/10 pt-8 text-xs text-ink-soft md:flex-row">
-          <p>© {new Date().getFullYear()} Viktoria Pidlypna. All rights reserved.</p>
-          <p className="italic">Art bridges what words cannot.</p>
+        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-cream/10 pt-8 text-xs text-cream/30 md:flex-row md:items-center">
+          <p>© {new Date().getFullYear()} Pidlypna Art</p>
+          <p className="tracking-wider uppercase">Ukraine · Spain · Everywhere between</p>
         </div>
       </div>
     </footer>

@@ -3,57 +3,66 @@ import type { Collection } from '../types';
 
 export const collections: Collection[] = [
   {
-    id: 'floral',
-    name: 'Floral Collection',
-    slug: 'floral',
-    coverImage: photos.lilacs,
+    id: 'still-life',
+    name: 'Still Life',
+    slug: 'still-life',
+    coverImage: photos.lilacsNew,
     coverAlt: 'White lilacs in a glass vase — floral still life',
     intro:
-      'Lush blooms painted with Mediterranean light — roses from Castellón gardens, wildflowers gathered along coastal paths, each petal rendered in layered, luminous color.',
+      'Classic still lifes — lilacs, sunflowers, and bouquets studied for light, texture, and the quiet drama of everyday beauty.',
   },
   {
-    id: 'ukrainian-motifs',
-    name: 'Ukrainian Motifs',
-    slug: 'ukrainian-motifs',
-    coverImage: photos.treeFramed,
-    coverAlt: 'Duality tree painting — Ukrainian heritage in contemporary form',
+    id: 'portraits',
+    name: 'Portraits',
+    slug: 'portraits',
+    coverImage: photos.floralCrownClean,
+    coverAlt: 'Floral Crown — grayscale portrait with vibrant flowers',
     intro:
-      'Heritage reimagined: traditional Ukrainian ornamentation woven into contemporary compositions, honoring memory while speaking a new visual language.',
+      'Faces and figures — from floral-crowned silhouettes to surreal tiger blooms and expressive color portraits.',
   },
   {
-    id: 'mediterranean',
-    name: 'Mediterranean Collection',
-    slug: 'mediterranean',
-    coverImage: photos.sunsetFront,
-    coverAlt: 'Sunset seascape with turquoise water and fiery horizon',
+    id: 'ukrainian-heritage',
+    name: 'Ukrainian Heritage',
+    slug: 'ukrainian-heritage',
+    coverImage: photos.heritageFace,
+    coverAlt: 'Portrait merging realism with Ukrainian folk embroidery',
     intro:
-      'The sea, the stone, the endless blue — paintings born from life along the Spanish coast, where Ukrainian soul meets Mediterranean warmth.',
+      'Works that carry Ukraine forward — embroidery patterns woven into contemporary faces, memory held in paint.',
   },
   {
     id: 'petrykivka',
     name: 'Petrykivka',
     slug: 'petrykivka',
-    coverImage: photos.colorfulPortrait,
-    coverAlt: 'Bold colorful portrait with expressive painterly texture',
+    coverImage: photos.petrykivkaBlueGold,
+    coverAlt: 'Petrykivka blue flower with orange leaves on black background',
     intro:
-      'Inspired by the ancient Petrykivka decorative painting tradition — intricate florals and birds rendered with contemporary freedom and bold color.',
+      'The Ukrainian decorative painting tradition — stylized florals, berries, and brush-stroke ornaments on canvas.',
+  },
+  {
+    id: 'seascapes',
+    name: 'Seascapes',
+    slug: 'seascapes',
+    coverImage: photos.sunsetNew,
+    coverAlt: 'Sunset seascape with turquoise water and fiery horizon',
+    intro:
+      'Mediterranean light on water — textured sunsets, coastal horizons, and the strength of the sea.',
+  },
+  {
+    id: 'landscapes',
+    name: 'Landscapes',
+    slug: 'landscapes',
+    coverImage: photos.balloonCastle,
+    coverAlt: 'Golden hot air balloon over misty coastal landscape',
+    intro:
+      'Mountains, dream balloons, symbolic trees, and fluid horizons — places both real and imagined.',
   },
   {
     id: 'abstract',
     name: 'Abstract',
     slug: 'abstract',
-    coverImage: photos.cityscapeFront,
-    coverAlt: 'Abstract cityscape with glowing light and impasto texture',
+    coverImage: photos.goldArcs,
+    coverAlt: 'Minimal white canvas with textured metallic gold arcs',
     intro:
-      'Pure emotion on canvas — gestural brushwork, atmospheric color fields, and the spontaneous energy of process made visible.',
-  },
-  {
-    id: 'landscapes',
-    name: 'Landscapes & Journeys',
-    slug: 'landscapes',
-    coverImage: photos.oceanWoman,
-    coverAlt: 'Surrealist landscape — figure merging with ocean and sky',
-    intro:
-      'From Ukrainian wheat fields to Provence lavender rows — landscapes that map an artist\'s journey across continents and seasons.',
+      'Texture, gold, ink, and gesture — compositions that speak through color and surface alone.',
   },
 ];

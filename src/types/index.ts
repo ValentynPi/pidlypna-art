@@ -1,10 +1,18 @@
+export interface ArtworkImage {
+  src: string;
+  alt: string;
+}
+
 export interface Artwork {
   id: string;
   title: string;
   medium: string;
   size: string;
+  /** Primary / cover image shown in the grid */
   image: string;
   imageAlt: string;
+  /** Extra angles or detail shots of the same painting */
+  images?: ArtworkImage[];
   collectionId: string;
   featured?: boolean;
 }

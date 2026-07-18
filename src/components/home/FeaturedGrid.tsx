@@ -3,60 +3,74 @@ import type { Artwork } from '../../types';
 import { ScrollReveal } from '../ui/ScrollReveal';
 import { LazyImage } from '../ui/LazyImage';
 import { Button } from '../ui/Button';
+import { SectionLabel } from '../ui/SectionLabel';
 
 interface FeaturedGridProps {
   artworks: Artwork[];
 }
 
+const layoutClasses = [
+  'lg:col-span-7 lg:row-span-2',
+  'lg:col-span-5',
+  'lg:col-span-5',
+  'lg:col-span-4',
+  'lg:col-span-4',
+  'lg:col-span-4',
+  'lg:col-span-6',
+  'lg:col-span-6',
+];
+
 export function FeaturedGrid({ artworks }: FeaturedGridProps) {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
+    <section className="section-padding mx-auto max-w-[90rem]">
       <ScrollReveal>
-        <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <div className="mb-16 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-xs tracking-[0.3em] text-terracotta uppercase">
-              Selected Works
-            </p>
-            <h2 className="mt-3 font-serif text-4xl text-ink md:text-5xl">
-              A glimpse into the studio
+            <SectionLabel>Selected Works</SectionLabel>
+            <h2 className="display-heading mt-6 text-4xl md:text-5xl lg:text-6xl">
+              Into the studio
             </h2>
           </div>
-          <p className="max-w-md text-sm leading-relaxed text-ink-soft md:text-base">
-            A curated selection — each piece a conversation between memory and
-            place, tradition and the present moment.
+          <p className="max-w-sm text-base leading-relaxed text-ink-soft lg:text-right">
+            Each piece a conversation between memory and place — tradition
+            held gently in the present moment.
           </p>
         </div>
       </ScrollReveal>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:gap-5">
-        {artworks.slice(0, 8).map((artwork, index) => {
-          const isLarge = index === 0 || index === 5;
-          return (
-            <ScrollReveal
-              key={artwork.id}
-              delay={index * 0.08}
-              className={isLarge ? 'sm:col-span-2 sm:row-span-2' : ''}
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-12 lg:grid-rows-[repeat(3,auto)] lg:gap-4">
+        {artworks.slice(0, 8).map((artwork, index) => (
+          <ScrollReveal
+            key={artwork.id}
+            delay={index * 0.06}
+            className={layoutClasses[index] ?? ''}
+          >
+            <Link
+              to="/gallery"
+              className="group relative block overflow-hidden bg-ink"
+              style={{ aspectRatio: index === 0 ? '4/5' : index < 3 ? '3/4' : '1/1' }}
             >
-              <Link
-                to="/gallery"
-                className="group relative block aspect-[4/5] overflow-hidden bg-cream-dark sm:aspect-auto sm:h-full sm:min-h-[280px]"
-              >
-                <LazyImage
-                  src={artwork.image}
-                  alt={artwork.imageAlt}
-                  className="transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/15" />
-                <div className="absolute right-0 bottom-0 left-0 p-5 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <p className="font-serif text-lg text-cream">{artwork.title}</p>
-                </div>
-              </Link>
-            </ScrollReveal>
-          );
-        })}
+              <LazyImage
+                src={artwork.image}
+                alt={artwork.imageAlt}
+                className="h-full transition-transform duration-1000 ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-ink/0 transition-all duration-500 group-hover:bg-ink/30" />
+              <div className="absolute top-4 left-4 font-serif text-5xl text-cream/20 transition-colors group-hover:text-gold/40">
+                {String(index + 1).padStart(2, '0')}
+              </div>
+              <div className="absolute right-0 bottom-0 left-0 translate-y-full bg-ink/80 p-5 backdrop-blur-sm transition-transform duration-500 group-hover:translate-y-0">
+                <p className="font-serif text-xl text-cream">{artwork.title}</p>
+                <p className="mt-1 text-xs tracking-wider text-cream/50 uppercase">
+                  {artwork.medium}
+                </p>
+              </div>
+            </Link>
+          </ScrollReveal>
+        ))}
       </div>
 
-      <ScrollReveal className="mt-16 text-center">
+      <ScrollReveal className="mt-16 flex justify-center">
         <Button to="/gallery" variant="ghost">
           Explore Full Gallery
         </Button>

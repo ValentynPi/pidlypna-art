@@ -1,7 +1,9 @@
 import { PageMeta } from '../components/ui/PageMeta';
+import { PageHeader } from '../components/ui/PageHeader';
 import { ScrollReveal } from '../components/ui/ScrollReveal';
 import { LazyImage } from '../components/ui/LazyImage';
 import { Button } from '../components/ui/Button';
+import { SectionLabel } from '../components/ui/SectionLabel';
 import { workshops, workshopPhotos } from '../data/workshops';
 
 export function WorkshopsPage() {
@@ -9,44 +11,35 @@ export function WorkshopsPage() {
     <>
       <PageMeta
         title="Workshops"
-        description="Join Viktoria Pidlypna for painting workshops in Castellón, Spain — floral oils, Petrykivka, plein air, and more."
+        description="Join Pidlypna Art for painting workshops in Castellón, Spain — floral oils, Petrykivka, plein air, and more."
       />
 
-      <section className="pt-28 md:pt-36">
-        <div className="mx-auto max-w-7xl px-6 md:px-10">
-          <ScrollReveal>
-            <p className="text-xs tracking-[0.3em] text-terracotta uppercase">
-              Workshops
-            </p>
-            <h1 className="mt-3 font-serif text-4xl text-ink md:text-6xl">
-              Paint together
-            </h1>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-soft md:text-lg">
-              Intimate, hands-on painting sessions in Castellón and along the
-              coast. Whether you&apos;re picking up a brush for the first time or
-              deepening your practice, there&apos;s a place for you at the easel.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
+      <PageHeader
+        label="Workshops"
+        title="Paint together"
+        description="Intimate, hands-on painting sessions in Castellón and along the coast — all levels welcome at the easel."
+      />
 
-      <section className="mx-auto max-w-7xl px-6 py-12 md:px-10">
+      <section className="mx-auto max-w-[90rem] px-6 pb-16 md:px-10 lg:px-16">
         <ScrollReveal>
-          <h2 className="mb-8 font-serif text-2xl text-ink md:text-3xl">
-            The studio experience
-          </h2>
+          <SectionLabel>The studio experience</SectionLabel>
         </ScrollReveal>
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
+        <div className="mt-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3">
           {workshopPhotos.map((photo, index) => (
-            <ScrollReveal key={photo.id} delay={index * 0.08}>
-              <div className="group relative aspect-[4/3] overflow-hidden bg-cream-dark">
+            <ScrollReveal
+              key={photo.id}
+              delay={index * 0.06}
+              className={index === 0 ? 'col-span-2 row-span-2 md:col-span-1 md:row-span-1' : ''}
+            >
+              <div className="group relative aspect-square overflow-hidden bg-ink">
                 <LazyImage
                   src={photo.image}
                   alt={photo.imageAlt}
                   className="transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-ink/60 to-transparent p-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <p className="text-xs text-cream">{photo.caption}</p>
+                <div className="absolute inset-0 bg-ink/0 transition-colors group-hover:bg-ink/40" />
+                <div className="absolute right-0 bottom-0 left-0 translate-y-full bg-ink/80 p-4 transition-transform group-hover:translate-y-0">
+                  <p className="text-xs text-cream/70">{photo.caption}</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -54,43 +47,39 @@ export function WorkshopsPage() {
         </div>
       </section>
 
-      <section className="bg-cream-dark">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
+      <section className="bg-ink">
+        <div className="mx-auto max-w-[90rem] px-6 py-20 md:px-10 lg:px-16 md:py-28">
           <ScrollReveal>
-            <h2 className="mb-4 font-serif text-2xl text-ink md:text-3xl">
-              Upcoming dates
-            </h2>
-            <p className="mb-10 max-w-xl text-ink-soft">
-              All materials are provided unless noted. Group sizes are kept small
-              for personal attention. To book or inquire, use the contact form or
-              reach out via WhatsApp.
+            <SectionLabel light>Upcoming dates</SectionLabel>
+            <p className="mt-6 max-w-xl text-cream/50">
+              All materials provided. Small groups for personal attention.
             </p>
           </ScrollReveal>
 
-          <div className="space-y-6">
+          <div className="mt-12 space-y-px bg-cream/10">
             {workshops.map((workshop, index) => (
               <ScrollReveal key={workshop.id} delay={index * 0.08}>
-                <div className="grid gap-6 border border-ink/10 bg-cream p-6 md:grid-cols-4 md:gap-8 md:p-8">
-                  <div className="md:col-span-1">
-                    <p className="text-xs tracking-widest text-terracotta uppercase">
+                <div className="grid gap-6 bg-ink p-6 md:grid-cols-12 md:gap-8 md:p-8">
+                  <div className="md:col-span-3">
+                    <p className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
                       {workshop.date}
                     </p>
-                    <p className="mt-1 text-sm text-sage">{workshop.location}</p>
+                    <p className="mt-2 text-sm text-cream/40">{workshop.location}</p>
                   </div>
-                  <div className="md:col-span-2">
-                    <h3 className="font-serif text-xl text-ink md:text-2xl">
+                  <div className="md:col-span-6">
+                    <h3 className="font-serif text-xl text-cream md:text-2xl">
                       {workshop.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+                    <p className="mt-3 text-sm leading-relaxed text-cream/50">
                       {workshop.description}
                     </p>
                   </div>
-                  <div className="flex flex-col justify-between md:col-span-1 md:items-end">
-                    <span className="text-xs tracking-wide text-ink-soft uppercase">
+                  <div className="flex flex-col justify-between md:col-span-3 md:items-end">
+                    <span className="text-[0.65rem] tracking-[0.2em] text-cream/30 uppercase">
                       {workshop.level}
                     </span>
-                    <Button to="/contact" variant="ghost" className="mt-4 md:mt-0">
-                      Book / Inquire
+                    <Button to="/contact" variant="gold" className="mt-4 md:mt-0">
+                      Book
                     </Button>
                   </div>
                 </div>
@@ -100,22 +89,17 @@ export function WorkshopsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28">
+      <section className="section-padding mx-auto max-w-2xl text-center">
         <ScrollReveal>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-serif text-2xl text-ink md:text-3xl">
-              What to expect
-            </h2>
-            <p className="mt-4 leading-relaxed text-ink-soft">
-              Each workshop begins with a brief demonstration, followed by guided
-              painting time with individual feedback. You&apos;ll leave with a
-              finished piece and techniques you can continue exploring at home.
-              Comfortable clothes recommended — painting is a joyful mess.
-            </p>
-            <Button to="/contact" variant="primary" className="mt-8">
-              Get in Touch
-            </Button>
-          </div>
+          <h2 className="display-heading text-3xl">What to expect</h2>
+          <p className="mt-6 leading-relaxed text-ink-soft">
+            Each workshop begins with a demonstration, followed by guided painting
+            with individual feedback. You leave with a finished piece and techniques
+            to explore at home.
+          </p>
+          <Button to="/contact" variant="ghost" className="mt-10">
+            Get in Touch
+          </Button>
         </ScrollReveal>
       </section>
     </>

@@ -1,20 +1,25 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Outfit', system-ui, sans-serif;
 
-  --color-cream: #faf7f2;
-  --color-cream-dark: #f0ebe3;
-  --color-ink: #2c2a26;
-  --color-ink-soft: #5c5850;
-  --color-terracotta: #c4714a;
-  --color-terracotta-light: #d4896a;
-  --color-sage: #8b9a7b;
-  --color-sage-light: #a8b59a;
-  --color-lavender: #b8a9c9;
-  --color-mediterranean: #5a7d8c;
-  --color-gold: #c9a96e;
+  --color-cream: #f8f4ec;
+  --color-cream-dark: #ece4d6;
+  --color-warm: #fffdf9;
+  --color-ink: #141310;
+  --color-ink-soft: #5a564e;
+  --color-terracotta: #9a7049;
+  --color-terracotta-light: #b8895f;
+  --color-sage: #5a7a6a;
+  --color-sage-light: #7a9a88;
+  --color-lavender: #9a8ab0;
+  --color-mediterranean: #2a6464;
+  --color-gold: #d4a853;
+  --color-teal: #2a6464;
+  --color-teal-deep: #1a4545;
+  --color-burgundy: #6b3333;
+  --color-blush: #ede0d4;
 }
 
 @layer base {
@@ -27,7 +32,7 @@
   }
 
   ::selection {
-    @apply bg-terracotta/20 text-ink;
+    @apply bg-gold/30 text-ink;
   }
 }
 
@@ -37,6 +42,27 @@
   }
 
   .grain-overlay {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  }
+
+  .editorial-line {
+    @apply h-px w-12 bg-gold;
+  }
+
+  .image-frame {
+    @apply relative;
+  }
+
+  .image-frame::before {
+    content: '';
+    @apply pointer-events-none absolute -inset-3 border border-ink/8;
+  }
+
+  .section-padding {
+    @apply px-6 py-24 md:px-10 md:py-32 lg:px-16;
+  }
+
+  .display-heading {
+    @apply font-serif font-light tracking-tight text-ink;
   }
 }

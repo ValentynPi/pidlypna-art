@@ -1,15 +1,17 @@
 import { type ReactNode, type ButtonHTMLAttributes } from 'react';
 import { Link, type LinkProps } from 'react-router-dom';
 
-type ButtonVariant = 'primary' | 'secondary' | 'ghost';
+type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'gold';
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-terracotta text-cream hover:bg-terracotta-light border border-terracotta',
+    'bg-ink text-cream hover:bg-ink/90 border border-ink',
   secondary:
-    'bg-transparent text-cream border border-cream/60 hover:bg-cream/10 hover:border-cream',
+    'bg-transparent text-cream border border-cream/40 hover:bg-cream/10 hover:border-cream/70',
   ghost:
-    'bg-transparent text-ink border border-ink/20 hover:border-terracotta hover:text-terracotta',
+    'bg-transparent text-ink border border-ink/15 hover:border-terracotta hover:text-terracotta',
+  gold:
+    'bg-gold text-ink hover:bg-gold/90 border border-gold',
 };
 
 interface BaseProps {
@@ -32,7 +34,18 @@ export function Button({
   ...props
 }: ButtonProps) {
   const base =
-    'inline-flex items-center justify-center px-7 py-3 text-sm font-medium tracking-wide uppercase transition-all duration-300';
+    'group inline-flex items-center justify-center gap-2 px-8 py-3.5 text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300';
+
+  const content = (
+    <>
+      {children}
+      {'to' in props && props.to && (
+        <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+          →
+        </span>
+      )}
+    </>
+  );
 
   if ('to' in props && props.to) {
     const { to, ...linkProps } = props;
@@ -42,7 +55,7 @@ export function Button({
         className={`${base} ${variantStyles[variant]} ${className}`}
         {...linkProps}
       >
-        {children}
+        {content}
       </Link>
     );
   }
