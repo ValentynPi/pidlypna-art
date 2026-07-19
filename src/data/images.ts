@@ -1,6 +1,6 @@
 /** Local photos from /public/images — mapped to site sections */
 
-const base = '/images';
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/images`;
 
 export const photos = {
   // Original set
