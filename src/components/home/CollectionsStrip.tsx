@@ -11,7 +11,7 @@ export function CollectionsStrip() {
         <ScrollReveal>
           <SectionLabel light>Collections</SectionLabel>
           <h2 className="display-heading mt-6 text-3xl text-cream md:text-4xl">
-            Seven chapters, one story
+            Nine chapters, one story
           </h2>
         </ScrollReveal>
       </div>

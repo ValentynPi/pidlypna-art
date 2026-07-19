@@ -62,7 +62,7 @@ export function FeaturedGrid({ artworks }: FeaturedGridProps) {
               <div className="absolute right-0 bottom-0 left-0 translate-y-full bg-ink/80 p-5 backdrop-blur-sm transition-transform duration-500 group-hover:translate-y-0">
                 <p className="font-serif text-xl text-cream">{artwork.title}</p>
                 <p className="mt-1 text-xs tracking-wider text-cream/50 uppercase">
-                  {artwork.medium}
+                  {artwork.materials} · {artwork.dimensions}
                 </p>
               </div>
             </Link>

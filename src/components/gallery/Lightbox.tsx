@@ -1,7 +1,9 @@
 import { useEffect, useCallback, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Artwork } from '../../types';
-import { getArtworkImages } from '../../data/artworks';
+import { getArtworkImages, SHIPPING_NOTE, CARE_INSTRUCTIONS } from '../../data/artworks';
+import { getCollectionById } from '../../data/collections';
 import { LazyImage } from '../ui/LazyImage';
 
 interface LightboxProps {
@@ -19,6 +21,7 @@ export function Lightbox({
 }: LightboxProps) {
   const artwork = artworks[currentIndex];
   const views = artwork ? getArtworkImages(artwork) : [];
+  const collection = artwork ? getCollectionById(artwork.collectionId) : undefined;
   const [viewIndex, setViewIndex] = useState(0);
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < artworks.length - 1;
@@ -57,6 +60,22 @@ export function Lightbox({
   if (!artwork) return null;
 
   const activeView = views[viewIndex] ?? views[0];
+  const isAvailable = artwork.availability === 'Available';
+
+  const specs: { label: string; value: string }[] = [
+    { label: 'Year', value: String(artwork.year) },
+    { label: 'Dimensions', value: artwork.dimensions },
+    { label: 'Materials', value: artwork.materials },
+    { label: 'Technique', value: artwork.technique },
+    { label: 'Surface', value: artwork.surface },
+    { label: 'Framing', value: artwork.framing },
+    { label: 'Signed', value: artwork.signed ? 'Yes' : 'No' },
+    {
+      label: 'Certificate of Authenticity',
+      value: artwork.certificateOfAuthenticity ? 'Yes' : 'No',
+    },
+    { label: 'Availability', value: artwork.availability },
+  ];
 
   return (
     <AnimatePresence>
@@ -99,8 +118,8 @@ export function Lightbox({
                 <LazyImage
                   src={activeView.src}
                   alt={activeView.alt}
-                  className="max-h-[50vh] object-contain md:max-h-[78vh]"
-                  wrapperClassName="h-full min-h-[280px] md:min-h-[480px]"
+                  className="max-h-[40vh] object-contain md:max-h-[78vh]"
+                  wrapperClassName="h-full min-h-[240px] md:min-h-[480px]"
                 />
               </motion.div>
             </AnimatePresence>
@@ -130,24 +149,80 @@ export function Lightbox({
             )}
           </div>
 
-          <div className="flex w-full flex-col justify-center border-t border-cream/10 p-8 md:w-96 md:border-t-0 md:border-l md:p-12">
-            <p className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
-              {String(currentIndex + 1).padStart(2, '0')} /{' '}
-              {String(artworks.length).padStart(2, '0')}
-            </p>
-            <h3 className="display-heading mt-4 text-3xl text-cream md:text-4xl">
-              {artwork.title}
-            </h3>
-            <div className="mt-6 space-y-2 border-t border-cream/10 pt-6 text-sm text-cream/50">
-              <p>{artwork.medium}</p>
-              <p>{artwork.size}</p>
+          <div className="flex w-full flex-col border-t border-cream/10 md:w-[26rem] md:border-t-0 md:border-l">
+            <div className="flex-1 overflow-y-auto p-8 md:p-10">
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
+                  {String(currentIndex + 1).padStart(2, '0')} /{' '}
+                  {String(artworks.length).padStart(2, '0')}
+                </p>
+                <span
+                  className={`text-[0.65rem] tracking-[0.2em] uppercase ${
+                    isAvailable ? 'text-gold' : 'text-cream/40'
+                  }`}
+                >
+                  {artwork.availability}
+                </span>
+              </div>
+
+              <h3 className="display-heading mt-4 text-3xl text-cream md:text-4xl">
+                {artwork.title}
+              </h3>
+
+              {collection && (
+                <Link
+                  to={`/gallery/${collection.slug}`}
+                  onClick={onClose}
+                  className="mt-3 inline-block text-xs tracking-[0.2em] text-cream/45 uppercase transition-colors hover:text-gold"
+                >
+                  {collection.name}
+                </Link>
+              )}
+
+              <dl className="mt-8 space-y-3 border-t border-cream/10 pt-6">
+                {specs.map((spec) => (
+                  <div
+                    key={spec.label}
+                    className="grid grid-cols-[1fr_auto] gap-4 text-sm"
+                  >
+                    <dt className="text-cream/40">{spec.label}</dt>
+                    <dd className="text-right text-cream/75">{spec.value}</dd>
+                  </div>
+                ))}
+              </dl>
+
+              <div className="mt-8 border-t border-cream/10 pt-6">
+                <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
+                  Description
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-cream/60">
+                  {artwork.description}
+                </p>
+              </div>
+
+              <div className="mt-8 space-y-4 border-t border-cream/10 pt-6 text-sm">
+                <div>
+                  <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
+                    Shipping
+                  </p>
+                  <p className="mt-2 text-cream/55">{SHIPPING_NOTE}</p>
+                </div>
+                <div>
+                  <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
+                    Care Instructions
+                  </p>
+                  <p className="mt-2 text-cream/55">{CARE_INSTRUCTIONS}</p>
+                </div>
+              </div>
+
               {hasMultipleViews && (
-                <p className="pt-2 text-gold/80">
+                <p className="mt-6 text-xs text-gold/70">
                   View {viewIndex + 1} of {views.length} — same painting, different angle
                 </p>
               )}
             </div>
-            <div className="mt-10 flex gap-2">
+
+            <div className="flex gap-2 border-t border-cream/10 p-4 md:p-6">
               <button
                 onClick={() => onNavigate(currentIndex - 1)}
                 disabled={!hasPrev}

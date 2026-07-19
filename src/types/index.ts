@@ -3,11 +3,22 @@ export interface ArtworkImage {
   alt: string;
 }
 
+export type ArtworkAvailability = 'Available' | 'Sold';
+export type ArtworkFraming = 'Framed' | 'Unframed';
+
 export interface Artwork {
   id: string;
   title: string;
-  medium: string;
-  size: string;
+  year: number;
+  dimensions: string;
+  materials: string;
+  technique: string;
+  surface: string;
+  framing: ArtworkFraming;
+  signed: boolean;
+  certificateOfAuthenticity: boolean;
+  availability: ArtworkAvailability;
+  description: string;
   /** Primary / cover image shown in the grid */
   image: string;
   imageAlt: string;
