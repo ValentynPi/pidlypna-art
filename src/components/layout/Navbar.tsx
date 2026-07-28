@@ -56,7 +56,7 @@ export function Navbar() {
                 : 'border-ink/20 text-ink group-hover:border-terracotta group-hover:text-terracotta'
             }`}
           >
-            PA
+            VP
           </span>
           <span
             className={`hidden font-serif text-lg tracking-wide transition-colors sm:block ${

@@ -8,7 +8,7 @@ export function Footer() {
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center border border-cream/20 font-serif text-sm">
-                PA
+                VP
               </span>
               <h3 className="font-serif text-2xl">Pidlypna Art</h3>
             </div>
