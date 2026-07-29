@@ -1,12 +1,10 @@
 import { PageMeta } from '../components/ui/PageMeta';
 import { Hero } from '../components/home/Hero';
-import { FeaturedGrid } from '../components/home/FeaturedGrid';
 import { CollectionsStrip } from '../components/home/CollectionsStrip';
 import { ScrollReveal } from '../components/ui/ScrollReveal';
 import { Button } from '../components/ui/Button';
 import { HandLine } from '../components/ui/HandLine';
 import { LazyImage } from '../components/ui/LazyImage';
-import { featuredArtworks } from '../data/artworks';
 import { photos } from '../data/images';
 
 export function HomePage() {
@@ -17,7 +15,6 @@ export function HomePage() {
         description="Pidlypna Art — Contemporary Ukrainian art living and creating in Spain. Explore paintings, workshops, and exhibitions."
       />
       <Hero />
-      <FeaturedGrid artworks={featuredArtworks} />
 
       <section className="relative overflow-hidden bg-blush">
         <div className="grid lg:grid-cols-2">
