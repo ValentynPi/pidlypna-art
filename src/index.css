@@ -63,6 +63,6 @@
   }
 
   .display-heading {
-    @apply font-serif font-light tracking-tight text-ink;
+    @apply font-serif font-light tracking-tight;
   }
 }
