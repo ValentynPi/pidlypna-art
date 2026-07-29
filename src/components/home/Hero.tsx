@@ -21,13 +21,13 @@ export function Hero() {
       <div className="grid min-h-screen lg:grid-cols-[42%_58%]">
         <motion.div
           style={{ y: textY, opacity }}
-          className="relative z-10 flex flex-col justify-end px-8 pb-16 pt-32 md:px-12 md:pb-24 lg:px-16 lg:pt-0"
+          className="relative z-10 flex min-h-[45vh] flex-col justify-end px-8 pb-8 pt-16 md:min-h-[50vh] md:px-12 md:pb-10 md:pt-20 lg:min-h-screen lg:px-16 lg:pb-14 lg:pt-0"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-[0.65rem] font-medium tracking-[0.4em] text-gold uppercase"
+            className="text-[0.65rem] font-medium tracking-[0.4em] text-gold uppercase lg:mt-auto lg:pt-[18vh]"
           >
             Contemporary Ukrainian Artist
           </motion.p>
@@ -36,7 +36,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="display-heading mt-6 text-5xl leading-[0.95] md:text-6xl lg:text-7xl xl:text-8xl"
+            className="display-heading mt-12 text-5xl leading-[0.95] md:mt-14 lg:mt-16 md:text-6xl lg:text-7xl xl:text-8xl"
           >
             <span className="text-cream">Viktoria</span>
             <br />
