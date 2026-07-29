@@ -39,8 +39,10 @@ export function HomePage() {
                 <span className="text-gold">&rdquo;</span>
               </blockquote>
               <HandLine variant="swirl" className="mt-8 w-32 text-terracotta" />
-              <p className="mt-6 text-sm tracking-[0.2em] text-terracotta uppercase">
-                Pidlypna Art
+              <p className="mt-6 font-serif text-sm leading-snug tracking-[0.15em] text-terracotta uppercase md:text-base">
+                Viktoria
+                <br />
+                <span className="italic text-gold">Pidlypna</span>
               </p>
             </ScrollReveal>
           </div>
