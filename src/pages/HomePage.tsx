@@ -39,10 +39,10 @@ export function HomePage() {
                 <span className="text-gold">&rdquo;</span>
               </blockquote>
               <HandLine variant="swirl" className="mt-8 w-32 text-terracotta" />
-              <p className="mt-6 font-serif text-sm leading-snug italic text-gold md:text-base">
-                Viktoria
+              <p className="mt-6 font-serif text-sm leading-snug md:text-base">
+                <span className="text-ink">Viktoria</span>
                 <br />
-                Pidlypna
+                <span className="italic text-gold">Pidlypna</span>
               </p>
             </ScrollReveal>
           </div>
