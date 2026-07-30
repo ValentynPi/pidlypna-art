@@ -63,6 +63,18 @@ export const photos = {
   workshopDetail: `${base}/PXL_20260717_124740342.jpg`,
   workshopDetail2: `${base}/PXL_20260717_125711965.jpg`,
   goldArcsDetail: `${base}/PXL_20260717_132600851.jpg`,
+
+  // Textured Art (July 2026 album)
+  texturedHalo1: `${base}/textured-halo-1.jpg`,
+  texturedHalo2: `${base}/textured-halo-2.jpg`,
+  texturedHalo3: `${base}/textured-halo-3.jpg`,
+  texturedGoldArcs1: `${base}/textured-gold-arcs-1.jpg`,
+  texturedGoldArcs2: `${base}/textured-gold-arcs-2.jpg`,
+  texturedGoldArcs3: `${base}/textured-gold-arcs-3.jpg`,
+  texturedGoldArcs4: `${base}/textured-gold-arcs-4.jpg`,
+  texturedGoldArcs5: `${base}/textured-gold-arcs-5.jpg`,
+  texturedGoldArcs6: `${base}/textured-gold-arcs-6.jpg`,
+  texturedGoldArcs7: `${base}/textured-gold-arcs-7.jpg`,
 } as const;
 
 export type PhotoKey = keyof typeof photos;

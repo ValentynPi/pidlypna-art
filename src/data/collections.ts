@@ -60,8 +60,8 @@ export const collections: Collection[] = [
     id: 'textured-art',
     name: 'Textured Art',
     slug: 'textured-art',
-    coverImage: photos.sunsetNew,
-    coverAlt: 'Sunset seascape with turquoise water and fiery horizon',
+    coverImage: photos.texturedGoldArcs7,
+    coverAlt: 'White canvas with textured metallic gold arcs',
     intro:
       'Surface as story — impasto, metallic layers, and tactile depths you can almost feel.',
   },
