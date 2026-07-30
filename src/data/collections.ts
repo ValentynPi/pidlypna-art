@@ -38,6 +38,15 @@ export const collections: Collection[] = [
     intro:
       'Places remembered and imagined — cities, coasts, and horizons that carry personal meaning.',
   },
+  {
+    id: 'ukrainian-motifs',
+    name: 'Ukrainian Motifs',
+    slug: 'ukrainian-motifs',
+    coverImage: photos.ukrainianHeritage5,
+    coverAlt: 'Portrait merging realism with Ukrainian folk embroidery',
+    intro:
+      'Heritage held in paint — embroidery, memory, and symbols that carry Ukraine into the present.',
+  },
 ];
 
 export function getCollectionById(id: string): Collection | undefined {

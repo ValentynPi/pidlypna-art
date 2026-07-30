@@ -106,6 +106,15 @@ export const photos = {
   placesBalloon1: `${base}/places-balloon-1.jpg`,
   placesBalloon2: `${base}/places-balloon-2.jpg`,
   placesBalloon3: `${base}/places-balloon-3.jpg`,
+
+  // Ukrainian Motifs (July 2026 album)
+  ukrainianHeritage1: `${base}/ukrainian-heritage-1.jpg`,
+  ukrainianHeritage2: `${base}/ukrainian-heritage-2.jpg`,
+  ukrainianHeritage3: `${base}/ukrainian-heritage-3.jpg`,
+  ukrainianHeritage4: `${base}/ukrainian-heritage-4.jpg`,
+  ukrainianHeritage5: `${base}/ukrainian-heritage-5.jpg`,
+  ukrainianHeritage6: `${base}/ukrainian-heritage-6.jpg`,
+  ukrainianHeritage7: `${base}/ukrainian-heritage-7.jpg`,
 } as const;
 
 export type PhotoKey = keyof typeof photos;

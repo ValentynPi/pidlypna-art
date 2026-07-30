@@ -275,6 +275,36 @@ export const artworks: Artwork[] = [
     collectionId: 'inspired-by-places',
     featured: true,
   },
+
+  // —— Ukrainian Motifs ——
+  {
+    id: 'motifs-01',
+    title: 'Heritage',
+    year: 2025,
+    dimensions: '80 × 100 cm',
+    materials: 'Oil and acrylic',
+    technique: 'Portrait with folk embroidery motifs',
+    surface: 'Canvas',
+    framing: 'Unframed',
+    signed: true,
+    certificateOfAuthenticity: true,
+    availability: 'Available',
+    description:
+      'A face split between realism and Ukrainian folk embroidery — memory woven into skin. Half portrait, half ornament: geometric bands and floral motifs carry home across distance. The blue eyes hold both worlds at once. Painted as a bridge between tradition and contemporary portraiture, and a quiet act of carrying Ukraine forward.',
+    image: photos.ukrainianHeritage5,
+    imageAlt: 'Portrait split between realistic face and Ukrainian folk patterns',
+    images: [
+      { src: photos.ukrainianHeritage5, alt: 'Heritage — front view' },
+      { src: photos.ukrainianHeritage7, alt: 'Heritage — wall display' },
+      { src: photos.ukrainianHeritage6, alt: 'Heritage — large and small versions' },
+      { src: photos.ukrainianHeritage3, alt: 'Heritage — angled view' },
+      { src: photos.ukrainianHeritage4, alt: 'Heritage — close detail' },
+      { src: photos.ukrainianHeritage1, alt: 'Heritage — detail of embroidery and eye' },
+      { src: photos.ukrainianHeritage2, alt: 'Heritage — close-up of eye and patterns' },
+    ],
+    collectionId: 'ukrainian-motifs',
+    featured: true,
+  },
 ];
 
 export const featuredArtworks = artworks.filter((a) => a.featured);
