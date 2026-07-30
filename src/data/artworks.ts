@@ -225,6 +225,56 @@ export const artworks: Artwork[] = [
     collectionId: 'floral-collection',
     featured: true,
   },
+
+  // —— Inspired by Places ——
+  {
+    id: 'places-01',
+    title: 'City Light',
+    year: 2024,
+    dimensions: '100 × 80 cm',
+    materials: 'Oil',
+    technique: 'Abstract cityscape with symbolic overlay',
+    surface: 'Canvas',
+    framing: 'Unframed',
+    signed: true,
+    certificateOfAuthenticity: true,
+    availability: 'Available',
+    description:
+      'An abstracted city skyline glowing from within — warm orange and red light rising through dark towers. White symbols float above the urban silhouette, inviting reflection on identity and place. Inspired by evenings in Spanish towns when windows turn amber. Built layer by layer to keep the light breathing through the darks.',
+    image: photos.placesCity1,
+    imageAlt: 'Abstract cityscape with glowing light and symbolic white marks',
+    images: [
+      { src: photos.placesCity1, alt: 'City Light — front view' },
+      { src: photos.placesCity2, alt: 'City Light — angled view' },
+      { src: photos.placesCity3, alt: 'City Light — side angle showing texture' },
+    ],
+    collectionId: 'inspired-by-places',
+    featured: true,
+  },
+  {
+    id: 'places-02',
+    title: 'Golden Balloon',
+    year: 2024,
+    dimensions: '60 × 60 cm',
+    materials: 'Mixed media',
+    technique: 'Imaginative landscape',
+    surface: 'Canvas',
+    framing: 'Unframed',
+    signed: true,
+    certificateOfAuthenticity: true,
+    availability: 'Available',
+    description:
+      'A golden hot air balloon over a misty coastal castle — travel as dream. Part observation, part wish: the landscape is familiar while the balloon is hope. Soft mist softens edges so the gold can shine against grey-blue water. Painted as a gentle escape that still belongs to a real coast remembered with love.',
+    image: photos.placesBalloon1,
+    imageAlt: 'Golden hot air balloon over misty coastal castle landscape',
+    images: [
+      { src: photos.placesBalloon1, alt: 'Golden Balloon — front view' },
+      { src: photos.placesBalloon2, alt: 'Golden Balloon — angled view' },
+      { src: photos.placesBalloon3, alt: 'Golden Balloon — side angle' },
+    ],
+    collectionId: 'inspired-by-places',
+    featured: true,
+  },
 ];
 
 export const featuredArtworks = artworks.filter((a) => a.featured);

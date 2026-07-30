@@ -29,6 +29,15 @@ export const collections: Collection[] = [
     intro:
       'Classic floral still lifes — bouquets studied for light, texture, and the quiet drama of everyday beauty.',
   },
+  {
+    id: 'inspired-by-places',
+    name: 'Inspired by Places',
+    slug: 'inspired-by-places',
+    coverImage: photos.placesBalloon1,
+    coverAlt: 'Golden hot air balloon over misty coastal castle landscape',
+    intro:
+      'Places remembered and imagined — cities, coasts, and horizons that carry personal meaning.',
+  },
 ];
 
 export function getCollectionById(id: string): Collection | undefined {

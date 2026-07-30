@@ -98,6 +98,14 @@ export const photos = {
   floralLilacs1: `${base}/floral-lilacs-1.jpg`,
   floralLilacs2: `${base}/floral-lilacs-2.jpg`,
   floralLilacs3: `${base}/floral-lilacs-3.jpg`,
+
+  // Inspired by Places (July 2026 album)
+  placesCity1: `${base}/places-city-1.jpg`,
+  placesCity2: `${base}/places-city-2.jpg`,
+  placesCity3: `${base}/places-city-3.jpg`,
+  placesBalloon1: `${base}/places-balloon-1.jpg`,
+  placesBalloon2: `${base}/places-balloon-2.jpg`,
+  placesBalloon3: `${base}/places-balloon-3.jpg`,
 } as const;
 
 export type PhotoKey = keyof typeof photos;
