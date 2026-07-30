@@ -9,7 +9,7 @@ export function CollectionsStrip() {
       <ScrollReveal>
         <SectionLabel>Collections</SectionLabel>
         <h2 className="display-heading mt-6 text-3xl md:text-4xl">
-          Nine chapters, one story
+          Explore the collections
         </h2>
       </ScrollReveal>
 
