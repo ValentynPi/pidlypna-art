@@ -20,6 +20,15 @@ export const collections: Collection[] = [
     intro:
       'Landscapes, seas, and skies observed with feeling — nature translated into color and light.',
   },
+  {
+    id: 'floral-collection',
+    name: 'Floral Collection',
+    slug: 'floral-collection',
+    coverImage: photos.floralLilacs1,
+    coverAlt: 'White lilacs in a glass vase against a deep burgundy background',
+    intro:
+      'Classic floral still lifes — bouquets studied for light, texture, and the quiet drama of everyday beauty.',
+  },
 ];
 
 export function getCollectionById(id: string): Collection | undefined {

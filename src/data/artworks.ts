@@ -175,6 +175,56 @@ export const artworks: Artwork[] = [
     collectionId: 'inspired-by-nature',
     featured: true,
   },
+
+  // —— Floral Collection ——
+  {
+    id: 'floral-01',
+    title: 'Sunflowers',
+    year: 2025,
+    dimensions: '50 × 70 cm',
+    materials: 'Oil',
+    technique: 'Floral still life',
+    surface: 'Canvas',
+    framing: 'Unframed',
+    signed: true,
+    certificateOfAuthenticity: true,
+    availability: 'Available',
+    description:
+      'Three sunflowers in a green vase against teal — summer held in a simple arrangement. Studied for warmth, the tilt of each head, and the stubborn cheer of the bloom. Thick petals catch light like small fields of gold. Painted as a love letter to ordinary abundance and Mediterranean color.',
+    image: photos.floralSunflowers1,
+    imageAlt: 'Three sunflowers in a green vase against a teal background',
+    images: [
+      { src: photos.floralSunflowers1, alt: 'Sunflowers — front view' },
+      { src: photos.floralSunflowers3, alt: 'Sunflowers — angled view' },
+      { src: photos.floralSunflowers2, alt: 'Sunflowers — side angle showing texture' },
+    ],
+    collectionId: 'floral-collection',
+    featured: true,
+  },
+  {
+    id: 'floral-02',
+    title: 'White Lilacs',
+    year: 2025,
+    dimensions: '80 × 100 cm',
+    materials: 'Oil',
+    technique: 'Floral still life',
+    surface: 'Canvas',
+    framing: 'Unframed',
+    signed: true,
+    certificateOfAuthenticity: true,
+    availability: 'Available',
+    description:
+      'White lilacs in a glass vase against deep burgundy — perfume translated into paint. Observed for light, petal edge, and quiet drama. The dark ground lets the blooms glow like evening guests. Many viewers feel intimacy and freshness in the soft white clusters. Painted in the studio with natural light as co-author.',
+    image: photos.floralLilacs1,
+    imageAlt: 'White lilacs in a glass vase against a deep burgundy background',
+    images: [
+      { src: photos.floralLilacs1, alt: 'White Lilacs — front view' },
+      { src: photos.floralLilacs2, alt: 'White Lilacs — angled view' },
+      { src: photos.floralLilacs3, alt: 'White Lilacs — side angle' },
+    ],
+    collectionId: 'floral-collection',
+    featured: true,
+  },
 ];
 
 export const featuredArtworks = artworks.filter((a) => a.featured);

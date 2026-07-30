@@ -90,6 +90,14 @@ export const photos = {
   natureSnowPeaks2: `${base}/nature-snow-peaks-2.jpg`,
   natureSnowPeaks3: `${base}/nature-snow-peaks-3.jpg`,
   natureDuality1: `${base}/nature-duality-1.jpg`,
+
+  // Floral Collection (July 2026 album)
+  floralSunflowers1: `${base}/floral-sunflowers-1.jpg`,
+  floralSunflowers2: `${base}/floral-sunflowers-2.jpg`,
+  floralSunflowers3: `${base}/floral-sunflowers-3.jpg`,
+  floralLilacs1: `${base}/floral-lilacs-1.jpg`,
+  floralLilacs2: `${base}/floral-lilacs-2.jpg`,
+  floralLilacs3: `${base}/floral-lilacs-3.jpg`,
 } as const;
 
 export type PhotoKey = keyof typeof photos;
