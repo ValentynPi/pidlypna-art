@@ -11,6 +11,15 @@ export const collections: Collection[] = [
     intro:
       'Surface as story — impasto, metallic layers, and tactile depths you can almost feel.',
   },
+  {
+    id: 'inspired-by-nature',
+    name: 'Inspired by Nature',
+    slug: 'inspired-by-nature',
+    coverImage: photos.natureSnowPeaks3,
+    coverAlt: 'Snow-capped mountain peaks under a pale blue sky',
+    intro:
+      'Landscapes, seas, and skies observed with feeling — nature translated into color and light.',
+  },
 ];
 
 export function getCollectionById(id: string): Collection | undefined {
