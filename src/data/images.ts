@@ -115,6 +115,21 @@ export const photos = {
   ukrainianHeritage5: `${base}/ukrainian-heritage-5.jpg`,
   ukrainianHeritage6: `${base}/ukrainian-heritage-6.jpg`,
   ukrainianHeritage7: `${base}/ukrainian-heritage-7.jpg`,
+
+  // Petrykivka (July 2026 album)
+  petrykivkaKalynaNight1: `${base}/petrykivka-kalyna-night-1.jpg`,
+  petrykivkaKalynaNight2: `${base}/petrykivka-kalyna-night-2.jpg`,
+  petrykivkaKalynaNight3: `${base}/petrykivka-kalyna-night-3.jpg`,
+  petrykivkaBlueBloom1: `${base}/petrykivka-blue-bloom-1.jpg`,
+  petrykivkaBlueBloom2: `${base}/petrykivka-blue-bloom-2.jpg`,
+  petrykivkaBlueBloom3: `${base}/petrykivka-blue-bloom-3.jpg`,
+  petrykivkaBlueGold1: `${base}/petrykivka-blue-gold-1.jpg`,
+  petrykivkaBlueGold2: `${base}/petrykivka-blue-gold-2.jpg`,
+  petrykivkaBlueGold3: `${base}/petrykivka-blue-gold-3.jpg`,
+  petrykivkaBlueGold4: `${base}/petrykivka-blue-gold-4.jpg`,
+  petrykivkaTealPeonies1: `${base}/petrykivka-teal-peonies-1.jpg`,
+  petrykivkaTealPeonies2: `${base}/petrykivka-teal-peonies-2.jpg`,
+  petrykivkaTealPeonies3: `${base}/petrykivka-teal-peonies-3.jpg`,
 } as const;
 
 export type PhotoKey = keyof typeof photos;

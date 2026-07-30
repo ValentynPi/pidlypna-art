@@ -47,6 +47,15 @@ export const collections: Collection[] = [
     intro:
       'Heritage held in paint — embroidery, memory, and symbols that carry Ukraine into the present.',
   },
+  {
+    id: 'petrykivka',
+    name: 'Petrykivka',
+    slug: 'petrykivka',
+    coverImage: photos.petrykivkaBlueBloom1,
+    coverAlt: 'Petrykivka blue flower with orange leaves on black background',
+    intro:
+      'The Ukrainian decorative painting tradition — stylized florals, berries, and brush-stroke ornaments on canvas.',
+  },
 ];
 
 export function getCollectionById(id: string): Collection | undefined {
