@@ -105,7 +105,7 @@ export function Lightbox({
             </svg>
           </button>
 
-          <div className="flex flex-1 flex-col bg-ink">
+          <div className="flex min-h-0 flex-1 flex-col bg-ink">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`${artwork.id}-${viewIndex}`}
@@ -113,13 +113,14 @@ export function Lightbox({
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.25 }}
-                className="flex-1"
+                className="flex min-h-0 flex-1 items-center justify-center p-4 md:p-6"
               >
                 <LazyImage
                   src={activeView.src}
                   alt={activeView.alt}
-                  className="max-h-[40vh] object-contain md:max-h-[78vh]"
-                  wrapperClassName="h-full min-h-[240px] md:min-h-[480px]"
+                  objectFit="contain"
+                  className="max-h-[45vh] md:max-h-[82vh]"
+                  wrapperClassName="flex h-full w-full items-center justify-center"
                 />
               </motion.div>
             </AnimatePresence>

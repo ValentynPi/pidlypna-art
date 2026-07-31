@@ -6,6 +6,8 @@ interface LazyImageProps {
   alt?: string;
   className?: string;
   wrapperClassName?: string;
+  /** cover = fill and crop; contain = show full image */
+  objectFit?: 'cover' | 'contain';
 }
 
 export function LazyImage({
@@ -13,8 +15,12 @@ export function LazyImage({
   alt = '',
   className = '',
   wrapperClassName = '',
+  objectFit = 'cover',
 }: LazyImageProps) {
   const [loaded, setLoaded] = useState(false);
+  const fitClass = objectFit === 'contain' ? 'object-contain' : 'object-cover';
+  const sizeClass =
+    objectFit === 'contain' ? 'max-h-full max-w-full' : 'h-full w-full';
 
   return (
     <div className={`relative overflow-hidden bg-cream-dark ${wrapperClassName}`}>
@@ -30,7 +36,7 @@ export function LazyImage({
         initial={{ opacity: 0, scale: 1.03 }}
         animate={{ opacity: loaded ? 1 : 0, scale: loaded ? 1 : 1.03 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`h-full w-full object-cover ${className}`}
+        className={`${sizeClass} ${fitClass} ${className}`}
       />
     </div>
   );
