@@ -130,6 +130,14 @@ export const photos = {
   petrykivkaTealPeonies1: `${base}/petrykivka-teal-peonies-1.jpg`,
   petrykivkaTealPeonies2: `${base}/petrykivka-teal-peonies-2.jpg`,
   petrykivkaTealPeonies3: `${base}/petrykivka-teal-peonies-3.jpg`,
+
+  // Petrykivka — workshop pieces (August 2026)
+  petrykivkaRedBerryVine1: `${base}/petrykivka-red-berry-vine-1.jpg`,
+  petrykivkaGardenPath1: `${base}/petrykivka-garden-path-1.jpg`,
+  petrykivkaCrimsonBuds1: `${base}/petrykivka-crimson-buds-1.jpg`,
+  petrykivkaFirebird1: `${base}/petrykivka-firebird-1.jpg`,
+  petrykivkaFlameSprig1: `${base}/petrykivka-flame-sprig-1.jpg`,
+  petrykivkaSpiralGarden1: `${base}/petrykivka-spiral-garden-1.jpg`,
 } as const;
 
 export type PhotoKey = keyof typeof photos;
