@@ -24,7 +24,6 @@ export const artworks: Artwork[] = [
     image: photos.texturedHalo3,
     imageAlt: 'White and gold textured circle diptych on easels',
     images: [
-      { src: photos.texturedHalo3, alt: 'Halo — front view on easels' },
       { src: photos.texturedHalo1, alt: 'Halo — close detail of texture' },
       { src: photos.texturedHalo2, alt: 'Halo — angled view showing depth' },
     ],
@@ -48,7 +47,6 @@ export const artworks: Artwork[] = [
     image: photos.texturedGoldArcs7,
     imageAlt: 'White canvas with three textured metallic gold arcs',
     images: [
-      { src: photos.texturedGoldArcs7, alt: 'Gold Arcs — front view' },
       { src: photos.texturedGoldArcs6, alt: 'Gold Arcs — full canvas view' },
       { src: photos.texturedGoldArcs5, alt: 'Gold Arcs — side angle showing texture' },
       { src: photos.texturedGoldArcs4, alt: 'Gold Arcs — close detail of ridges' },
@@ -78,7 +76,6 @@ export const artworks: Artwork[] = [
     image: photos.natureSeagulls3,
     imageAlt: 'Seascape at dusk with seagulls flying over calm water',
     images: [
-      { src: photos.natureSeagulls3, alt: 'Flight at Dusk — front view' },
       { src: photos.natureSeagulls1, alt: 'Flight at Dusk — angled view' },
       { src: photos.natureSeagulls2, alt: 'Flight at Dusk — side angle' },
     ],
@@ -102,7 +99,6 @@ export const artworks: Artwork[] = [
     image: photos.natureSunset1,
     imageAlt: 'Textured seascape with turquoise water and fiery sunset',
     images: [
-      { src: photos.natureSunset1, alt: 'Sunset Reflection — front view' },
       { src: photos.natureSunset2, alt: 'Sunset Reflection — angled view showing texture' },
       { src: photos.natureSunset3, alt: 'Sunset Reflection — side angle' },
     ],
@@ -126,7 +122,6 @@ export const artworks: Artwork[] = [
     image: photos.natureShore3,
     imageAlt: 'Abstract textured landscape with horizon and water ripples',
     images: [
-      { src: photos.natureShore3, alt: 'Quiet Shore — front view' },
       { src: photos.natureShore1, alt: 'Quiet Shore — angled view' },
       { src: photos.natureShore2, alt: 'Quiet Shore — side angle showing texture' },
     ],
@@ -149,7 +144,6 @@ export const artworks: Artwork[] = [
     image: photos.natureSnowPeaks3,
     imageAlt: 'Snow-capped mountain peaks under a pale blue sky',
     images: [
-      { src: photos.natureSnowPeaks3, alt: 'Snow Peaks — front view' },
       { src: photos.natureSnowPeaks1, alt: 'Snow Peaks — angled view' },
       { src: photos.natureSnowPeaks2, alt: 'Snow Peaks — side angle' },
     ],
@@ -194,7 +188,6 @@ export const artworks: Artwork[] = [
     image: photos.floralSunflowers1,
     imageAlt: 'Three sunflowers in a green vase against a teal background',
     images: [
-      { src: photos.floralSunflowers1, alt: 'Sunflowers — front view' },
       { src: photos.floralSunflowers3, alt: 'Sunflowers — angled view' },
       { src: photos.floralSunflowers2, alt: 'Sunflowers — side angle showing texture' },
     ],
@@ -218,7 +211,6 @@ export const artworks: Artwork[] = [
     image: photos.floralLilacs1,
     imageAlt: 'White lilacs in a glass vase against a deep burgundy background',
     images: [
-      { src: photos.floralLilacs1, alt: 'White Lilacs — front view' },
       { src: photos.floralLilacs2, alt: 'White Lilacs — angled view' },
       { src: photos.floralLilacs3, alt: 'White Lilacs — side angle' },
     ],
@@ -244,7 +236,6 @@ export const artworks: Artwork[] = [
     image: photos.placesCity1,
     imageAlt: 'Abstract cityscape with glowing light and symbolic white marks',
     images: [
-      { src: photos.placesCity1, alt: 'City Light — front view' },
       { src: photos.placesCity2, alt: 'City Light — angled view' },
       { src: photos.placesCity3, alt: 'City Light — side angle showing texture' },
     ],
@@ -268,7 +259,6 @@ export const artworks: Artwork[] = [
     image: photos.placesBalloon1,
     imageAlt: 'Golden hot air balloon over misty coastal castle landscape',
     images: [
-      { src: photos.placesBalloon1, alt: 'Golden Balloon — front view' },
       { src: photos.placesBalloon2, alt: 'Golden Balloon — angled view' },
       { src: photos.placesBalloon3, alt: 'Golden Balloon — side angle' },
     ],
@@ -294,7 +284,6 @@ export const artworks: Artwork[] = [
     image: photos.ukrainianHeritage5,
     imageAlt: 'Portrait split between realistic face and Ukrainian folk patterns',
     images: [
-      { src: photos.ukrainianHeritage5, alt: 'Heritage — front view' },
       { src: photos.ukrainianHeritage7, alt: 'Heritage — wall display' },
       { src: photos.ukrainianHeritage6, alt: 'Heritage — large and small versions' },
       { src: photos.ukrainianHeritage3, alt: 'Heritage — angled view' },
@@ -324,7 +313,6 @@ export const artworks: Artwork[] = [
     image: photos.petrykivkaKalynaNight1,
     imageAlt: 'Petrykivka-style white berries and leaves on burgundy ground',
     images: [
-      { src: photos.petrykivkaKalynaNight1, alt: 'Kalyna Night — front view on easel' },
       { src: photos.petrykivkaKalynaNight2, alt: 'Kalyna Night — angled view' },
       { src: photos.petrykivkaKalynaNight3, alt: 'Kalyna Night — side angle' },
     ],
@@ -348,7 +336,6 @@ export const artworks: Artwork[] = [
     image: photos.petrykivkaBlueBloom1,
     imageAlt: 'Petrykivka blue flower with orange leaves on black background',
     images: [
-      { src: photos.petrykivkaBlueBloom1, alt: 'Blue Bloom — front view' },
       { src: photos.petrykivkaBlueBloom2, alt: 'Blue Bloom — angled view' },
       { src: photos.petrykivkaBlueBloom3, alt: 'Blue Bloom — side angle showing texture' },
     ],
@@ -372,7 +359,6 @@ export const artworks: Artwork[] = [
     image: photos.petrykivkaBlueGold2,
     imageAlt: 'Small Petrykivka floral sprig in blue and gold',
     images: [
-      { src: photos.petrykivkaBlueGold2, alt: 'Blue & Gold — front view on easel' },
       { src: photos.petrykivkaBlueGold1, alt: 'Blue & Gold — pair with Teal Peonies' },
       { src: photos.petrykivkaBlueGold3, alt: 'Blue & Gold — angled view' },
       { src: photos.petrykivkaBlueGold4, alt: 'Blue & Gold — side angle' },
@@ -396,7 +382,6 @@ export const artworks: Artwork[] = [
     image: photos.petrykivkaTealPeonies1,
     imageAlt: 'Petrykivka teal and burgundy flowers on white canvas',
     images: [
-      { src: photos.petrykivkaTealPeonies1, alt: 'Teal Peonies — front view on easel' },
       { src: photos.petrykivkaTealPeonies2, alt: 'Teal Peonies — angled view' },
       { src: photos.petrykivkaTealPeonies3, alt: 'Teal Peonies — side angle' },
     ],
@@ -516,10 +501,18 @@ export const artworks: Artwork[] = [
 export const featuredArtworks = artworks.filter((a) => a.featured);
 
 export function getArtworkImages(artwork: Artwork): ArtworkImage[] {
-  if (artwork.images && artwork.images.length > 0) {
-    return artwork.images;
+  const cover: ArtworkImage = { src: artwork.image, alt: artwork.imageAlt };
+  const seen = new Set<string>([cover.src]);
+  const extras: ArtworkImage[] = [];
+
+  for (const img of artwork.images ?? []) {
+    if (!seen.has(img.src)) {
+      seen.add(img.src);
+      extras.push(img);
+    }
   }
-  return [{ src: artwork.image, alt: artwork.imageAlt }];
+
+  return extras.length > 0 ? [cover, ...extras] : [cover];
 }
 
 export function getArtworksByCollection(collectionId: string): Artwork[] {

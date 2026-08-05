@@ -21,11 +21,12 @@ export function Lightbox({
 }: LightboxProps) {
   const artwork = artworks[currentIndex];
   const views = artwork ? getArtworkImages(artwork) : [];
+  const alternateViews = views.slice(1);
   const collection = artwork ? getCollectionById(artwork.collectionId) : undefined;
   const [viewIndex, setViewIndex] = useState(0);
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < artworks.length - 1;
-  const hasMultipleViews = views.length > 1;
+  const hasMultipleViews = alternateViews.length > 0;
 
   useEffect(() => {
     setViewIndex(0);
@@ -127,17 +128,17 @@ export function Lightbox({
 
             {hasMultipleViews && (
               <div className="flex gap-2 overflow-x-auto border-t border-cream/10 p-3">
-                {views.map((view, i) => (
+                {alternateViews.map((view, i) => (
                   <button
                     key={view.src}
                     type="button"
-                    onClick={() => setViewIndex(i)}
+                    onClick={() => setViewIndex(i + 1)}
                     className={`relative h-16 w-14 shrink-0 overflow-hidden border transition-colors ${
-                      i === viewIndex
+                      i + 1 === viewIndex
                         ? 'border-gold'
                         : 'border-cream/20 opacity-60 hover:opacity-100'
                     }`}
-                    aria-label={`View ${i + 1} of ${views.length}`}
+                    aria-label={`View ${i + 2} of ${views.length}`}
                   >
                     <img
                       src={view.src}
