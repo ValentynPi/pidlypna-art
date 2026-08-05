@@ -57,7 +57,7 @@ export function AboutPage() {
       <section className="relative overflow-hidden bg-ink py-24 md:py-32">
         <div className="absolute inset-0 opacity-20">
           <LazyImage
-            src={photos.treeWall}
+            src={photos.ukrainian_symbolism_heritage_1}
             alt=""
             wrapperClassName="h-full w-full"
           />

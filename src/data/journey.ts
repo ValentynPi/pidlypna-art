@@ -19,7 +19,7 @@ export const journeyEntries: JourneyEntry[] = [
         alt: 'Soft pastel landscape inspired by southern light',
       },
       {
-        src: photos.lilacsNew,
+        src: photos.floral_collection_white_lilacs_1,
         alt: 'Floral still life inspired by southern blooms',
       },
     ],
@@ -37,7 +37,7 @@ export const journeyEntries: JourneyEntry[] = [
         alt: 'Dreamlike balloon over a misty castle landscape',
       },
       {
-        src: photos.treeAngle,
+        src: photos.ukrainian_symbolism_heritage_4,
         alt: 'Tree painting showing impasto texture up close',
       },
     ],
@@ -55,11 +55,11 @@ export const journeyEntries: JourneyEntry[] = [
         alt: 'Floral portrait — botanical inspiration from Madrid gardens',
       },
       {
-        src: photos.goldArcsHome,
+        src: photos.textured_and_light_gold_arcs_1,
         alt: 'Gold abstract paintings in a contemporary home',
       },
       {
-        src: photos.sunflowers,
+        src: photos.floral_collection_sunflowers_1,
         alt: 'Sunflower still life from garden light studies',
       },
     ],
