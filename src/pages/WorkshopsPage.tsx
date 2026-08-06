@@ -11,7 +11,7 @@ export function WorkshopsPage() {
     <>
       <PageMeta
         title="Workshops"
-        description="Join Pidlypna Art for painting workshops in Castellón, Spain — floral oils, Petrykivka, plein air, and more."
+        description="Join Pidlypna_Art for painting workshops in Castellón, Spain — floral oils, Petrykivka, plein air, and more."
       />
 
       <PageHeader

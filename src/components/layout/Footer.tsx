@@ -10,7 +10,7 @@ export function Footer() {
               <span className="flex h-10 w-10 items-center justify-center border border-cream/20 font-serif text-sm">
                 VP
               </span>
-              <h3 className="font-serif text-2xl">Pidlypna Art</h3>
+              <h3 className="font-serif text-2xl">Pidlypna_Art</h3>
             </div>
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-cream/50">
               Contemporary Ukrainian art living and creating in Castellón,
@@ -96,7 +96,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-cream/10 pt-8 text-xs text-cream/30 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Pidlypna Art</p>
+          <p>© {new Date().getFullYear()} Pidlypna_Art</p>
           <p className="tracking-wider uppercase">Ukraine · Spain · Everywhere between</p>
         </div>
       </div>

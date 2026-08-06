@@ -63,7 +63,7 @@ export function Navbar() {
               onDarkHero && !scrolled ? 'text-cream' : 'text-ink'
             }`}
           >
-            Pidlypna Art
+            Pidlypna_Art
           </span>
         </Link>
 

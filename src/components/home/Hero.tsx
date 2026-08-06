@@ -83,7 +83,7 @@ export function Hero() {
           <motion.div style={{ y: imageY }} className="absolute inset-0">
             <LazyImage
               src={photos.floralCrownClean}
-              alt="Floral Crown painting by Pidlypna Art"
+              alt="Floral Crown painting by Pidlypna_Art"
               className="scale-105 object-cover"
               wrapperClassName="h-full w-full"
             />

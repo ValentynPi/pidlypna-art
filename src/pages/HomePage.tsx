@@ -12,7 +12,7 @@ export function HomePage() {
     <>
       <PageMeta
         title="Home"
-        description="Pidlypna Art — Contemporary Ukrainian art living and creating in Spain. Explore paintings, workshops, and exhibitions."
+        description="Pidlypna_Art — Contemporary Ukrainian art living and creating in Spain. Explore paintings, workshops, and exhibitions."
       />
       <Hero />
 
@@ -21,7 +21,7 @@ export function HomePage() {
           <div className="relative min-h-[400px] lg:min-h-[600px]">
             <LazyImage
               src={photos.tigerBloom}
-              alt="Tiger Bloom — surreal painting by Pidlypna Art"
+              alt="Tiger Bloom — surreal painting by Pidlypna_Art"
               wrapperClassName="h-full w-full"
             />
             <div className="absolute inset-0 bg-teal-deep/20" />

@@ -6,7 +6,7 @@ export function ContactPage() {
     <>
       <PageMeta
         title="Contact"
-        description="Contact Pidlypna Art — contemporary artist based in Castellón, Spain. Email, Instagram, WhatsApp."
+        description="Contact Pidlypna_Art — contemporary artist based in Castellón, Spain. Email, Instagram, WhatsApp."
       />
       <div className="pt-16 md:pt-20">
         <ContactSection />
