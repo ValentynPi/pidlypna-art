@@ -32,15 +32,22 @@ export function Hero() {
             Contemporary Ukrainian Artist
           </motion.p>
 
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            className="mt-12 text-sm font-medium tracking-[0.35em] text-gold uppercase md:mt-14 lg:mt-16"
+          >
+            Viktoria
+          </motion.p>
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="display-heading mt-12 text-5xl leading-[0.95] md:mt-14 lg:mt-16 md:text-6xl lg:text-7xl xl:text-8xl"
+            className="display-heading mt-4 text-5xl leading-[0.95] text-white md:text-6xl lg:text-7xl xl:text-8xl"
           >
-            <span className="italic text-gold">Viktoria</span>
-            <br />
-            <span className="text-white">Pidlypna_Art</span>
+            Pidlypna_Art
           </motion.h1>
 
           <HandLine variant="swirl" className="mt-8 w-40 text-gold/70" />

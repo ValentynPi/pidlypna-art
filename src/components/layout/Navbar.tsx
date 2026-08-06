@@ -60,7 +60,7 @@ export function Navbar() {
           </span>
           <span
             className={`hidden font-serif text-lg tracking-wide transition-colors sm:block ${
-              onDarkHero && !scrolled ? 'text-cream' : 'text-ink'
+              onDarkHero && !scrolled ? 'text-white' : 'text-ink'
             }`}
           >
             Pidlypna_Art
@@ -98,11 +98,7 @@ export function Navbar() {
 
         <Link
           to="/gallery"
-          className={`hidden text-xs tracking-[0.15em] uppercase transition-colors lg:block ${
-            onDarkHero && !scrolled
-              ? 'bg-cream/95 px-4 py-2 text-ink hover:bg-cream hover:text-ink/80'
-              : 'text-ink hover:text-ink/70'
-          }`}
+          className="hidden border border-black/10 bg-white px-5 py-2.5 text-xs font-semibold tracking-[0.15em] text-black uppercase transition-colors hover:bg-white/90 lg:block"
         >
           View Art
         </Link>
