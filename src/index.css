@@ -26,10 +26,18 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
-    @apply bg-cream font-sans text-ink antialiased;
+    @apply overflow-x-hidden bg-cream font-sans text-ink antialiased;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
   }
 
   ::selection {
@@ -60,7 +68,7 @@
   }
 
   .section-padding {
-    @apply px-6 py-24 md:px-10 md:py-32 lg:px-16;
+    @apply px-5 py-16 sm:px-6 sm:py-24 md:px-10 md:py-32 lg:px-16;
   }
 
   .display-heading {

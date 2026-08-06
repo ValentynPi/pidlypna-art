@@ -18,17 +18,18 @@ export function HomePage() {
 
       <section className="relative overflow-hidden bg-blush">
         <div className="grid lg:grid-cols-2">
-          <div className="relative min-h-[400px] lg:min-h-[600px]">
+          <div className="relative min-h-[280px] sm:min-h-[360px] lg:min-h-[600px]">
             <LazyImage
               src={photos.tigerBloom}
               alt="Tiger Bloom — surreal painting by Viktoria Pidlypna"
+              className="object-cover"
               wrapperClassName="h-full w-full"
             />
             <div className="absolute inset-0 bg-teal-deep/20" />
           </div>
           <div className="flex flex-col justify-center section-padding">
             <ScrollReveal>
-              <blockquote className="font-serif text-2xl leading-snug text-ink md:text-3xl lg:text-4xl">
+              <blockquote className="font-serif text-xl leading-snug text-ink sm:text-2xl md:text-3xl lg:text-4xl">
                 <span className="text-gold">&ldquo;</span>
                 I paint the distance between where I come from and where I
                 stand now — every canvas a bridge, every color a word in a

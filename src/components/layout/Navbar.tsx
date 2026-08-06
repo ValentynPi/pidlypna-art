@@ -40,17 +40,17 @@ export function Navbar() {
   return (
     <header className="fixed top-0 right-0 left-0 z-50">
       <nav
-        className={`mx-auto flex max-w-[90rem] items-center justify-between px-6 py-6 transition-all duration-500 md:px-10 lg:px-16 ${
+        className={`mx-auto flex max-w-[90rem] items-center justify-between px-5 py-4 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-500 sm:px-6 sm:py-6 md:px-10 lg:px-16 ${
           scrolled
-            ? 'bg-cream/90 py-4 backdrop-blur-lg'
+            ? 'bg-cream/90 py-3 backdrop-blur-lg sm:py-4'
             : onDarkHero
               ? ''
               : 'bg-cream/90 backdrop-blur-lg'
         }`}
       >
-        <Link to="/" className="group flex items-center gap-3">
+        <Link to="/" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
           <span
-            className={`flex h-9 w-9 items-center justify-center border font-serif text-sm transition-colors ${
+            className={`flex h-9 w-9 shrink-0 items-center justify-center border font-serif text-sm transition-colors ${
               onDarkHero && !scrolled
                 ? 'border-cream/30 text-cream group-hover:border-gold group-hover:text-gold'
                 : 'border-ink/20 text-ink group-hover:border-terracotta group-hover:text-terracotta'
@@ -59,7 +59,7 @@ export function Navbar() {
             VP
           </span>
           <span
-            className={`hidden font-serif text-lg tracking-wide transition-colors sm:block ${
+            className={`truncate font-serif text-base tracking-wide transition-colors sm:text-lg ${
               onDarkHero && !scrolled ? 'text-white' : 'text-ink'
             }`}
           >
@@ -105,10 +105,11 @@ export function Navbar() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden ${
+          className={`relative z-50 flex h-11 w-11 shrink-0 touch-manipulation flex-col items-center justify-center gap-1.5 lg:hidden ${
             isOpen ? 'text-ink' : onDarkHero && !scrolled ? 'text-cream' : 'text-ink'
           }`}
           aria-label="Toggle menu"
+          aria-expanded={isOpen}
         >
           <motion.span
             animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
@@ -132,10 +133,10 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 flex flex-col bg-cream lg:hidden"
+            className="fixed inset-0 z-40 flex flex-col bg-cream pt-[max(4.5rem,calc(env(safe-area-inset-top)+3.5rem))] lg:hidden"
           >
-            <div className="flex flex-1 flex-col justify-center px-10">
-              <ul className="space-y-2">
+            <div className="flex flex-1 flex-col justify-center overflow-y-auto px-6 sm:px-10">
+              <ul className="space-y-1">
                 {[{ to: '/', label: 'Home' }, ...navLinks].map((link, i) => (
                   <motion.li
                     key={link.to}
@@ -145,7 +146,7 @@ export function Navbar() {
                   >
                     <Link
                       to={link.to}
-                      className={`block py-3 font-serif text-4xl transition-colors ${
+                      className={`block py-2.5 font-serif text-3xl transition-colors touch-manipulation sm:text-4xl ${
                         isActive(link.to) ? 'text-terracotta' : 'text-ink hover:text-terracotta'
                       }`}
                     >
@@ -154,8 +155,14 @@ export function Navbar() {
                   </motion.li>
                 ))}
               </ul>
+              <Link
+                to="/gallery"
+                className="mt-8 inline-flex w-full items-center justify-center border border-black/10 bg-white px-5 py-3.5 text-xs font-semibold tracking-[0.15em] text-black uppercase touch-manipulation sm:w-auto"
+              >
+                View Art
+              </Link>
             </div>
-            <div className="border-t border-ink/10 px-10 py-8">
+            <div className="border-t border-ink/10 px-6 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:px-10 sm:py-8">
               <p className="text-xs tracking-widest text-ink-soft uppercase">
                 Castellón, Spain
               </p>

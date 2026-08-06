@@ -17,17 +17,32 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section ref={ref} className="relative min-h-screen overflow-hidden bg-ink">
-      <div className="grid min-h-screen lg:grid-cols-[42%_58%]">
+    <section
+      ref={ref}
+      className="relative min-h-[100svh] overflow-hidden bg-ink lg:min-h-screen"
+    >
+      {/* Mobile: full-bleed painting behind text */}
+      <div className="absolute inset-0 lg:hidden">
+        <LazyImage
+          src={photos.floralCrownClean}
+          alt="Floral Crown painting by Viktoria Pidlypna"
+          className="h-full w-full scale-105 object-cover object-[70%_center]"
+          wrapperClassName="h-full w-full"
+        />
+        <div className="grain-overlay absolute inset-0" />
+        <div className="absolute inset-0 bg-linear-to-t from-ink via-ink/75 to-ink/35" />
+      </div>
+
+      <div className="relative grid min-h-[100svh] lg:min-h-screen lg:grid-cols-[42%_58%]">
         <motion.div
           style={{ y: textY, opacity }}
-          className="relative z-10 flex min-h-[45vh] flex-col justify-end px-8 pb-8 pt-16 md:min-h-[50vh] md:px-12 md:pb-10 md:pt-20 lg:min-h-screen lg:px-16 lg:pb-14 lg:pt-0"
+          className="relative z-10 flex min-h-[100svh] flex-col justify-end px-5 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-24 sm:px-8 sm:pb-10 md:px-12 md:pb-12 lg:min-h-screen lg:justify-end lg:px-16 lg:pb-14 lg:pt-0"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-[0.65rem] font-medium tracking-[0.4em] text-gold uppercase lg:mt-auto lg:pt-[18vh]"
+            className="max-w-[18rem] text-[0.6rem] font-medium tracking-[0.22em] text-gold uppercase sm:max-w-none sm:text-[0.65rem] sm:tracking-[0.35em] lg:mt-auto lg:pt-[18vh] lg:tracking-[0.4em]"
           >
             Contemporary Ukrainian Artist
           </motion.p>
@@ -36,19 +51,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="mt-12 text-5xl leading-[0.95] md:mt-14 lg:mt-16 md:text-6xl lg:text-7xl xl:text-8xl"
+            className="mt-6 text-[clamp(2.75rem,12vw,3.75rem)] leading-[0.95] sm:mt-10 sm:text-5xl md:mt-14 md:text-6xl lg:mt-16 lg:text-7xl xl:text-8xl"
           >
             <span className="name-viktoria block">Viktoria</span>
             <span className="name-pidlypna mt-1 block text-[0.92em]">Pidlypna</span>
           </motion.h1>
 
-          <HandLine variant="swirl" className="mt-8 w-40 text-gold/70" />
+          <HandLine variant="swirl" className="mt-5 w-28 text-gold/70 sm:mt-8 sm:w-40" />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="mt-8 max-w-sm text-base leading-relaxed text-cream/60 md:text-lg"
+            className="mt-5 max-w-[20rem] text-[0.95rem] leading-relaxed text-cream/70 sm:mt-8 sm:max-w-sm sm:text-base md:text-lg"
           >
             Living and creating in Spain — where Ukrainian tradition meets
             Mediterranean light
@@ -58,12 +73,12 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="mt-10 flex flex-wrap gap-3"
+            className="mt-7 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:flex-wrap"
           >
-            <Button to="/gallery" variant="gold">
+            <Button to="/gallery" variant="gold" className="w-full sm:w-auto">
               View Artwork
             </Button>
-            <Button to="/workshops" variant="secondary">
+            <Button to="/workshops" variant="secondary" className="w-full sm:w-auto">
               Workshops
             </Button>
           </motion.div>
@@ -78,7 +93,8 @@ export function Hero() {
           </motion.p>
         </motion.div>
 
-        <div className="relative min-h-[50vh] lg:min-h-screen">
+        {/* Desktop painting panel */}
+        <div className="relative hidden min-h-screen lg:block">
           <motion.div style={{ y: imageY }} className="absolute inset-0">
             <LazyImage
               src={photos.floralCrownClean}
@@ -87,14 +103,14 @@ export function Hero() {
               wrapperClassName="h-full w-full"
             />
             <div className="grain-overlay absolute inset-0" />
-            <div className="absolute inset-0 bg-ink/20 lg:bg-transparent lg:bg-linear-to-r lg:from-ink lg:via-ink/40 lg:to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-r from-ink via-ink/40 to-transparent" />
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            className="absolute bottom-8 left-8 hidden md:block lg:bottom-16 lg:left-auto lg:right-8"
+            className="absolute right-8 bottom-16"
           >
             <LinkCard to="/exhibitions" label="Upcoming" title="Roots & Horizons" />
           </motion.div>
