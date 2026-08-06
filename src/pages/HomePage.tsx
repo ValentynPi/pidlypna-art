@@ -36,10 +36,12 @@ export function HomePage() {
                 <span className="text-gold">&rdquo;</span>
               </blockquote>
               <HandLine variant="swirl" className="mt-8 w-32 text-terracotta" />
-              <p className="mt-6 font-serif text-sm leading-snug md:text-base">
-                <span className="italic text-gold">Viktoria</span>
+              <p className="mt-6 text-sm leading-snug md:text-base">
+                <span className="font-serif font-light italic tracking-[0.32em] text-gold uppercase">
+                  Viktoria
+                </span>
                 <br />
-                <span className="text-xl text-ink md:text-2xl">Pidlypna</span>
+                <span className="font-serif text-xl text-ink md:text-2xl">Pidlypna_Art</span>
               </p>
             </ScrollReveal>
           </div>
