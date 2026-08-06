@@ -8,7 +8,7 @@ export function ExhibitionsPage() {
     <>
       <PageMeta
         title="Exhibitions"
-        description="Past and upcoming exhibitions by Pidlypna_Art — Castellón, Madrid, Provence, Valencia, and beyond."
+        description="Past and upcoming exhibitions by Viktoria Pidlypna — Castellón, Madrid, Provence, Valencia, and beyond."
       />
 
       <PageHeader

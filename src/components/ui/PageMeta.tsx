@@ -6,7 +6,7 @@ interface PageMetaProps {
 }
 
 export function PageMeta({ title, description }: PageMetaProps) {
-  const fullTitle = `${title} — Pidlypna_Art`;
+  const fullTitle = `${title} — Viktoria Pidlypna`;
 
   return (
     <Helmet>

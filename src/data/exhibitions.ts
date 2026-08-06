@@ -52,7 +52,7 @@ export const exhibitions: Exhibition[] = [
     location: 'Community Arts Center, Valencia',
     dates: 'February 1 – March 1, 2025',
     description:
-      'A group exhibition featuring Ukrainian artists in Spain — Pidlypna_Art presented new works from the Ukrainian Motifs series alongside fellow creatives.',
+      'A group exhibition featuring Ukrainian artists in Spain — Viktoria Pidlypna presented new works from the Ukrainian Motifs series alongside fellow creatives.',
     image: photos.petrykivkaBlueGold,
     imageAlt: 'Petrykivka painting — Threads of Home exhibition',
     status: 'past',

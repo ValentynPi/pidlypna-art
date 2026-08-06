@@ -15,7 +15,7 @@ export const pressItems: PressItem[] = [
     publication: 'Castellón Cultural',
     date: 'July 2025',
     quote:
-      'A highlight of the Festival de las Artes — Pidlypna_Art\'s live painting drew crowds and sparked conversations about art as bridge between cultures.',
+      'A highlight of the Festival de las Artes — Viktoria Pidlypna\'s live painting drew crowds and sparked conversations about art as bridge between cultures.',
     link: '#',
     logoAlt: '[PLACEHOLDER] Castellón Cultural magazine logo',
   },
@@ -51,7 +51,7 @@ export const pressItems: PressItem[] = [
     publication: 'Art Workshop Spain',
     date: 'January 2026',
     quote:
-      'Students leave Pidlypna_Art workshops not just with a painting, but with a new way of seeing — teaching as generous as the art itself.',
+      'Students leave Viktoria Pidlypna workshops not just with a painting, but with a new way of seeing — teaching as generous as the art itself.',
     link: '#',
     logoAlt: '[PLACEHOLDER] Art Workshop Spain logo',
   },

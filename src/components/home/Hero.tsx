@@ -47,7 +47,7 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
             className="display-heading mt-4 text-5xl leading-[0.95] text-white md:text-6xl lg:text-7xl xl:text-8xl"
           >
-            Pidlypna_Art
+            Pidlypna
           </motion.h1>
 
           <HandLine variant="swirl" className="mt-8 w-40 text-gold/70" />
@@ -90,7 +90,7 @@ export function Hero() {
           <motion.div style={{ y: imageY }} className="absolute inset-0">
             <LazyImage
               src={photos.floralCrownClean}
-              alt="Floral Crown painting by Pidlypna_Art"
+              alt="Floral Crown painting by Viktoria Pidlypna"
               className="scale-105 object-cover"
               wrapperClassName="h-full w-full"
             />
