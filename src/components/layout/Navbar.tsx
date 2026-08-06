@@ -100,8 +100,8 @@ export function Navbar() {
           to="/gallery"
           className={`hidden text-xs tracking-[0.15em] uppercase transition-colors lg:block ${
             onDarkHero && !scrolled
-              ? 'text-gold hover:text-gold/80'
-              : 'text-terracotta hover:text-terracotta-light'
+              ? 'bg-cream/95 px-4 py-2 text-ink hover:bg-cream hover:text-ink/80'
+              : 'text-ink hover:text-ink/70'
           }`}
         >
           View Art

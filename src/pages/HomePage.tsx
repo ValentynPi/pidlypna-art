@@ -37,9 +37,9 @@ export function HomePage() {
               </blockquote>
               <HandLine variant="swirl" className="mt-8 w-32 text-terracotta" />
               <p className="mt-6 font-serif text-sm leading-snug md:text-base">
-                <span className="text-ink">Viktoria</span>
+                <span className="italic text-gold">Viktoria</span>
                 <br />
-                <span className="italic text-gold">Pidlypna</span>
+                <span className="text-ink">Pidlypna_Art</span>
               </p>
             </ScrollReveal>
           </div>
