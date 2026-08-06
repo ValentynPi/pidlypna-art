@@ -38,9 +38,8 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
             className="mt-12 text-5xl leading-[0.95] md:mt-14 lg:mt-16 md:text-6xl lg:text-7xl xl:text-8xl"
           >
-            <span className="name-viktoria text-white">Viktoria</span>
-            <br />
-            <span className="name-pidlypna text-gold">Pidlypna</span>
+            <span className="name-viktoria block">Viktoria</span>
+            <span className="name-pidlypna mt-1 block text-[0.92em]">Pidlypna</span>
           </motion.h1>
 
           <HandLine variant="swirl" className="mt-8 w-40 text-gold/70" />
