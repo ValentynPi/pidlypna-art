@@ -76,27 +76,28 @@ const ALBUMS = [
       {
         slug: 'soy-fuerte',
         title: 'Soy Fuerte',
-        files: ['PXL_20260716_163536870.jpg', 'PXL_20260716_163540648.jpg'],
+        files: [
+          'PXL_20260716_163536870.jpg',
+          'PXL_20260716_163540648.jpg',
+          'PXL_20260716_163718888.jpg',
+        ],
         materials: 'Acrylic',
         technique: 'Text affirmation seascape',
         description:
           'Stylized blue waves carry the words Soy Fuerte — strength written into the sea.',
       },
       {
-        slug: 'affirmation-i',
-        title: 'Affirmation I',
-        files: ['PXL_20260716_163718888.jpg', 'PXL_20260716_163930583.jpg'],
+        slug: 'shine-love-create',
+        title: 'Shine · Love · Create',
+        files: [
+          'PXL_20260716_163930583.jpg',
+          'PXL_20260716_164005846.jpg',
+          'PXL_20260716_164057293.jpg',
+        ],
         materials: 'Mixed media',
         technique: 'Word and image composition',
-        description: 'An affirmation piece where text and color reinforce a daily intention.',
-      },
-      {
-        slug: 'affirmation-ii',
-        title: 'Affirmation II',
-        files: ['PXL_20260716_164005846.jpg', 'PXL_20260716_164057293.jpg'],
-        materials: 'Mixed media',
-        technique: 'Word and image composition',
-        description: 'Bold lettering and painterly ground — a message meant to be lived with.',
+        description:
+          'Сяй · Кохай · Твори — shine, love, create — written into soft pink light.',
       },
     ],
   },
