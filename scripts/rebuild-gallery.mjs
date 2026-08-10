@@ -17,45 +17,52 @@ const ALBUMS = [
       'Compositions that speak through color, gesture, and form — atmospheres beyond the literal.',
     paintings: [
       {
-        slug: 'moonlit-horizon',
-        title: 'Moonlit Horizon',
-        files: ['PXL_20260717_130157124.jpg', 'PXL_20260717_125842654.jpg'],
+        slug: 'mist-horizon',
+        title: 'Mist Horizon',
+        files: [
+          'PXL_20260717_130157124.jpg',
+          'PXL_20260717_125953386.jpg',
+          'PXL_20260717_125957692.jpg',
+        ],
         materials: 'Oil',
         technique: 'Atmospheric abstract landscape',
         description:
-          'An abstract landscape where moon, horizon, and blue tones meet in quiet balance.',
+          'Cream sky over cool blue reflection, divided by a dark textured horizon.',
       },
       {
-        slug: 'horizon-line',
-        title: 'Horizon Line',
-        files: ['photo_2026-08-05_13-57-56.jpg', 'photo_2026-08-05_13-58-02.jpg'],
-        materials: 'Mixed media',
-        technique: 'Textured abstract',
+        slug: 'ember-reflection',
+        title: 'Ember Reflection',
+        files: [
+          'PXL_20260717_125842654.jpg',
+          'PXL_20260717_125857999.jpg',
+          'PXL_20260717_125904227.jpg',
+        ],
+        materials: 'Oil',
+        technique: 'Abstract sunset landscape',
         description:
-          'Terracotta texture meets cool blue along a single horizon — grounded yet open.',
-      },
-      {
-        slug: 'inner-circle',
-        title: 'Inner Circle',
-        files: ['photo_2026-08-05_13-58-09.jpg', 'photo_2026-08-05_13-58-35.jpg'],
-        materials: 'Mixed media',
-        technique: 'Textured abstract',
-        description:
-          'A circular sun motif inside a textured landscape — center as shelter and light.',
+          'Warm peach sky and a red reflection on dark water, with a bright yellow accent.',
       },
       {
         slug: 'city-light',
         title: 'City Light',
         files: [
-          'PXL_20260717_125857999.jpg',
-          'PXL_20260717_125904227.jpg',
-          'PXL_20260717_125953386.jpg',
-          'PXL_20260717_125957692.jpg',
+          'photo_2026-08-05_13-57-56.jpg',
+          'photo_2026-08-05_13-58-02.jpg',
+          'photo_2026-08-05_13-58-09.jpg',
         ],
         materials: 'Oil',
         technique: 'Abstract cityscape',
         description:
           'An abstracted city skyline glowing from within — warm light rising through dark towers.',
+      },
+      {
+        slug: 'day-and-night',
+        title: 'Day & Night',
+        files: ['photo_2026-08-05_13-58-35.jpg'],
+        materials: 'Mixed media',
+        technique: 'Split-tone tree composition',
+        description:
+          'A single tree divided between warm gold light and cool darkness — two worlds in one trunk.',
       },
     ],
   },
@@ -112,7 +119,11 @@ const ALBUMS = [
       {
         slug: 'soft-terrain',
         title: 'Soft Terrain',
-        files: ['PXL_20260716_165148176.jpg', 'PXL_20260716_165156572.jpg'],
+        files: [
+          'PXL_20260716_165022619.jpg',
+          'PXL_20260716_165148176.jpg',
+          'PXL_20260716_165156572.jpg',
+        ],
         materials: 'Alcohol ink',
         technique: 'Fluid landscape',
         description:
@@ -135,7 +146,6 @@ const ALBUMS = [
         slug: 'ink-study-i',
         title: 'Ink Study I',
         files: [
-          'PXL_20260716_165022619.jpg',
           'PXL_20260716_165219782.jpg',
           'PXL_20260716_165227970.jpg',
           'PXL_20260716_165233419.jpg',
@@ -301,7 +311,6 @@ const ALBUMS = [
           'PXL_20260716_172254485.jpg',
           'PXL_20260716_172242034.jpg',
           'PXL_20260716_172248816.jpg',
-          'PXL_20260716_172137396.jpg',
         ],
         materials: 'Acrylic',
         technique: 'Petrykivka decorative painting',
@@ -379,7 +388,13 @@ const ALBUMS = [
       {
         slug: 'snow-peaks',
         title: 'Snow Peaks',
-        files: ['PXL_20260717_124836905.MP.jpg', 'PXL_20260717_124846406.jpg'],
+        files: [
+          'PXL_20260717_124836905.MP.jpg',
+          'PXL_20260717_124846406.jpg',
+          'PXL_20260717_124740342.jpg',
+          'PXL_20260717_124746757.jpg',
+          'PXL_20260717_124804479.jpg',
+        ],
         materials: 'Oil',
         technique: 'Mountain landscape',
         description:
@@ -400,18 +415,6 @@ const ALBUMS = [
           'A golden hot air balloon over a misty coastal castle — travel as dream.',
       },
       {
-        slug: 'plein-air-i',
-        title: 'Plein Air I',
-        files: [
-          'PXL_20260717_124740342.jpg',
-          'PXL_20260717_124746757.jpg',
-          'PXL_20260717_124804479.jpg',
-        ],
-        materials: 'Oil',
-        technique: 'Plein air landscape',
-        description: 'Painted outdoors — light caught before it shifts.',
-      },
-      {
         slug: 'plein-air-ii',
         title: 'Plein Air II',
         files: [
@@ -424,16 +427,16 @@ const ALBUMS = [
         description: 'A landscape observed on location — color as immediate response.',
       },
       {
-        slug: 'coastal-study',
-        title: 'Coastal Study',
+        slug: 'lavender-fields',
+        title: 'Lavender Fields',
         files: [
+          'PXL_20260731_155903388.jpg',
           'PXL_20260731_155321152.jpg',
           'PXL_20260731_155442934.jpg',
-          'PXL_20260731_155903388.jpg',
         ],
         materials: 'Oil',
-        technique: 'Coastal plein air',
-        description: 'Sea, sky, and shore painted in the open air.',
+        technique: 'Plein air landscape',
+        description: 'Purple lavender rows leading toward a golden field and distant mountains.',
       },
     ],
   },
@@ -482,6 +485,10 @@ const ALBUMS = [
           'PXL_20260717_133109716.jpg',
           'PXL_20260717_133141098.jpg',
           'PXL_20260717_133148703.jpg',
+          'PXL_20260717_132013708.jpg',
+          'PXL_20260717_132016834.jpg',
+          'PXL_20260717_132035832.jpg',
+          'PXL_20260717_132052011.jpg',
         ],
         materials: 'Mixed media, metallic gold',
         technique: 'Textured diptych',
@@ -504,20 +511,6 @@ const ALBUMS = [
         technique: 'Textured abstract composition',
         description:
           'Textured metallic gold arcs crossing clean white space — quiet architecture of light.',
-      },
-      {
-        slug: 'sunset-reflection',
-        title: 'Sunset Reflection',
-        files: [
-          'PXL_20260717_132013708.jpg',
-          'PXL_20260717_132016834.jpg',
-          'PXL_20260717_132035832.jpg',
-          'PXL_20260717_132052011.jpg',
-        ],
-        materials: 'Oil',
-        technique: 'Impasto seascape',
-        description:
-          'Turquoise water under a fiery horizon — Mediterranean light built in thick paint.',
       },
     ],
   },
@@ -548,6 +541,11 @@ const ALBUMS = [
   },
 ];
 
+/** Files kept for About/Workshops legacy refs but not as gallery painting views */
+const EXTRA_FILES = {
+  Petrykivka: ['PXL_20260716_172137396.jpg'], // studio shot of two paintings together
+};
+
 function slugify(s) {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
@@ -572,6 +570,9 @@ const allAssigned = new Set();
 for (const album of ALBUMS) {
   for (const p of album.paintings) {
     for (const f of p.files) allAssigned.add(`${album.folder}/${f}`);
+  }
+  for (const f of EXTRA_FILES[album.folder] ?? []) {
+    allAssigned.add(`${album.folder}/${f}`);
   }
 }
 
@@ -621,6 +622,14 @@ for (const album of ALBUMS) {
       imageKeys.push(key);
     }
 
+    // Ensure EXTRA_FILES stay available for legacy page refs
+    for (const extra of EXTRA_FILES[album.folder] ?? []) {
+      const input = path.join(folderPath, extra);
+      const output = path.join(DST, extra);
+      if (!fs.existsSync(input)) throw new Error(`Missing extra: ${input}`);
+      if (!fs.existsSync(output)) await compress(input, output);
+    }
+
     const coverKey = imageKeys[0];
     const altKeys = imageKeys.slice(1);
 
@@ -647,24 +656,27 @@ const legacyPhotos = {
   workshopDetail: 'PXL_20260717_124740342.jpg',
   workshopDetail2: 'PXL_20260717_125711965.jpg',
   petrykivkaPair: 'PXL_20260716_172137396.jpg',
-  petrykivkaBurgundy: 'PXL_20260716_164638581.jpg',
-  petrykivkaBurgundyAlt: 'PXL_20260716_164643661.jpg',
-  petrykivkaBlueGold: 'PXL_20260716_164912575.jpg',
-  petrykivkaBlueSmall: 'PXL_20260716_172254485.jpg',
-  petrykivkaBlueRed: 'PXL_20260716_172319507.jpg',
-  goldCircleDiptych: 'PXL_20260717_133109716.jpg',
-  goldArcs: 'PXL_20260717_132516436.jpg',
-  inkCircle: 'PXL_20260716_171356057.jpg',
-  heritageFace: 'PXL_20260717_125059587.jpg',
-  sunsetNew: 'PXL_20260717_125842654.jpg',
-  inkPastelLandscape: 'PXL_20260716_171921324.jpg',
-  soyFuerte: 'PXL_20260716_163536870.jpg',
-  tigerBloom: 'InShot_20260717_163612621.jpg',
-  floralCrownClean: 'InShot_20260717_155018888.jpg',
-  snowPeaks: 'PXL_20260717_124836905.MP.jpg',
-  balloonCastle: 'PXL_20260717_131259051.jpg',
-  thoughts: 'PXL_20260717_130624498.jpg',
-  colorfulPortraitNew: 'PXL_20260717_124415399.jpg',
+  petrykivkaBurgundy: 'petrykivka-kalyna-night-1.jpg',
+  petrykivkaBurgundyAlt: 'petrykivka-kalyna-night-2.jpg',
+  petrykivkaBlueGold: 'petrykivka-blue-bloom-1.jpg',
+  petrykivkaBlueSmall: 'petrykivka-blue-gold-1.jpg',
+  petrykivkaBlueRed: 'petrykivka-teal-peonies-1.jpg',
+  goldCircleDiptych: 'textured-and-light-halo-1.jpg',
+  goldArcs: 'textured-and-light-gold-arcs-1.jpg',
+  inkCircle: 'alcohol-ink-art-ink-circle-1.jpg',
+  heritageFace: 'ukrainian-symbolism-heritage-1.jpg',
+  sunsetNew: 'abstract-art-ember-reflection-1.jpg',
+  inkPastelLandscape: 'alcohol-ink-art-pastel-hills-1.jpg',
+  soyFuerte: 'affirmation-collection-soy-fuerte-1.jpg',
+  tigerBloom: 'female-portraits-tiger-bloom-1.jpg',
+  floralCrownClean: 'female-portraits-floral-crown-1.jpg',
+  snowPeaks: 'plain-air-collection-snow-peaks-1.jpg',
+  balloonCastle: 'plain-air-collection-golden-balloon-1.jpg',
+  thoughts: 'pop-art-thoughts-1.jpg',
+  colorfulPortraitNew: 'pop-art-vibrant-spirit-1.jpg',
+  treeStudio: 'photo_2026-07-08_12-34-21.jpg',
+  workshopDetail: 'plain-air-collection-snow-peaks-3.jpg',
+  workshopDetail2: 'inspired-by-nature-nature-study-1.jpg',
 };
 
 let imagesTs = `/** Local photos from /public/images — mapped to site sections */
