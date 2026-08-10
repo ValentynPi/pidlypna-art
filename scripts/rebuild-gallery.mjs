@@ -111,7 +111,11 @@ const ALBUMS = [
       {
         slug: 'pastel-hills',
         title: 'Pastel Hills',
-        files: ['PXL_20260716_171921324.jpg', 'PXL_20260716_171945148.jpg'],
+        files: [
+          'PXL_20260716_171921324.jpg',
+          'PXL_20260716_171945148.jpg',
+          'PXL_20260716_171951859.jpg',
+        ],
         materials: 'Alcohol ink',
         technique: 'Fluid landscape',
         description:
@@ -154,14 +158,6 @@ const ALBUMS = [
         materials: 'Alcohol ink',
         technique: 'Fluid abstract',
         description: 'Ink allowed to bloom and settle — color finding its own edges.',
-      },
-      {
-        slug: 'ink-study-ii',
-        title: 'Ink Study II',
-        files: ['PXL_20260716_171951859.jpg'],
-        materials: 'Alcohol ink',
-        technique: 'Fluid abstract',
-        description: 'A small fluid study in layered translucent color.',
       },
     ],
   },
