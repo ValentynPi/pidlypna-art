@@ -194,19 +194,17 @@ const ALBUMS = [
       {
         slug: 'tiger-bloom',
         title: 'Tiger Bloom',
-        files: ['InShot_20260717_163612621.jpg', 'PXL_20260717_125449352.jpg'],
+        files: [
+          'InShot_20260717_163612621.jpg',
+          'PXL_20260717_125449352.jpg',
+          'PXL_20260717_125230747.jpg',
+          'PXL_20260717_125235541.jpg',
+          'PXL_20260717_125251928.jpg',
+        ],
         materials: 'Acrylic',
         technique: 'Surrealist portrait',
         description:
           'A tiger and woman joined by pink peonies — wildness and tenderness in one frame.',
-      },
-      {
-        slug: 'portrait-study',
-        title: 'Portrait Study',
-        files: ['PXL_20260717_125230747.jpg', 'PXL_20260717_125235541.jpg', 'PXL_20260717_125251928.jpg'],
-        materials: 'Oil',
-        technique: 'Expressive portrait',
-        description: 'An intimate portrait study in layered color and light.',
       },
     ],
   },
