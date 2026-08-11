@@ -31,26 +31,26 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.6, delay: index * 0.06 }}
               onClick={() => setLightboxIndex(index)}
-              className="group relative aspect-[4/5] cursor-pointer overflow-hidden bg-ink text-left"
+              className="group relative aspect-[4/5] cursor-pointer overflow-hidden bg-ink text-left touch-manipulation"
             >
               <LazyImage
                 src={artwork.image}
                 alt={artwork.imageAlt}
                 className="transition-transform duration-1000 ease-out group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-ink/0 transition-all duration-500 group-hover:bg-ink/35" />
-              <div className="absolute top-4 left-4 font-serif text-3xl text-cream/20">
+              <div className="absolute inset-0 bg-ink/25 transition-all duration-500 sm:bg-ink/0 sm:group-hover:bg-ink/35" />
+              <div className="absolute top-3 left-3 font-serif text-2xl text-cream/25 sm:top-4 sm:left-4 sm:text-3xl sm:text-cream/20">
                 {String(index + 1).padStart(2, '0')}
               </div>
               {viewCount > 1 && (
-                <div className="absolute top-4 right-4 border border-cream/30 bg-ink/70 px-2 py-1 text-[0.6rem] tracking-[0.15em] text-cream/80 uppercase backdrop-blur-sm">
+                <div className="absolute top-3 right-3 border border-cream/30 bg-ink/70 px-2 py-1 text-[0.6rem] tracking-[0.15em] text-cream/80 uppercase backdrop-blur-sm sm:top-4 sm:right-4">
                   {viewCount} views
                 </div>
               )}
-              <div className="absolute right-0 bottom-0 left-0 translate-y-full bg-ink/85 p-5 backdrop-blur-sm transition-transform duration-500 group-hover:translate-y-0">
-                <p className="font-serif text-xl text-cream">{artwork.title}</p>
-                <p className="mt-1 text-xs tracking-wider text-cream/50 uppercase">
-                  {artwork.materials} · {artwork.dimensions}
+              <div className="absolute right-0 bottom-0 left-0 translate-y-0 bg-ink/80 p-4 backdrop-blur-sm transition-transform duration-500 sm:translate-y-full sm:p-5 sm:group-hover:translate-y-0">
+                <p className="font-serif text-lg text-cream sm:text-xl">{artwork.title}</p>
+                <p className="mt-1 text-[0.65rem] tracking-wider text-cream/50 uppercase sm:text-xs">
+                  {artwork.materials}
                   {viewCount > 1 ? ` · ${viewCount} angles` : ''}
                 </p>
               </div>
