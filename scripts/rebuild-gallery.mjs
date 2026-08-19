@@ -587,6 +587,19 @@ const ALBUMS = [
         description:
           'Textured metallic gold arcs crossing clean white space — quiet architecture of light.',
       },
+      {
+        slug: 'rose-cake',
+        title: 'Rose Cake',
+        files: [
+          'PXL_20260811_162246145.jpg',
+          'PXL_20260811_162304560.jpg',
+          'PXL_20260811_162259607.jpg',
+        ],
+        materials: 'Acrylic, heavy impasto',
+        technique: 'Textured still life',
+        description:
+          'A peach cake with roses and strawberries — frosting and petals built in thick light.',
+      },
     ],
   },
   {
