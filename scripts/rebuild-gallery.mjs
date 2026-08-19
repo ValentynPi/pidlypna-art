@@ -565,6 +565,19 @@ const ALBUMS = [
         technique: 'Plein air landscape',
         description: 'Purple lavender rows leading toward a golden field and distant mountains.',
       },
+      {
+        slug: 'blossom-path',
+        title: 'Blossom Path',
+        files: [
+          'PXL_20260811_150202033.jpg',
+          'PXL_20260811_150218912.jpg',
+          'PXL_20260811_150227186.jpg',
+        ],
+        materials: 'Oil',
+        technique: 'Plein air landscape',
+        description:
+          'A path through blossoming trees toward distant mountains — spring light in rows.',
+      },
     ],
   },
   {
