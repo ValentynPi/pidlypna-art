@@ -1,0 +1,20 @@
+---
+description: After finishing site/content work, always commit and push to main
+alwaysApply: true
+---
+
+# Always commit and push
+
+When gallery, content, or code work for this site is finished and verified (build OK when substantial):
+
+1. Commit the relevant files (do not wait to be asked).
+2. Push to `main` so GitHub Pages deploys:
+
+```powershell
+cd "d:\Sandbox\Paint web site 2.0"
+git push origin main
+```
+
+3. Share the live URL: https://valentynpi.github.io/pidlypna-art/
+
+Follow the project's git safety protocol (no force push, no amend of pushed commits, no secrets). Do not deploy to Vercel.

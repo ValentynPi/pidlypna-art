@@ -159,6 +159,35 @@ const ALBUMS = [
         technique: 'Fluid abstract',
         description: 'Ink allowed to bloom and settle — color finding its own edges.',
       },
+      {
+        slug: 'blush-horizon',
+        title: 'Blush Horizon',
+        files: [
+          'PXL_20260811_161422840.jpg',
+          'PXL_20260811_161410658.jpg',
+          'PXL_20260811_161434365.jpg',
+          'PXL_20260811_161400739.jpg',
+          'PXL_20260811_161459182.jpg',
+        ],
+        materials: 'Alcohol ink',
+        technique: 'Circular fluid landscape',
+        description:
+          'A blush sky over layered olive and charcoal hills — a circular landscape in flowing ink.',
+      },
+      {
+        slug: 'lavender-tide',
+        title: 'Lavender Tide',
+        files: [
+          'PXL_20260811_160336688.jpg',
+          'PXL_20260811_160519215.jpg',
+          'PXL_20260811_160251141.jpg',
+          'PXL_20260811_160507391.jpg',
+        ],
+        materials: 'Alcohol ink',
+        technique: 'Circular fluid composition',
+        description:
+          'Dusty rose and sky blue flowing through a circular field — ink finding its own veins.',
+      },
     ],
   },
   {
