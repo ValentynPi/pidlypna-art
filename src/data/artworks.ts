@@ -516,6 +516,28 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'petrykivka-04',
+    title: 'Golden Petals',
+    year: 2025,
+    dimensions: 'Contact for dimensions',
+    materials: 'Acrylic',
+    technique: 'Petrykivka decorative painting',
+    surface: 'Canvas',
+    framing: 'Unframed',
+    signed: true,
+    certificateOfAuthenticity: true,
+    availability: 'Available',
+    description: 'Gold petal strokes open among blue leaves and berry trails — Ukraine’s colors in Petrykivka rhythm.',
+    image: photos.petrykivka_golden_petals_1,
+    imageAlt: 'Golden Petals — front view',
+    images: [
+      { src: photos.petrykivka_golden_petals_2, alt: 'Golden Petals — alternate view' },
+      { src: photos.petrykivka_golden_petals_3, alt: 'Golden Petals — alternate view' },
+    ],
+    collectionId: 'petrykivka',
+    featured: true,
+  },
+  {
+    id: 'petrykivka-05',
     title: 'Teal Peonies',
     year: 2025,
     dimensions: 'Contact for dimensions',
@@ -538,7 +560,7 @@ export const artworks: Artwork[] = [
     featured: true,
   },
   {
-    id: 'petrykivka-05',
+    id: 'petrykivka-06',
     title: 'Red Berry Vine',
     year: 2025,
     dimensions: 'Contact for dimensions',
@@ -556,7 +578,7 @@ export const artworks: Artwork[] = [
     featured: true,
   },
   {
-    id: 'petrykivka-06',
+    id: 'petrykivka-07',
     title: 'Garden Path',
     year: 2025,
     dimensions: 'Contact for dimensions',
@@ -574,7 +596,7 @@ export const artworks: Artwork[] = [
     featured: true,
   },
   {
-    id: 'petrykivka-07',
+    id: 'petrykivka-08',
     title: 'Firebird',
     year: 2025,
     dimensions: 'Contact for dimensions',
@@ -592,7 +614,7 @@ export const artworks: Artwork[] = [
     featured: true,
   },
   {
-    id: 'petrykivka-08',
+    id: 'petrykivka-09',
     title: 'Flame Sprig',
     year: 2025,
     dimensions: 'Contact for dimensions',
@@ -610,7 +632,7 @@ export const artworks: Artwork[] = [
     featured: true,
   },
   {
-    id: 'petrykivka-09',
+    id: 'petrykivka-10',
     title: 'Spiral Garden',
     year: 2025,
     dimensions: 'Contact for dimensions',

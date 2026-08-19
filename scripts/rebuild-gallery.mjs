@@ -367,6 +367,19 @@ const ALBUMS = [
           'A small floral sprig in blue and gold — intimate, deliberate, almost calligraphic.',
       },
       {
+        slug: 'golden-petals',
+        title: 'Golden Petals',
+        files: [
+          'PXL_20260811_161830752.jpg',
+          'PXL_20260811_161836664.MP.jpg',
+          'PXL_20260811_161845497.jpg',
+        ],
+        materials: 'Acrylic',
+        technique: 'Petrykivka decorative painting',
+        description:
+          'Gold petal strokes open among blue leaves and berry trails — Ukraine’s colors in Petrykivka rhythm.',
+      },
+      {
         slug: 'teal-peonies',
         title: 'Teal Peonies',
         files: [
