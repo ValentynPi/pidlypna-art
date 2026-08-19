@@ -321,6 +321,33 @@ const ALBUMS = [
     ],
   },
   {
+    folder: 'Inspired by Places',
+    id: 'inspired-by-places',
+    name: 'Inspired by Places',
+    intro:
+      'Landmarks remembered in paint — cities, coasts, and journeys translated into atmosphere.',
+    paintings: [
+      {
+        slug: 'golden-balloon',
+        title: 'Golden Balloon',
+        files: [
+          'PXL_20260811_155443658.jpg',
+          'PXL_20260811_154408691.jpg',
+          'PXL_20260811_154448598.jpg',
+          'PXL_20260811_155220631.jpg',
+          'PXL_20260717_131259051.jpg',
+          'PXL_20260717_131325300.jpg',
+          'PXL_20260717_131326962.jpg',
+          'PXL_20260717_131340973.jpg',
+        ],
+        materials: 'Mixed media, metallic gold',
+        technique: 'Imaginative landscape',
+        description:
+          'A golden hot air balloon over Mont-Saint-Michel — travel held as dream and memory.',
+      },
+    ],
+  },
+  {
     folder: 'Petrykivka',
     id: 'petrykivka',
     name: 'Petrykivka',
@@ -463,20 +490,6 @@ const ALBUMS = [
           'Snow-capped peaks under a pale blue sky — distance made clear and calm.',
       },
       {
-        slug: 'golden-balloon',
-        title: 'Golden Balloon',
-        files: [
-          'PXL_20260717_131259051.jpg',
-          'PXL_20260717_131325300.jpg',
-          'PXL_20260717_131326962.jpg',
-          'PXL_20260717_131340973.jpg',
-        ],
-        materials: 'Mixed media',
-        technique: 'Imaginative landscape',
-        description:
-          'A golden hot air balloon over a misty coastal castle — travel as dream.',
-      },
-      {
         slug: 'plein-air-ii',
         title: 'Plein Air II',
         files: [
@@ -606,6 +619,12 @@ const ALBUMS = [
 /** Files kept for About/Workshops legacy refs but not as gallery painting views */
 const EXTRA_FILES = {
   Petrykivka: ['PXL_20260716_172137396.jpg'], // studio shot of two paintings together
+  'Plain Air Collection': [
+    'PXL_20260717_131259051.jpg',
+    'PXL_20260717_131325300.jpg',
+    'PXL_20260717_131326962.jpg',
+    'PXL_20260717_131340973.jpg',
+  ],
 };
 
 function slugify(s) {
@@ -733,7 +752,7 @@ const legacyPhotos = {
   tigerBloom: 'female-portraits-tiger-bloom-1.jpg',
   floralCrownClean: 'female-portraits-floral-crown-1.jpg',
   snowPeaks: 'plain-air-collection-snow-peaks-1.jpg',
-  balloonCastle: 'plain-air-collection-golden-balloon-1.jpg',
+  balloonCastle: 'inspired-by-places-golden-balloon-1.jpg',
   thoughts: 'pop-art-thoughts-1.jpg',
   colorfulPortraitNew: 'pop-art-vibrant-spirit-1.jpg',
   treeStudio: 'photo_2026-07-08_12-34-21.jpg',

@@ -51,6 +51,14 @@ export const collections: Collection[] = [
     intro: 'Landscapes, seas, and skies observed with feeling — nature translated into color and light.',
   },
   {
+    id: 'inspired-by-places',
+    name: 'Inspired by Places',
+    slug: 'inspired-by-places',
+    coverImage: photos.inspired_by_places_cover,
+    coverAlt: 'Inspired by Places collection cover',
+    intro: 'Landmarks remembered in paint — cities, coasts, and journeys translated into atmosphere.',
+  },
+  {
     id: 'petrykivka',
     name: 'Petrykivka',
     slug: 'petrykivka',
