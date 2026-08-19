@@ -64,6 +64,45 @@ const ALBUMS = [
         description:
           'A single tree divided between warm gold light and cool darkness — two worlds in one trunk.',
       },
+      {
+        slug: 'patina-horizon',
+        title: 'Patina Horizon',
+        files: [
+          'PXL_20260811_154140472.jpg',
+          'PXL_20260811_154132023.jpg',
+          'PXL_20260811_154154572.jpg',
+        ],
+        materials: 'Mixed media, metallic copper',
+        technique: 'Textured abstract landscape',
+        description:
+          'A copper ridge between charcoal sky and teal water — horizon as metal and light.',
+      },
+      {
+        slug: 'soft-current',
+        title: 'Soft Current',
+        files: [
+          'PXL_20260811_153724230.jpg',
+          'PXL_20260811_153731909.jpg',
+          'PXL_20260811_153741565.jpg',
+        ],
+        materials: 'Acrylic',
+        technique: 'Gestural abstract',
+        description:
+          'Mint, rose, and white in airy strokes — a current of color across the canvas.',
+      },
+      {
+        slug: 'vertical-light',
+        title: 'Vertical Light',
+        files: [
+          'PXL_20260811_142814227.jpg',
+          'PXL_20260811_142821787.jpg',
+          'PXL_20260811_142827662.jpg',
+        ],
+        materials: 'Acrylic',
+        technique: 'Abstract vertical composition',
+        description:
+          'Blue, white, and earth tones rising in vertical strokes — light as architecture.',
+      },
     ],
   },
   {
