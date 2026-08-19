@@ -335,6 +335,19 @@ const ALBUMS = [
         description:
           'White lilacs in a glass vase against deep burgundy — perfume translated into paint.',
       },
+      {
+        slug: 'night-bouquet',
+        title: 'Night Bouquet',
+        files: [
+          'PXL_20260811_144052988.jpg',
+          'PXL_20260811_144102619.jpg',
+          'PXL_20260811_144200632.jpg',
+        ],
+        materials: 'Oil',
+        technique: 'Textured floral still life',
+        description:
+          'A mixed bouquet in thick paint against dark burgundy — light catching petals in shadow.',
+      },
     ],
   },
   {
