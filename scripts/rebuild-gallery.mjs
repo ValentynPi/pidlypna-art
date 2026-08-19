@@ -619,12 +619,6 @@ const ALBUMS = [
 /** Files kept for About/Workshops legacy refs but not as gallery painting views */
 const EXTRA_FILES = {
   Petrykivka: ['PXL_20260716_172137396.jpg'], // studio shot of two paintings together
-  'Plain Air Collection': [
-    'PXL_20260717_131259051.jpg',
-    'PXL_20260717_131325300.jpg',
-    'PXL_20260717_131326962.jpg',
-    'PXL_20260717_131340973.jpg',
-  ],
 };
 
 function slugify(s) {
