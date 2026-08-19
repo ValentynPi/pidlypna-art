@@ -77,6 +77,9 @@ const ALBUMS = [
         slug: 'soy-fuerte',
         title: 'Soy Fuerte',
         files: [
+          'PXL_20260811_162142153.jpg',
+          'PXL_20260811_162157218.jpg',
+          'PXL_20260811_162219270.jpg',
           'PXL_20260716_163536870.jpg',
           'PXL_20260716_163540648.jpg',
           'PXL_20260716_163718888.jpg',
@@ -98,6 +101,28 @@ const ALBUMS = [
         technique: 'Word and image composition',
         description:
           'Сяй · Кохай · Твори — shine, love, create — written into soft pink light.',
+      },
+      {
+        slug: 'joy',
+        title: 'Joy',
+        files: [
+          'PXL_20260811_161953886.jpg',
+          'PXL_20260811_162002033.jpg',
+          'PXL_20260811_162010779.jpg',
+        ],
+        materials: 'Acrylic',
+        technique: 'Text affirmation skyscape',
+        description:
+          'Joy written into a soft blue sky over lavender and peach clouds.',
+      },
+      {
+        slug: 'bloom-anyway',
+        title: 'Bloom Anyway',
+        files: ['PXL_20260811_162036676.jpg'],
+        materials: 'Acrylic',
+        technique: 'Text affirmation abstract',
+        description:
+          'Bloom anyway — pink words across blue and plum swirling light.',
       },
     ],
   },
