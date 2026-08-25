@@ -2,7 +2,15 @@ import { useEffect, useCallback, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Artwork } from '../../types';
-import { getArtworkImages, SHIPPING_NOTE, CARE_INSTRUCTIONS } from '../../data/artworks';
+import {
+  getArtworkImages,
+  listingMaterials,
+  listingWidth,
+  listingHeight,
+  listingSizeCm,
+  SHIPPING_NOTE,
+  CARE_INSTRUCTIONS,
+} from '../../data/artworks';
 import { getCollectionById } from '../../data/collections';
 import { LazyImage } from '../ui/LazyImage';
 
@@ -74,15 +82,16 @@ export function Lightbox({
   const isAvailable = artwork.availability === 'Available';
 
   const primarySpecs = [
-    { label: 'Materials', value: artwork.materials },
-    { label: 'Dimensions', value: artwork.dimensions },
+    { label: 'Materials', value: listingMaterials(artwork) },
+    { label: 'Width', value: listingWidth(artwork) },
+    { label: 'Height', value: listingHeight(artwork) },
     { label: 'Availability', value: artwork.availability },
   ];
 
   const moreSpecs = [
     { label: 'Year', value: String(artwork.year) },
+    { label: 'Size', value: listingSizeCm(artwork) },
     { label: 'Technique', value: artwork.technique },
-    { label: 'Surface', value: artwork.surface },
     { label: 'Framing', value: artwork.framing },
     { label: 'Signed', value: artwork.signed ? 'Yes' : 'No' },
     {

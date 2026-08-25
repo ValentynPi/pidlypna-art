@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import type { Artwork } from '../../types';
-import { getArtworkImages } from '../../data/artworks';
+import { getArtworkImages, listingMaterials } from '../../data/artworks';
 import { LazyImage } from '../ui/LazyImage';
 import { Lightbox } from './Lightbox';
 
@@ -50,7 +50,7 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
               <div className="absolute right-0 bottom-0 left-0 translate-y-0 bg-ink/80 p-4 backdrop-blur-sm transition-transform duration-500 sm:translate-y-full sm:p-5 sm:group-hover:translate-y-0">
                 <p className="font-serif text-lg text-cream sm:text-xl">{artwork.title}</p>
                 <p className="mt-1 text-[0.65rem] tracking-wider text-cream/50 uppercase sm:text-xs">
-                  {artwork.materials}
+                  {listingMaterials(artwork)}
                   {viewCount > 1 ? ` · ${viewCount} angles` : ''}
                 </p>
               </div>

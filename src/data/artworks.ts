@@ -247,10 +247,10 @@ export const artworks: Artwork[] = [
     id: 'alcohol-ink-art-01',
     title: 'Pastel Hills',
     year: 2025,
-    dimensions: 'Contact for dimensions',
+    dimensions: '30 × 30 cm',
     materials: 'Alcohol ink',
     technique: 'Fluid landscape',
-    surface: 'Canvas',
+    surface: 'Panel',
     framing: 'Unframed',
     signed: true,
     certificateOfAuthenticity: true,
@@ -269,10 +269,10 @@ export const artworks: Artwork[] = [
     id: 'alcohol-ink-art-02',
     title: 'Soft Terrain',
     year: 2025,
-    dimensions: 'Contact for dimensions',
+    dimensions: '30 × 30 cm',
     materials: 'Alcohol ink',
     technique: 'Fluid landscape',
-    surface: 'Canvas',
+    surface: 'Panel',
     framing: 'Unframed',
     signed: true,
     certificateOfAuthenticity: true,
@@ -291,10 +291,10 @@ export const artworks: Artwork[] = [
     id: 'alcohol-ink-art-03',
     title: 'Ink Circle',
     year: 2025,
-    dimensions: 'Contact for dimensions',
+    dimensions: '30 × 30 cm',
     materials: 'Alcohol ink',
     technique: 'Circular fluid composition',
-    surface: 'Canvas',
+    surface: 'Panel',
     framing: 'Unframed',
     signed: true,
     certificateOfAuthenticity: true,
@@ -316,7 +316,7 @@ export const artworks: Artwork[] = [
     dimensions: 'Contact for dimensions',
     materials: 'Alcohol ink',
     technique: 'Fluid abstract',
-    surface: 'Canvas',
+    surface: 'Panel',
     framing: 'Unframed',
     signed: true,
     certificateOfAuthenticity: true,
@@ -338,7 +338,7 @@ export const artworks: Artwork[] = [
     dimensions: 'Contact for dimensions',
     materials: 'Alcohol ink',
     technique: 'Circular fluid landscape',
-    surface: 'Canvas',
+    surface: 'Panel',
     framing: 'Unframed',
     signed: true,
     certificateOfAuthenticity: true,
@@ -362,7 +362,7 @@ export const artworks: Artwork[] = [
     dimensions: 'Contact for dimensions',
     materials: 'Alcohol ink',
     technique: 'Circular fluid composition',
-    surface: 'Canvas',
+    surface: 'Panel',
     framing: 'Unframed',
     signed: true,
     certificateOfAuthenticity: true,
@@ -678,10 +678,10 @@ export const artworks: Artwork[] = [
     id: 'petrykivka-06',
     title: 'Red Berry Vine',
     year: 2025,
-    dimensions: 'Contact for dimensions',
+    dimensions: '15 × 45 cm',
     materials: 'Gouache',
     technique: 'Petrykivka decorative painting',
-    surface: 'Canvas',
+    surface: 'Paper',
     framing: 'Unframed',
     signed: true,
     certificateOfAuthenticity: true,
@@ -696,10 +696,10 @@ export const artworks: Artwork[] = [
     id: 'petrykivka-07',
     title: 'Garden Path',
     year: 2025,
-    dimensions: 'Contact for dimensions',
+    dimensions: '15 × 45 cm',
     materials: 'Gouache',
     technique: 'Petrykivka decorative painting',
-    surface: 'Canvas',
+    surface: 'Paper',
     framing: 'Unframed',
     signed: true,
     certificateOfAuthenticity: true,
@@ -714,10 +714,10 @@ export const artworks: Artwork[] = [
     id: 'petrykivka-08',
     title: 'Firebird',
     year: 2025,
-    dimensions: 'Contact for dimensions',
+    dimensions: '30 × 40 cm',
     materials: 'Gouache',
     technique: 'Petrykivka decorative painting',
-    surface: 'Canvas',
+    surface: 'Paper',
     framing: 'Unframed',
     signed: true,
     certificateOfAuthenticity: true,
@@ -732,10 +732,10 @@ export const artworks: Artwork[] = [
     id: 'petrykivka-09',
     title: 'Flame Sprig',
     year: 2025,
-    dimensions: 'Contact for dimensions',
+    dimensions: '15 × 45 cm',
     materials: 'Gouache',
     technique: 'Petrykivka decorative painting',
-    surface: 'Canvas',
+    surface: 'Paper',
     framing: 'Unframed',
     signed: true,
     certificateOfAuthenticity: true,
@@ -750,7 +750,7 @@ export const artworks: Artwork[] = [
     id: 'petrykivka-10',
     title: 'Spiral Garden',
     year: 2025,
-    dimensions: 'Contact for dimensions',
+    dimensions: 'Ø 30 cm',
     materials: 'Gouache',
     technique: 'Petrykivka decorative painting',
     surface: 'Canvas',
@@ -996,6 +996,93 @@ export const artworks: Artwork[] = [
 ];
 
 export const featuredArtworks = artworks.filter((a) => a.featured);
+
+/** Width × height in cm, used for the listing-style Width / Height fields. */
+const LISTING_SIZE_CM: Record<string, { width: number; height: number }> = {
+  'Floral Crown': { width: 60, height: 80 },
+  'Tiger Bloom': { width: 70, height: 90 },
+  'Ocean Dream': { width: 80, height: 100 },
+  'Sunflowers': { width: 50, height: 70 },
+  'White Lilacs': { width: 80, height: 100 },
+  'City Light': { width: 80, height: 100 },
+  'Soy Fuerte': { width: 50, height: 70 },
+  'Vibrant Spirit': { width: 50, height: 70 },
+  'Heritage': { width: 80, height: 100 },
+  'Kalyna Night': { width: 40, height: 50 },
+  'Blue Bloom': { width: 40, height: 40 },
+  'Blue & Gold': { width: 20, height: 20 },
+  'Teal Peonies': { width: 20, height: 20 },
+  'Red Berry Vine': { width: 15, height: 45 },
+  'Garden Path': { width: 15, height: 45 },
+  'Firebird': { width: 30, height: 40 },
+  'Flame Sprig': { width: 15, height: 45 },
+  'Spiral Garden': { width: 30, height: 30 },
+  'Snow Peaks': { width: 70, height: 50 },
+  'Golden Balloon': { width: 60, height: 60 },
+  'Gold Arcs': { width: 80, height: 100 },
+  'Halo': { width: 50, height: 70 },
+  'Thoughts': { width: 60, height: 80 },
+  'Pastel Hills': { width: 30, height: 30 },
+  'Soft Terrain': { width: 30, height: 30 },
+  'Ink Circle': { width: 30, height: 30 },
+};
+
+function cmToInches(cm: number): number {
+  return Math.round(cm / 2.54);
+}
+
+const MATERIAL_ORDER = [
+  'acrylic',
+  'oil',
+  'gouache',
+  'alcohol ink',
+  'metallic gold',
+  'metallic copper',
+  'gold leaf',
+  'canvas',
+  'panel',
+  'paper',
+];
+
+export function listingMaterials(artwork: Artwork): string {
+  const expanded = artwork.materials
+    .toLowerCase()
+    .replaceAll('mixed media', 'acrylic, oil')
+    .replaceAll(/\band\b/g, ',')
+    .replaceAll('heavy impasto', '');
+
+  const parts = expanded
+    .split(',')
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  const surface = artwork.surface.toLowerCase();
+  if (!parts.includes(surface)) parts.push(surface);
+
+  return [...new Set(parts)].sort((a, b) => {
+    const ai = MATERIAL_ORDER.indexOf(a);
+    const bi = MATERIAL_ORDER.indexOf(b);
+    return (ai === -1 ? 50 : ai) - (bi === -1 ? 50 : bi);
+  }).join(', ');
+}
+
+export function listingWidth(artwork: Artwork): string {
+  const size = LISTING_SIZE_CM[artwork.title];
+  return size ? `${cmToInches(size.width)} inches` : 'Contact';
+}
+
+export function listingHeight(artwork: Artwork): string {
+  const size = LISTING_SIZE_CM[artwork.title];
+  return size ? `${cmToInches(size.height)} inches` : 'Contact';
+}
+
+export function listingSizeCm(artwork: Artwork): string {
+  const size = LISTING_SIZE_CM[artwork.title];
+  if (!size) return artwork.dimensions;
+  if (artwork.title === 'Halo') return `2 × ${size.width} × ${size.height} cm`;
+  if (artwork.title === 'Spiral Garden') return `Ø ${size.width} cm`;
+  return `${size.width} × ${size.height} cm`;
+}
 
 export function getArtworkImages(artwork: Artwork): ArtworkImage[] {
   const cover: ArtworkImage = { src: artwork.image, alt: artwork.imageAlt };
