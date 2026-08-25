@@ -1,0 +1,36 @@
+---
+description: Always commit, push, and deploy every change via GitHub Pages
+alwaysApply: true
+---
+
+# Always deploy every change
+
+After any code or content change, publish it. Do not wait for the user to ask.
+
+This project is published **only through GitHub**. Do not deploy to Vercel.
+
+## Live site
+
+https://valentynpi.github.io/pidlypna-art/
+
+Repo: https://github.com/ValentynPi/pidlypna-art
+
+## Required workflow after every change
+
+1. Run `npm run build` locally if the change is substantial; fix any errors.
+2. Commit the relevant files immediately (user asked to always deploy; do not wait).
+3. Push to `main`:
+
+```powershell
+cd "d:\Sandbox\Paint web site 2.0"
+git push origin main
+```
+
+4. GitHub Actions (`Deploy GitHub Pages`) builds and publishes automatically.
+5. Wait for the Pages workflow (`gh run list` / `gh run watch`).
+6. Share the live URL: https://valentynpi.github.io/pidlypna-art/
+
+## Notes
+
+- Do **not** run `npx vercel` or any Vercel deploy.
+- Image paths use `import.meta.env.BASE_URL` so they work under `/pidlypna-art/`.
