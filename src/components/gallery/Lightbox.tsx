@@ -2,15 +2,13 @@ import { useEffect, useCallback, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Artwork } from '../../types';
+import { getArtworkImages, SHIPPING_NOTE, CARE_INSTRUCTIONS } from '../../data/artworks';
 import {
-  getArtworkImages,
-  listingMaterials,
-  listingWidth,
-  listingHeight,
-  listingSizeCm,
-  SHIPPING_NOTE,
-  CARE_INSTRUCTIONS,
-} from '../../data/artworks';
+  CUSTOMIZATIONS,
+  listingDescription,
+  listingDetails,
+  madeToOrderText,
+} from '../../data/listing';
 import { getCollectionById } from '../../data/collections';
 import { LazyImage } from '../ui/LazyImage';
 
@@ -81,24 +79,7 @@ export function Lightbox({
   const activeView = views[viewIndex] ?? views[0];
   const isAvailable = artwork.availability === 'Available';
 
-  const primarySpecs = [
-    { label: 'Materials', value: listingMaterials(artwork) },
-    { label: 'Width', value: listingWidth(artwork) },
-    { label: 'Height', value: listingHeight(artwork) },
-    { label: 'Availability', value: artwork.availability },
-  ];
-
-  const moreSpecs = [
-    { label: 'Year', value: String(artwork.year) },
-    { label: 'Size', value: listingSizeCm(artwork) },
-    { label: 'Technique', value: artwork.technique },
-    { label: 'Framing', value: artwork.framing },
-    { label: 'Signed', value: artwork.signed ? 'Yes' : 'No' },
-    {
-      label: 'Certificate',
-      value: artwork.certificateOfAuthenticity ? 'Yes' : 'No',
-    },
-  ];
+  const details = listingDetails(artwork);
 
   const onTouchStart = (e: React.TouchEvent) => {
     const t = e.changedTouches[0];
@@ -271,39 +252,54 @@ export function Lightbox({
                 </Link>
               )}
 
-              <dl className="mt-5 space-y-2.5 border-t border-cream/10 pt-4 md:mt-8 md:space-y-3 md:pt-6">
-                {primarySpecs.map((spec) => (
-                  <div key={spec.label} className="grid grid-cols-[1fr_auto] gap-4 text-sm">
-                    <dt className="text-cream/40">{spec.label}</dt>
-                    <dd className="text-right text-cream/75">{spec.value}</dd>
-                  </div>
-                ))}
-              </dl>
-
-              <p className="mt-4 text-sm leading-relaxed text-cream/60 md:mt-6">
-                {artwork.description}
+              <p className="mt-5 text-sm leading-relaxed text-cream/70 md:mt-6">
+                {listingDescription(artwork)}
               </p>
+
+              <div className="mt-6 border-t border-cream/10 pt-5">
+                <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
+                  Details
+                </p>
+                <dl className="mt-4 space-y-2.5">
+                  {details.map((spec) => (
+                    <div key={spec.label} className="grid grid-cols-[7.5rem_1fr] gap-3 text-sm">
+                      <dt className="text-cream/40">{spec.label}</dt>
+                      <dd className="text-cream/80">{spec.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+
+              <div className="mt-6 border-t border-cream/10 pt-5">
+                <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
+                  Made to Order
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-cream/60">
+                  {madeToOrderText(artwork)}
+                </p>
+              </div>
+
+              <div className="mt-6 border-t border-cream/10 pt-5">
+                <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
+                  Customizations
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-cream/60">
+                  {CUSTOMIZATIONS}
+                </p>
+              </div>
 
               <button
                 type="button"
                 onClick={() => setDetailsOpen((o) => !o)}
-                className="mt-4 flex w-full touch-manipulation items-center justify-between border border-cream/15 px-3 py-3 text-left text-[0.65rem] tracking-[0.2em] text-cream/70 uppercase md:mt-6"
+                className="mt-6 flex w-full touch-manipulation items-center justify-between border border-cream/15 px-3 py-3 text-left text-[0.65rem] tracking-[0.2em] text-cream/70 uppercase"
                 aria-expanded={detailsOpen}
               >
-                {detailsOpen ? 'Hide details' : 'More details'}
+                {detailsOpen ? 'Hide shipping & care' : 'Shipping & care'}
                 <span aria-hidden>{detailsOpen ? '−' : '+'}</span>
               </button>
 
               {detailsOpen && (
-                <div className="mt-4 space-y-5 border-t border-cream/10 pt-4">
-                  <dl className="space-y-2.5">
-                    {moreSpecs.map((spec) => (
-                      <div key={spec.label} className="grid grid-cols-[1fr_auto] gap-4 text-sm">
-                        <dt className="text-cream/40">{spec.label}</dt>
-                        <dd className="text-right text-cream/75">{spec.value}</dd>
-                      </div>
-                    ))}
-                  </dl>
+                <div className="mt-4 space-y-5">
                   <div>
                     <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
                       Shipping
