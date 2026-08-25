@@ -14,7 +14,6 @@ export function ExhibitionsPage() {
       <PageHeader
         label="Exhibitions"
         title="On the wall"
-        description="From intimate gallery shows in Castellón to exhibitions in Madrid and Provence — where the work has traveled."
       />
 
       <section className="mx-auto max-w-[90rem] px-6 pb-24 md:px-10 lg:px-16">
