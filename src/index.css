@@ -25,13 +25,17 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    overflow-anchor: none;
+    overflow-x: clip;
+    scroll-behavior: auto;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
 
   body {
-    @apply overflow-x-hidden bg-cream font-sans text-ink antialiased;
+    overflow-anchor: none;
+    overflow-x: clip;
+    @apply bg-cream font-sans text-ink antialiased;
   }
 
   img,

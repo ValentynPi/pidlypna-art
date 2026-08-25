@@ -28,7 +28,7 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
               key={artwork.id}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
+              viewport={{ once: true, margin: '0px 0px -40px 0px' }}
               transition={{ duration: 0.6, delay: index * 0.06 }}
               onClick={() => setLightboxIndex(index)}
               className="group relative aspect-[4/5] cursor-pointer overflow-hidden bg-ink text-left touch-manipulation"
