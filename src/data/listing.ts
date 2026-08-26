@@ -44,8 +44,11 @@ export function listingMaterialsFull(artwork: Artwork): string {
   const materials = artwork.materials.toLowerCase();
   const surface = artwork.surface.toLowerCase();
 
+  if (artwork.id === 'female-portraits-01' || artwork.title === 'Floral Crown') {
+    return `${surface}, pine, cotton, acrylic paints, textured paste, acrylic markers`;
+  }
   if (materials.includes('alcohol ink')) {
-    return `${surface}, alcohol ink, acrylic markers`;
+    return `${surface}, alcohol ink`;
   }
   if (materials.includes('gouache') && surface === 'paper') {
     return 'paper, cotton, gouache paints';
@@ -56,7 +59,7 @@ export function listingMaterialsFull(artwork: Artwork): string {
   if (materials.includes('metallic')) {
     return `${surface}, pine, cotton, acrylic paints, textured paste, metallic leaf`;
   }
-  return `${surface}, pine, cotton, acrylic paints, textured paste, acrylic markers`;
+  return `${surface}, pine, cotton, acrylic paints, textured paste`;
 }
 
 const DESCRIPTIONS: Record<string, string> = {
