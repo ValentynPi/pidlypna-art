@@ -53,7 +53,7 @@ export function HomePage() {
           {[
             {
               title: 'Workshops',
-              desc: 'Intimate painting sessions in Castellón — all levels welcome.',
+              desc: 'Painting sessions in Castellón — all levels welcome.',
               to: '/workshops',
               num: '01',
             },
