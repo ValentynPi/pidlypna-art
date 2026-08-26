@@ -30,6 +30,7 @@ export function Lightbox({
   const collection = artwork ? getCollectionById(artwork.collectionId) : undefined;
   const [viewIndex, setViewIndex] = useState(0);
   const [detailsOpen, setDetailsOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < artworks.length - 1;
@@ -38,6 +39,7 @@ export function Lightbox({
   useEffect(() => {
     setViewIndex(0);
     setDetailsOpen(false);
+    setExpanded(false);
   }, [currentIndex]);
 
   const cycleView = useCallback(
@@ -50,7 +52,13 @@ export function Lightbox({
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') {
+        if (expanded) {
+          setExpanded(false);
+          return;
+        }
+        onClose();
+      }
       if (e.key === 'ArrowLeft' && hasPrev) onNavigate(currentIndex - 1);
       if (e.key === 'ArrowRight' && hasNext) onNavigate(currentIndex + 1);
       if (e.key === 'ArrowUp' && hasMultipleViews) {
@@ -62,7 +70,7 @@ export function Lightbox({
         cycleView(1);
       }
     },
-    [onClose, onNavigate, currentIndex, hasPrev, hasNext, hasMultipleViews, cycleView],
+    [onClose, onNavigate, currentIndex, hasPrev, hasNext, hasMultipleViews, cycleView, expanded],
   );
 
   useEffect(() => {
@@ -117,7 +125,7 @@ export function Lightbox({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 16 }}
           transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-          className="relative flex h-[100dvh] w-full flex-col md:mx-auto md:h-[min(92vh,900px)] md:max-w-6xl md:flex-row md:overflow-hidden md:bg-ink md:shadow-2xl"
+          className="relative flex h-[100dvh] w-full flex-col md:flex-row md:overflow-hidden"
           style={{ marginTop: 'max(0px, env(safe-area-inset-top))' }}
           onClick={(e) => e.stopPropagation()}
         >
@@ -133,7 +141,7 @@ export function Lightbox({
 
           {/* Image stage */}
           <div
-            className="relative flex min-h-0 flex-[1.15] flex-col bg-ink md:flex-1"
+            className="relative flex min-h-0 flex-[1.4] flex-col bg-ink md:flex-[1.7]"
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
           >
@@ -144,13 +152,23 @@ export function Lightbox({
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="flex min-h-0 flex-1 items-center justify-center px-3 pt-14 pb-2 md:p-6"
+                className="flex min-h-0 flex-1 cursor-zoom-in items-center justify-center px-2 pt-12 pb-2 md:p-4"
+                onClick={() => setExpanded(true)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setExpanded(true);
+                  }
+                }}
+                aria-label="View painting larger"
               >
                 <LazyImage
                   src={activeView.src}
                   alt={activeView.alt}
                   objectFit="contain"
-                  className="max-h-[min(52svh,420px)] w-auto md:max-h-[82vh]"
+                  className="max-h-[72svh] w-auto md:max-h-[94vh]"
                   wrapperClassName="flex h-full w-full items-center justify-center bg-transparent"
                 />
               </motion.div>
@@ -222,7 +240,7 @@ export function Lightbox({
           </div>
 
           {/* Details */}
-          <div className="flex min-h-0 flex-1 flex-col border-t border-cream/10 md:w-[26rem] md:flex-none md:border-t-0 md:border-l">
+          <div className="flex min-h-0 flex-1 flex-col border-t border-cream/10 md:w-[22rem] md:flex-none md:border-t-0 md:border-l lg:w-[26rem]">
             <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 pt-4 pb-3 md:p-10">
               <div className="flex items-center justify-between gap-3">
                 <p className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
@@ -336,6 +354,38 @@ export function Lightbox({
             </div>
           </div>
         </motion.div>
+
+        <AnimatePresence>
+          {expanded && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="absolute inset-0 z-30 flex cursor-zoom-out items-center justify-center bg-ink p-2 sm:p-4"
+              onClick={(e) => {
+                e.stopPropagation();
+                setExpanded(false);
+              }}
+            >
+              <button
+                type="button"
+                onClick={() => setExpanded(false)}
+                className="absolute top-[max(0.75rem,env(safe-area-inset-top))] right-3 z-40 flex h-11 w-11 touch-manipulation items-center justify-center rounded-full bg-ink/60 text-cream"
+                aria-label="Close large view"
+              >
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              </button>
+              <img
+                src={activeView.src}
+                alt={activeView.alt}
+                className="max-h-full max-w-full object-contain"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </AnimatePresence>
   );
