@@ -60,28 +60,38 @@ export function HomePage() {
             {
               title: 'Exhibitions',
               desc: 'From Castellón to Madrid, Provence to Barcelona.',
-              to: '/exhibitions',
               num: '02',
             },
             {
               title: 'Creative Journey',
               desc: 'A visual diary of places that shape her art.',
-              to: '/journey',
               num: '03',
             },
           ].map((item, i) => (
-            <ScrollReveal key={item.to} delay={i * 0.1}>
-              <div className="group relative border border-ink/10 bg-warm p-8 transition-all duration-500 hover:border-gold/40 hover:bg-cream">
-                <span className="font-serif text-4xl text-ink/10 transition-colors group-hover:text-gold/30">
+            <ScrollReveal key={item.title} delay={i * 0.1}>
+              <div
+                className={`relative border border-ink/10 bg-warm p-8 ${
+                  item.to
+                    ? 'group transition-all duration-500 hover:border-gold/40 hover:bg-cream'
+                    : ''
+                }`}
+              >
+                <span
+                  className={`font-serif text-4xl text-ink/10 ${
+                    item.to ? 'transition-colors group-hover:text-gold/30' : ''
+                  }`}
+                >
                   {item.num}
                 </span>
                 <h3 className="display-heading mt-4 text-2xl">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                   {item.desc}
                 </p>
-                <Button to={item.to} variant="ghost" className="mt-8 border-0 px-0">
-                  Discover
-                </Button>
+                {item.to && (
+                  <Button to={item.to} variant="ghost" className="mt-8 border-0 px-0">
+                    Discover
+                  </Button>
+                )}
               </div>
             </ScrollReveal>
           ))}
