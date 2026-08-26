@@ -21,10 +21,6 @@ export function listingMedium(artwork: Artwork): string {
   if (materials.includes('gouache')) return `Professional gouache on ${surface}`;
   if (materials.includes('metallic')) return `Mixed media with metallic leaf on ${surface}`;
   if (materials.includes('mixed')) return `Mixed media on ${surface}`;
-  if (materials.includes('oil') && materials.includes('acrylic')) {
-    return `Professional oils and acrylics on ${surface}`;
-  }
-  if (materials.includes('oil')) return `Professional oils on ${surface}`;
   if (materials.includes('acrylic')) return `Professional acrylics on ${surface}`;
   return `Original painting on ${surface}`;
 }
@@ -40,7 +36,7 @@ export function listingTechniqueLabel(artwork: Artwork): string {
   ) {
     return 'Impasto texture';
   }
-  if (artwork.materials.toLowerCase().includes('oil')) return 'Impasto texture';
+  if (artwork.materials.toLowerCase().includes('acrylic')) return 'Impasto texture';
   return artwork.technique;
 }
 
@@ -60,22 +56,16 @@ export function listingMaterialsFull(artwork: Artwork): string {
   if (materials.includes('metallic')) {
     return `${surface}, pine, cotton, acrylic paints, textured paste, metallic leaf`;
   }
-  if (materials.includes('mixed') || (materials.includes('oil') && materials.includes('acrylic'))) {
-    return `${surface}, pine, cotton, acrylic paints, oil paints, textured paste, acrylic markers`;
-  }
-  if (materials.includes('oil')) {
-    return `${surface}, pine, cotton, oil paints, textured paste`;
-  }
   return `${surface}, pine, cotton, acrylic paints, textured paste, acrylic markers`;
 }
 
 const DESCRIPTIONS: Record<string, string> = {
   'abstract-art-01':
-    'Mist Horizon is an original oil painting by Pidlypna celebrating the hush between sky and water through layered palette-knife textures and pale cream light. A dark horizon divides cool reflection from open air, as if dawn were still deciding its color. The peaceful composition transforms a simple landscape into a poetic contemporary work that evokes stillness, distance, and quiet sophistication.',
+    'Mist Horizon is an original acrylic painting by Pidlypna celebrating the hush between sky and water through layered palette-knife textures and pale cream light. A dark horizon divides cool reflection from open air, as if dawn were still deciding its color. The peaceful composition transforms a simple landscape into a poetic contemporary work that evokes stillness, distance, and quiet sophistication.',
   'abstract-art-02':
-    'Ember Reflection is an original oil painting by Pidlypna capturing the last warmth of sunset through expressive impasto and delicate peach tones. A red glow gathers on dark water while a single yellow accent holds the light like a held breath. The composition turns evening into a contemporary meditation on warmth, memory, and calm.',
+    'Ember Reflection is an original acrylic painting by Pidlypna capturing the last warmth of sunset through expressive impasto and delicate peach tones. A red glow gathers on dark water while a single yellow accent holds the light like a held breath. The composition turns evening into a contemporary meditation on warmth, memory, and calm.',
   'abstract-art-03':
-    'City Light is an original oil painting by Pidlypna celebrating the pulse of a city through abstracted towers and glowing interiors. Warm orange rises through dark architecture while pale symbols drift across the skyline like notes in a private language. The work transforms urban night into a poetic contemporary piece that evokes energy, intimacy, and quiet wonder.',
+    'City Light is an original acrylic painting by Pidlypna celebrating the pulse of a city through abstracted towers and glowing interiors. Warm orange rises through dark architecture while pale symbols drift across the skyline like notes in a private language. The work transforms urban night into a poetic contemporary piece that evokes energy, intimacy, and quiet wonder.',
   'abstract-art-04':
     'Day & Night is an original mixed-media painting by Pidlypna celebrating duality through a single tree split between gold light and cool shadow. Two climates meet in one trunk, as if belonging could live in more than one place at once. The composition becomes a poetic contemporary symbol of home, change, and balance.',
   'abstract-art-05':
@@ -107,17 +97,17 @@ const DESCRIPTIONS: Record<string, string> = {
   'female-portraits-01':
     'Floral Crown is an original mixed-media painting by Pidlypna celebrating the quiet strength of a woman through a grayscale profile and a lush, sculptural crown of flowers. Thick impasto petals in white, rose, magenta, and green bloom across her face and hair, while neon marks and a pink contour keep the work contemporary. The composition transforms the portrait into a poetic symbol of identity, beauty, and inner blossoming.',
   'female-portraits-02':
-    'Ocean Dream is an original oil and acrylic painting by Pidlypna celebrating a woman merging with sea and sky. Tide, horizon, and figure share one breath, painted in layered, luminous color. The work becomes a poetic contemporary portrait of belonging, freedom, and quiet transformation.',
+    'Ocean Dream is an original acrylic painting by Pidlypna celebrating a woman merging with sea and sky. Tide, horizon, and figure share one breath, painted in layered, luminous color. The work becomes a poetic contemporary portrait of belonging, freedom, and quiet transformation.',
   'female-portraits-03':
     'Tiger Bloom is an original acrylic painting by Pidlypna celebrating the meeting of wildness and tenderness through a woman, a tiger, and unfolding peonies. Bold color and thick petals hold both ferocity and care in a single frame. The composition becomes a poetic contemporary work of courage, beauty, and devotion.',
   'floral-collection-01':
-    'Sunflowers is an original oil painting by Pidlypna celebrating summer’s generosity through three blooms in a green vase against teal. Palette-knife petals catch the light as if the room were still warm from the afternoon. The composition transforms a simple still life into a poetic contemporary piece of joy, abundance, and calm.',
+    'Sunflowers is an original acrylic painting by Pidlypna celebrating summer’s generosity through three blooms in a green vase against teal. Palette-knife petals catch the light as if the room were still warm from the afternoon. The composition transforms a simple still life into a poetic contemporary piece of joy, abundance, and calm.',
   'floral-collection-02':
-    'White Lilacs is an original oil painting by Pidlypna celebrating perfume and memory through white blossoms in glass against deep burgundy. Delicate clusters are built with patient, luminous strokes. The work transforms a still life into a contemporary meditation on tenderness, home, and quiet luxury.',
+    'White Lilacs is an original acrylic painting by Pidlypna celebrating perfume and memory through white blossoms in glass against deep burgundy. Delicate clusters are built with patient, luminous strokes. The work transforms a still life into a contemporary meditation on tenderness, home, and quiet luxury.',
   'floral-collection-03':
-    'Night Bouquet is an original oil painting by Pidlypna celebrating flowers after dark through thick paint and a burgundy ground. Light finds the petals the way a lamp finds a table late in the evening. The composition becomes a poetic contemporary still life of intimacy, richness, and calm.',
+    'Night Bouquet is an original acrylic painting by Pidlypna celebrating flowers after dark through thick paint and a burgundy ground. Light finds the petals the way a lamp finds a table late in the evening. The composition becomes a poetic contemporary still life of intimacy, richness, and calm.',
   'inspired-by-nature-01':
-    'Nature Study is an original oil painting by Pidlypna celebrating looking closely — light, air, and distance held in paint. Observed with care and finished with contemporary restraint, the landscape keeps the freshness of being there. The work evokes presence, patience, and quiet sophistication.',
+    'Nature Study is an original acrylic painting by Pidlypna celebrating looking closely — light, air, and distance held in paint. Observed with care and finished with contemporary restraint, the landscape keeps the freshness of being there. The work evokes presence, patience, and quiet sophistication.',
   'inspired-by-places-01':
     'Golden Balloon is an original mixed-media painting by Pidlypna celebrating travel as dream, with a golden balloon rising above a remembered place. Metallic light and soft ground turn a journey into something you can keep. The composition becomes a poetic contemporary work of wonder, freedom, and longing.',
   'petrykivka-01':
@@ -141,15 +131,15 @@ const DESCRIPTIONS: Record<string, string> = {
   'petrykivka-10':
     'Spiral Garden is an original Petrykivka painting by Pidlypna celebrating floral motifs turning outward on a round canvas. A quieter, almost monochrome palette lets the rhythm of the strokes lead. The composition evokes meditation, balance, and refined folk beauty.',
   'plain-air-collection-01':
-    'Snow Peaks is an original oil painting by Pidlypna celebrating high distance through pale blue sky and quiet snow. The mountains are held with clear, calm color rather than noise. The work becomes a poetic contemporary landscape of stillness, air, and awe.',
+    'Snow Peaks is an original acrylic painting by Pidlypna celebrating high distance through pale blue sky and quiet snow. The mountains are held with clear, calm color rather than noise. The work becomes a poetic contemporary landscape of stillness, air, and awe.',
   'plain-air-collection-02':
-    'Plein Air II is an original oil painting by Pidlypna celebrating painting on location — color as an immediate response to light. Fresh strokes keep the hour visible on the canvas. The composition evokes presence, weather, and the pleasure of looking.',
+    'Plein Air II is an original acrylic painting by Pidlypna celebrating painting on location — color as an immediate response to light. Fresh strokes keep the hour visible on the canvas. The composition evokes presence, weather, and the pleasure of looking.',
   'plain-air-collection-03':
-    'Lavender Fields is an original oil painting by Pidlypna celebrating purple rows leading toward gold ground and distant mountains. The landscape is both place and perfume, painted with Mediterranean warmth. The work becomes a poetic contemporary piece of travel, calm, and summer light.',
+    'Lavender Fields is an original acrylic painting by Pidlypna celebrating purple rows leading toward gold ground and distant mountains. The landscape is both place and perfume, painted with Mediterranean warmth. The work becomes a poetic contemporary piece of travel, calm, and summer light.',
   'plain-air-collection-04':
-    'Blossom Path is an original oil painting by Pidlypna celebrating a walk through flowering trees toward far mountains. Spring light is arranged in rows, as if the path itself were blooming. The composition evokes hope, journey, and quiet joy.',
+    'Blossom Path is an original acrylic painting by Pidlypna celebrating a walk through flowering trees toward far mountains. Spring light is arranged in rows, as if the path itself were blooming. The composition evokes hope, journey, and quiet joy.',
   'pop-art-01':
-    'Vibrant Spirit is an original oil painting by Pidlypna celebrating a face that refuses to be quiet — bold color, painterly texture, and contemporary nerve. The portrait holds energy without losing warmth. The work becomes a poetic piece of character, confidence, and living color.',
+    'Vibrant Spirit is an original acrylic painting by Pidlypna celebrating a face that refuses to be quiet — bold color, painterly texture, and contemporary nerve. The portrait holds energy without losing warmth. The work becomes a poetic piece of character, confidence, and living color.',
   'pop-art-02':
     'Thoughts is an original mixed-media painting by Pidlypna celebrating the inner life through pastel fields crossed by the handwritten word Thoughts. Mind is made visible without becoming loud. The composition evokes reflection, softness, and contemporary intimacy.',
   'textured-and-light-01':
@@ -159,7 +149,7 @@ const DESCRIPTIONS: Record<string, string> = {
   'textured-and-light-03':
     'Rose Cake is an original acrylic painting by Pidlypna celebrating sweetness and celebration through a peach cake with roses and strawberries built in thick, luminous paint. Frosting and petals share the same sculptural joy. The work becomes a poetic contemporary still life of delight, care, and festivity.',
   'ukrainian-symbolism-01':
-    'Heritage is an original oil and acrylic painting by Pidlypna celebrating a face woven with Ukrainian embroidery — memory held in the skin. Realism and folk pattern share one portrait, as if the past were still speaking. The composition becomes a poetic contemporary work of identity, devotion, and belonging.',
+    'Heritage is an original acrylic painting by Pidlypna celebrating a face woven with Ukrainian embroidery — memory held in the skin. Realism and folk pattern share one portrait, as if the past were still speaking. The composition becomes a poetic contemporary work of identity, devotion, and belonging.',
 };
 
 export function listingDescription(artwork: Artwork): string {

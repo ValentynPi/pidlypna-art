@@ -102,7 +102,7 @@ export function AboutPage() {
             <div className="grid gap-12 md:grid-cols-3">
               {[
                 { label: 'Based in', value: 'Castellón, Spain' },
-                { label: 'Mediums', value: 'Oil, acrylic, gouache, mixed media' },
+                { label: 'Mediums', value: 'Acrylic, gouache, mixed media' },
                 {
                   label: 'Focus',
                   value: 'Ukrainian heritage · Mediterranean life · Contemporary painting',
