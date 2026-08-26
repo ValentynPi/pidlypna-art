@@ -2,7 +2,7 @@
 
 @theme {
   --font-serif: 'Fraunces', Georgia, serif;
-  --font-display: 'Bodoni Moda', 'Fraunces', Georgia, serif;
+  --font-display: 'Cormorant Garamond', 'Fraunces', Georgia, serif;
   --font-sans: 'Outfit', system-ui, sans-serif;
 
   --color-cream: #f8f4ec;
@@ -80,10 +80,10 @@
   }
 
   .name-viktoria {
-    font-family: 'Bodoni Moda', 'Times New Roman', serif !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
     font-weight: 500;
     font-style: normal;
-    letter-spacing: -0.04em;
+    letter-spacing: 0.02em;
     color: #ffffff;
   }
 
