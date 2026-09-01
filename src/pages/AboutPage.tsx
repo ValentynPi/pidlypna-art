@@ -10,7 +10,7 @@ export function AboutPage() {
     <>
       <PageMeta
         title="About"
-        description="The story of Pidlypna — contemporary Ukrainian painting bridging tradition and Mediterranean life in Spain."
+        description="The story of Viktoria Paladios — contemporary Ukrainian painting bridging tradition and Mediterranean life in Spain."
       />
 
       <PageHeader
@@ -25,7 +25,7 @@ export function AboutPage() {
               <div className="relative aspect-[3/4] overflow-hidden bg-ink">
                 <LazyImage
                   src={photos.floralCrownClean}
-                  alt="Floral Crown — portrait painting by Pidlypna"
+                  alt="Floral Crown — portrait painting by Viktoria Paladios"
                 />
               </div>
             </div>
@@ -35,7 +35,7 @@ export function AboutPage() {
             <ScrollReveal delay={0.1}>
               <p className="first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-6xl first-letter:text-gold first-letter:leading-none">
                 She learned to see color before she learned to read. Growing up in
-                Ukraine, the artist behind Pidlypna spent childhood afternoons watching her
+                Ukraine, Viktoria Paladios spent childhood afternoons watching her
                 grandmother embroider vyshyvanka patterns by lamplight — each
                 stitch a story, each motif a prayer.
               </p>
@@ -87,7 +87,7 @@ export function AboutPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p>
-              Today, Pidlypna continues from a studio in Castellón, exhibiting
+              Today, she continues from a studio in Castellón, exhibiting
               across Spain and France, teaching workshops that welcome everyone
               from curious beginners to experienced painters, and continuing a
               visual diary of the journeys that feed the practice.

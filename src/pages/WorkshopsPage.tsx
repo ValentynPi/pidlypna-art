@@ -11,7 +11,7 @@ export function WorkshopsPage() {
     <>
       <PageMeta
         title="Workshops"
-        description="Join Viktoria Pidlypna for painting workshops in Castellón, Spain — floral acrylics, Petrykivka, plein air, and more."
+        description="Join Viktoria Paladios for painting workshops in Castellón, Spain — floral acrylics, Petrykivka, plein air, and more."
       />
 
       <PageHeader

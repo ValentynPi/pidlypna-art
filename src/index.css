@@ -87,11 +87,12 @@
     color: #ffffff;
   }
 
-  .name-pidlypna {
+  .name-art {
     font-family: 'Fraunces', Georgia, serif !important;
-    font-weight: 400;
-    font-style: italic;
-    letter-spacing: -0.02em;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
     color: #d4a853;
   }
 }

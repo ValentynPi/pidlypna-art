@@ -6,7 +6,7 @@ export const pressItems: PressItem[] = [
     publication: 'Levante-EMV',
     date: 'November 2025',
     quote:
-      'Pidlypna\'s paintings carry the warmth of two homelands — her Ukrainian heritage visible in every brushstroke, her Mediterranean present in every shade of blue.',
+      'Viktoria Paladios\'s paintings carry the warmth of two homelands — her Ukrainian heritage visible in every brushstroke, her Mediterranean present in every shade of blue.',
     link: '#',
     logoAlt: '[PLACEHOLDER] Levante-EMV publication logo',
   },
@@ -15,7 +15,7 @@ export const pressItems: PressItem[] = [
     publication: 'Castellón Cultural',
     date: 'July 2025',
     quote:
-      'A highlight of the Festival de las Artes — Viktoria Pidlypna\'s live painting drew crowds and sparked conversations about art as bridge between cultures.',
+      'A highlight of the Festival de las Artes — Viktoria Paladios\'s live painting drew crowds and sparked conversations about art as bridge between cultures.',
     link: '#',
     logoAlt: '[PLACEHOLDER] Castellón Cultural magazine logo',
   },
@@ -24,7 +24,7 @@ export const pressItems: PressItem[] = [
     publication: 'Ukrainian Art Abroad',
     date: 'March 2025',
     quote:
-      'Among the most compelling voices in the Ukrainian diaspora art scene — Pidlypna reimagines folk tradition without nostalgia, with fierce contemporary energy.',
+      'Among the most compelling voices in the Ukrainian diaspora art scene — Viktoria Paladios reimagines folk tradition without nostalgia, with fierce contemporary energy.',
     link: '#',
     logoAlt: '[PLACEHOLDER] Ukrainian Art Abroad blog logo',
   },
@@ -51,7 +51,7 @@ export const pressItems: PressItem[] = [
     publication: 'Art Workshop Spain',
     date: 'January 2026',
     quote:
-      'Students leave Viktoria Pidlypna workshops not just with a painting, but with a new way of seeing — teaching as generous as the art itself.',
+      'Students leave Viktoria Paladios workshops not just with a painting, but with a new way of seeing — teaching as generous as the art itself.',
     link: '#',
     logoAlt: '[PLACEHOLDER] Art Workshop Spain logo',
   },

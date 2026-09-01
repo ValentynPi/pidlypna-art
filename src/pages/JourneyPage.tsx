@@ -10,7 +10,7 @@ export function JourneyPage() {
     <>
       <PageMeta
         title="Creative Journey"
-        description="A visual diary of the places and experiences that inspire Pidlypna — from Provence lavender fields to Madrid gardens."
+        description="A visual diary of the places and experiences that inspire Viktoria Paladios — from Provence lavender fields to Madrid gardens."
       />
 
       <PageHeader
@@ -35,7 +35,7 @@ export function JourneyPage() {
               remembers the wind.&rdquo;
             </p>
             <p className="mt-6 text-[0.65rem] tracking-[0.3em] text-terracotta uppercase">
-              Pidlypna
+              Viktoria Paladios
             </p>
           </ScrollReveal>
         </div>

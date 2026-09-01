@@ -12,7 +12,7 @@ export function HomePage() {
     <>
       <PageMeta
         title="Home"
-        description="Viktoria Pidlypna — Contemporary Ukrainian art living and creating in Spain. Explore paintings, workshops, and exhibitions."
+        description="Viktoria Paladios Art — Contemporary Ukrainian art living and creating in Spain. Explore paintings, workshops, and exhibitions."
       />
       <Hero />
 
@@ -21,7 +21,7 @@ export function HomePage() {
           <div className="relative min-h-[280px] sm:min-h-[360px] lg:min-h-[600px]">
             <LazyImage
               src={photos.tigerBloom}
-              alt="Tiger Bloom — surreal painting by Viktoria Pidlypna"
+              alt="Tiger Bloom — surreal painting by Viktoria Paladios"
               className="object-cover"
               wrapperClassName="h-full w-full"
             />
@@ -38,8 +38,8 @@ export function HomePage() {
               </blockquote>
               <HandLine variant="swirl" className="mt-8 w-32 text-terracotta" />
               <p className="mt-6 text-xl leading-[0.95] md:text-2xl">
-                <span className="name-viktoria block !text-ink">Viktoria</span>
-                <span className="name-pidlypna mt-1 block text-[0.92em]">Pidlypna</span>
+                <span className="name-viktoria block !text-ink">Viktoria Paladios</span>
+                <span className="name-art mt-1 block text-[0.92em]">Art</span>
               </p>
             </ScrollReveal>
           </div>

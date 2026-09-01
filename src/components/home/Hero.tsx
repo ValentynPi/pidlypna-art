@@ -25,7 +25,7 @@ export function Hero() {
       <div className="absolute inset-0 lg:hidden">
         <LazyImage
           src={photos.floralCrownClean}
-          alt="Floral Crown painting by Viktoria Pidlypna"
+          alt="Floral Crown painting by Viktoria Paladios"
           className="h-full w-full scale-105 object-cover object-[70%_center]"
           wrapperClassName="h-full w-full"
         />
@@ -53,8 +53,8 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
             className="mt-6 text-[clamp(2.75rem,12vw,3.75rem)] leading-[0.95] sm:mt-10 sm:text-5xl md:mt-14 md:text-6xl lg:mt-16 lg:text-7xl xl:text-8xl"
           >
-            <span className="name-viktoria block">Viktoria</span>
-            <span className="name-pidlypna mt-1 block text-[0.92em]">Pidlypna</span>
+            <span className="name-viktoria block">Viktoria Paladios</span>
+            <span className="name-art mt-1 block text-[0.92em]">Art</span>
           </motion.h1>
 
           <HandLine variant="swirl" className="mt-5 w-28 text-gold/70 sm:mt-8 sm:w-40" />
@@ -98,7 +98,7 @@ export function Hero() {
           <motion.div style={{ y: imageY }} className="absolute inset-0">
             <LazyImage
               src={photos.floralCrownClean}
-              alt="Floral Crown painting by Viktoria Pidlypna"
+              alt="Floral Crown painting by Viktoria Paladios"
               className="scale-105 object-cover"
               wrapperClassName="h-full w-full"
             />

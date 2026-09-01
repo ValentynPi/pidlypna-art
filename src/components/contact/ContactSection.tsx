@@ -20,8 +20,8 @@ export function ContactSection() {
     },
     {
       label: 'Instagram',
-      value: '@pidlypna.art',
-      href: 'https://instagram.com',
+      value: '@viktoria.paladios.art',
+      href: 'https://instagram.com/viktoria.paladios.art',
       external: true,
     },
     {

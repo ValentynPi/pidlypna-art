@@ -8,7 +8,7 @@ export function GalleryPage() {
     <>
       <PageMeta
         title="Gallery"
-        description="Explore Viktoria Pidlypna collections — paintings grouped by style and theme."
+        description="Explore Viktoria Paladios collections — paintings grouped by style and theme."
       />
 
       <PageHeader

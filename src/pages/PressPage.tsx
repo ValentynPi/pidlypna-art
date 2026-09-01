@@ -8,7 +8,7 @@ export function PressPage() {
     <>
       <PageMeta
         title="Press"
-        description="Press mentions and features about Viktoria Pidlypna — contemporary Ukrainian artist in Spain."
+        description="Press mentions and features about Viktoria Paladios — contemporary Ukrainian artist in Spain."
       />
 
       <PageHeader

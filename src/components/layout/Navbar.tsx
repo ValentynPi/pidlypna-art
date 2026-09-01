@@ -63,7 +63,7 @@ export function Navbar() {
               onDarkHero && !scrolled ? 'text-white' : 'text-ink'
             }`}
           >
-            Pidlypna_Art
+            Viktoria Paladios Art
           </span>
         </Link>
 
