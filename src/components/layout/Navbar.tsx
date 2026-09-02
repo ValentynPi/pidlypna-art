@@ -38,14 +38,16 @@ export function Navbar() {
   const onDarkHero = isHome && !scrolled;
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-50">
+    <header
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? 'border-b border-ink/5 bg-cream/30 backdrop-blur-xl'
+          : 'bg-transparent'
+      }`}
+    >
       <nav
         className={`mx-auto flex max-w-[90rem] items-center justify-between px-5 py-4 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-500 sm:px-6 sm:py-6 md:px-10 lg:px-16 ${
-          scrolled
-            ? 'bg-cream/90 py-3 backdrop-blur-lg sm:py-4'
-            : onDarkHero
-              ? ''
-              : 'bg-cream/90 backdrop-blur-lg'
+          scrolled ? 'py-3 sm:py-4' : ''
         }`}
       >
         <Link to="/" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
@@ -98,7 +100,11 @@ export function Navbar() {
 
         <Link
           to="/gallery"
-          className="hidden border border-black/10 bg-white px-5 py-2.5 text-xs font-semibold tracking-[0.15em] text-black uppercase transition-colors hover:bg-white/90 lg:block"
+          className={`hidden border px-5 py-2.5 text-xs font-semibold tracking-[0.15em] uppercase transition-colors lg:block ${
+            onDarkHero && !scrolled
+              ? 'border-cream/30 bg-white/10 text-cream backdrop-blur-sm hover:bg-white/20'
+              : 'border-black/10 bg-white/80 text-black backdrop-blur-sm hover:bg-white/90'
+          }`}
         >
           View Art
         </Link>
