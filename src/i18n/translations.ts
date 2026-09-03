@@ -416,7 +416,7 @@ const es: TranslationTree = {
 const uk: TranslationTree = {
   nav: {
     home: 'Головна',
-    about: 'Про нас',
+    about: 'Про мене',
     gallery: 'Галерея',
     workshops: 'Майстер-класи',
     contact: 'Контакти',
@@ -457,7 +457,7 @@ const uk: TranslationTree = {
     collectionsTitle: 'Ознайомитися з колекціями',
   },
   about: {
-    metaTitle: 'Про нас',
+    metaTitle: 'Про мене',
     metaDesc:
       'Історія Вікторії Паладіос — сучасний український живопис між традицією та середземноморським життям в Іспанії.',
     label: 'Про художницю',
