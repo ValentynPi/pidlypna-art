@@ -36,6 +36,7 @@ export function Footer() {
                   { to: '/gallery', label: t('nav.gallery') },
                   { to: '/about', label: t('nav.about') },
                   { to: '/workshops', label: t('nav.workshops') },
+                  { to: '/charity', label: t('nav.charity') },
                 ].map((link) => (
                   <li key={link.to}>
                     <Link

@@ -10,6 +10,7 @@ export function Navbar() {
     { to: '/about', label: t('nav.about') },
     { to: '/gallery', label: t('nav.gallery') },
     { to: '/workshops', label: t('nav.workshops') },
+    { to: '/charity', label: t('nav.charity') },
     { to: '/contact', label: t('nav.contact') },
   ];
   const [isOpen, setIsOpen] = useState(false);

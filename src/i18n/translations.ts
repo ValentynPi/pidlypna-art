@@ -6,6 +6,7 @@ const en: TranslationTree = {
     about: 'About',
     gallery: 'Gallery',
     workshops: 'Workshops',
+    charity: 'Charity',
     contact: 'Contact',
     viewArt: 'View Art',
     menu: 'Toggle menu',
@@ -161,6 +162,11 @@ const en: TranslationTree = {
     closeLarge: 'Close large view',
     viewLarger: 'View painting larger',
   },
+  charity: {
+    metaTitle: 'Charity & Initiatives',
+    label: 'Charity',
+    title: 'Charity & Initiatives',
+  },
   exhibitions: {
     metaTitle: 'Exhibitions',
     metaDesc:
@@ -212,6 +218,7 @@ const es: TranslationTree = {
     about: 'Sobre mí',
     gallery: 'Galería',
     workshops: 'Talleres',
+    charity: 'Caridad',
     contact: 'Contacto',
     viewArt: 'Ver arte',
     menu: 'Abrir menú',
@@ -368,6 +375,11 @@ const es: TranslationTree = {
     closeLarge: 'Cerrar vista grande',
     viewLarger: 'Ver la pintura más grande',
   },
+  charity: {
+    metaTitle: 'Caridad e iniciativas',
+    label: 'Caridad',
+    title: 'Caridad e iniciativas',
+  },
   exhibitions: {
     metaTitle: 'Exposiciones',
     metaDesc:
@@ -419,6 +431,7 @@ const uk: TranslationTree = {
     about: 'Про мене',
     gallery: 'Галерея',
     workshops: 'Майстер-класи',
+    charity: 'Благодійність',
     contact: 'Контакти',
     viewArt: 'Переглянути мистецтво',
     menu: 'Відкрити меню',
@@ -574,6 +587,11 @@ const uk: TranslationTree = {
     close: 'Закрити',
     closeLarge: 'Закрити збільшений вигляд',
     viewLarger: 'Відкрити картину більшою',
+  },
+  charity: {
+    metaTitle: 'Благодійність та ініціативи',
+    label: 'Благодійність',
+    title: 'Благодійність та ініціативи',
   },
   exhibitions: {
     metaTitle: 'Виставки',

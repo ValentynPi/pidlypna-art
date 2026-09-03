@@ -10,6 +10,7 @@ import { ExhibitionsPage } from './pages/ExhibitionsPage';
 import { PressPage } from './pages/PressPage';
 import { JourneyPage } from './pages/JourneyPage';
 import { ContactPage } from './pages/ContactPage';
+import { CharityPage } from './pages/CharityPage';
 import { LanguageProvider } from './i18n/LanguageContext';
 
 export function App() {
@@ -24,6 +25,7 @@ export function App() {
               <Route path="gallery" element={<GalleryPage />} />
               <Route path="gallery/:slug" element={<GalleryCollectionPage />} />
               <Route path="workshops" element={<WorkshopsPage />} />
+              <Route path="charity" element={<CharityPage />} />
               <Route path="exhibitions" element={<ExhibitionsPage />} />
               <Route path="press" element={<PressPage />} />
               <Route path="journey" element={<JourneyPage />} />
