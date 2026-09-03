@@ -71,10 +71,10 @@ export function Footer() {
                 <li>Castellón, Spain</li>
                 <li>
                   <a
-                    href="mailto:hello@pidlypna.art"
+                    href="mailto:hello@viktoria-p.art"
                     className="transition-colors hover:text-cream"
                   >
-                    hello@pidlypna.art
+                    hello@viktoria-p.art
                   </a>
                 </li>
                 <li>

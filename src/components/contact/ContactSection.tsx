@@ -3,20 +3,58 @@ import { ScrollReveal } from '../ui/ScrollReveal';
 import { Button } from '../ui/Button';
 import { SectionLabel } from '../ui/SectionLabel';
 
+const CONTACT_EMAIL = 'hello@viktoria-p.art';
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
+
 export function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          _subject: 'New contact form message — viktoria-p.art',
+          _template: 'table',
+        }),
+      });
+
+      const data = (await response.json()) as { success?: string; message?: string };
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong. Please try again.');
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : 'Something went wrong. Please try again.',
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   const links = [
     { label: 'Location', value: 'Castellón, Spain' },
     {
       label: 'Email',
-      value: 'hello@pidlypna.art',
-      href: 'mailto:hello@pidlypna.art',
+      value: CONTACT_EMAIL,
+      href: `mailto:${CONTACT_EMAIL}`,
     },
     {
       label: 'Instagram',
@@ -87,30 +125,60 @@ export function ContactSection() {
                 { id: 'email', label: 'Email', type: 'email' },
               ].map((field) => (
                 <div key={field.id}>
-                  <label htmlFor={field.id} className="mb-2 block text-[0.65rem] tracking-[0.2em] text-ink-soft uppercase">
+                  <label
+                    htmlFor={field.id}
+                    className="mb-2 block text-[0.65rem] tracking-[0.2em] text-ink-soft uppercase"
+                  >
                     {field.label}
                   </label>
                   <input
                     id={field.id}
+                    name={field.id}
                     type={field.type}
                     required
-                    className="w-full border-b border-ink/15 bg-transparent py-3 text-ink transition-colors focus:border-gold focus:outline-none"
+                    value={form[field.id as keyof typeof form]}
+                    onChange={(e) =>
+                      setForm((prev) => ({ ...prev, [field.id]: e.target.value }))
+                    }
+                    disabled={loading}
+                    className="w-full border-b border-ink/15 bg-transparent py-3 text-ink transition-colors focus:border-gold focus:outline-none disabled:opacity-50"
                   />
                 </div>
               ))}
               <div>
-                <label htmlFor="message" className="mb-2 block text-[0.65rem] tracking-[0.2em] text-ink-soft uppercase">
+                <label
+                  htmlFor="message"
+                  className="mb-2 block text-[0.65rem] tracking-[0.2em] text-ink-soft uppercase"
+                >
                   Message
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={5}
                   required
-                  className="w-full resize-none border-b border-ink/15 bg-transparent py-3 text-ink transition-colors focus:border-gold focus:outline-none"
+                  value={form.message}
+                  onChange={(e) =>
+                    setForm((prev) => ({ ...prev, message: e.target.value }))
+                  }
+                  disabled={loading}
+                  className="w-full resize-none border-b border-ink/15 bg-transparent py-3 text-ink transition-colors focus:border-gold focus:outline-none disabled:opacity-50"
                 />
               </div>
-              <Button type="submit" variant="primary" className="w-full sm:w-auto">
-                Send Message
+
+              {error && (
+                <p className="text-sm text-terracotta" role="alert">
+                  {error}
+                </p>
+              )}
+
+              <Button
+                type="submit"
+                variant="primary"
+                className="w-full sm:w-auto"
+                disabled={loading}
+              >
+                {loading ? 'Sending…' : 'Send Message'}
               </Button>
             </form>
           )}
