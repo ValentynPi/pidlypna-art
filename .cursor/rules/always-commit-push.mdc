@@ -15,6 +15,6 @@ cd "d:\Sandbox\Paint web site 2.0"
 git push origin main
 ```
 
-3. Share the live URL: https://valentynpi.github.io/pidlypna-art/
+3. Share the live URL: https://viktoria-p.art/
 
 Follow the project's git safety protocol (no force push, no amend of pushed commits, no secrets). Do not deploy to Vercel.

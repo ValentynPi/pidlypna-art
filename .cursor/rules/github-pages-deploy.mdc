@@ -11,7 +11,9 @@ This project is published **only through GitHub**. Do not deploy to Vercel.
 
 ## Live site
 
-https://valentynpi.github.io/pidlypna-art/
+https://viktoria-p.art/
+
+Fallback (GitHub): https://valentynpi.github.io/pidlypna-art/
 
 Repo: https://github.com/ValentynPi/pidlypna-art
 
@@ -28,9 +30,10 @@ git push origin main
 
 4. GitHub Actions (`Deploy GitHub Pages`) builds and publishes automatically.
 5. Wait for the Pages workflow (`gh run list` / `gh run watch`).
-6. Share the live URL: https://valentynpi.github.io/pidlypna-art/
+6. Share the live URL: https://viktoria-p.art/
 
 ## Notes
 
 - Do **not** run `npx vercel` or any Vercel deploy.
-- Image paths use `import.meta.env.BASE_URL` so they work under `/pidlypna-art/`.
+- Image paths use `import.meta.env.BASE_URL` (root `/` on custom domain).
+- Custom domain DNS is configured at GoDaddy; apex `viktoria-p.art` uses GitHub A records.
