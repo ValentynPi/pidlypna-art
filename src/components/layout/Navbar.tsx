@@ -63,7 +63,7 @@ export function Navbar() {
               onDarkHero && !scrolled ? 'text-white' : 'text-ink'
             }`}
           >
-            Viktoria Paladios Art
+            Viktoria Paladios
           </span>
         </Link>
 
