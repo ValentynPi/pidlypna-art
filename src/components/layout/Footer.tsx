@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-ink text-cream">
       <div className="mx-auto max-w-[90rem] px-6 py-20 md:px-10 lg:px-16">
-        <div className="grid gap-16 md:grid-cols-12">
+        <div className="grid gap-16 md:grid-cols-12 md:items-start">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center border border-cream/20 font-serif text-sm">
@@ -21,7 +21,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 md:col-span-4 md:col-start-7">
+          <div className="grid grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-3 md:col-span-7 md:items-start">
             <div>
               <h4 className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
                 Explore
@@ -31,7 +31,6 @@ export function Footer() {
                   { to: '/gallery', label: 'Gallery' },
                   { to: '/about', label: 'About' },
                   { to: '/workshops', label: 'Workshops' },
-                  { to: '/exhibitions', label: 'Exhibitions' },
                 ].map((link) => (
                   <li key={link.to}>
                     <Link
@@ -50,7 +49,6 @@ export function Footer() {
               </h4>
               <ul className="mt-5 space-y-3">
                 {[
-                  { to: '/journey', label: 'Creative Journey' },
                   { to: '/press', label: 'Press' },
                   { to: '/contact', label: 'Contact' },
                 ].map((link) => (
@@ -65,33 +63,32 @@ export function Footer() {
                 ))}
               </ul>
             </div>
-          </div>
-
-          <div className="md:col-span-3 md:col-start-10">
-            <h4 className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
-              Connect
-            </h4>
-            <ul className="mt-5 space-y-3 text-sm text-cream/50">
-              <li>Castellón, Spain</li>
-              <li>
-                <a
-                  href="mailto:hello@pidlypna.art"
-                  className="transition-colors hover:text-cream"
-                >
-                  hello@pidlypna.art
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com/viktoria.paladios.art"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-cream"
-                >
-                  @viktoria.paladios.art
-                </a>
-              </li>
-            </ul>
+            <div className="col-span-2 sm:col-span-1">
+              <h4 className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
+                Connect
+              </h4>
+              <ul className="mt-5 space-y-3 text-sm text-cream/50">
+                <li>Castellón, Spain</li>
+                <li>
+                  <a
+                    href="mailto:hello@pidlypna.art"
+                    className="transition-colors hover:text-cream"
+                  >
+                    hello@pidlypna.art
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/viktoria.paladios.art"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-cream"
+                  >
+                    @viktoria.paladios.art
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 

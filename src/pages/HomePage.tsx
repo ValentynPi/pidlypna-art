@@ -12,7 +12,7 @@ export function HomePage() {
     <>
       <PageMeta
         title="Home"
-        description="Viktoria Paladios Art — Contemporary Ukrainian art living and creating in Spain. Explore paintings, workshops, and exhibitions."
+        description="Viktoria Paladios Art — Contemporary Ukrainian art living and creating in Spain. Explore paintings and workshops."
       />
       <Hero />
 
@@ -49,7 +49,7 @@ export function HomePage() {
       <CollectionsStrip />
 
       <section className="section-padding mx-auto max-w-[90rem]">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="mx-auto grid max-w-xl gap-6">
           {[
             {
               title: 'Workshops',
@@ -57,20 +57,6 @@ export function HomePage() {
               to: '/workshops',
               num: '01',
               clickable: true,
-            },
-            {
-              title: 'Exhibitions',
-              desc: 'From Castellón to Madrid, Provence to Barcelona.',
-              to: '/exhibitions',
-              num: '02',
-              clickable: false,
-            },
-            {
-              title: 'Creative Journey',
-              desc: 'A visual diary of places that shape her art.',
-              to: '/journey',
-              num: '03',
-              clickable: false,
             },
           ].map((item, i) => (
             <ScrollReveal key={item.to} delay={i * 0.1}>

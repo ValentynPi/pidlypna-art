@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { photos } from '../../data/images';
 import { Button } from '../ui/Button';
 import { LazyImage } from '../ui/LazyImage';
@@ -106,36 +105,8 @@ export function Hero() {
             <div className="absolute inset-0 bg-linear-to-r from-ink via-ink/40 to-transparent" />
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, duration: 0.8 }}
-            className="absolute right-8 bottom-16"
-          >
-            <LinkCard to="/exhibitions" label="Upcoming" title="Roots & Horizons" />
-          </motion.div>
         </div>
       </div>
     </section>
-  );
-}
-
-function LinkCard({
-  to,
-  label,
-  title,
-}: {
-  to: string;
-  label: string;
-  title: string;
-}) {
-  return (
-    <Link
-      to={to}
-      className="group block border border-cream/20 bg-ink/60 px-6 py-4 backdrop-blur-sm transition-colors hover:border-gold/40"
-    >
-      <p className="text-[0.6rem] tracking-[0.3em] text-gold uppercase">{label}</p>
-      <p className="mt-1 font-serif text-lg text-cream group-hover:text-gold">{title}</p>
-    </Link>
   );
 }
