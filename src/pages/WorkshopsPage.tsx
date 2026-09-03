@@ -1,10 +1,9 @@
 import { PageMeta } from '../components/ui/PageMeta';
 import { PageHeader } from '../components/ui/PageHeader';
 import { ScrollReveal } from '../components/ui/ScrollReveal';
-import { LazyImage } from '../components/ui/LazyImage';
 import { Button } from '../components/ui/Button';
 import { SectionLabel } from '../components/ui/SectionLabel';
-import { workshops, workshopPhotos } from '../data/workshops';
+import { workshops } from '../data/workshops';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export function WorkshopsPage() {
@@ -22,33 +21,6 @@ export function WorkshopsPage() {
         title={t('workshops.title')}
         description={t('workshops.description')}
       />
-
-      <section className="mx-auto max-w-[90rem] px-6 pb-16 md:px-10 lg:px-16">
-        <ScrollReveal>
-          <SectionLabel>{t('workshops.studio')}</SectionLabel>
-        </ScrollReveal>
-        <div className="mt-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3">
-          {workshopPhotos.map((photo, index) => (
-            <ScrollReveal
-              key={photo.id}
-              delay={index * 0.06}
-              className={index === 0 ? 'col-span-2 row-span-2 md:col-span-1 md:row-span-1' : ''}
-            >
-              <div className="group relative aspect-square overflow-hidden bg-ink">
-                <LazyImage
-                  src={photo.image}
-                  alt={photo.imageAlt}
-                  className="transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-ink/0 transition-colors group-hover:bg-ink/40" />
-                <div className="absolute right-0 bottom-0 left-0 translate-y-full bg-ink/80 p-4 transition-transform group-hover:translate-y-0">
-                  <p className="text-xs text-cream/70">{photo.caption}</p>
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
 
       <section className="bg-ink">
         <div className="mx-auto max-w-[90rem] px-6 py-20 md:px-10 lg:px-16 md:py-28">

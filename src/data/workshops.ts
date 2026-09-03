@@ -1,5 +1,4 @@
-import { photos } from './images';
-import type { Workshop, WorkshopPhoto } from '../types';
+import type { Workshop } from '../types';
 
 export const workshops: Workshop[] = [
   {
@@ -28,44 +27,5 @@ export const workshops: Workshop[] = [
     level: 'All levels',
     description:
       'A three-day immersive workshop covering landscape, floral, and abstract approaches. Includes studio time, group critique, and a final mini-exhibition of student works.',
-  },
-];
-
-export const workshopPhotos: WorkshopPhoto[] = [
-  {
-    id: 'ws-01',
-    image: photos.petrykivkaPair,
-    imageAlt: 'Two small Petrykivka paintings on mini easels',
-    caption: 'Petrykivka workshop — finished student pieces',
-  },
-  {
-    id: 'ws-02',
-    image: photos.petrykivkaBurgundyAlt,
-    imageAlt: 'Petrykivka painting on easel in studio light',
-    caption: 'Decorative folk painting in progress',
-  },
-  {
-    id: 'ws-03',
-    image: photos.floral_collection_sunflowers_2,
-    imageAlt: 'Sunflower still life showing impasto texture',
-    caption: 'Floral painting workshop — texture and light',
-  },
-  {
-    id: 'ws-04',
-    image: photos.affirmation_collection_soy_fuerte_2,
-    imageAlt: 'Soy Fuerte seascape painting on the wall',
-    caption: 'Mediterranean-inspired studio piece',
-  },
-  {
-    id: 'ws-05',
-    image: photos.alcohol_ink_art_ink_circle_2,
-    imageAlt: 'Circular alcohol ink painting on easel',
-    caption: 'Fluid art techniques exploration',
-  },
-  {
-    id: 'ws-06',
-    image: photos.textured_and_light_gold_arcs_1,
-    imageAlt: 'Gold textured abstract paintings in a living space',
-    caption: 'Works at home — summer intensive celebration',
   },
 ];
