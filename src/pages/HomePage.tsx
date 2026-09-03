@@ -6,13 +6,15 @@ import { Button } from '../components/ui/Button';
 import { HandLine } from '../components/ui/HandLine';
 import { LazyImage } from '../components/ui/LazyImage';
 import { photos } from '../data/images';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function HomePage() {
+  const { t } = useLanguage();
   return (
     <>
       <PageMeta
-        title="Home"
-        description="Viktoria Paladios Art — Contemporary Ukrainian art living and creating in Spain. Explore paintings and workshops."
+        title={t('home.metaTitle')}
+        description={t('home.metaDesc')}
       />
       <Hero />
 
@@ -31,9 +33,7 @@ export function HomePage() {
             <ScrollReveal>
               <blockquote className="font-serif text-xl leading-snug text-ink sm:text-2xl md:text-3xl lg:text-4xl">
                 <span className="text-gold">&ldquo;</span>
-                I paint the distance between where I come from and where I
-                stand now — every canvas a bridge, every color a word in a
-                language I am still learning to speak.
+                {t('home.quote')}
                 <span className="text-gold">&rdquo;</span>
               </blockquote>
               <HandLine variant="swirl" className="mt-8 w-32 text-terracotta" />
@@ -52,8 +52,8 @@ export function HomePage() {
         <div className="mx-auto grid max-w-xl gap-6">
           {[
             {
-              title: 'Workshops',
-              desc: 'Painting sessions in Castellón — all levels welcome.',
+              title: t('home.workshopsTitle'),
+              desc: t('home.workshopsDesc'),
               to: '/workshops',
               num: '01',
               clickable: true,
@@ -70,14 +70,14 @@ export function HomePage() {
                 </p>
                 {item.clickable ? (
                   <Button to={item.to} variant="ghost" className="mt-8 border-0 px-0">
-                    Discover
+                    {t('home.discover')}
                   </Button>
                 ) : (
                   <span
                     className="mt-8 inline-flex cursor-default items-center gap-2 px-0 py-3.5 text-xs font-medium tracking-[0.2em] text-ink uppercase"
                     aria-hidden
                   >
-                    Discover
+                    {t('home.discover')}
                     <span aria-hidden>→</span>
                   </span>
                 )}
@@ -90,13 +90,13 @@ export function HomePage() {
       <section className="bg-teal-deep px-6 py-20 text-center md:px-10 lg:px-16">
         <ScrollReveal>
           <p className="text-[0.65rem] tracking-[0.35em] text-gold uppercase">
-            Commissions & Inquiries
+            {t('home.commissions')}
           </p>
           <h2 className="display-heading mt-6 text-3xl text-cream md:text-5xl">
-            Let&apos;s create something together
+            {t('home.together')}
           </h2>
           <Button to="/contact" variant="gold" className="mt-10">
-            Get in Touch
+            {t('home.getInTouch')}
           </Button>
         </ScrollReveal>
       </section>

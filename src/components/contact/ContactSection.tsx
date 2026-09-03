@@ -2,11 +2,13 @@ import { useState, type FormEvent } from 'react';
 import { ScrollReveal } from '../ui/ScrollReveal';
 import { Button } from '../ui/Button';
 import { SectionLabel } from '../ui/SectionLabel';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const CONTACT_EMAIL = 'hello@viktoria-p.art';
 const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 export function ContactSection() {
+  const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -36,13 +38,13 @@ export function ContactSection() {
       const data = (await response.json()) as { success?: string; message?: string };
 
       if (!response.ok) {
-        throw new Error(data.message || 'Something went wrong. Please try again.');
+        throw new Error(data.message || t('contact.error'));
       }
 
       setSubmitted(true);
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : 'Something went wrong. Please try again.',
+        err instanceof Error ? err.message : t('contact.error'),
       );
     } finally {
       setLoading(false);
@@ -50,21 +52,21 @@ export function ContactSection() {
   };
 
   const links = [
-    { label: 'Location', value: 'Castellón, Spain' },
+    { label: t('contact.location'), value: t('contact.locationValue') },
     {
-      label: 'Email',
+      label: t('contact.email'),
       value: CONTACT_EMAIL,
       href: `mailto:${CONTACT_EMAIL}`,
     },
     {
-      label: 'Instagram',
+      label: t('contact.instagram'),
       value: '@viktoria.paladios.art',
       href: 'https://instagram.com/viktoria.paladios.art',
       external: true,
     },
     {
-      label: 'WhatsApp',
-      value: 'Send a message',
+      label: t('contact.whatsapp'),
+      value: t('contact.whatsappValue'),
       href: 'https://wa.me/34000000000',
       external: true,
     },
@@ -74,13 +76,12 @@ export function ContactSection() {
     <section className="mx-auto max-w-[90rem] section-padding">
       <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
         <ScrollReveal>
-          <SectionLabel>Get in Touch</SectionLabel>
+          <SectionLabel>{t('contact.label')}</SectionLabel>
           <h2 className="display-heading mt-6 text-4xl md:text-5xl lg:text-6xl">
-            Let&apos;s connect
+            {t('contact.title')}
           </h2>
           <p className="mt-6 max-w-md leading-relaxed text-ink-soft">
-            For commissions, workshop bookings, exhibition inquiries, or simply
-            to say hello — I&apos;d love to hear from you.
+            {t('contact.intro')}
           </p>
 
           <dl className="mt-12 space-y-6">
@@ -112,17 +113,17 @@ export function ContactSection() {
           {submitted ? (
             <div className="flex h-full min-h-[400px] items-center justify-center border border-sage/20 bg-sage/5 p-12 text-center">
               <div>
-                <p className="display-heading text-3xl">Thank you</p>
+                <p className="display-heading text-3xl">{t('contact.thanks')}</p>
                 <p className="mt-4 text-ink-soft">
-                  Your message has been received. I&apos;ll be in touch soon.
+                  {t('contact.thanksBody')}
                 </p>
               </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               {[
-                { id: 'name', label: 'Name', type: 'text' },
-                { id: 'email', label: 'Email', type: 'email' },
+                { id: 'name', label: t('contact.name'), type: 'text' },
+                { id: 'email', label: t('contact.email'), type: 'email' },
               ].map((field) => (
                 <div key={field.id}>
                   <label
@@ -150,7 +151,7 @@ export function ContactSection() {
                   htmlFor="message"
                   className="mb-2 block text-[0.65rem] tracking-[0.2em] text-ink-soft uppercase"
                 >
-                  Message
+                  {t('contact.message')}
                 </label>
                 <textarea
                   id="message"
@@ -178,7 +179,7 @@ export function ContactSection() {
                 className="w-full sm:w-auto"
                 disabled={loading}
               >
-                {loading ? 'Sending…' : 'Send Message'}
+                {loading ? t('contact.sending') : t('contact.send')}
               </Button>
             </form>
           )}

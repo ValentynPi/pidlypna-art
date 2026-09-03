@@ -2,19 +2,21 @@ import { PageMeta } from '../components/ui/PageMeta';
 import { PageHeader } from '../components/ui/PageHeader';
 import { CollectionCard } from '../components/gallery/CollectionCard';
 import { collections } from '../data/collections';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function GalleryPage() {
+  const { t } = useLanguage();
   return (
     <>
       <PageMeta
-        title="Gallery"
-        description="Explore Viktoria Paladios collections — paintings grouped by style and theme."
+        title={t('gallery.metaTitle')}
+        description={t('gallery.metaDesc')}
       />
 
       <PageHeader
-        label="Gallery"
-        title="Collections"
-        description="Open a collection to explore the paintings inside."
+        label={t('gallery.label')}
+        title={t('gallery.title')}
+        description={t('gallery.description')}
       />
 
       <section className="mx-auto max-w-[90rem] px-6 pb-24 md:px-10 lg:px-16">

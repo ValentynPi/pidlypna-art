@@ -4,8 +4,10 @@ import { photos } from '../../data/images';
 import { Button } from '../ui/Button';
 import { LazyImage } from '../ui/LazyImage';
 import { HandLine } from '../ui/HandLine';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function Hero() {
+  const { t } = useLanguage();
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -43,7 +45,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-[18rem] text-[0.6rem] font-medium tracking-[0.22em] text-gold uppercase sm:max-w-none sm:text-[0.65rem] sm:tracking-[0.35em] lg:mt-auto lg:pt-[18vh] lg:tracking-[0.4em]"
           >
-            Contemporary Ukrainian Artist
+            {t('hero.tag')}
           </motion.p>
 
           <motion.h1
@@ -64,8 +66,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="mt-5 max-w-[20rem] text-[0.95rem] leading-relaxed text-cream/70 sm:mt-8 sm:max-w-sm sm:text-base md:text-lg"
           >
-            Living and creating in Spain — where Ukrainian tradition meets
-            Mediterranean light
+            {t('hero.intro')}
           </motion.p>
 
           <motion.div
@@ -75,10 +76,10 @@ export function Hero() {
             className="mt-7 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:flex-wrap"
           >
             <Button to="/gallery" variant="gold" className="w-full sm:w-auto">
-              View Artwork
+              {t('hero.viewArtwork')}
             </Button>
             <Button to="/workshops" variant="secondary" className="w-full sm:w-auto">
-              Workshops
+              {t('hero.workshops')}
             </Button>
           </motion.div>
 
@@ -88,7 +89,7 @@ export function Hero() {
             transition={{ delay: 1.2 }}
             className="mt-16 hidden text-xs tracking-[0.3em] text-cream/30 uppercase lg:block"
           >
-            Castellón de la Plana · Spain
+            {t('hero.place')}
           </motion.p>
         </motion.div>
 

@@ -4,18 +4,21 @@ import { ScrollReveal } from '../components/ui/ScrollReveal';
 import { LazyImage } from '../components/ui/LazyImage';
 import { HandLine } from '../components/ui/HandLine';
 import { photos } from '../data/images';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function AboutPage() {
+  const { t } = useLanguage();
+
   return (
     <>
       <PageMeta
-        title="About"
-        description="The story of Viktoria Paladios — contemporary Ukrainian painting bridging tradition and Mediterranean life in Spain."
+        title={t('about.metaTitle')}
+        description={t('about.metaDesc')}
       />
 
       <PageHeader
-        label="About the Artist"
-        title="A story written in color"
+        label={t('about.label')}
+        title={t('about.title')}
       />
 
       <section className="mx-auto max-w-[90rem] px-6 pb-16 md:px-10 lg:px-16">
@@ -34,20 +37,12 @@ export function AboutPage() {
           <div className="space-y-8 text-base leading-[1.8] text-ink-soft lg:col-span-7 md:text-lg">
             <ScrollReveal delay={0.1}>
               <p className="first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-6xl first-letter:text-gold first-letter:leading-none">
-                I learned to see color before I learned to read. Growing up in
-                Ukraine, I spent childhood afternoons watching my
-                grandmother embroider vyshyvanka patterns by lamplight — each
-                stitch a story, each motif a prayer.
+                {t('about.p1')}
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.15}>
-              <p>
-                When I arrived in Spain, Castellón became
-                home slowly — first through the language of markets and olive
-                groves, then through the particular quality of Mediterranean
-                light that transforms how you mix every color on your palette.
-              </p>
+              <p>{t('about.p2')}</p>
             </ScrollReveal>
           </div>
         </div>
@@ -65,9 +60,7 @@ export function AboutPage() {
           <ScrollReveal>
             <HandLine variant="circle" className="mx-auto mb-8 h-16 w-16 text-gold" />
             <blockquote className="font-serif text-2xl leading-relaxed text-cream italic md:text-4xl md:leading-snug">
-              &ldquo;I don&apos;t paint to remember Ukraine — I paint to keep
-              the conversation alive between who I was and who I am
-              becoming.&rdquo;
+              &ldquo;{t('about.quote')}&rdquo;
             </blockquote>
           </ScrollReveal>
         </div>
@@ -76,19 +69,10 @@ export function AboutPage() {
       <section className="mx-auto max-w-[90rem] px-6 py-20 md:px-10 lg:px-16">
         <div className="mx-auto max-w-3xl space-y-8 text-base leading-[1.8] text-ink-soft md:text-lg">
           <ScrollReveal>
-            <p>
-              Her work lives in the space between worlds. Ukrainian folk motifs
-              curl through contemporary compositions like handwritten notes in
-              the margins of a new chapter. Mediterranean landscapes breathe
-              with the same luminous atmosphere she once associated only with
-              summer visits to her grandmother&apos;s garden.
-            </p>
+            <p>{t('about.p3')}</p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p>
-              Today, I continue from a studio in Castellón, continuing a
-              visual diary of the journeys that feed the practice.
-            </p>
+            <p>{t('about.p4')}</p>
           </ScrollReveal>
         </div>
       </section>
@@ -98,12 +82,9 @@ export function AboutPage() {
           <ScrollReveal>
             <div className="grid gap-12 md:grid-cols-3">
               {[
-                { label: 'Based in', value: 'Castellón, Spain' },
-                { label: 'Mediums', value: 'Acrylic, oil, mixed media' },
-                {
-                  label: 'Focus',
-                  value: 'Ukrainian heritage · Mediterranean life · Contemporary painting',
-                },
+                { label: t('about.based'), value: t('about.basedValue') },
+                { label: t('about.mediums'), value: t('about.mediumsValue') },
+                { label: t('about.focus'), value: t('about.focusValue') },
               ].map((item) => (
                 <div key={item.label} className="border-l-2 border-gold pl-6">
                   <p className="text-[0.65rem] tracking-[0.3em] text-terracotta uppercase">

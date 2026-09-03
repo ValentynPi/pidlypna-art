@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const navLinks = [
-  { to: '/about', label: 'About' },
-  { to: '/gallery', label: 'Gallery' },
-  { to: '/workshops', label: 'Workshops' },
-  { to: '/contact', label: 'Contact' },
-];
+import { useLanguage } from '../../i18n/LanguageContext';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Navbar() {
+  const { t } = useLanguage();
+  const navLinks = [
+    { to: '/about', label: t('nav.about') },
+    { to: '/gallery', label: t('nav.gallery') },
+    { to: '/workshops', label: t('nav.workshops') },
+    { to: '/contact', label: t('nav.contact') },
+  ];
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -97,38 +99,44 @@ export function Navbar() {
           ))}
         </ul>
 
-        <Link
-          to="/gallery"
-          className={`hidden border px-5 py-2.5 text-xs font-semibold tracking-[0.15em] uppercase transition-colors lg:block ${
-            onDarkHero && !scrolled
-              ? 'border-cream/30 bg-white/10 text-cream backdrop-blur-sm hover:bg-white/20'
-              : 'border-black/10 bg-white/80 text-black backdrop-blur-sm hover:bg-white/90'
-          }`}
-        >
-          View Art
-        </Link>
+        <div className="hidden items-center gap-4 lg:flex">
+          <LanguageSwitcher onDark={onDarkHero && !scrolled} />
+          <Link
+            to="/gallery"
+            className={`border px-5 py-2.5 text-xs font-semibold tracking-[0.15em] uppercase transition-colors ${
+              onDarkHero && !scrolled
+                ? 'border-cream/30 bg-white/10 text-cream backdrop-blur-sm hover:bg-white/20'
+                : 'border-black/10 bg-white/80 text-black backdrop-blur-sm hover:bg-white/90'
+            }`}
+          >
+            {t('nav.viewArt')}
+          </Link>
+        </div>
 
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className={`relative z-50 flex h-11 w-11 shrink-0 touch-manipulation flex-col items-center justify-center gap-1.5 lg:hidden ${
-            isOpen ? 'text-ink' : onDarkHero && !scrolled ? 'text-cream' : 'text-ink'
-          }`}
-          aria-label="Toggle menu"
-          aria-expanded={isOpen}
-        >
-          <motion.span
-            animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-            className="block h-px w-6 bg-current"
-          />
-          <motion.span
-            animate={isOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
-            className="block h-px w-6 bg-current"
-          />
-          <motion.span
-            animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-            className="block h-px w-6 bg-current"
-          />
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <LanguageSwitcher onDark={!isOpen && onDarkHero && !scrolled} compact />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className={`relative z-50 flex h-11 w-11 shrink-0 touch-manipulation flex-col items-center justify-center gap-1.5 ${
+              isOpen ? 'text-ink' : onDarkHero && !scrolled ? 'text-cream' : 'text-ink'
+            }`}
+            aria-label={t('nav.menu')}
+            aria-expanded={isOpen}
+          >
+            <motion.span
+              animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+              className="block h-px w-6 bg-current"
+            />
+            <motion.span
+              animate={isOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+              className="block h-px w-6 bg-current"
+            />
+            <motion.span
+              animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+              className="block h-px w-6 bg-current"
+            />
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -142,7 +150,7 @@ export function Navbar() {
           >
             <div className="flex flex-1 flex-col justify-center overflow-y-auto px-6 sm:px-10">
               <ul className="space-y-1">
-                {[{ to: '/', label: 'Home' }, ...navLinks].map((link, i) => (
+                {[{ to: '/', label: t('nav.home') }, ...navLinks].map((link, i) => (
                   <motion.li
                     key={link.to}
                     initial={{ opacity: 0, x: -30 }}
@@ -164,12 +172,12 @@ export function Navbar() {
                 to="/gallery"
                 className="mt-8 inline-flex w-full items-center justify-center border border-black/10 bg-white px-5 py-3.5 text-xs font-semibold tracking-[0.15em] text-black uppercase touch-manipulation sm:w-auto"
               >
-                View Art
+                {t('nav.viewArt')}
               </Link>
             </div>
             <div className="border-t border-ink/10 px-6 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:px-10 sm:py-8">
               <p className="text-xs tracking-widest text-ink-soft uppercase">
-                Castellón, Spain
+                {t('footer.location')}
               </p>
             </div>
           </motion.div>

@@ -2,18 +2,20 @@ import { PageMeta } from '../components/ui/PageMeta';
 import { PageHeader } from '../components/ui/PageHeader';
 import { Timeline } from '../components/exhibitions/Timeline';
 import { exhibitions } from '../data/exhibitions';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function ExhibitionsPage() {
+  const { t } = useLanguage();
   return (
     <>
       <PageMeta
-        title="Exhibitions"
-        description="Past and upcoming exhibitions by Viktoria Paladios — Castellón, Madrid, Provence, Valencia, and beyond."
+        title={t('exhibitions.metaTitle')}
+        description={t('exhibitions.metaDesc')}
       />
 
       <PageHeader
-        label="Exhibitions"
-        title="On the wall"
+        label={t('exhibitions.label')}
+        title={t('exhibitions.title')}
       />
 
       <section className="mx-auto max-w-[90rem] px-6 pb-24 md:px-10 lg:px-16">

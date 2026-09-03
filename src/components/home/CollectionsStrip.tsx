@@ -2,14 +2,16 @@ import { CollectionCard } from '../gallery/CollectionCard';
 import { collections } from '../../data/collections';
 import { ScrollReveal } from '../ui/ScrollReveal';
 import { SectionLabel } from '../ui/SectionLabel';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function CollectionsStrip() {
+  const { t } = useLanguage();
   return (
     <section className="section-padding mx-auto max-w-[90rem]">
       <ScrollReveal>
-        <SectionLabel>Collections</SectionLabel>
+        <SectionLabel>{t('home.collectionsLabel')}</SectionLabel>
         <h2 className="display-heading mt-6 text-3xl md:text-4xl">
-          Explore the collections
+          {t('home.collectionsTitle')}
         </h2>
       </ScrollReveal>
 

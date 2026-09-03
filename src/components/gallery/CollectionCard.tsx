@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import type { Collection } from '../../types';
 import { LazyImage } from '../ui/LazyImage';
 import { ScrollReveal } from '../ui/ScrollReveal';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 interface CollectionCardProps {
   collection: Collection;
@@ -9,6 +10,8 @@ interface CollectionCardProps {
 }
 
 export function CollectionCard({ collection, index }: CollectionCardProps) {
+  const { t } = useLanguage();
+  const name = t(`collections.${collection.id}`);
   return (
     <ScrollReveal delay={index * 0.04}>
       <Link to={`/gallery/${collection.slug}`} className="group block">
@@ -24,7 +27,7 @@ export function CollectionCard({ collection, index }: CollectionCardProps) {
           </div>
           <div className="absolute inset-x-0 bottom-0 p-3 md:p-3.5">
             <h3 className="font-serif text-sm leading-snug text-cream md:text-base">
-              {collection.name}
+              {name}
             </h3>
           </div>
         </div>

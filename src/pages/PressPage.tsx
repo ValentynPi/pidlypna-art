@@ -2,19 +2,21 @@ import { PageMeta } from '../components/ui/PageMeta';
 import { PageHeader } from '../components/ui/PageHeader';
 import { ScrollReveal } from '../components/ui/ScrollReveal';
 import { pressItems } from '../data/press';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function PressPage() {
+  const { t } = useLanguage();
   return (
     <>
       <PageMeta
-        title="Press"
-        description="Press mentions and features about Viktoria Paladios — contemporary Ukrainian artist in Spain."
+        title={t('press.metaTitle')}
+        description={t('press.metaDesc')}
       />
 
       <PageHeader
-        label="Press"
-        title="In the press"
-        description="Features, reviews, and mentions from publications across Spain, France, and the Ukrainian art community."
+        label={t('press.label')}
+        title={t('press.title')}
+        description={t('press.description')}
       />
 
       <section className="mx-auto max-w-[90rem] px-6 pb-24 md:px-10 lg:px-16">
@@ -37,7 +39,7 @@ export function PressPage() {
                       href={item.link}
                       className="text-xs tracking-[0.2em] text-terracotta uppercase transition-colors hover:text-gold"
                     >
-                      Read →
+                      {t('press.read')}
                     </a>
                   </div>
                 )}

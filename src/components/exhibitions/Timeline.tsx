@@ -2,12 +2,14 @@ import type { Exhibition } from '../../types';
 import { ScrollReveal } from '../ui/ScrollReveal';
 import { LazyImage } from '../ui/LazyImage';
 import { SectionLabel } from '../ui/SectionLabel';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 interface TimelineProps {
   exhibitions: Exhibition[];
 }
 
 export function Timeline({ exhibitions }: TimelineProps) {
+  const { t } = useLanguage();
   const upcoming = exhibitions.filter((e) => e.status === 'upcoming');
   const past = exhibitions.filter((e) => e.status === 'past');
 
@@ -16,7 +18,7 @@ export function Timeline({ exhibitions }: TimelineProps) {
       {upcoming.length > 0 && (
         <div>
           <ScrollReveal>
-            <SectionLabel>Upcoming</SectionLabel>
+            <SectionLabel>{t('exhibitions.upcoming')}</SectionLabel>
           </ScrollReveal>
           <div className="mt-10 space-y-16">
             {upcoming.map((item, index) => (
@@ -28,7 +30,7 @@ export function Timeline({ exhibitions }: TimelineProps) {
 
       <div>
         <ScrollReveal>
-          <SectionLabel>Past</SectionLabel>
+            <SectionLabel>{t('exhibitions.past')}</SectionLabel>
         </ScrollReveal>
         <div className="mt-10 space-y-12">
           {past.map((item, index) => (

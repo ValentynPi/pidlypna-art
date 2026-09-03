@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-ink text-cream">
       <div className="mx-auto max-w-[90rem] px-6 py-20 md:px-10 lg:px-16">
@@ -16,24 +19,23 @@ export function Footer() {
               <h3 className="font-serif text-2xl">Viktoria Paladios Art</h3>
             </div>
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-cream/50">
-              Contemporary Ukrainian art living and creating in Castellón,
-              Spain. Paintings that bridge two worlds.
+              {t('footer.blurb')}
             </p>
             <p className="mt-8 font-serif text-lg italic text-gold/80">
-              Art bridges what words cannot.
+              {t('footer.quote')}
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-x-10 gap-y-10 sm:grid-cols-3 md:col-span-7 md:items-start">
             <div>
               <h4 className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
-                Explore
+                {t('footer.explore')}
               </h4>
               <ul className="mt-5 space-y-3">
                 {[
-                  { to: '/gallery', label: 'Gallery' },
-                  { to: '/about', label: 'About' },
-                  { to: '/workshops', label: 'Workshops' },
+                  { to: '/gallery', label: t('nav.gallery') },
+                  { to: '/about', label: t('nav.about') },
+                  { to: '/workshops', label: t('nav.workshops') },
                 ].map((link) => (
                   <li key={link.to}>
                     <Link
@@ -48,29 +50,25 @@ export function Footer() {
             </div>
             <div>
               <h4 className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
-                More
+                {t('footer.more')}
               </h4>
               <ul className="mt-5 space-y-3">
-                {[
-                  { to: '/contact', label: 'Contact' },
-                ].map((link) => (
-                  <li key={link.to}>
-                    <Link
-                      to={link.to}
-                      className="text-sm text-cream/50 transition-colors hover:text-cream"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link
+                    to="/contact"
+                    className="text-sm text-cream/50 transition-colors hover:text-cream"
+                  >
+                    {t('nav.contact')}
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="col-span-2 sm:col-span-1">
               <h4 className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
-                Connect
+                {t('footer.connect')}
               </h4>
               <ul className="mt-5 space-y-3 text-sm text-cream/50">
-                <li>Castellón, Spain</li>
+                <li>{t('footer.location')}</li>
                 <li>
                   <a
                     href="mailto:hello@viktoria-p.art"
@@ -96,7 +94,7 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-cream/10 pt-8 text-xs text-cream/30 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Viktoria Paladios</p>
-          <p className="tracking-wider uppercase">Ukraine · Spain · Everywhere between</p>
+          <p className="tracking-wider uppercase">{t('footer.between')}</p>
         </div>
       </div>
     </footer>

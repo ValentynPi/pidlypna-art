@@ -4,19 +4,21 @@ import { JourneyEntry } from '../components/journey/JourneyEntry';
 import { ScrollReveal } from '../components/ui/ScrollReveal';
 import { HandLine } from '../components/ui/HandLine';
 import { journeyEntries } from '../data/journey';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function JourneyPage() {
+  const { t } = useLanguage();
   return (
     <>
       <PageMeta
-        title="Creative Journey"
-        description="A visual diary of the places and experiences that inspire Viktoria Paladios — from Provence lavender fields to Madrid gardens."
+        title={t('journey.metaTitle')}
+        description={t('journey.metaDesc')}
       />
 
       <PageHeader
-        label="Creative Journey"
-        title="Pages from a visual diary"
-        description="Not a blog — a scrapbook. The places I've stood, the light I've chased, and the quiet mornings that find their way onto canvas."
+        label={t('journey.label')}
+        title={t('journey.title')}
+        description={t('journey.description')}
       />
 
       <section className="mx-auto max-w-[90rem] px-6 pb-16 md:px-10 lg:px-16">
@@ -30,9 +32,7 @@ export function JourneyPage() {
           <ScrollReveal>
             <HandLine variant="circle" className="mx-auto mb-8 h-12 w-12 text-gold" />
             <p className="font-serif text-2xl leading-relaxed text-ink italic md:text-3xl">
-              &ldquo;Every journey I take ends up on the canvas — sometimes as
-              landscape, sometimes as color, sometimes as a single line that
-              remembers the wind.&rdquo;
+              &ldquo;{t('journey.quote')}&rdquo;
             </p>
             <p className="mt-6 text-[0.65rem] tracking-[0.3em] text-terracotta uppercase">
               Viktoria Paladios

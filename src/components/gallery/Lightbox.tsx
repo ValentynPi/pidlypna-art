@@ -11,6 +11,7 @@ import {
 } from '../../data/listing';
 import { getCollectionById } from '../../data/collections';
 import { LazyImage } from '../ui/LazyImage';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 interface LightboxProps {
   artworks: Artwork[];
@@ -25,6 +26,7 @@ export function Lightbox({
   onClose,
   onNavigate,
 }: LightboxProps) {
+  const { t } = useLanguage();
   const artwork = artworks[currentIndex];
   const views = artwork ? getArtworkImages(artwork) : [];
   const collection = artwork ? getCollectionById(artwork.collectionId) : undefined;
@@ -132,7 +134,7 @@ export function Lightbox({
           <button
             onClick={onClose}
             className="absolute top-[max(0.75rem,env(safe-area-inset-top))] right-3 z-20 flex h-11 w-11 touch-manipulation items-center justify-center rounded-full bg-ink/60 text-cream backdrop-blur-sm md:top-5 md:right-5 md:bg-transparent"
-            aria-label="Close lightbox"
+            aria-label={t('lightbox.close')}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               <path d="M18 6L6 18M6 6l12 12" />
@@ -162,7 +164,7 @@ export function Lightbox({
                     setExpanded(true);
                   }
                 }}
-                aria-label="View painting larger"
+                aria-label={t('lightbox.viewLarger')}
               >
                 <LazyImage
                   src={activeView.src}
@@ -213,7 +215,10 @@ export function Lightbox({
 
             {hasMultipleViews && (
               <p className="px-4 pb-2 text-center text-[0.65rem] tracking-[0.18em] text-gold/80 uppercase md:hidden">
-                Angle {viewIndex + 1} / {views.length} · swipe to change
+                {t('lightbox.angle', {
+                  current: String(viewIndex + 1),
+                  total: String(views.length),
+                })}
               </p>
             )}
 
@@ -252,7 +257,7 @@ export function Lightbox({
                     isAvailable ? 'text-gold' : 'text-cream/40'
                   }`}
                 >
-                  {artwork.availability}
+                  {isAvailable ? t('lightbox.available') : t('lightbox.sold')}
                 </span>
               </div>
 
@@ -266,7 +271,7 @@ export function Lightbox({
                   onClick={onClose}
                   className="mt-2 inline-block text-xs tracking-[0.2em] text-cream/45 uppercase transition-colors hover:text-gold"
                 >
-                  {collection.name}
+                  {t(`collections.${collection.id}`)}
                 </Link>
               )}
 
@@ -276,12 +281,18 @@ export function Lightbox({
 
               <div className="mt-6 border-t border-cream/10 pt-5">
                 <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
-                  Details
+                  {t('lightbox.details')}
                 </p>
                 <dl className="mt-4 space-y-2.5">
                   {details.map((spec) => (
                     <div key={spec.label} className="grid grid-cols-[7.5rem_1fr] gap-3 text-sm">
-                      <dt className="text-cream/40">{spec.label}</dt>
+                      <dt className="text-cream/40">
+                        {(() => {
+                          const key = `lightbox.${spec.label.toLowerCase()}`;
+                          const translated = t(key);
+                          return translated === key ? spec.label : translated;
+                        })()}
+                      </dt>
                       <dd className="text-cream/80">{spec.value}</dd>
                     </div>
                   ))}
@@ -290,7 +301,7 @@ export function Lightbox({
 
               <div className="mt-6 border-t border-cream/10 pt-5">
                 <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
-                  Made to Order
+                  {t('lightbox.madeToOrder')}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-cream/60">
                   {madeToOrderText(artwork)}
@@ -299,7 +310,7 @@ export function Lightbox({
 
               <div className="mt-6 border-t border-cream/10 pt-5">
                 <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
-                  Customizations
+                  {t('lightbox.customizations')}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-cream/60">
                   {CUSTOMIZATIONS}
@@ -312,7 +323,7 @@ export function Lightbox({
                 className="mt-6 flex w-full touch-manipulation items-center justify-between border border-cream/15 px-3 py-3 text-left text-[0.65rem] tracking-[0.2em] text-cream/70 uppercase"
                 aria-expanded={detailsOpen}
               >
-                {detailsOpen ? 'Hide shipping & care' : 'Shipping & care'}
+                {detailsOpen ? t('lightbox.hideShippingCare') : t('lightbox.shippingCare')}
                 <span aria-hidden>{detailsOpen ? '−' : '+'}</span>
               </button>
 
@@ -320,13 +331,13 @@ export function Lightbox({
                 <div className="mt-4 space-y-5">
                   <div>
                     <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
-                      Shipping
+                      {t('lightbox.shipping')}
                     </p>
                     <p className="mt-2 text-sm text-cream/55">{SHIPPING_NOTE}</p>
                   </div>
                   <div>
                     <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
-                      Care Instructions
+                      {t('lightbox.care')}
                     </p>
                     <p className="mt-2 text-sm text-cream/55">{CARE_INSTRUCTIONS}</p>
                   </div>
@@ -341,7 +352,7 @@ export function Lightbox({
                 className="flex h-12 flex-1 touch-manipulation items-center justify-center border border-cream/20 text-sm text-cream/70 transition-colors active:scale-[0.98] hover:border-gold hover:text-gold disabled:opacity-20"
                 aria-label="Previous artwork"
               >
-                ← Prev
+                {t('lightbox.prev')}
               </button>
               <button
                 onClick={() => onNavigate(currentIndex + 1)}
@@ -349,7 +360,7 @@ export function Lightbox({
                 className="flex h-12 flex-1 touch-manipulation items-center justify-center border border-cream/20 text-sm text-cream/70 transition-colors active:scale-[0.98] hover:border-gold hover:text-gold disabled:opacity-20"
                 aria-label="Next artwork"
               >
-                Next →
+                {t('lightbox.next')}
               </button>
             </div>
           </div>
@@ -372,7 +383,7 @@ export function Lightbox({
                 type="button"
                 onClick={() => setExpanded(false)}
                 className="absolute top-[max(0.75rem,env(safe-area-inset-top))] right-3 z-40 flex h-11 w-11 touch-manipulation items-center justify-center rounded-full bg-ink/60 text-cream"
-                aria-label="Close large view"
+                aria-label={t('lightbox.closeLarge')}
               >
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M18 6L6 18M6 6l12 12" />
