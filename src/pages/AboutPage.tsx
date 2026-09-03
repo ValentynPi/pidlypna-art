@@ -34,8 +34,8 @@ export function AboutPage() {
           <div className="space-y-8 text-base leading-[1.8] text-ink-soft lg:col-span-7 md:text-lg">
             <ScrollReveal delay={0.1}>
               <p className="first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-6xl first-letter:text-gold first-letter:leading-none">
-                She learned to see color before she learned to read. Growing up in
-                Ukraine, Viktoria Paladios spent childhood afternoons watching her
+                I learned to see color before I learned to read. Growing up in
+                Ukraine, I spent childhood afternoons watching my
                 grandmother embroider vyshyvanka patterns by lamplight — each
                 stitch a story, each motif a prayer.
               </p>
@@ -43,8 +43,7 @@ export function AboutPage() {
 
             <ScrollReveal delay={0.15}>
               <p>
-                When she arrived in Spain, she carried everything in her
-                suitcase and nothing that could be unpacked. Castellón became
+                When I arrived in Spain, Castellón became
                 home slowly — first through the language of markets and olive
                 groves, then through the particular quality of Mediterranean
                 light that transforms how you mix every color on your palette.
@@ -87,9 +86,7 @@ export function AboutPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p>
-              Today, she continues from a studio in Castellón, exhibiting
-              across Spain and France, teaching workshops that welcome everyone
-              from curious beginners to experienced painters, and continuing a
+              Today, I continue from a studio in Castellón, continuing a
               visual diary of the journeys that feed the practice.
             </p>
           </ScrollReveal>
@@ -102,7 +99,7 @@ export function AboutPage() {
             <div className="grid gap-12 md:grid-cols-3">
               {[
                 { label: 'Based in', value: 'Castellón, Spain' },
-                { label: 'Mediums', value: 'Acrylic, gouache, mixed media' },
+                { label: 'Mediums', value: 'Acrylic, oil, mixed media' },
                 {
                   label: 'Focus',
                   value: 'Ukrainian heritage · Mediterranean life · Contemporary painting',

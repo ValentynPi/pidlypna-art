@@ -7,7 +7,10 @@ export function Footer() {
         <div className="grid gap-16 md:grid-cols-12 md:items-start">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center border border-cream/20 font-serif text-sm">
+              <span
+                translate="no"
+                className="notranslate flex h-10 w-10 items-center justify-center border border-cream/20 font-serif text-sm"
+              >
                 VP
               </span>
               <h3 className="font-serif text-2xl">Viktoria Paladios Art</h3>
@@ -49,7 +52,6 @@ export function Footer() {
               </h4>
               <ul className="mt-5 space-y-3">
                 {[
-                  { to: '/press', label: 'Press' },
                   { to: '/contact', label: 'Contact' },
                 ].map((link) => (
                   <li key={link.to}>

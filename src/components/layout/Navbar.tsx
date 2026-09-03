@@ -50,7 +50,8 @@ export function Navbar() {
       >
         <Link to="/" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
           <span
-            className={`flex h-9 w-9 shrink-0 items-center justify-center border font-serif text-sm transition-colors ${
+            translate="no"
+            className={`notranslate flex h-9 w-9 shrink-0 items-center justify-center border font-serif text-sm transition-colors ${
               onDarkHero && !scrolled
                 ? 'border-cream/30 text-cream group-hover:border-gold group-hover:text-gold'
                 : 'border-ink/20 text-ink group-hover:border-terracotta group-hover:text-terracotta'

@@ -3,15 +3,6 @@ import type { Workshop, WorkshopPhoto } from '../types';
 
 export const workshops: Workshop[] = [
   {
-    id: 'floral-oils',
-    title: 'Floral Painting in Acrylics',
-    date: 'April 12, 2026',
-    location: 'Castellón Studio',
-    level: 'All levels welcome',
-    description:
-      'Learn to capture the luminous quality of flowers in acrylic paint. We\'ll cover color mixing, brush techniques, and composition — with plenty of time to paint from fresh bouquets.',
-  },
-  {
     id: 'petrykivka-intro',
     title: 'Introduction to Petrykivka',
     date: 'May 24, 2026',
