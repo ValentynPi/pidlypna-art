@@ -8,6 +8,7 @@ import { LazyImage } from '../components/ui/LazyImage';
 import { photos } from '../data/images';
 import { useLanguage } from '../i18n/LanguageContext';
 
+
 export function HomePage() {
   const { t } = useLanguage();
   return (
@@ -47,45 +48,6 @@ export function HomePage() {
       </section>
 
       <CollectionsStrip />
-
-      <section className="section-padding mx-auto max-w-[90rem]">
-        <div className="mx-auto grid max-w-xl gap-6">
-          {[
-            {
-              title: t('home.workshopsTitle'),
-              desc: t('home.workshopsDesc'),
-              to: '/workshops',
-              num: '01',
-              clickable: true,
-            },
-          ].map((item, i) => (
-            <ScrollReveal key={item.to} delay={i * 0.1}>
-              <div className="group relative border border-ink/10 bg-warm p-8 transition-all duration-500 hover:border-gold/40 hover:bg-cream">
-                <span className="font-serif text-4xl text-ink/10 transition-colors group-hover:text-gold/30">
-                  {item.num}
-                </span>
-                <h3 className="display-heading mt-4 text-2xl">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-                  {item.desc}
-                </p>
-                {item.clickable ? (
-                  <Button to={item.to} variant="ghost" className="mt-8 border-0 px-0">
-                    {t('home.discover')}
-                  </Button>
-                ) : (
-                  <span
-                    className="mt-8 inline-flex cursor-default items-center gap-2 px-0 py-3.5 text-xs font-medium tracking-[0.2em] text-ink uppercase"
-                    aria-hidden
-                  >
-                    {t('home.discover')}
-                    <span aria-hidden>→</span>
-                  </span>
-                )}
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
 
       <section className="bg-teal-deep px-6 py-20 text-center md:px-10 lg:px-16">
         <ScrollReveal>

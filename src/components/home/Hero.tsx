@@ -78,8 +78,8 @@ export function Hero() {
             <Button to="/gallery" variant="gold" className="w-full sm:w-auto">
               {t('hero.viewArtwork')}
             </Button>
-            <Button to="/workshops" variant="secondary" className="w-full sm:w-auto">
-              {t('hero.workshops')}
+            <Button to="/contact" variant="secondary" className="w-full sm:w-auto">
+              {t('nav.contact')}
             </Button>
           </motion.div>
 
