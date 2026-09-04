@@ -21,9 +21,12 @@ export function LazyImage({
   const fitClass = objectFit === 'contain' ? 'object-contain' : 'object-cover';
   const sizeClass =
     objectFit === 'contain' ? 'max-h-full max-w-full' : 'h-full w-full';
+  const positionClass = wrapperClassName.includes('absolute')
+    ? 'overflow-hidden'
+    : 'relative overflow-hidden';
 
   return (
-    <div className={`relative overflow-hidden bg-cream-dark ${wrapperClassName}`}>
+    <div className={`${positionClass} bg-cream-dark ${wrapperClassName}`}>
       {!loaded && (
         <div className="absolute inset-0 animate-pulse bg-cream-dark" />
       )}

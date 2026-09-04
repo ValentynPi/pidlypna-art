@@ -156,14 +156,13 @@ export function CharityPage() {
             <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:gap-4">
               {event.photos.map((photo, index) => (
                 <ScrollReveal key={photo.src} delay={index * 0.06}>
-                  <div className="relative aspect-[4/5] overflow-hidden bg-cream-dark sm:aspect-[3/4]">
-                    <LazyImage
-                      src={photo.src}
-                      alt={photo.alt}
-                      wrapperClassName="absolute inset-0 h-full w-full"
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
+                  <LazyImage
+                    src={photo.src}
+                    alt={photo.alt}
+                    wrapperClassName="w-full"
+                    className="!h-auto !w-full !max-h-none"
+                    objectFit="cover"
+                  />
                 </ScrollReveal>
               ))}
             </div>
