@@ -166,6 +166,8 @@ const en: TranslationTree = {
     metaTitle: 'Charity & Initiatives',
     label: 'Charity',
     title: 'Charity & Initiatives',
+    eventDate: 'August 24, 2024',
+    eventTitle: 'Charity master class in Petrykivka painting',
   },
   exhibitions: {
     metaTitle: 'Exhibitions',
@@ -379,6 +381,8 @@ const es: TranslationTree = {
     metaTitle: 'Caridad e iniciativas',
     label: 'Caridad',
     title: 'Caridad e iniciativas',
+    eventDate: '24 de agosto de 2024',
+    eventTitle: 'Taller benéfico de pintura Petrykivka',
   },
   exhibitions: {
     metaTitle: 'Exposiciones',
@@ -592,6 +596,8 @@ const uk: TranslationTree = {
     metaTitle: 'Благодійність та ініціативи',
     label: 'Благодійність',
     title: 'Благодійність та ініціативи',
+    eventDate: '24 серпня 2024 року',
+    eventTitle: 'Благодійний майстер-клас з Петриківського розпису',
   },
   exhibitions: {
     metaTitle: 'Виставки',
