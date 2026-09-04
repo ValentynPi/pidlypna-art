@@ -161,6 +161,41 @@ const en: TranslationTree = {
     close: 'Close lightbox',
     closeLarge: 'Close large view',
     viewLarger: 'View painting larger',
+    contactValue: 'Contact',
+    inches: '{{value}} inches',
+    shippingNote: 'Worldwide shipping available.',
+    careNote:
+      'Avoid direct sunlight and high humidity. Dust gently with a soft, dry cloth. Do not use liquid cleaners on the painted surface.',
+    authenticityValue: 'Original handmade artwork',
+    certificationValue: 'Signed & Dated COA',
+    signedValue: 'Signed',
+    customizationsText:
+      'Custom orders are available for size and color changes, provided they are suitable for the artwork and preserve its overall appearance. Please send a message to discuss your requirements.',
+    madeToOrderAvailable:
+      'This is an original handmade painting by Viktoria Paladios. A new original can also be created for you in this exact style and palette. While the composition remains consistent, each brushstroke is unique, ensuring your piece is a one-of-a-kind original with its own distinct character.',
+    madeToOrderSold:
+      '{{title}} has been sold. Upon purchase, a new original painting will be created for you in this exact style and palette. While the composition remains consistent, each brushstroke is unique, ensuring your piece is a one-of-a-kind original with its own distinct character.',
+    mediumAlcoholInk: 'Alcohol ink on {{surface}}',
+    mediumGouache: 'Professional gouache on {{surface}}',
+    mediumMetallic: 'Mixed media with metallic leaf on {{surface}}',
+    mediumMixed: 'Mixed media on {{surface}}',
+    mediumAcrylic: 'Professional acrylics on {{surface}}',
+    mediumDefault: 'Original painting on {{surface}}',
+    techniquePetrykivka: 'Traditional Petrykivka brushwork',
+    techniqueFluidInk: 'Fluid ink technique',
+    techniqueHandLettered: 'Hand-lettered mixed media',
+    techniqueImpasto: 'Impasto texture',
+    surfaceCanvas: 'canvas',
+    surfacePaper: 'paper',
+    surfaceWood: 'wood',
+    materialsFloralCrown:
+      '{{surface}}, pine, cotton, acrylic paints, textured paste, acrylic markers',
+    materialsAlcoholInk: '{{surface}}, alcohol ink',
+    materialsGouachePaper: 'paper, cotton, gouache paints',
+    materialsGouache: 'canvas, pine, cotton, gouache paints',
+    materialsMetallic:
+      '{{surface}}, pine, cotton, acrylic paints, textured paste, metallic leaf',
+    materialsDefault: '{{surface}}, pine, cotton, acrylic paints, textured paste',
   },
   charity: {
     metaTitle: 'Charity & Initiatives',
@@ -382,6 +417,42 @@ const es: TranslationTree = {
     close: 'Cerrar',
     closeLarge: 'Cerrar vista grande',
     viewLarger: 'Ver la pintura más grande',
+    contactValue: 'Consultar',
+    inches: '{{value}} pulgadas',
+    shippingNote: 'Envío disponible a todo el mundo.',
+    careNote:
+      'Evita la luz solar directa y la humedad alta. Limpia con un paño suave y seco. No uses limpiadores líquidos sobre la superficie pintada.',
+    authenticityValue: 'Obra original hecha a mano',
+    certificationValue: 'COA firmado y fechado',
+    signedValue: 'Firmada',
+    customizationsText:
+      'Los encargos personalizados están disponibles para cambios de tamaño y color, siempre que sean adecuados para la obra y preserven su apariencia general. Envía un mensaje para hablar de tus requisitos.',
+    madeToOrderAvailable:
+      'Esta es una pintura original hecha a mano por Viktoria Paladios. También se puede crear para ti una nueva original en este mismo estilo y paleta. Aunque la composición se mantiene, cada pincelada es única, de modo que tu pieza es un original único con su propio carácter.',
+    madeToOrderSold:
+      '{{title}} se ha vendido. Tras la compra, se creará para ti una nueva pintura original en este mismo estilo y paleta. Aunque la composición se mantiene, cada pincelada es única, de modo que tu pieza es un original único con su propio carácter.',
+    mediumAlcoholInk: 'Tinta alcohólica sobre {{surface}}',
+    mediumGouache: 'Gouache profesional sobre {{surface}}',
+    mediumMetallic: 'Técnica mixta con hoja metálica sobre {{surface}}',
+    mediumMixed: 'Técnica mixta sobre {{surface}}',
+    mediumAcrylic: 'Acrílicos profesionales sobre {{surface}}',
+    mediumDefault: 'Pintura original sobre {{surface}}',
+    techniquePetrykivka: 'Pincelada tradicional Petrykivka',
+    techniqueFluidInk: 'Técnica de tinta fluida',
+    techniqueHandLettered: 'Técnica mixta con tipografía a mano',
+    techniqueImpasto: 'Textura de impasto',
+    surfaceCanvas: 'lienzo',
+    surfacePaper: 'papel',
+    surfaceWood: 'madera',
+    materialsFloralCrown:
+      '{{surface}}, pino, algodón, pinturas acrílicas, pasta texturizada, rotuladores acrílicos',
+    materialsAlcoholInk: '{{surface}}, tinta alcohólica',
+    materialsGouachePaper: 'papel, algodón, pinturas gouache',
+    materialsGouache: 'lienzo, pino, algodón, pinturas gouache',
+    materialsMetallic:
+      '{{surface}}, pino, algodón, pinturas acrílicas, pasta texturizada, hoja metálica',
+    materialsDefault:
+      '{{surface}}, pino, algodón, pinturas acrílicas, pasta texturizada',
   },
   charity: {
     metaTitle: 'Caridad e iniciativas',
@@ -603,6 +674,42 @@ const uk: TranslationTree = {
     close: 'Закрити',
     closeLarge: 'Закрити збільшений вигляд',
     viewLarger: 'Відкрити картину більшою',
+    contactValue: 'За запитом',
+    inches: '{{value}} дюймів',
+    shippingNote: 'Доставка доступна по всьому світу.',
+    careNote:
+      'Уникайте прямого сонця та високої вологості. Обережно протирайте м’якою сухою тканиною. Не використовуйте рідкі засоби на поверхні живопису.',
+    authenticityValue: 'Оригінальна робота ручної роботи',
+    certificationValue: 'Підписаний і датований COA',
+    signedValue: 'Підписано',
+    customizationsText:
+      'Індивідуальні замовлення доступні щодо розміру та кольору, якщо зміни підходять для роботи й зберігають її загальний вигляд. Напишіть повідомлення, щоб обговорити ваші побажання.',
+    madeToOrderAvailable:
+      'Це оригінальна картина ручної роботи Вікторії Паладіос. Для вас також можна створити нову оригінальну роботу в цьому самому стилі й палітрі. Хоча композиція залишається, кожен мазок унікальний — ваша робота буде неповторним оригіналом із власним характером.',
+    madeToOrderSold:
+      '{{title}} продано. Після покупки для вас буде створено нову оригінальну картину в цьому самому стилі й палітрі. Хоча композиція залишається, кожен мазок унікальний — ваша робота буде неповторним оригіналом із власним характером.',
+    mediumAlcoholInk: 'Спиртові чорнила · {{surface}}',
+    mediumGouache: 'Професійна гуаш · {{surface}}',
+    mediumMetallic: 'Змішана техніка з металевою фольгою · {{surface}}',
+    mediumMixed: 'Змішана техніка · {{surface}}',
+    mediumAcrylic: 'Професійний акрил · {{surface}}',
+    mediumDefault: 'Оригінальний живопис · {{surface}}',
+    techniquePetrykivka: 'Традиційний петриківський розпис',
+    techniqueFluidInk: 'Техніка плинних чорнил',
+    techniqueHandLettered: 'Змішана техніка з рукописним текстом',
+    techniqueImpasto: 'Фактура імпасто',
+    surfaceCanvas: 'полотно',
+    surfacePaper: 'папір',
+    surfaceWood: 'дерево',
+    materialsFloralCrown:
+      '{{surface}}, сосна, бавовна, акрилові фарби, фактурна паста, акрилові маркери',
+    materialsAlcoholInk: '{{surface}}, спиртові чорнила',
+    materialsGouachePaper: 'папір, бавовна, гуаш',
+    materialsGouache: 'полотно, сосна, бавовна, гуаш',
+    materialsMetallic:
+      '{{surface}}, сосна, бавовна, акрилові фарби, фактурна паста, металева фольга',
+    materialsDefault:
+      '{{surface}}, сосна, бавовна, акрилові фарби, фактурна паста',
   },
   charity: {
     metaTitle: 'Благодійність та ініціативи',

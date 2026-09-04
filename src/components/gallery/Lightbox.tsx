@@ -4,11 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import type { Artwork } from '../../types';
 import { getArtworkImages } from '../../data/artworks';
 import {
-  listingCare,
-  listingCustomizations,
   listingDescription,
   listingDetails,
-  listingShipping,
   madeToOrderText,
 } from '../../data/listing';
 import { getCollectionById } from '../../data/collections';
@@ -28,7 +25,7 @@ export function Lightbox({
   onClose,
   onNavigate,
 }: LightboxProps) {
-  const { t, language } = useLanguage();
+  const { language, t } = useLanguage();
   const artwork = artworks[currentIndex];
   const views = artwork ? getArtworkImages(artwork) : [];
   const collection = artwork ? getCollectionById(artwork.collectionId) : undefined;
@@ -90,8 +87,7 @@ export function Lightbox({
 
   const activeView = views[viewIndex] ?? views[0];
   const isAvailable = artwork.availability === 'Available';
-
-  const details = listingDetails(artwork, language);
+  const details = listingDetails(artwork, t);
 
   const onTouchStart = (e: React.TouchEvent) => {
     const t = e.changedTouches[0];
@@ -287,14 +283,8 @@ export function Lightbox({
                 </p>
                 <dl className="mt-4 space-y-2.5">
                   {details.map((spec) => (
-                    <div key={spec.label} className="grid grid-cols-[7.5rem_1fr] gap-3 text-sm">
-                      <dt className="text-cream/40">
-                        {(() => {
-                          const key = `lightbox.${spec.label.toLowerCase()}`;
-                          const translated = t(key);
-                          return translated === key ? spec.label : translated;
-                        })()}
-                      </dt>
+                    <div key={spec.labelKey} className="grid grid-cols-[7.5rem_1fr] gap-3 text-sm">
+                      <dt className="text-cream/40">{t(spec.labelKey)}</dt>
                       <dd className="text-cream/80">{spec.value}</dd>
                     </div>
                   ))}
@@ -306,7 +296,7 @@ export function Lightbox({
                   {t('lightbox.madeToOrder')}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-cream/60">
-                  {madeToOrderText(artwork, language)}
+                  {madeToOrderText(artwork, t)}
                 </p>
               </div>
 
@@ -315,7 +305,7 @@ export function Lightbox({
                   {t('lightbox.customizations')}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-cream/60">
-                  {listingCustomizations(language)}
+                  {t('lightbox.customizationsText')}
                 </p>
               </div>
 
@@ -335,13 +325,13 @@ export function Lightbox({
                     <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
                       {t('lightbox.shipping')}
                     </p>
-                    <p className="mt-2 text-sm text-cream/55">{listingShipping(language)}</p>
+                    <p className="mt-2 text-sm text-cream/55">{t('lightbox.shippingNote')}</p>
                   </div>
                   <div>
                     <p className="text-[0.65rem] tracking-[0.25em] text-gold uppercase">
                       {t('lightbox.care')}
                     </p>
-                    <p className="mt-2 text-sm text-cream/55">{listingCare(language)}</p>
+                    <p className="mt-2 text-sm text-cream/55">{t('lightbox.careNote')}</p>
                   </div>
                 </div>
               )}
