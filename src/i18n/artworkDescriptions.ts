@@ -6,15 +6,15 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'abstract-art-01':
       'Mist Horizon is an original acrylic painting by Viktoria Paladios celebrating the hush between sky and water through layered palette-knife textures and pale cream light. A dark horizon divides cool reflection from open air, as if dawn were still deciding its color. The peaceful composition transforms a simple landscape into a poetic contemporary work that evokes stillness, distance, and quiet sophistication.',
     'abstract-art-02':
-      'Ember Reflection is an original acrylic painting by Viktoria Paladios capturing the last warmth of sunset through expressive impasto and delicate peach tones. A red glow gathers on dark water while a single yellow accent holds the light like a held breath. The composition turns evening into a contemporary meditation on warmth, memory, and calm.',
+      'Beyond Visibility is an original acrylic painting by Viktoria Paladios capturing the last warmth of sunset through expressive impasto and delicate peach tones. A red glow gathers on dark water while a single yellow accent holds the light like a held breath. The composition turns evening into a contemporary meditation on warmth, memory, and calm.',
     'abstract-art-03':
-      'City Light is an original acrylic painting by Viktoria Paladios celebrating the pulse of a city through abstracted towers and glowing interiors. Warm orange rises through dark architecture while pale symbols drift across the skyline like notes in a private language. The work transforms urban night into a poetic contemporary piece that evokes energy, intimacy, and quiet wonder.',
+      'Signals in the Chaos. In the modern metropolis, we are surrounded by millions of lights, yet we so easily lose each other in the endless noise. This piece captures the story of two souls — a man and a woman — moving through the labyrinth of a big city. The arrows, symbols, and fragmented lines represent the motion, confusion, and obstacles of urban life, where so many signals cross, making it difficult to find one another amidst the chaos.',
     'abstract-art-04':
-      'Day & Night is an original mixed-media painting by Viktoria Paladios celebrating duality through a single tree split between gold light and cool shadow. Two climates meet in one trunk, as if belonging could live in more than one place at once. The composition becomes a poetic contemporary symbol of home, change, and balance.',
+      'Roots in Two Worlds. This mixed-media piece explores duality through a single tree split between golden light and cool shadow. Two climates meet in one trunk, capturing the sense of belonging to more than one place at once. The composition stands as a contemporary poetic symbol of home, change, and internal balance.',
     'abstract-art-05':
-      'Patina Horizon is an original mixed-media painting by Viktoria Paladios celebrating the meeting of metal and landscape through copper texture and teal water. A dark ridge holds the light like a shoreline of memory. The work transforms an abstract horizon into a quiet contemporary piece that evokes depth, time, and refined calm.',
+      'Between Time and Depth. This piece is an abstract landscape celebrating the meeting of metal and nature, where rich copper texture meets deep teal water. A dark ridge holds the light, evoking a shoreline of memory. The work transforms an abstract horizon into a quiet contemporary piece that evokes depth, time, and refined calm.',
     'abstract-art-06':
-      'Soft Current is an original acrylic painting by Viktoria Paladios celebrating movement through mint, rose, and white in airy, layered strokes. Color travels across the canvas like water finding its path. The composition becomes a poetic contemporary work that evokes ease, breath, and gentle sophistication.',
+      'Soft Flow is an original acrylic painting that celebrates movement through mint, rose, and white in airy, layered brushstrokes. The color travels across the canvas like water finding its way. The composition becomes a poetic, contemporary piece that evokes lightness, breath, and delicate sophistication.',
     'abstract-art-07':
       'Vertical Light is an original acrylic painting by Viktoria Paladios celebrating ascent through blue, white, and earth tones stacked like architecture. Light rises in measured strokes, as if a window were opening from within the paint. The work transforms abstraction into a contemporary meditation on hope, structure, and quiet lift.',
     'affirmation-collection-01':
@@ -38,7 +38,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'alcohol-ink-art-06':
       'Lavender Tide is an original alcohol-ink painting by Viktoria Paladios celebrating flow through dusty rose and sky blue moving in a circular field. Veins of color travel like water under light. The work transforms fluid technique into a contemporary piece of serenity, romance, and quiet sophistication.',
     'female-portraits-01':
-      'Floral Crown is an original mixed-media painting by Viktoria Paladios celebrating the quiet strength of a woman through a grayscale profile and a lush, sculptural crown of flowers. Thick impasto petals in white, rose, magenta, and green bloom across her face and hair, while neon marks and a pink contour keep the work contemporary. The composition transforms the portrait into a poetic symbol of identity, beauty, and inner blossoming.',
+      'Blooming Silence. This mixed-media piece celebrates the quiet strength of a woman through a monochrome profile crowned by a lush, sculptural arrangement of flowers. Thick impasto petals in white, pink, magenta, and green bloom across the form, while neon accents and bold color blocks give the piece a modern edge. The composition transforms a portrait into a poetic symbol of identity, beauty, and inner blossoming.',
     'female-portraits-02':
       'Ocean Dream is an original acrylic painting by Viktoria Paladios celebrating a woman merging with sea and sky. Tide, horizon, and figure share one breath, painted in layered, luminous color. The work becomes a poetic contemporary portrait of belonging, freedom, and quiet transformation.',
     'female-portraits-03':
@@ -92,21 +92,21 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'textured-and-light-03':
       'Rose Cake is an original acrylic painting by Viktoria Paladios celebrating sweetness and celebration through a peach cake with roses and strawberries built in thick, luminous paint. Frosting and petals share the same sculptural joy. The work becomes a poetic contemporary still life of delight, care, and festivity.',
     'ukrainian-symbolism-01':
-      'Heritage is an original acrylic painting by Viktoria Paladios celebrating a face woven with Ukrainian embroidery — memory held in the skin. Realism and folk pattern share one portrait, as if the past were still speaking. The composition becomes a poetic contemporary work of identity, devotion, and belonging.',
+      'Heritage is an original acrylic painting celebrating a face woven with Ukrainian embroidery — memory held in the skin. Realism and folk pattern share one portrait, as if the past were still speaking. The composition becomes a poetic contemporary work of identity, devotion, and belonging.',
   },
   es: {
     'abstract-art-01':
       'Mist Horizon es una pintura acrílica original de Viktoria Paladios que celebra el silencio entre cielo y agua mediante texturas de espátula en capas y una luz crema pálida. Un horizonte oscuro divide el reflejo fresco del aire abierto, como si el amanecer aún estuviera eligiendo su color. La composición serena transforma un paisaje sencillo en una obra contemporánea poética que evoca quietud, distancia y sofisticación discreta.',
     'abstract-art-02':
-      'Ember Reflection es una pintura acrílica original de Viktoria Paladios que captura el último calor del atardecer con impasto expresivo y tonos melocotón delicados. Un resplandor rojo se reúne sobre el agua oscura mientras un acento amarillo sostiene la luz como un aliento contenido. La composición convierte la noche en una meditación contemporánea sobre el calor, la memoria y la calma.',
+      'Más allá de la visibilidad es una pintura acrílica original de Viktoria Paladios que captura el último calor del atardecer con impasto expresivo y tonos melocotón delicados. Un resplandor rojo se reúne sobre el agua oscura mientras un acento amarillo sostiene la luz como un aliento contenido. La composición convierte la noche en una meditación contemporánea sobre el calor, la memoria y la calma.',
     'abstract-art-03':
-      'City Light es una pintura acrílica original de Viktoria Paladios que celebra el pulso de la ciudad a través de torres abstractas e interiores luminosos. El naranja cálido asciende entre la arquitectura oscura mientras símbolos pálidos cruzan el horizonte como notas de un lenguaje privado. La obra transforma la noche urbana en una pieza contemporánea poética de energía, intimidad y asombro silencioso.',
+      'Señales en el caos. En la metrópolis moderna estamos rodeados de millones de luces, pero a menudo nos perdemos en este ruido interminable. Esta obra habla de dos personas —un hombre y una mujer— que intentan encontrarse en el laberinto de la gran ciudad. Las flechas, los símbolos y los trazos dispersos simbolizan el movimiento, la confusión y los obstáculos de la vida urbana, donde hay tantas señales que resulta difícil conectar y verse de verdad.',
     'abstract-art-04':
-      'Day & Night es una pintura de técnica mixta original de Viktoria Paladios que celebra la dualidad en un solo árbol dividido entre luz dorada y sombra fresca. Dos climas se encuentran en un tronco, como si pertenecer pudiera vivir en más de un lugar a la vez. La composición se convierte en un símbolo contemporáneo poético de hogar, cambio y equilibrio.',
+      'Raíces en dos mundos. Una obra que explora la dualidad a través de un único árbol dividido entre la luz dorada y la sombra fresca. Dos climas convergen en un solo tronco, reflejando cómo la sensación de hogar puede habitar en más de un lugar a la vez. La composición se convierte en un símbolo poético de pertenencia, cambio y equilibrio.',
     'abstract-art-05':
-      'Patina Horizon es una pintura de técnica mixta original de Viktoria Paladios que celebra el encuentro del metal y el paisaje a través de textura de cobre y agua verdeazulada. Una cresta oscura sostiene la luz como una orilla de la memoria. La obra transforma un horizonte abstracto en una pieza contemporánea serena que evoca profundidad, tiempo y calma refinada.',
+      'Entre el tiempo y la profundidad. Una obra que celebra el encuentro entre el metal y el paisaje a través de texturas de cobre y aguas azul verdoso. Una cresta oscura retiene la luz como si fuera la orilla de la memoria. La composición transforma un horizonte abstracto en una pieza contemporánea serena que evoca profundidad, tiempo y una calma refinada.',
     'abstract-art-06':
-      'Soft Current es una pintura acrílica original de Viktoria Paladios que celebra el movimiento con menta, rosa y blanco en trazos aéreos y superpuestos. El color atraviesa el lienzo como el agua buscando su camino. La composición se convierte en una obra contemporánea poética que evoca fluidez, respiración y suave sofisticación.',
+      'Flujo suave es una pintura acrílica original que celebra el movimiento a través de menta, rosa y blanco en pinceladas aéreas y superpuestas. El color atraviesa el lienzo como el agua buscando su camino. La composición se convierte en una pieza contemporánea poética que evoca ligereza, respiración y una sofisticación delicada.',
     'abstract-art-07':
       'Vertical Light es una pintura acrílica original de Viktoria Paladios que celebra el ascenso mediante azules, blancos y tonos tierra apilados como arquitectura. La luz sube en trazos medidos, como si una ventana se abriera desde dentro de la pintura. La obra transforma la abstracción en una meditación contemporánea sobre la esperanza, la estructura y el elevamiento sereno.',
     'affirmation-collection-01':
@@ -130,7 +130,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'alcohol-ink-art-06':
       'Lavender Tide es una pintura original en tinta alcohólica de Viktoria Paladios que celebra el flujo mediante rosa polvoriento y azul cielo en un campo circular. Las venas de color viajan como agua bajo la luz. La obra transforma la técnica fluida en una pieza contemporánea de serenidad, romanticismo y sofisticación discreta.',
     'female-portraits-01':
-      'Floral Crown es una pintura de técnica mixta original de Viktoria Paladios que celebra la fuerza serena de una mujer mediante un perfil en escala de grises y una corona escultórica de flores. Pétalos de impasto en blanco, rosa, magenta y verde florecen sobre su rostro y cabello, mientras marcas neón y un contorno rosa mantienen la obra contemporánea. La composición transforma el retrato en un símbolo poético de identidad, belleza y florecimiento interior.',
+      'Silencio en flor. Una obra en técnica mixta que celebra la fuerza silenciosa de la mujer a través de un perfil sobrio coronado por un frondoso arreglo escultórico de flores. Los pétalos de impasto espeso en tonos blancos, rosas, magenta y verdes florecen sobre el rostro, mientras que los acentos contemporáneos y bloques geométricos aportan una visión moderna. La composición convierte el retrato en un símbolo poético de identidad, belleza y florecimiento interior.',
     'female-portraits-02':
       'Ocean Dream es una pintura acrílica original de Viktoria Paladios que celebra a una mujer fundiéndose con mar y cielo. Marea, horizonte y figura comparten un mismo aliento, pintados en color luminoso y en capas. La obra se convierte en un retrato contemporáneo poético de pertenencia, libertad y transformación silenciosa.',
     'female-portraits-03':
@@ -184,21 +184,21 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'textured-and-light-03':
       'Rose Cake es una pintura acrílica original de Viktoria Paladios que celebra dulzura y celebración con un pastel melocotón de rosas y fresas construido en pintura densa y luminosa. Glaseado y pétalos comparten la misma alegría escultórica. La obra se convierte en un bodegón contemporáneo poético de deleite, cuidado y festividad.',
     'ukrainian-symbolism-01':
-      'Heritage es una pintura acrílica original de Viktoria Paladios que celebra un rostro tejido con bordado ucraniano: la memoria sostenida en la piel. Realismo y patrón popular comparten un retrato, como si el pasado siguiera hablando. La composición se convierte en una obra contemporánea poética de identidad, devoción y pertenencia.',
+      'Herencia es una pintura acrílica original que celebra un rostro tejido con bordado ucraniano: la memoria sostenida en la piel. Realismo y patrón popular comparten un retrato, como si el pasado siguiera hablando. La composición se convierte en una obra contemporánea poética de identidad, devoción y pertenencia.',
   },
   uk: {
     'abstract-art-01':
       'Mist Horizon — оригінальна акрилова картина Вікторії Паладіос, що оспівує тишу між небом і водою через шаруваті фактури мастихіну та бліде кремове світло. Темний горизонт ділить прохолодне відображення й відкрите повітря, ніби світанок ще обирає свій колір. Спокійна композиція перетворює простий пейзаж на поетичну сучасну роботу, що викликає відчуття тиші, відстані та стриманої витонченості.',
     'abstract-art-02':
-      'Ember Reflection — оригінальна акрилова картина Вікторії Паладіос, що ловить останнє тепло заходу через виразний імпасто та ніжно-персикові тони. Червоне сяйво збирається на темній воді, а жовтий акцент тримає світло, мов затамований подих. Композиція перетворює вечір на сучасну медитацію про тепло, пам’ять і спокій.',
+      'За межею видимості — оригінальна акрилова картина Вікторії Паладіос, що ловить останнє тепло заходу через виразний імпасто та ніжно-персикові тони. Червоне сяйво збирається на темній воді, а жовтий акцент тримає світло, мов затамований подих. Композиція перетворює вечір на сучасну медитацію про тепло, пам’ять і спокій.',
     'abstract-art-03':
-      'City Light — оригінальна акрилова картина Вікторії Паладіос, що оспівує пульс міста через абстрактні вежі та світлі інтер’єри. Теплий помаранчевий піднімається крізь темну архітектуру, а бліді символи пливуть над горизонтом, як ноти приватної мови. Робота перетворює міську ніч на поетичний сучасний твір про енергію, близькість і тихе здивування.',
+      'Сигнали в хаосі. У сучасному мегаполісі ми оточені мільйонами вогнів, але часто втрачаємо одне одного в цьому нескінченному шумі. Ця робота — про двох людей, чоловіка та жінку, чиї шляхи перетинаються в лабіринті великого міста. Стрілки, позначки та хаотичні штрихи символізують рух, розгубленість і перешкоди сучасного життя, де стільки сигналів, але так важко почути найголовніше та знайти ту саму людину.',
     'abstract-art-04':
-      'Day & Night — оригінальна картина в змішаній техніці Вікторії Паладіос, що оспівує двоїстість у одному дереві, розділеному між золотим світлом і прохолодною тінню. Два клімати зустрічаються в одному стовбурі, ніби належність може жити в більше ніж одному місці. Композиція стає поетичним сучасним символом дому, змін і рівноваги.',
+      'Коріння в двох світах. Полотно досліджує тему дуальності через образ єдиного дерева, розділеного між золотим світлом і прохолодною тінню. Два клімати зливаються в один стовбур, відтворюючи відчуття того, що дім може знаходитися в кількох місцях водночас. Це сучасний поетичний символ пошуку балансу, зміни та нерозривного зв’язку між різними частинами власного життя.',
     'abstract-art-05':
-      'Patina Horizon — оригінальна картина в змішаній техніці Вікторії Паладіос, що оспівує зустріч металу й пейзажу через мідну фактуру та бірюзову воду. Темний хребет тримає світло, мов берег пам’яті. Робота перетворює абстрактний горизонт на тихий сучасний твір про глибину, час і витончений спокій.',
+      'Між часом та глибиною. Ця робота — абстрактний пейзаж, де текстурована мідь зустрічається з глибокою бірюзовою водою. Темний гребінь утримує світло, немов берегова лінія пам’яті. Полотно перетворює абстрактний горизонт на спокійний сучасний витвір мистецтва, що викликає відчуття глибини, часу та витонченого спокою.',
     'abstract-art-06':
-      'Soft Current — оригінальна акрилова картина Вікторії Паладіос, що оспівує рух через м’ятні, рожеві та білі повітряні шаруваті мазки. Колір іде полотном, як вода, що шукає свій шлях. Композиція стає поетичною сучасною роботою про легкість, подих і м’яку витонченість.',
+      'М’який плин — оригінальна акрилова картина, що оспівує рух через м’ятні, рожеві та білі повітряні шаруваті мазки. Колір іде полотном, як вода, що шукає свій шлях. Композиція стає поетичним сучасним твором про легкість, подих і ніжну витонченість.',
     'abstract-art-07':
       'Vertical Light — оригінальна акрилова картина Вікторії Паладіос, що оспівує підйом через сині, білі та землисті тони, складені як архітектура. Світло піднімається мірними мазками, ніби вікно відкривається зсередини фарби. Робота перетворює абстракцію на сучасну медитацію про надію, структуру та тихий злет.',
     'affirmation-collection-01':
@@ -222,7 +222,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'alcohol-ink-art-06':
       'Lavender Tide — оригінальна картина спиртовими чорнилами Вікторії Паладіос, що оспівує плинність через припорошений рожевий і небесно-блакитний у круглому полі. Жили кольору йдуть, як вода під світлом. Робота перетворює плинну техніку на сучасний твір спокою, романтики й стриманої витонченості.',
     'female-portraits-01':
-      'Floral Crown — оригінальна картина в змішаній техніці Вікторії Паладіос, що оспівує тиху силу жінки через профіль у відтінках сірого та пишну скульптурну корону квітів. Густі пелюстки імпасто білого, рожевого, мадженти й зеленого квітнуть на обличчі й волоссі, а неонові акценти та рожевий контур роблять роботу сучасною. Композиція перетворює портрет на поетичний символ ідентичності, краси й внутрішнього розквіту.',
+      'Квітуча тиша. Ця робота у змішаній техніці оспівує тиху силу жінки через графічний профіль та пишну скульптурну корону з квітів. Густі пелюстки імпасто в білих, рожевих, маджентових і зелених відтінках розквітають над обличчям, а неонові акценти й зелені геометричні блоки додають сучасного звучання. Композиція перетворює портрет на поетичний символ ідентичності, краси й внутрішнього розквіту.',
     'female-portraits-02':
       'Ocean Dream — оригінальна акрилова картина Вікторії Паладіос, що оспівує жінку, яка зливається з морем і небом. Приплив, горизонт і фігура ділять один подих, написані шаруватим світлим кольором. Робота стає поетичним сучасним портретом належності, свободи й тихої трансформації.',
     'female-portraits-03':
@@ -276,7 +276,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'textured-and-light-03':
       'Rose Cake — оригінальна акрилова картина Вікторії Паладіос, що оспівує солодкість і свято через персиковий торт із трояндами та полуницею, побудований густою світлою фарбою. Глазур і пелюстки ділять ту саму скульптурну радість. Робота стає поетичним сучасним натюрмортом насолоди, турботи й святковості.',
     'ukrainian-symbolism-01':
-      'Heritage — оригінальна акрилова картина Вікторії Паладіос, що оспівує обличчя, вплетене в українську вишивку — пам’ять, утримана в шкірі. Реалізм і народний орнамент ділять один портрет, ніби минуле все ще говорить. Композиція стає поетичною сучасною роботою про ідентичність, відданість і належність.',
+      'Спадщина — оригінальна акрилова картина, що оспівує обличчя, вплетене в українську вишивку — пам’ять, утримана в шкірі. Реалізм і народний орнамент ділять один портрет, ніби минуле все ще говорить. Композиція стає поетичною сучасною роботою про ідентичність, відданість і належність.',
   },
 };
 

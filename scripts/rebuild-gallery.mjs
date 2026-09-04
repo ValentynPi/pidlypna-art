@@ -31,7 +31,7 @@ const ALBUMS = [
       },
       {
         slug: 'ember-reflection',
-        title: 'Ember Reflection',
+        title: 'Beyond Visibility',
         files: [
           'PXL_20260717_125842654.jpg',
           'PXL_20260717_125857999.jpg',
@@ -44,7 +44,7 @@ const ALBUMS = [
       },
       {
         slug: 'city-light',
-        title: 'City Light',
+        title: 'Separated by a metropolis',
         files: [
           'photo_2026-08-05_13-57-56.jpg',
           'photo_2026-08-05_13-58-02.jpg',
@@ -57,7 +57,7 @@ const ALBUMS = [
       },
       {
         slug: 'day-and-night',
-        title: 'Day & Night',
+        title: 'Roots in Two Worlds',
         files: ['photo_2026-08-05_13-58-35.jpg'],
         materials: 'Mixed media',
         technique: 'Split-tone tree composition',
@@ -66,7 +66,7 @@ const ALBUMS = [
       },
       {
         slug: 'patina-horizon',
-        title: 'Patina Horizon',
+        title: 'Between Time and Depth',
         files: [
           'PXL_20260811_154140472.jpg',
           'PXL_20260811_154132023.jpg',
@@ -79,7 +79,7 @@ const ALBUMS = [
       },
       {
         slug: 'soft-current',
-        title: 'Soft Current',
+        title: 'Soft Flow',
         files: [
           'PXL_20260811_153724230.jpg',
           'PXL_20260811_153731909.jpg',
@@ -263,7 +263,7 @@ const ALBUMS = [
     paintings: [
       {
         slug: 'floral-crown',
-        title: 'Floral Crown',
+        title: 'Blooming Silence',
         files: [
           'InShot_20260717_155018888.jpg',
           'PXL_20260717_134616395.jpg',

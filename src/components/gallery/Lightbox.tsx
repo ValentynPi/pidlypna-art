@@ -11,6 +11,7 @@ import {
 import { getCollectionById } from '../../data/collections';
 import { LazyImage } from '../ui/LazyImage';
 import { useLanguage } from '../../i18n/LanguageContext';
+import { getArtworkTitle } from '../../i18n/artworkTitles';
 
 interface LightboxProps {
   artworks: Artwork[];
@@ -87,7 +88,7 @@ export function Lightbox({
 
   const activeView = views[viewIndex] ?? views[0];
   const isAvailable = artwork.availability === 'Available';
-  const details = listingDetails(artwork, t);
+  const details = listingDetails(artwork, t, language);
 
   const onTouchStart = (e: React.TouchEvent) => {
     const t = e.changedTouches[0];
@@ -260,7 +261,7 @@ export function Lightbox({
               </div>
 
               <h3 className="display-heading mt-3 text-2xl text-cream sm:text-3xl md:mt-4 md:text-4xl">
-                {artwork.title}
+                {getArtworkTitle(artwork.id, language, artwork.title)}
               </h3>
 
               {collection && (
@@ -296,7 +297,7 @@ export function Lightbox({
                   {t('lightbox.madeToOrder')}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-cream/60">
-                  {madeToOrderText(artwork, t)}
+                  {madeToOrderText(artwork, t, language)}
                 </p>
               </div>
 

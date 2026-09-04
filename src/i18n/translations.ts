@@ -60,7 +60,7 @@ const en: TranslationTree = {
     mediums: 'Mediums',
     mediumsValue: 'Acrylic, oil, mixed media',
     focus: 'Focus',
-    focusValue: 'Ukrainian heritage · Mediterranean life · Contemporary painting',
+    focusValue: 'Contemporary painting',
   },
   gallery: {
     metaTitle: 'Gallery',
@@ -253,6 +253,32 @@ const en: TranslationTree = {
     'textured-and-light': 'Textured & Light',
     'ukrainian-symbolism': 'Ukrainian Symbolism',
   },
+  collectionIntros: {
+    'ukrainian-symbolism':
+      'Heritage held in paint — embroidery, memory, and symbols that carry Ukraine into the present.',
+    'female-portraits':
+      'Faces and figures of women — from floral-crowned silhouettes to dreamlike seascapes of identity.',
+    'abstract-art':
+      'Compositions that speak through color, gesture, and form — atmospheres beyond the literal.',
+    'floral-collection':
+      'Classic floral still lifes — bouquets studied for light, texture, and quiet drama.',
+    petrykivka:
+      'The Ukrainian decorative painting tradition — stylized florals, berries, and brush-stroke ornaments.',
+    'pop-art':
+      'Bold color, graphic energy, and contemporary icons — art that speaks with confidence.',
+    'inspired-by-nature':
+      'Landscapes, seas, and skies observed with feeling — nature translated into color and light.',
+    'inspired-by-places':
+      'Landmarks remembered in paint — cities, coasts, and journeys translated into atmosphere.',
+    'plain-air-collection':
+      'Painted from life and light — mountains, coasts, and horizons observed with a quiet eye.',
+    'alcohol-ink-art':
+      'Fluid pigment on panel — luminous landscapes and circles born from chance and control.',
+    'textured-and-light':
+      'Surface as story — impasto, metallic layers, and tactile depths you can almost feel.',
+    'affirmation-collection':
+      'Words and images woven together — paintings that hold strength, intention, and daily courage.',
+  },
 };
 
 const es: TranslationTree = {
@@ -316,7 +342,7 @@ const es: TranslationTree = {
     mediums: 'Medios',
     mediumsValue: 'Acrílico, óleo, técnica mixta',
     focus: 'Enfoque',
-    focusValue: 'Herencia ucraniana · Vida mediterránea · Pintura contemporánea',
+    focusValue: 'Pintura contemporánea',
   },
   gallery: {
     metaTitle: 'Galería',
@@ -510,6 +536,32 @@ const es: TranslationTree = {
     'textured-and-light': 'Textura y luz',
     'ukrainian-symbolism': 'Simbolismo ucraniano',
   },
+  collectionIntros: {
+    'ukrainian-symbolism':
+      'La herencia sostenida en pintura — bordado, memoria y símbolos que llevan Ucrania al presente.',
+    'female-portraits':
+      'Rostros y figuras de mujeres — de siluetas coronadas de flores a paisajes oníricos de identidad.',
+    'abstract-art':
+      'Composiciones que hablan a través del color, el gesto y la forma — atmósferas más allá de lo literal.',
+    'floral-collection':
+      'Bodegones florales clásicos — ramos estudiados por la luz, la textura y un drama sereno.',
+    petrykivka:
+      'La tradición ucraniana de pintura decorativa — flores estilizadas, bayas y ornamentos de pincel.',
+    'pop-art':
+      'Color audaz, energía gráfica e iconos contemporáneos — arte que habla con confianza.',
+    'inspired-by-nature':
+      'Paisajes, mares y cielos observados con sentimiento — la naturaleza traducida en color y luz.',
+    'inspired-by-places':
+      'Lugares recordados en pintura — ciudades, costas y viajes convertidos en atmósfera.',
+    'plain-air-collection':
+      'Pintado del natural y de la luz — montañas, costas y horizontes observados con mirada serena.',
+    'alcohol-ink-art':
+      'Pigmento fluido sobre panel — paisajes luminosos y círculos nacidos del azar y el control.',
+    'textured-and-light':
+      'La superficie como relato — impasto, capas metálicas y profundidades táctiles que casi se sienten.',
+    'affirmation-collection':
+      'Palabras e imágenes entrelazadas — pinturas que guardan fuerza, intención y valor cotidiano.',
+  },
 };
 
 const uk: TranslationTree = {
@@ -573,7 +625,7 @@ const uk: TranslationTree = {
     mediums: 'Медіуми',
     mediumsValue: 'Акрил, олія, змішана техніка',
     focus: 'Фокус',
-    focusValue: 'Українська спадщина · Середземноморське життя · Сучасний живопис',
+    focusValue: 'Сучасний живопис',
   },
   gallery: {
     metaTitle: 'Галерея',
@@ -766,6 +818,32 @@ const uk: TranslationTree = {
     'pop-art': 'Поп-арт',
     'textured-and-light': 'Текстура і світло',
     'ukrainian-symbolism': 'Українська символіка',
+  },
+  collectionIntros: {
+    'ukrainian-symbolism':
+      'Спадщина, утримана в фарбі — вишивка, пам’ять і символи, що несуть Україну в сьогодення.',
+    'female-portraits':
+      'Обличчя й постаті жінок — від силуетів у квіткових коронах до мрійливих морських пейзажів ідентичності.',
+    'abstract-art':
+      'Композиції, що говорять кольором, жестом і формою — атмосфери поза буквальним.',
+    'floral-collection':
+      'Класичні квіткові натюрморти — букети, вивчені для світла, фактури й тихої драми.',
+    petrykivka:
+      'Українська традиція декоративного розпису — стилізовані квіти, ягоди й орнаменти мазка.',
+    'pop-art':
+      'Сміливий колір, графічна енергія й сучасні ікони — мистецтво, що говорить упевнено.',
+    'inspired-by-nature':
+      'Пейзажі, моря й небеса, побачені з чуттям — природа, перекладена кольором і світлом.',
+    'inspired-by-places':
+      'Місця, збережені в фарбі — міста, узбережжя й подорожі, перетворені на атмосферу.',
+    'plain-air-collection':
+      'Написано з натури й світла — гори, узбережжя й обрії, побачені спокійним оком.',
+    'alcohol-ink-art':
+      'Рідкий пігмент на панелі — світлі пейзажі й кола, народжені з випадку й контролю.',
+    'textured-and-light':
+      'Поверхня як історія — імпасто, металеві шари й відчутна глибина, яку майже можна торкнути.',
+    'affirmation-collection':
+      'Слова й образи, сплетені разом — картини сили, наміру й щоденної відваги.',
   },
 };
 

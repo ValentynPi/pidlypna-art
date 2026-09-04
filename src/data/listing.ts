@@ -1,6 +1,7 @@
 import type { Artwork } from '../types';
 import { listingHeight, listingWidth } from './artworks';
 import { getArtworkDescription } from '../i18n/artworkDescriptions';
+import { getArtworkTitle } from '../i18n/artworkTitles';
 import type { Language } from '../i18n/types';
 
 export type TranslateFn = (path: string, params?: Record<string, string>) => string;
@@ -13,9 +14,15 @@ function translateSurface(surface: string, t: TranslateFn): string {
   return surface.toLowerCase();
 }
 
-export function madeToOrderText(artwork: Artwork, t: TranslateFn): string {
+export function madeToOrderText(
+  artwork: Artwork,
+  t: TranslateFn,
+  language: Language = 'en',
+): string {
   if (artwork.availability === 'Sold') {
-    return t('lightbox.madeToOrderSold', { title: artwork.title });
+    return t('lightbox.madeToOrderSold', {
+      title: getArtworkTitle(artwork.id, language, artwork.title),
+    });
   }
   return t('lightbox.madeToOrderAvailable');
 }
@@ -54,7 +61,7 @@ export function listingMaterialsFull(artwork: Artwork, t: TranslateFn): string {
   const materials = artwork.materials.toLowerCase();
   const surface = translateSurface(artwork.surface, t);
 
-  if (artwork.id === 'female-portraits-01' || artwork.title === 'Floral Crown') {
+  if (artwork.id === 'female-portraits-01' || artwork.title === 'Blooming Silence') {
     return t('lightbox.materialsFloralCrown', { surface });
   }
   if (materials.includes('alcohol ink')) {
@@ -86,9 +93,16 @@ function formatDimension(raw: string, t: TranslateFn): string {
   return raw;
 }
 
-export function listingDetails(artwork: Artwork, t: TranslateFn) {
+export function listingDetails(
+  artwork: Artwork,
+  t: TranslateFn,
+  language: Language = 'en',
+) {
   return [
-    { labelKey: 'lightbox.name', value: artwork.title },
+    {
+      labelKey: 'lightbox.name',
+      value: getArtworkTitle(artwork.id, language, artwork.title),
+    },
     { labelKey: 'lightbox.medium', value: listingMedium(artwork, t) },
     { labelKey: 'lightbox.technique', value: listingTechniqueLabel(artwork, t) },
     { labelKey: 'lightbox.authenticity', value: t('lightbox.authenticityValue') },

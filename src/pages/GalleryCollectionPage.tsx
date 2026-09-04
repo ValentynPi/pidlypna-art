@@ -24,15 +24,16 @@ export function GalleryCollectionPage() {
   }
 
   const name = t(`collections.${collection.id}`);
+  const intro = t(`collectionIntros.${collection.id}`);
 
   return (
     <>
-      <PageMeta title={name} description={collection.intro} />
+      <PageMeta title={name} description={intro} />
 
       <PageHeader
         label={t('gallery.collectionLabel')}
         title={name}
-        description={collection.intro}
+        description={intro}
         backTo="/gallery"
         backLabel={t('gallery.back')}
       />
