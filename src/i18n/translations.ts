@@ -520,7 +520,7 @@ const uk: TranslationTree = {
     workshops: 'Майстер-класи',
     charity: 'Благодійність',
     contact: 'Контакти',
-    viewArt: 'Переглянути мистецтво',
+    viewArt: 'Переглянути галерею',
     menu: 'Відкрити меню',
     language: 'Мова',
   },
