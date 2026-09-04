@@ -153,7 +153,7 @@ export function CharityPage() {
               ) : null}
             </ScrollReveal>
 
-            <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:gap-4">
+            <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
               {event.photos.map((photo, index) => (
                 <ScrollReveal key={photo.src} delay={index * 0.06}>
                   <LazyImage

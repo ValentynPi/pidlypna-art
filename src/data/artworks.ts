@@ -428,7 +428,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'female-portraits-03',
-    title: 'Tiger Bloom',
+    title: 'The Fierce and the Tender',
     year: 2025,
     dimensions: 'Contact for dimensions',
     materials: 'Acrylic',
@@ -438,14 +438,15 @@ export const artworks: Artwork[] = [
     signed: true,
     certificateOfAuthenticity: true,
     availability: 'Available',
-    description: 'A tiger and woman joined by pink peonies — wildness and tenderness in one frame.',
+    description:
+      'The Fierce and the Tender. This piece celebrates the meeting of wild instinct and gentle grace through the striking triad of a woman, a tiger, and blooming peonies.',
     image: photos.female_portraits_tiger_bloom_1,
-    imageAlt: 'Tiger Bloom — front view',
+    imageAlt: 'The Fierce and the Tender — front view',
     images: [
-      { src: photos.female_portraits_tiger_bloom_2, alt: 'Tiger Bloom — alternate view' },
-      { src: photos.female_portraits_tiger_bloom_3, alt: 'Tiger Bloom — alternate view' },
-      { src: photos.female_portraits_tiger_bloom_4, alt: 'Tiger Bloom — alternate view' },
-      { src: photos.female_portraits_tiger_bloom_5, alt: 'Tiger Bloom — alternate view' },
+      { src: photos.female_portraits_tiger_bloom_2, alt: 'The Fierce and the Tender — alternate view' },
+      { src: photos.female_portraits_tiger_bloom_3, alt: 'The Fierce and the Tender — alternate view' },
+      { src: photos.female_portraits_tiger_bloom_4, alt: 'The Fierce and the Tender — alternate view' },
+      { src: photos.female_portraits_tiger_bloom_5, alt: 'The Fierce and the Tender — alternate view' },
     ],
     collectionId: 'female-portraits',
     featured: true,
@@ -1001,7 +1002,7 @@ export const featuredArtworks = artworks.filter((a) => a.featured);
 /** Width × height in cm, used for the listing-style Width / Height fields. */
 const LISTING_SIZE_CM: Record<string, { width: number; height: number }> = {
   'Blooming Silence': { width: 60, height: 80 },
-  'Tiger Bloom': { width: 70, height: 90 },
+  'The Fierce and the Tender': { width: 70, height: 90 },
   'Ocean Dream': { width: 80, height: 100 },
   'Sunflowers': { width: 50, height: 70 },
   'White Lilacs': { width: 80, height: 100 },

@@ -42,7 +42,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'female-portraits-02':
       'Ocean Dream is an original acrylic painting by Viktoria Paladios celebrating a woman merging with sea and sky. Tide, horizon, and figure share one breath, painted in layered, luminous color. The work becomes a poetic contemporary portrait of belonging, freedom, and quiet transformation.',
     'female-portraits-03':
-      'Tiger Bloom is an original acrylic painting by Viktoria Paladios celebrating the meeting of wildness and tenderness through a woman, a tiger, and unfolding peonies. Bold color and thick petals hold both ferocity and care in a single frame. The composition becomes a poetic contemporary work of courage, beauty, and devotion.',
+      'The Fierce and the Tender. This piece celebrates the meeting of wild instinct and gentle grace through the striking triad of a woman, a tiger, and blooming peonies. Bold color and thick impasto strokes capture both fierce power and tender care within a single frame. The composition stands as a contemporary poetic exploration of courage, beauty, and quiet devotion.',
     'floral-collection-01':
       'Sunflowers is an original acrylic painting by Viktoria Paladios celebrating summer’s generosity through three blooms in a green vase against teal. Palette-knife petals catch the light as if the room were still warm from the afternoon. The composition transforms a simple still life into a poetic contemporary piece of joy, abundance, and calm.',
     'floral-collection-02':
@@ -134,7 +134,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'female-portraits-02':
       'Ocean Dream es una pintura acrílica original de Viktoria Paladios que celebra a una mujer fundiéndose con mar y cielo. Marea, horizonte y figura comparten un mismo aliento, pintados en color luminoso y en capas. La obra se convierte en un retrato contemporáneo poético de pertenencia, libertad y transformación silenciosa.',
     'female-portraits-03':
-      'Tiger Bloom es una pintura acrílica original de Viktoria Paladios que celebra el encuentro de lo salvaje y lo tierno a través de una mujer, un tigre y peonías que se abren. El color audaz y los pétalos densos sostienen ferocidad y cuidado en un mismo encuadre. La composición se convierte en una obra contemporánea poética de valor, belleza y devoción.',
+      'La fiereza y la ternura. Una obra que celebra el encuentro entre la fuerza salvaje y la delicadeza a través de la unión de una mujer, un tigre y peonías en flor. El color audaz y las texturas de impasto denso reúnen la ferocidad y la ternura en un solo lienzo. La composición se convierte en un relato poético y contemporáneo sobre el coraje, la belleza y la entrega interior.',
     'floral-collection-01':
       'Sunflowers es una pintura acrílica original de Viktoria Paladios que celebra la generosidad del verano con tres flores en un jarrón verde sobre fondo turquesa. Los pétalos de espátula captan la luz como si la habitación aún guardara el calor de la tarde. La composición transforma un bodegón sencillo en una pieza contemporánea poética de alegría, abundancia y calma.',
     'floral-collection-02':
@@ -226,7 +226,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'female-portraits-02':
       'Ocean Dream — оригінальна акрилова картина Вікторії Паладіос, що оспівує жінку, яка зливається з морем і небом. Приплив, горизонт і фігура ділять один подих, написані шаруватим світлим кольором. Робота стає поетичним сучасним портретом належності, свободи й тихої трансформації.',
     'female-portraits-03':
-      'Tiger Bloom — оригінальна акрилова картина Вікторії Паладіос, що оспівує зустріч дикості й ніжності через жінку, тигра та розкриті півонії. Сміливий колір і густі пелюстки тримають і лютість, і турботу в одному кадрі. Композиція стає поетичною сучасною роботою про мужність, красу й відданість.',
+      'Сила ніжності. Робота оспівує зустріч дикої сили та тендітності через гармонію трьох образів: жінки, тигра та розквітлих півоній. Сміливий колір і густі пастозні мазки тримають у собі як лють і міць, так і турботу в одному кадрі. Композиція перетворюється на поетичну сучасну розповідь про мужність, красу й внутрішню відданість своєму єству.',
     'floral-collection-01':
       'Sunflowers — оригінальна акрилова картина Вікторії Паладіос, що оспівує щедрість літа через три квітки в зеленій вазі на бірюзовому тлі. Пелюстки мастихіну ловлять світло так, ніби кімната ще тепла від дня. Композиція перетворює простий натюрморт на поетичний сучасний твір радості, достатку й спокою.',
     'floral-collection-02':

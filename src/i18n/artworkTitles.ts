@@ -10,6 +10,8 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'abstract-art-06': 'Soft Flow',
     'ukrainian-symbolism-01': 'Heritage',
     'female-portraits-01': 'Blooming Silence',
+    'female-portraits-02': 'Ocean Dream',
+    'female-portraits-03': 'The Fierce and the Tender',
   },
   es: {
     'abstract-art-02': 'Más allá de la visibilidad',
@@ -19,6 +21,8 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'abstract-art-06': 'Flujo suave',
     'ukrainian-symbolism-01': 'Herencia',
     'female-portraits-01': 'Silencio en flor',
+    'female-portraits-02': 'Sueño oceánico',
+    'female-portraits-03': 'La fiereza y la ternura',
   },
   uk: {
     'abstract-art-02': 'За межею видимості',
@@ -28,6 +32,8 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'abstract-art-06': "М'який плин",
     'ukrainian-symbolism-01': 'Спадщина',
     'female-portraits-01': 'Квітуча тиша',
+    'female-portraits-02': 'Сон океану',
+    'female-portraits-03': 'Сила ніжності',
   },
 };
 
