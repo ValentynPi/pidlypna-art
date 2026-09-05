@@ -50,7 +50,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'floral-collection-03':
       'Night Bouquet is an original acrylic painting by Viktoria Paladios celebrating flowers after dark through thick paint and a burgundy ground. Light finds the petals the way a lamp finds a table late in the evening. The composition becomes a poetic contemporary still life of intimacy, richness, and calm.',
     'inspired-by-nature-01':
-      'Nature Study is an original acrylic painting by Viktoria Paladios celebrating looking closely — light, air, and distance held in paint. Observed with care and finished with contemporary restraint, the landscape keeps the freshness of being there. The work evokes presence, patience, and quiet sophistication.',
+      'Sorrow is an original acrylic painting by Viktoria Paladios celebrating looking closely — light, air, and distance held in paint. Observed with care and finished with contemporary restraint, the landscape keeps the freshness of being there. The work evokes presence, patience, and quiet sophistication.',
     'inspired-by-places-01':
       'Golden Balloon is an original mixed-media painting by Viktoria Paladios celebrating travel as dream, with a golden balloon rising above a remembered place. Metallic light and soft ground turn a journey into something you can keep. The composition becomes a poetic contemporary work of wonder, freedom, and longing.',
     'petrykivka-01':
@@ -142,7 +142,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'floral-collection-03':
       'Night Bouquet es una pintura acrílica original de Viktoria Paladios que celebra las flores después del anochecer con pintura densa y fondo burdeos. La luz encuentra los pétalos como una lámpara encuentra una mesa al final de la noche. La composición se convierte en un bodegón contemporáneo poético de intimidad, riqueza y calma.',
     'inspired-by-nature-01':
-      'Nature Study es una pintura acrílica original de Viktoria Paladios que celebra mirar de cerca: luz, aire y distancia sostenidos en la pintura. Observado con cuidado y terminado con contención contemporánea, el paisaje conserva la frescura de haber estado allí. La obra evoca presencia, paciencia y sofisticación serena.',
+      'Pena es una pintura acrílica original de Viktoria Paladios que celebra mirar de cerca: luz, aire y distancia sostenidos en la pintura. Observado con cuidado y terminado con contención contemporánea, el paisaje conserva la frescura de haber estado allí. La obra evoca presencia, paciencia y sofisticación serena.',
     'inspired-by-places-01':
       'Golden Balloon es una pintura de técnica mixta original de Viktoria Paladios que celebra el viaje como sueño, con un globo dorado elevándose sobre un lugar recordado. La luz metálica y el suelo suave convierten el trayecto en algo que se puede guardar. La composición se convierte en una obra contemporánea poética de asombro, libertad y anhelo.',
     'petrykivka-01':
@@ -234,7 +234,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'floral-collection-03':
       'Night Bouquet — оригінальна акрилова картина Вікторії Паладіос, що оспівує квіти після темряви через густу фарбу й бордовий ґрунт. Світло знаходить пелюстки так, як лампа знаходить стіл пізно ввечері. Композиція стає поетичним сучасним натюрмортом близькості, багатства й спокою.',
     'inspired-by-nature-01':
-      'Nature Study — оригінальна акрилова картина Вікторії Паладіос, що оспівує уважний погляд: світло, повітря й відстань, утримані в фарбі. Спостережено з турботою й завершено з сучасною стриманістю, пейзаж зберігає свіжість присутності. Робота викликає відчуття присутності, терпіння й тихої витонченості.',
+      'Журба — оригінальна акрилова картина Вікторії Паладіос, що оспівує уважний погляд: світло, повітря й відстань, утримані в фарбі. Спостережено з турботою й завершено з сучасною стриманістю, пейзаж зберігає свіжість присутності. Робота викликає відчуття присутності, терпіння й тихої витонченості.',
     'inspired-by-places-01':
       'Golden Balloon — оригінальна картина в змішаній техніці Вікторії Паладіос, що оспівує подорож як мрію: золота повітряна куля піднімається над згаданим місцем. Металеве світло й м’який ґрунт перетворюють шлях на те, що можна зберегти. Композиція стає поетичною сучасною роботою про подив, свободу й тугу.',
     'petrykivka-01':
