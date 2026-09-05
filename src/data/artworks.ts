@@ -24,6 +24,7 @@ export const artworks: Artwork[] = [
     images: [
       { src: photos.abstract_art_mist_horizon_2, alt: 'Mist Horizon — alternate view' },
       { src: photos.abstract_art_mist_horizon_3, alt: 'Mist Horizon — alternate view' },
+      { src: photos.abstract_art_mist_horizon_4, alt: 'Mist Horizon — alternate view' },
     ],
     collectionId: 'abstract-art',
     featured: true,

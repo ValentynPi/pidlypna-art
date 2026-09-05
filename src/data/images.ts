@@ -56,6 +56,7 @@ export const photos = {
   abstract_art_mist_horizon_1: `${base}/abstract-art-mist-horizon-1.jpg`,
   abstract_art_mist_horizon_2: `${base}/abstract-art-mist-horizon-2.jpg`,
   abstract_art_mist_horizon_3: `${base}/abstract-art-mist-horizon-3.jpg`,
+  abstract_art_mist_horizon_4: `${base}/abstract-art-mist-horizon-4.jpg`,
   abstract_art_cover: `${base}/abstract-art-mist-horizon-1.jpg`,
   abstract_art_ember_reflection_1: `${base}/abstract-art-ember-reflection-1.jpg`,
   abstract_art_ember_reflection_2: `${base}/abstract-art-ember-reflection-2.jpg`,
