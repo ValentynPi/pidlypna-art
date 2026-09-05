@@ -87,7 +87,6 @@ export function Lightbox({
   if (!artwork) return null;
 
   const activeView = views[viewIndex] ?? views[0];
-  const isAvailable = artwork.availability === 'Available';
   const details = listingDetails(artwork, t, language);
 
   const onTouchStart = (e: React.TouchEvent) => {
@@ -246,18 +245,11 @@ export function Lightbox({
           {/* Details */}
           <div className="flex min-h-0 flex-1 flex-col border-t border-cream/10 md:w-[22rem] md:flex-none md:border-t-0 md:border-l lg:w-[26rem]">
             <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 pt-4 pb-3 md:p-10">
-              <div className="flex items-center justify-between gap-3">
+              <div>
                 <p className="text-[0.65rem] tracking-[0.3em] text-gold uppercase">
                   {String(currentIndex + 1).padStart(2, '0')} /{' '}
                   {String(artworks.length).padStart(2, '0')}
                 </p>
-                <span
-                  className={`text-[0.65rem] tracking-[0.2em] uppercase ${
-                    isAvailable ? 'text-gold' : 'text-cream/40'
-                  }`}
-                >
-                  {isAvailable ? t('lightbox.available') : t('lightbox.sold')}
-                </span>
               </div>
 
               <h3 className="display-heading mt-3 text-2xl text-cream sm:text-3xl md:mt-4 md:text-4xl">
