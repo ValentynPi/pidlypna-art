@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CONTACT_EMAIL, social } from '../../data/social';
+import { social } from '../../data/social';
 import { useLanguage } from '../../i18n/LanguageContext';
 
 export function Footer() {
@@ -8,27 +8,27 @@ export function Footer() {
   const connectLinks = [
     {
       href: social.instagram.href,
-      label: social.instagram.handle,
+      label: t('contact.instagram'),
       external: true,
     },
     {
       href: social.youtube.href,
-      label: social.youtube.handle,
+      label: t('contact.youtube'),
       external: true,
     },
     {
       href: social.tiktok.href,
-      label: social.tiktok.handle,
+      label: t('contact.tiktok'),
       external: true,
     },
     {
       href: social.facebook.href,
-      label: social.facebook.handle,
+      label: t('contact.facebook'),
       external: true,
     },
     {
       href: social.email.href,
-      label: CONTACT_EMAIL,
+      label: t('contact.email'),
       external: false,
     },
   ];
