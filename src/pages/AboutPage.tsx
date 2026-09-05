@@ -4,10 +4,18 @@ import { ScrollReveal } from '../components/ui/ScrollReveal';
 import { LazyImage } from '../components/ui/LazyImage';
 import { HandLine } from '../components/ui/HandLine';
 import { photos } from '../data/images';
+import { social } from '../data/social';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export function AboutPage() {
   const { t } = useLanguage();
+
+  const socialLinks = [
+    { href: social.instagram.href, label: t('contact.instagram') },
+    { href: social.youtube.href, label: t('contact.youtube') },
+    { href: social.tiktok.href, label: t('contact.tiktok') },
+    { href: social.facebook.href, label: t('contact.facebook') },
+  ];
 
   return (
     <>
@@ -44,6 +52,10 @@ export function AboutPage() {
             <ScrollReveal delay={0.15}>
               <p>{t('about.p2')}</p>
             </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <p>{t('about.pTechnique')}</p>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -73,6 +85,24 @@ export function AboutPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p>{t('about.p4')}</p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.15}>
+            <p className="text-base leading-relaxed text-ink-soft/80 md:text-lg">
+              {t('about.socialCta')}{' '}
+              {socialLinks.map((link, index) => (
+                <span key={link.href}>
+                  {index > 0 && ' · '}
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-terracotta underline-offset-4 transition-colors hover:text-gold hover:underline"
+                  >
+                    {link.label}
+                  </a>
+                </span>
+              ))}
+            </p>
           </ScrollReveal>
         </div>
       </section>

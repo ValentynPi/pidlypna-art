@@ -56,6 +56,10 @@ const en: TranslationTree = {
       "I don't paint only to remember Ukraine — I paint to keep the conversation alive between who I was and who I am becoming.",
     p3: 'My work lives in the space between worlds. Ukrainian folk motifs curl through contemporary compositions like handwritten notes in the margins of a new chapter. Mediterranean landscapes breathe with the same luminous atmosphere I once associated only with summer visits to my grandmother’s garden.',
     p4: 'Today, I create from my studio in Castellón, continuing a visual diary of the journeys that feed my practice.',
+    pTechnique:
+      'In my work, I combine rich textured paste, warm gold leaf accents, and the living energy of acrylics. Every canvas is a way to capture shifting light, preserve the warmth of memory, and turn an inner journey into a visible story.',
+    socialCta:
+      'Follow the making of new works and look into my studio on social media:',
     based: 'Based in',
     basedValue: 'Castellón, Spain',
     mediums: 'Mediums',
@@ -119,7 +123,7 @@ const en: TranslationTree = {
   contact: {
     metaTitle: 'Contact',
     metaDesc:
-      'Contact Viktoria Paladios — contemporary artist based in Castellón, Spain. Email, Instagram, WhatsApp.',
+      'Contact Viktoria Paladios — contemporary artist based in Castellón, Spain. Email, Instagram, YouTube, TikTok, Facebook, WhatsApp.',
     label: 'Get in Touch',
     title: "Let's connect",
     intro:
@@ -128,6 +132,12 @@ const en: TranslationTree = {
     locationValue: 'Castellón, Spain',
     email: 'Email',
     instagram: 'Instagram',
+    youtube: 'YouTube',
+    youtubeValue: 'Art and process channel',
+    tiktok: 'TikTok',
+    tiktokValue: 'Short studio videos',
+    facebook: 'Facebook',
+    facebookValue: 'Community page',
     whatsapp: 'WhatsApp',
     whatsappValue: 'Send a message',
     name: 'Name',
@@ -178,7 +188,7 @@ const en: TranslationTree = {
       '{{title}} has been sold. Upon purchase, a new original painting will be created for you in this exact style and palette. While the composition remains consistent, each brushstroke is unique, ensuring your piece is a one-of-a-kind original with its own distinct character.',
     mediumAlcoholInk: 'Alcohol ink on {{surface}}',
     mediumGouache: 'Professional gouache on {{surface}}',
-    mediumMetallic: 'Mixed media with metallic leaf on {{surface}}',
+    mediumMetallic: 'Mixed media with gold leaf on {{surface}}',
     mediumMixed: 'Mixed media on {{surface}}',
     mediumAcrylic: 'Professional acrylics on {{surface}}',
     mediumDefault: 'Original painting on {{surface}}',
@@ -194,14 +204,14 @@ const en: TranslationTree = {
     surfaceOnPaper: 'paper',
     surfaceOnWood: 'wood',
     materialsFloralCrown:
-      'Canvas (cotton), pine stretcher, acrylic paints, textured paste, acrylic markers',
+      'Canvas (cotton), pine stretcher bars, acrylic paints, textured paste, acrylic markers',
     materialsAlcoholInk: '{{surface}}, alcohol ink',
     materialsGouachePaper: 'paper, cotton, gouache paints',
-    materialsGouache: 'Canvas (cotton), pine stretcher, gouache paints',
+    materialsGouache: 'Canvas (cotton), pine stretcher bars, gouache paints',
     materialsMetallic:
-      'Canvas (cotton), pine stretcher, acrylic paints, textured paste, metallic leaf',
+      'Canvas (cotton), pine stretcher bars, acrylic paints, textured paste, gold leaf',
     materialsDefault:
-      'Canvas (cotton), pine stretcher, acrylic paints, textured paste',
+      'Canvas (cotton), pine stretcher bars, acrylic paints, textured paste',
   },
   charity: {
     metaTitle: 'Charity & Initiatives',
@@ -343,6 +353,10 @@ const es: TranslationTree = {
       'No pinto solo para recordar Ucrania; pinto para mantener vivo el diálogo entre la que fui y la que estoy llegando a ser.',
     p3: 'Mi obra habita en el espacio entre mundos. Los motivos populares ucranianos se entrelazan en composiciones contemporáneas como notas manuscritas en los márgenes de un nuevo capítulo. Los paisajes mediterráneos respiran con esa misma atmósfera luminosa que antes solo asociaba con las visitas de verano al jardín de mi abuela.',
     p4: 'Hoy sigo creando desde mi estudio en Castellón, continuando un diario visual de los viajes que alimentan mi práctica artística.',
+    pTechnique:
+      'En mi obra combino pastas texturizadas, cálidos acentos de pan de oro y la energía viva del acrílico. Cada lienzo es una forma de atrapar la luz cambiante, preservar la calidez de la memoria y convertir un viaje interior en una historia visible.',
+    socialCta:
+      'Sigue el proceso de creación de nuevas obras y asómate a mi estudio en las redes:',
     based: 'Reside en',
     basedValue: 'Castellón, España',
     mediums: 'Medios',
@@ -406,7 +420,7 @@ const es: TranslationTree = {
   contact: {
     metaTitle: 'Contacto',
     metaDesc:
-      'Contacta con Viktoria Paladios — artista contemporánea en Castellón, España. Email, Instagram, WhatsApp.',
+      'Contacta con Viktoria Paladios — artista contemporánea en Castellón, España. Email, Instagram, YouTube, TikTok, Facebook, WhatsApp.',
     label: 'Contacto',
     title: 'Hablemos',
     intro:
@@ -415,6 +429,12 @@ const es: TranslationTree = {
     locationValue: 'Castellón, España',
     email: 'Email',
     instagram: 'Instagram',
+    youtube: 'YouTube',
+    youtubeValue: 'Canal sobre arte y proceso',
+    tiktok: 'TikTok',
+    tiktokValue: 'Vídeos cortos del taller',
+    facebook: 'Facebook',
+    facebookValue: 'Página de la comunidad',
     whatsapp: 'WhatsApp',
     whatsappValue: 'Enviar un mensaje',
     name: 'Nombre',
@@ -465,7 +485,7 @@ const es: TranslationTree = {
       '{{title}} se ha vendido. Tras la compra, se creará para ti una nueva pintura original en este mismo estilo y paleta. Aunque la composición se mantiene, cada pincelada es única, de modo que tu pieza es un original único con su propio carácter.',
     mediumAlcoholInk: 'Tinta alcohólica sobre {{surface}}',
     mediumGouache: 'Gouache profesional sobre {{surface}}',
-    mediumMetallic: 'Técnica mixta con hoja metálica sobre {{surface}}',
+    mediumMetallic: 'Técnica mixta con pan de oro sobre {{surface}}',
     mediumMixed: 'Técnica mixta sobre {{surface}}',
     mediumAcrylic: 'Acrílicos profesionales sobre {{surface}}',
     mediumDefault: 'Pintura original sobre {{surface}}',
@@ -486,7 +506,7 @@ const es: TranslationTree = {
     materialsGouachePaper: 'papel, algodón, pinturas gouache',
     materialsGouache: 'Lienzo (algodón), bastidor de pino, pinturas gouache',
     materialsMetallic:
-      'Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada, hoja metálica',
+      'Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada, pan de oro',
     materialsDefault:
       'Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada',
   },
@@ -630,6 +650,10 @@ const uk: TranslationTree = {
       "Я пишу не лише для того, щоб пам'ятати Україну — я пишу, щоб не згасав діалог між тим, ким я була, і тим, ким я стаю.",
     p3: 'Мої роботи живуть у просторі між світами. Українські народні мотиви вплітаються в сучасні композиції, мов від руки написані нотатки на полях нового розділу. Середземноморські пейзажі дихають тією самою світлоносною атмосферою, яку колись я знала лише під час літніх гостювань у бабусиному саду.',
     p4: 'Сьогодні я творимо у своїй студії в Кастельйоні, продовжуючи вести візуальний щоденник мандрів, які живлять мою творчість.',
+    pTechnique:
+      "У своїй роботі я поєдную об'ємну фактуру пасти, теплі акценти поталі та живу енергію акрилу. Кожне полотно для мене — це спосіб зафіксувати мінливість світла, зберегти тепло спогадів і перетворити внутрішній шлях на видиму історію.",
+    socialCta:
+      'Слідкуйте за процесом створення нових робіт та зазирніть у мою студію у соцмережах:',
     based: 'Базується в',
     basedValue: 'Кастельйон, Іспанія',
     mediums: 'Медіуми',
@@ -693,7 +717,7 @@ const uk: TranslationTree = {
   contact: {
     metaTitle: 'Контакти',
     metaDesc:
-      'Зв’язок із Вікторією Паладіос — сучасна художниця в Кастельйоні, Іспанія. Email, Instagram, WhatsApp.',
+      'Зв’язок із Вікторією Паладіос — сучасна художниця в Кастельйоні, Іспанія. Email, Instagram, YouTube, TikTok, Facebook, WhatsApp.',
     label: "Зв'язатися",
     title: 'Давайте познайомимося',
     intro:
@@ -702,6 +726,12 @@ const uk: TranslationTree = {
     locationValue: 'Кастельйон, Іспанія',
     email: 'Email',
     instagram: 'Instagram',
+    youtube: 'YouTube',
+    youtubeValue: 'Канал про мистецтво та процес',
+    tiktok: 'TikTok',
+    tiktokValue: 'Короткі відео з майстерні',
+    facebook: 'Facebook',
+    facebookValue: 'Сторінка спільноти',
     whatsapp: 'WhatsApp',
     whatsappValue: 'Надіслати повідомлення',
     name: "Ім'я",
@@ -752,7 +782,7 @@ const uk: TranslationTree = {
       '{{title}} продано. Після покупки для вас буде створено нову оригінальну картину в цьому самому стилі й палітрі. Хоча композиція залишається, кожен мазок унікальний — ваша робота буде неповторним оригіналом із власним характером.',
     mediumAlcoholInk: 'Спиртові чорнила на {{surface}}',
     mediumGouache: 'Професійна гуаш на {{surface}}',
-    mediumMetallic: 'Змішана техніка з металевою фольгою на {{surface}}',
+    mediumMetallic: 'Змішана техніка з поталлю на {{surface}}',
     mediumMixed: 'Змішана техніка на {{surface}}',
     mediumAcrylic: 'Професійний акрил на {{surface}}',
     mediumDefault: 'Оригінальний живопис на {{surface}}',
@@ -773,7 +803,7 @@ const uk: TranslationTree = {
     materialsGouachePaper: 'папір, бавовна, гуаш',
     materialsGouache: 'Полотно (бавовна), сосновий підрамник, гуаш',
     materialsMetallic:
-      'Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста, металева фольга',
+      'Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста, поталь',
     materialsDefault:
       'Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста',
   },

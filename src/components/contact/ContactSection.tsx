@@ -2,9 +2,9 @@ import { useState, type FormEvent } from 'react';
 import { ScrollReveal } from '../ui/ScrollReveal';
 import { Button } from '../ui/Button';
 import { SectionLabel } from '../ui/SectionLabel';
+import { CONTACT_EMAIL, social } from '../../data/social';
 import { useLanguage } from '../../i18n/LanguageContext';
 
-const CONTACT_EMAIL = 'hello@viktoria-p.art';
 const FORM_ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 export function ContactSection() {
@@ -56,12 +56,30 @@ export function ContactSection() {
     {
       label: t('contact.email'),
       value: CONTACT_EMAIL,
-      href: `mailto:${CONTACT_EMAIL}`,
+      href: social.email.href,
     },
     {
       label: t('contact.instagram'),
-      value: '@viktoria.paladios.art',
-      href: 'https://instagram.com/viktoria.paladios.art',
+      value: social.instagram.handle,
+      href: social.instagram.href,
+      external: true,
+    },
+    {
+      label: t('contact.youtube'),
+      value: t('contact.youtubeValue'),
+      href: social.youtube.href,
+      external: true,
+    },
+    {
+      label: t('contact.tiktok'),
+      value: t('contact.tiktokValue'),
+      href: social.tiktok.href,
+      external: true,
+    },
+    {
+      label: t('contact.facebook'),
+      value: t('contact.facebookValue'),
+      href: social.facebook.href,
       external: true,
     },
     {

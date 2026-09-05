@@ -1,8 +1,37 @@
 import { Link } from 'react-router-dom';
+import { CONTACT_EMAIL, social } from '../../data/social';
 import { useLanguage } from '../../i18n/LanguageContext';
 
 export function Footer() {
   const { t } = useLanguage();
+
+  const connectLinks = [
+    {
+      href: social.instagram.href,
+      label: social.instagram.handle,
+      external: true,
+    },
+    {
+      href: social.youtube.href,
+      label: social.youtube.handle,
+      external: true,
+    },
+    {
+      href: social.tiktok.href,
+      label: social.tiktok.handle,
+      external: true,
+    },
+    {
+      href: social.facebook.href,
+      label: social.facebook.handle,
+      external: true,
+    },
+    {
+      href: social.email.href,
+      label: CONTACT_EMAIL,
+      external: false,
+    },
+  ];
 
   return (
     <footer className="bg-ink text-cream">
@@ -72,25 +101,19 @@ export function Footer() {
                 {t('footer.connect')}
               </h4>
               <ul className="mt-5 space-y-3 text-sm text-cream/50">
+                {connectLinks.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      target={link.external ? '_blank' : undefined}
+                      rel={link.external ? 'noopener noreferrer' : undefined}
+                      className="transition-colors hover:text-cream"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
                 <li>{t('footer.location')}</li>
-                <li>
-                  <a
-                    href="mailto:hello@viktoria-p.art"
-                    className="transition-colors hover:text-cream"
-                  >
-                    hello@viktoria-p.art
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://instagram.com/viktoria.paladios.art"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-colors hover:text-cream"
-                  >
-                    @viktoria.paladios.art
-                  </a>
-                </li>
               </ul>
             </div>
           </div>
