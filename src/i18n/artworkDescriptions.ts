@@ -82,7 +82,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'plain-air-collection-04':
       'Blossom Path is an original acrylic painting by Viktoria Paladios celebrating a walk through flowering trees toward far mountains. Spring light is arranged in rows, as if the path itself were blooming. The composition evokes hope, journey, and quiet joy.',
     'pop-art-01':
-      'Vibrant Spirit is an original acrylic painting by Viktoria Paladios celebrating a face that refuses to be quiet — bold color, painterly texture, and contemporary nerve. The portrait holds energy without losing warmth. The work becomes a poetic piece of character, confidence, and living color.',
+      'Vibrant Tina. A pop-art portrait capturing the unstoppable energy and legendary drive of Tina Turner. Bold colors, dynamic strokes, and an expressive palette embody an untamed musical spirit. This piece fills the space with power, charisma, and vivid color, transforming a familiar icon into a modern manifesto of freedom and raw energy.',
     'pop-art-02':
       'Thoughts is an original mixed-media painting by Viktoria Paladios celebrating the inner life through pastel fields crossed by the handwritten word Thoughts. Mind is made visible without becoming loud. The composition evokes reflection, softness, and contemporary intimacy.',
     'textured-and-light-01':
@@ -174,7 +174,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'plain-air-collection-04':
       'Blossom Path es una pintura acrílica original de Viktoria Paladios que celebra un paseo entre árboles en flor hacia montañas lejanas. La luz de primavera se ordena en filas, como si el propio camino floreciera. La composición evoca esperanza, viaje y alegría serena.',
     'pop-art-01':
-      'Vibrant Spirit es una pintura acrílica original de Viktoria Paladios que celebra un rostro que se niega a callar: color audaz, textura pictórica y nervio contemporáneo. El retrato sostiene energía sin perder calidez. La obra se convierte en una pieza poética de carácter, confianza y color vivo.',
+      'Tina vibrante. Un retrato en estilo pop-art que captura la energía imparable y el impulso legendario de Tina Turner. Los colores audaces, los trazos dinámicos y una paleta expresiva encarnan un espíritu musical indomable. La obra llena el espacio de fuerza, carisma y color vivo, convirtiendo un icono familiar en un manifiesto moderno de libertad y pura energía.',
     'pop-art-02':
       'Thoughts es una pintura de técnica mixta original de Viktoria Paladios que celebra la vida interior mediante campos pastel atravesados por la palabra manuscrita Thoughts. La mente se hace visible sin volverse ruidosa. La composición evoca reflexión, suavidad e intimidad contemporánea.',
     'textured-and-light-01':
@@ -266,7 +266,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'plain-air-collection-04':
       'Blossom Path — оригінальна акрилова картина Вікторії Паладіос, що оспівує прогулянку серед квітучих дерев до далеких гір. Весняне світло вибудуване рядами, ніби сама стежка розквітає. Композиція викликає надію, шлях і тиху радість.',
     'pop-art-01':
-      'Vibrant Spirit — оригінальна акрилова картина Вікторії Паладіос, що оспівує обличчя, яке відмовляється мовчати: сміливий колір, живописна фактура й сучасна нервовість. Портрет тримає енергію, не втрачаючи тепла. Робота стає поетичним твором характеру, впевненості й живого кольору.',
+      'Яскрава Тіна. Поп-арт портрет, що передає нестримну енергію та легендарний драйв Тіни Тернер. Сміливі кольори, динамічні мазки та експресивна палітра втілюють дух музики, який неможливо приборкати. Робота наповнює простір силою, харизмою та яскравим характером, перетворюючи знайомий образ на сучасний маніфест свободи й вибухового кольору.',
     'pop-art-02':
       'Thoughts — оригінальна картина в змішаній техніці Вікторії Паладіос, що оспівує внутрішнє життя через пастельні поля, перетнуті рукописним словом Thoughts. Розум стає видимим, не стаючи гучним. Композиція викликає роздум, м’якість і сучасну близькість.',
     'textured-and-light-01':
