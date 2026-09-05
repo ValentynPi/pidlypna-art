@@ -16,7 +16,8 @@ const en: TranslationTree = {
     explore: 'Explore',
     more: 'More',
     connect: 'Connect',
-    blurb: 'Contemporary Ukrainian art living and creating in Castellón, Spain. Paintings that bridge two worlds.',
+    blurb:
+      'Contemporary Ukrainian art born in Ukraine, rooted in Castellón, Spain. Paintings that bridge two worlds.',
     quote: 'Art bridges what words cannot.',
     between: 'Ukraine · Spain · Everywhere between',
     location: 'Castellón, Spain',
@@ -167,12 +168,12 @@ const en: TranslationTree = {
     careNote:
       'Avoid direct sunlight and high humidity. Dust gently with a soft, dry cloth. Do not use liquid cleaners on the painted surface.',
     authenticityValue: 'Original handmade artwork',
-    certificationValue: 'Signed & Dated COA',
+    certificationValue: 'Signed and dated Certificate of Authenticity (CoA)',
     signedValue: 'Signed',
     customizationsText:
       'Custom orders are available for size and color changes, provided they are suitable for the artwork and preserve its overall appearance. Please send a message to discuss your requirements.',
     madeToOrderAvailable:
-      'This is an original handmade painting by Viktoria Paladios. A new original can also be created for you in this exact style and palette. While the composition remains consistent, each brushstroke is unique, ensuring your piece is a one-of-a-kind original with its own distinct character.',
+      'This is an original handmade painting. A recreation of this work can also be created for you in the same style and palette. While the overall composition is preserved, each brushstroke is unique — you receive a one-of-a-kind original with its own character.',
     madeToOrderSold:
       '{{title}} has been sold. Upon purchase, a new original painting will be created for you in this exact style and palette. While the composition remains consistent, each brushstroke is unique, ensuring your piece is a one-of-a-kind original with its own distinct character.',
     mediumAlcoholInk: 'Alcohol ink on {{surface}}',
@@ -185,17 +186,22 @@ const en: TranslationTree = {
     techniqueFluidInk: 'Fluid ink technique',
     techniqueHandLettered: 'Hand-lettered mixed media',
     techniqueImpasto: 'Impasto texture',
+    techniqueTexturedLandscape: 'Textured abstract landscape',
     surfaceCanvas: 'canvas',
     surfacePaper: 'paper',
     surfaceWood: 'wood',
+    surfaceOnCanvas: 'canvas',
+    surfaceOnPaper: 'paper',
+    surfaceOnWood: 'wood',
     materialsFloralCrown:
-      '{{surface}}, pine, cotton, acrylic paints, textured paste, acrylic markers',
+      'Canvas (cotton), pine stretcher, acrylic paints, textured paste, acrylic markers',
     materialsAlcoholInk: '{{surface}}, alcohol ink',
     materialsGouachePaper: 'paper, cotton, gouache paints',
-    materialsGouache: 'canvas, pine, cotton, gouache paints',
+    materialsGouache: 'Canvas (cotton), pine stretcher, gouache paints',
     materialsMetallic:
-      '{{surface}}, pine, cotton, acrylic paints, textured paste, metallic leaf',
-    materialsDefault: '{{surface}}, pine, cotton, acrylic paints, textured paste',
+      'Canvas (cotton), pine stretcher, acrylic paints, textured paste, metallic leaf',
+    materialsDefault:
+      'Canvas (cotton), pine stretcher, acrylic paints, textured paste',
   },
   charity: {
     metaTitle: 'Charity & Initiatives',
@@ -298,9 +304,9 @@ const es: TranslationTree = {
     more: 'Más',
     connect: 'Conectar',
     blurb:
-      'Arte contemporáneo ucraniano creado en Castellón, España. Pinturas que unen dos mundos.',
-    quote: 'El arte une lo que las palabras no pueden.',
-    between: 'Ucrania · España · Todo lo que hay entre medias',
+      'Arte contemporáneo ucraniano nacido en Ucrania y arraigado en Castellón, España. Pinturas que unen dos mundos.',
+    quote: 'El arte habla donde las palabras no alcanzan.',
+    between: 'Ucrania · España · Todo lo que hay entre nosotros',
     location: 'Castellón, España',
   },
   hero: {
@@ -449,12 +455,12 @@ const es: TranslationTree = {
     careNote:
       'Evita la luz solar directa y la humedad alta. Limpia con un paño suave y seco. No uses limpiadores líquidos sobre la superficie pintada.',
     authenticityValue: 'Obra original hecha a mano',
-    certificationValue: 'COA firmado y fechado',
+    certificationValue: 'Certificado de autenticidad firmado y fechado (CoA)',
     signedValue: 'Firmada',
     customizationsText:
       'Los encargos personalizados están disponibles para cambios de tamaño y color, siempre que sean adecuados para la obra y preserven su apariencia general. Envía un mensaje para hablar de tus requisitos.',
     madeToOrderAvailable:
-      'Esta es una pintura original hecha a mano por Viktoria Paladios. También se puede crear para ti una nueva original en este mismo estilo y paleta. Aunque la composición se mantiene, cada pincelada es única, de modo que tu pieza es un original único con su propio carácter.',
+      'Esta es una pintura original hecha a mano. También se puede crear para ti una recreación de esta obra en el mismo estilo y paleta. Aunque la composición general se conserva, cada pincelada es única: recibes un original irrepetible con su propio carácter.',
     madeToOrderSold:
       '{{title}} se ha vendido. Tras la compra, se creará para ti una nueva pintura original en este mismo estilo y paleta. Aunque la composición se mantiene, cada pincelada es única, de modo que tu pieza es un original único con su propio carácter.',
     mediumAlcoholInk: 'Tinta alcohólica sobre {{surface}}',
@@ -467,18 +473,22 @@ const es: TranslationTree = {
     techniqueFluidInk: 'Técnica de tinta fluida',
     techniqueHandLettered: 'Técnica mixta con tipografía a mano',
     techniqueImpasto: 'Textura de impasto',
+    techniqueTexturedLandscape: 'Paisaje abstracto texturizado',
     surfaceCanvas: 'lienzo',
     surfacePaper: 'papel',
     surfaceWood: 'madera',
+    surfaceOnCanvas: 'lienzo',
+    surfaceOnPaper: 'papel',
+    surfaceOnWood: 'madera',
     materialsFloralCrown:
-      '{{surface}}, pino, algodón, pinturas acrílicas, pasta texturizada, rotuladores acrílicos',
+      'Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada, rotuladores acrílicos',
     materialsAlcoholInk: '{{surface}}, tinta alcohólica',
     materialsGouachePaper: 'papel, algodón, pinturas gouache',
-    materialsGouache: 'lienzo, pino, algodón, pinturas gouache',
+    materialsGouache: 'Lienzo (algodón), bastidor de pino, pinturas gouache',
     materialsMetallic:
-      '{{surface}}, pino, algodón, pinturas acrílicas, pasta texturizada, hoja metálica',
+      'Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada, hoja metálica',
     materialsDefault:
-      '{{surface}}, pino, algodón, pinturas acrílicas, pasta texturizada',
+      'Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada',
   },
   charity: {
     metaTitle: 'Caridad e iniciativas',
@@ -581,9 +591,9 @@ const uk: TranslationTree = {
     more: 'Більше',
     connect: 'Зв’язок',
     blurb:
-      'Сучасне українське мистецтво, створене в Кастельйоні, Іспанія. Живопис, що єднає два світи.',
-    quote: 'Мистецтво єднає те, чого не можуть єднати слова.',
-    between: 'Україна · Іспанія · Скрізь між ними',
+      'Сучасне українське мистецтво, народжене в Україні та продовжене в Кастельйоні, Іспанія. Полотна, що є мостом між двома світами.',
+    quote: 'Мистецтво говорить там, де слова безсилі',
+    between: 'Україна · Іспанія · Все, що між нами',
     location: 'Кастельйон, Іспанія',
   },
   hero: {
@@ -731,37 +741,41 @@ const uk: TranslationTree = {
     shippingNote: 'Доставка доступна по всьому світу.',
     careNote:
       'Уникайте прямого сонця та високої вологості. Обережно протирайте м’якою сухою тканиною. Не використовуйте рідкі засоби на поверхні живопису.',
-    authenticityValue: 'Оригінальна робота ручної роботи',
-    certificationValue: 'Підписаний і датований COA',
+    authenticityValue: 'Оригінальний витвір ручної роботи',
+    certificationValue: 'Підписаний і датований сертифікат автентичності (CoA)',
     signedValue: 'Підписано',
     customizationsText:
       'Індивідуальні замовлення доступні щодо розміру та кольору, якщо зміни підходять для роботи й зберігають її загальний вигляд. Напишіть повідомлення, щоб обговорити ваші побажання.',
     madeToOrderAvailable:
-      'Це оригінальна картина ручної роботи Вікторії Паладіос. Для вас також можна створити нову оригінальну роботу в цьому самому стилі й палітрі. Хоча композиція залишається, кожен мазок унікальний — ваша робота буде неповторним оригіналом із власним характером.',
+      'Це оригінальна картина ручної роботи. Для вас також можна створити повторення цієї роботи в тому ж стилі та палітрі. Хоча загальна композиція зберігається, кожен мазок унікальний — ви отримуєте неповторний оригінал із власним характером.',
     madeToOrderSold:
       '{{title}} продано. Після покупки для вас буде створено нову оригінальну картину в цьому самому стилі й палітрі. Хоча композиція залишається, кожен мазок унікальний — ваша робота буде неповторним оригіналом із власним характером.',
-    mediumAlcoholInk: 'Спиртові чорнила · {{surface}}',
-    mediumGouache: 'Професійна гуаш · {{surface}}',
-    mediumMetallic: 'Змішана техніка з металевою фольгою · {{surface}}',
-    mediumMixed: 'Змішана техніка · {{surface}}',
-    mediumAcrylic: 'Професійний акрил · {{surface}}',
-    mediumDefault: 'Оригінальний живопис · {{surface}}',
+    mediumAlcoholInk: 'Спиртові чорнила на {{surface}}',
+    mediumGouache: 'Професійна гуаш на {{surface}}',
+    mediumMetallic: 'Змішана техніка з металевою фольгою на {{surface}}',
+    mediumMixed: 'Змішана техніка на {{surface}}',
+    mediumAcrylic: 'Професійний акрил на {{surface}}',
+    mediumDefault: 'Оригінальний живопис на {{surface}}',
     techniquePetrykivka: 'Традиційний петриківський розпис',
     techniqueFluidInk: 'Техніка плинних чорнил',
     techniqueHandLettered: 'Змішана техніка з рукописним текстом',
     techniqueImpasto: 'Фактура імпасто',
+    techniqueTexturedLandscape: 'Текстурний абстрактний пейзаж',
     surfaceCanvas: 'полотно',
     surfacePaper: 'папір',
     surfaceWood: 'дерево',
+    surfaceOnCanvas: 'полотні',
+    surfaceOnPaper: 'папері',
+    surfaceOnWood: 'дереві',
     materialsFloralCrown:
-      '{{surface}}, сосна, бавовна, акрилові фарби, фактурна паста, акрилові маркери',
+      'Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста, акрилові маркери',
     materialsAlcoholInk: '{{surface}}, спиртові чорнила',
     materialsGouachePaper: 'папір, бавовна, гуаш',
-    materialsGouache: 'полотно, сосна, бавовна, гуаш',
+    materialsGouache: 'Полотно (бавовна), сосновий підрамник, гуаш',
     materialsMetallic:
-      '{{surface}}, сосна, бавовна, акрилові фарби, фактурна паста, металева фольга',
+      'Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста, металева фольга',
     materialsDefault:
-      '{{surface}}, сосна, бавовна, акрилові фарби, фактурна паста',
+      'Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста',
   },
   charity: {
     metaTitle: 'Благодійність та ініціативи',

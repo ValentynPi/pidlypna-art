@@ -14,6 +14,14 @@ function translateSurface(surface: string, t: TranslateFn): string {
   return surface.toLowerCase();
 }
 
+function translateSurfaceOn(surface: string, t: TranslateFn): string {
+  const key = surface.trim().toLowerCase();
+  if (key === 'canvas') return t('lightbox.surfaceOnCanvas');
+  if (key === 'paper') return t('lightbox.surfaceOnPaper');
+  if (key === 'wood') return t('lightbox.surfaceOnWood');
+  return surface.toLowerCase();
+}
+
 export function madeToOrderText(
   artwork: Artwork,
   t: TranslateFn,
@@ -29,7 +37,7 @@ export function madeToOrderText(
 
 export function listingMedium(artwork: Artwork, t: TranslateFn): string {
   const materials = artwork.materials.toLowerCase();
-  const surface = translateSurface(artwork.surface, t);
+  const surface = translateSurfaceOn(artwork.surface, t);
   if (materials.includes('alcohol ink')) return t('lightbox.mediumAlcoholInk', { surface });
   if (materials.includes('gouache')) return t('lightbox.mediumGouache', { surface });
   if (materials.includes('metallic')) return t('lightbox.mediumMetallic', { surface });
@@ -39,6 +47,9 @@ export function listingMedium(artwork: Artwork, t: TranslateFn): string {
 }
 
 export function listingTechniqueLabel(artwork: Artwork, t: TranslateFn): string {
+  if (artwork.technique.trim().toLowerCase() === 'textured abstract landscape') {
+    return t('lightbox.techniqueTexturedLandscape');
+  }
   if (artwork.collectionId === 'petrykivka') return t('lightbox.techniquePetrykivka');
   if (artwork.collectionId === 'alcohol-ink-art') return t('lightbox.techniqueFluidInk');
   if (artwork.collectionId === 'affirmation-collection') {
@@ -62,7 +73,7 @@ export function listingMaterialsFull(artwork: Artwork, t: TranslateFn): string {
   const surface = translateSurface(artwork.surface, t);
 
   if (artwork.id === 'female-portraits-01' || artwork.title === 'Blooming Silence') {
-    return t('lightbox.materialsFloralCrown', { surface });
+    return t('lightbox.materialsFloralCrown');
   }
   if (materials.includes('alcohol ink')) {
     return t('lightbox.materialsAlcoholInk', { surface });
@@ -74,9 +85,9 @@ export function listingMaterialsFull(artwork: Artwork, t: TranslateFn): string {
     return t('lightbox.materialsGouache');
   }
   if (materials.includes('metallic')) {
-    return t('lightbox.materialsMetallic', { surface });
+    return t('lightbox.materialsMetallic');
   }
-  return t('lightbox.materialsDefault', { surface });
+  return t('lightbox.materialsDefault');
 }
 
 export function listingDescription(

@@ -52,14 +52,19 @@ export function Footer() {
                 {t('footer.more')}
               </h4>
               <ul className="mt-5 space-y-3">
-                <li>
-                  <Link
-                    to="/contact"
-                    className="text-sm text-cream/50 transition-colors hover:text-cream"
-                  >
-                    {t('nav.contact')}
-                  </Link>
-                </li>
+                {[
+                  { to: '/contact', label: t('nav.contact') },
+                  { to: '/charity', label: t('nav.charity') },
+                ].map((link) => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="text-sm text-cream/50 transition-colors hover:text-cream"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="col-span-2 sm:col-span-1">

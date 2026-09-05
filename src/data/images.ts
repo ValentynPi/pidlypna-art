@@ -136,7 +136,7 @@ export const photos = {
   inspired_by_nature_nature_study_1: `${base}/inspired-by-nature-nature-study-1.jpg`,
   inspired_by_nature_nature_study_2: `${base}/inspired-by-nature-nature-study-2.jpg`,
   inspired_by_nature_nature_study_3: `${base}/inspired-by-nature-nature-study-3.jpg`,
-  inspired_by_nature_cover: `${base}/inspired-by-nature-nature-study-1.jpg`,
+  inspired_by_nature_cover: `${base}/inspired-by-nature-nature-study-3.jpg`,
   inspired_by_places_golden_balloon_1: `${base}/inspired-by-places-golden-balloon-1.jpg`,
   inspired_by_places_golden_balloon_2: `${base}/inspired-by-places-golden-balloon-2.jpg`,
   inspired_by_places_golden_balloon_3: `${base}/inspired-by-places-golden-balloon-3.jpg`,
