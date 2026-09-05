@@ -28,7 +28,7 @@ export function Footer() {
     },
     {
       href: social.email.href,
-      label: t('contact.email'),
+      label: social.email.handle,
       external: false,
     },
   ];
