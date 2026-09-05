@@ -14,6 +14,7 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'female-portraits-03': 'The Fierce and the Tender',
     'pop-art-01': 'Vibrant Tina',
     'inspired-by-nature-01': 'Sorrow',
+    'inspired-by-places-01': 'Golden Dream',
   },
   es: {
     'abstract-art-02': 'Más allá de la visibilidad',
@@ -27,6 +28,7 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'female-portraits-03': 'La fiereza y la ternura',
     'pop-art-01': 'Tina vibrante',
     'inspired-by-nature-01': 'Pena',
+    'inspired-by-places-01': 'Sueño dorado',
   },
   uk: {
     'abstract-art-02': 'За межею видимості',
@@ -40,6 +42,7 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'female-portraits-03': 'Сила ніжності',
     'pop-art-01': 'Яскрава Тіна',
     'inspired-by-nature-01': 'Журба',
+    'inspired-by-places-01': 'Золота мрія',
   },
 };
 

@@ -52,7 +52,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'inspired-by-nature-01':
       'Sorrow is an original acrylic painting by Viktoria Paladios celebrating looking closely — light, air, and distance held in paint. Observed with care and finished with contemporary restraint, the landscape keeps the freshness of being there. The work evokes presence, patience, and quiet sophistication.',
     'inspired-by-places-01':
-      'Golden Balloon is an original mixed-media painting by Viktoria Paladios celebrating travel as dream, with a golden balloon rising above a remembered place. Metallic light and soft ground turn a journey into something you can keep. The composition becomes a poetic contemporary work of wonder, freedom, and longing.',
+      'Golden Dream. This piece was born from a fleeting one-day journey to Mont-Saint-Michel. Staying for the night was a luxury beyond reach back then, but it sparked a dream that lingers on. A golden hot air balloon floats above the majestic silhouette of the abbey as a symbol of aspirations that refuse to fade. The mixed-media canvas captures the light of the road, the quiet of longing, and the enduring belief that one day, this dream will finally witness the sunrise from within those ancient walls.',
     'petrykivka-01':
       'Kalyna Night is an original Petrykivka painting by Viktoria Paladios celebrating the kalyna berry as a living emblem of home. White fruit and leaves bloom against deep burgundy in traditional brushstrokes made contemporary. The work becomes a poetic symbol of memory, devotion, and Ukrainian beauty.',
     'petrykivka-02':
@@ -144,7 +144,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'inspired-by-nature-01':
       'Pena es una pintura acrílica original de Viktoria Paladios que celebra mirar de cerca: luz, aire y distancia sostenidos en la pintura. Observado con cuidado y terminado con contención contemporánea, el paisaje conserva la frescura de haber estado allí. La obra evoca presencia, paciencia y sofisticación serena.',
     'inspired-by-places-01':
-      'Golden Balloon es una pintura de técnica mixta original de Viktoria Paladios que celebra el viaje como sueño, con un globo dorado elevándose sobre un lugar recordado. La luz metálica y el suelo suave convierten el trayecto en algo que se puede guardar. La composición se convierte en una obra contemporánea poética de asombro, libertad y anhelo.',
+      'Sueño dorado. Esta obra nace de un fugaz viaje de un solo día a Mont-Saint-Michel. Quedarse a pasar la noche era entonces un lujo inaccesible, pero encendió un deseo que sigue vivo. Un globo aerostático dorado se eleva sobre la silueta majestuosa de la abadía como símbolo de una aspiración que no se apaga. El lienzo de técnica mixta captura la luz del camino, la quietud del anhelo y la firme creencia de que, algún día, este sueño verá amanecer desde la misma orilla.',
     'petrykivka-01':
       'Kalyna Night es una pintura Petrykivka original de Viktoria Paladios que celebra la baya de kalyna como emblema vivo del hogar. Fruto blanco y hojas florecen sobre un burdeos profundo con pinceladas tradicionales hechas contemporáneas. La obra se convierte en un símbolo poético de memoria, devoción y belleza ucraniana.',
     'petrykivka-02':
@@ -236,7 +236,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'inspired-by-nature-01':
       'Журба — оригінальна акрилова картина Вікторії Паладіос, що оспівує уважний погляд: світло, повітря й відстань, утримані в фарбі. Спостережено з турботою й завершено з сучасною стриманістю, пейзаж зберігає свіжість присутності. Робота викликає відчуття присутності, терпіння й тихої витонченості.',
     'inspired-by-places-01':
-      'Golden Balloon — оригінальна картина в змішаній техніці Вікторії Паладіос, що оспівує подорож як мрію: золота повітряна куля піднімається над згаданим місцем. Металеве світло й м’який ґрунт перетворюють шлях на те, що можна зберегти. Композиція стає поетичною сучасною роботою про подив, свободу й тугу.',
+      'Золота мрія. Ця робота народилася з подорожі до Мон-Сен-Мішеля, яка тривала лише один день. Залишитися там на ніч тоді виявилося недосяжною розкішшю, але народило мрію, яка досі живе у серці. Золота повітряна куля здіймається над величним силуетом монастиря як символ того, що прагнення не згасають, а перетворюються на мистецтво. Полотно зберігає в собі світло дороги, тишу очікування і віру в те, що одного разу мрія зустріне свій світанок на тому самому березі.',
     'petrykivka-01':
       'Kalyna Night — оригінальний петриківський розпис Вікторії Паладіос, що оспівує калину як живий символ дому. Білі ягоди й листя квітнуть на глибокому бордовому тлі традиційними мазками, зробленими сучасними. Робота стає поетичним символом пам’яті, відданості й української краси.',
     'petrykivka-02':
