@@ -23,7 +23,7 @@ export const collections: Collection[] = [
     name: 'Abstract Art',
     slug: 'abstract-art',
     coverImage: photos.abstract_art_cover,
-    coverAlt: 'Mist Horizon — Abstract Art collection cover',
+    coverAlt: 'Beyond Visibility — Abstract Art collection cover',
     intro: 'Compositions that speak through color, gesture, and form — atmospheres beyond the literal.',
   },
   {
