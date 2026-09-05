@@ -83,7 +83,18 @@ export function listingDescription(
   artwork: Artwork,
   language: Language = 'en',
 ): string {
-  return getArtworkDescription(artwork.id, language, artwork.description);
+  const desc = getArtworkDescription(artwork.id, language, artwork.description);
+  if (language === 'en') return desc;
+
+  const localized = getArtworkTitle(artwork.id, language, artwork.title);
+  const english = getArtworkTitle(artwork.id, 'en', artwork.title);
+  if (localized === english) return desc;
+
+  // Descriptions often open with the English title — swap it for the localized name.
+  if (desc.startsWith(english)) {
+    return localized + desc.slice(english.length);
+  }
+  return desc;
 }
 
 function formatDimension(raw: string, t: TranslateFn): string {
