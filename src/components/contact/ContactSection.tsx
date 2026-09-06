@@ -65,6 +65,12 @@ export function ContactSection() {
       external: true,
     },
     {
+      label: t('contact.facebook'),
+      value: t('contact.facebookValue'),
+      href: social.facebook.href,
+      external: true,
+    },
+    {
       label: t('contact.youtube'),
       value: t('contact.youtubeValue'),
       href: social.youtube.href,
@@ -74,12 +80,6 @@ export function ContactSection() {
       label: t('contact.tiktok'),
       value: t('contact.tiktokValue'),
       href: social.tiktok.href,
-      external: true,
-    },
-    {
-      label: t('contact.facebook'),
-      value: t('contact.facebookValue'),
-      href: social.facebook.href,
       external: true,
     },
     {

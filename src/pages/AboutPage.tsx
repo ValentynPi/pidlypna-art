@@ -12,9 +12,9 @@ export function AboutPage() {
 
   const socialLinks = [
     { href: social.instagram.href, label: t('contact.instagram') },
+    { href: social.facebook.href, label: t('contact.facebook') },
     { href: social.youtube.href, label: t('contact.youtube') },
     { href: social.tiktok.href, label: t('contact.tiktok') },
-    { href: social.facebook.href, label: t('contact.facebook') },
   ];
 
   return (

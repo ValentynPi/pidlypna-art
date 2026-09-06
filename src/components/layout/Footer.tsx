@@ -12,6 +12,11 @@ export function Footer() {
       external: true,
     },
     {
+      href: social.facebook.href,
+      label: t('contact.facebook'),
+      external: true,
+    },
+    {
       href: social.youtube.href,
       label: t('contact.youtube'),
       external: true,
@@ -19,11 +24,6 @@ export function Footer() {
     {
       href: social.tiktok.href,
       label: t('contact.tiktok'),
-      external: true,
-    },
-    {
-      href: social.facebook.href,
-      label: t('contact.facebook'),
       external: true,
     },
     {
