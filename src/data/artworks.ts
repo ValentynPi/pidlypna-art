@@ -872,7 +872,7 @@ export const artworks: Artwork[] = [
     certificateOfAuthenticity: true,
     availability: 'Available',
     description:
-      'Vibrant Tina. A pop-art portrait capturing the unstoppable energy and legendary drive of Tina Turner.',
+      'This is a pop-art portrait capturing the unstoppable energy and legendary drive of Tina Turner.',
     image: photos.pop_art_vibrant_spirit_1,
     imageAlt: 'Vibrant Tina — front view',
     images: [

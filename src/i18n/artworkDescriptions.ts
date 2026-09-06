@@ -174,7 +174,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'plain-air-collection-04':
       'Esta obra es una pintura acrílica original que celebra un paseo entre árboles en flor hacia montañas lejanas. La luz de primavera se ordena en filas, como si el propio camino floreciera. La composición evoca esperanza, viaje y alegría serena.',
     'pop-art-01':
-      'Esta obra es un retrato en estilo pop-art que captura la energía imparable y el impulso legendario de Tina Turner. Los colores audaces, los trazos dinámicos y una paleta expresiva encarnan un espíritu musical indomable. La obra llena el espacio de fuerza, carisma y color vivo, convirtiendo un icono familiar en un manifiesto moderno de libertad y pura energía.',
+      'Este es un retrato en estilo pop-art que captura la energía imparable y el impulso legendario de Tina Turner. Los colores audaces, los trazos dinámicos y una paleta expresiva encarnan un espíritu musical indomable. La obra llena el espacio de fuerza, carisma y color vivo, convirtiendo un icono familiar en un manifiesto moderno de libertad y pura energía.',
     'pop-art-02':
       'Esta obra es una pintura de técnica mixta original que celebra la vida interior mediante campos pastel atravesados por la palabra manuscrita Thoughts. La mente se hace visible sin volverse ruidosa. La composición evoca reflexión, suavidad e intimidad contemporánea.',
     'textured-and-light-01':
@@ -266,7 +266,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'plain-air-collection-04':
       'Ця робота оспівує прогулянку серед квітучих дерев до далеких гір. Весняне світло вибудуване рядами, ніби сама стежка розквітає. Композиція викликає надію, шлях і тиху радість.',
     'pop-art-01':
-      'Поп-арт портрет, що передає нестримну енергію та легендарний драйв Тіни Тернер. Сміливі кольори, динамічні мазки та експресивна палітра втілюють дух музики, який неможливо приборкати. Робота наповнює простір силою, харизмою та яскравим характером, перетворюючи знайомий образ на сучасний маніфест свободи й вибухового кольору.',
+      'Це поп-арт портрет, що передає нестримну енергію та легендарний драйв Тіни Тернер. Сміливі кольори, динамічні мазки та експресивна палітра втілюють дух музики, який неможливо приборкати. Робота наповнює простір силою, харизмою та яскравим характером, перетворюючи знайомий образ на сучасний маніфест свободи й вибухового кольору.',
     'pop-art-02':
       'Ця робота оспівує внутрішнє життя через пастельні поля, перетнуті рукописним словом Thoughts. Розум стає видимим, не стаючи гучним. Композиція викликає роздум, м’якість і сучасну близькість.',
     'textured-and-light-01':
