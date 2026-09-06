@@ -54,7 +54,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'inspired-by-places-01':
       'This piece was born from a fleeting one-day journey to Mont-Saint-Michel. Staying for the night was a luxury beyond reach back then, but it sparked a dream that lingers on. A golden hot air balloon floats above the majestic silhouette of the abbey as a symbol of aspirations that refuse to fade. The mixed-media canvas captures the light of the road, the quiet of longing, and the enduring belief that one day, this dream will finally witness the sunrise from within those ancient walls.',
     'petrykivka-01':
-      'This work is an original Petrykivka painting that celebrates the kalyna berry as a living emblem of home. White fruit and leaves bloom against deep burgundy in traditional brushstrokes made contemporary. The work becomes a poetic symbol of memory, devotion, and Ukrainian beauty.',
+      'This Petrykivka painting celebrates the kalyna berry as a living emblem of home. White fruit and leaves bloom against deep burgundy in traditional brushstrokes made contemporary. The work becomes a poetic symbol of memory, devotion, and Ukrainian beauty.',
     'petrykivka-02':
       'This work is an original Petrykivka painting that celebrates a single flower opening against black, edged with orange leaves that catch the light. Classic strokes are placed with contemporary confidence. The composition evokes elegance, focus, and quiet festivity.',
     'petrykivka-03':
@@ -64,15 +64,15 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'petrykivka-05':
       'This work is an original Petrykivka painting that celebrates spring through teal and burgundy flowers on a white ground. Each petal is placed with the light, airy touch of the tradition. The work becomes a poetic contemporary bloom of freshness, grace, and joy.',
     'petrykivka-06':
-      'This work is an original Petrykivka painting that celebrates a tall climb of red blossoms, green leaves, and blue berries. The narrow format is read slowly, like a path through summer. The composition evokes abundance, craftsmanship, and quiet delight.',
+      'This Petrykivka painting celebrates a tall climb of red blossoms, green leaves, and blue berries. The narrow format is read slowly, like a path through summer. The composition evokes abundance, craftsmanship, and quiet delight.',
     'petrykivka-07':
-      'This work is an original Petrykivka painting that celebrates orange and blue flowers winding upward along a green stem. Classic strokes keep the movement lively and precise. The work becomes a poetic contemporary piece of growth, color, and folk elegance.',
+      'This Petrykivka painting celebrates orange and blue flowers winding upward along a green stem. Classic strokes keep the movement lively and precise. The work becomes a poetic contemporary piece of growth, color, and folk elegance.',
     'petrykivka-08':
-      'This work is an original Petrykivka painting that celebrates the mythical bird rising from a black ground among ornamental florals. Tradition and story meet in a single, vivid form. The composition evokes wonder, heritage, and luminous courage.',
+      'This Petrykivka painting celebrates the mythical bird rising from a black ground among ornamental florals. Tradition and story meet in a single, vivid form. The composition evokes wonder, heritage, and luminous courage.',
     'petrykivka-09':
-      'This work is an original Petrykivka painting that celebrates three flame-red flowers along a vertical stem with berries and leaves. The tall format feels like a bookmark of summer. The work becomes a poetic contemporary piece of warmth, rhythm, and craft.',
+      'This Petrykivka painting celebrates three flame-red flowers along a vertical stem with berries and leaves. The tall format feels like a bookmark of summer. The work becomes a poetic contemporary piece of warmth, rhythm, and craft.',
     'petrykivka-10':
-      'This work is an original Petrykivka painting that celebrates floral motifs turning outward on a round canvas. A quieter, almost monochrome palette lets the rhythm of the strokes lead. The composition evokes meditation, balance, and refined folk beauty.',
+      'This Petrykivka painting celebrates floral motifs turning outward on a round canvas. A quieter, almost monochrome palette lets the rhythm of the strokes lead. The composition evokes meditation, balance, and refined folk beauty.',
     'plain-air-collection-01':
       'This work is an original acrylic painting that celebrates high distance through pale blue sky and quiet snow. The mountains are held with clear, calm color rather than noise. The work becomes a poetic contemporary landscape of stillness, air, and awe.',
     'plain-air-collection-02':
@@ -84,7 +84,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'pop-art-01':
       'This is a pop-art portrait capturing the unstoppable energy and legendary drive of Tina Turner. Bold colors, dynamic strokes, and an expressive palette embody an untamed musical spirit. This piece fills the space with power, charisma, and vivid color, transforming a familiar icon into a modern manifesto of freedom and raw energy.',
     'pop-art-02':
-      'This work is an original mixed-media painting that celebrates the inner life through pastel fields crossed by the handwritten word Thoughts. Mind is made visible without becoming loud. The composition evokes reflection, softness, and contemporary intimacy.',
+      'This mixed-media painting celebrates the inner life through pastel fields crossed by the handwritten word Thoughts. Mind is made visible without becoming loud. The composition evokes reflection, softness, and contemporary intimacy.',
     'textured-and-light-01':
       'This work is an original mixed-media diptych that celebrates wholeness through a white and gold circle spanning two panels. Concentric textured lines build a quiet radiance where the canvases meet. The work becomes a poetic contemporary symbol of connection, light, and two places becoming one.',
     'textured-and-light-02':
@@ -146,7 +146,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'inspired-by-places-01':
       'Esta obra nace de un fugaz viaje de un solo día a Mont-Saint-Michel. Quedarse a pasar la noche era entonces un lujo inaccesible, pero encendió un deseo que sigue vivo. Un globo aerostático dorado se eleva sobre la silueta majestuosa de la abadía como símbolo de una aspiración que no se apaga. El lienzo de técnica mixta captura la luz del camino, la quietud del anhelo y la firme creencia de que, algún día, este sueño verá amanecer desde la misma orilla.',
     'petrykivka-01':
-      'Esta obra es una pintura Petrykivka original que celebra la baya de kalyna como emblema vivo del hogar. Fruto blanco y hojas florecen sobre un burdeos profundo con pinceladas tradicionales hechas contemporáneas. La obra se convierte en un símbolo poético de memoria, devoción y belleza ucraniana.',
+      'Esta pintura Petrykivka celebra la baya de kalyna como emblema vivo del hogar. Fruto blanco y hojas florecen sobre un burdeos profundo con pinceladas tradicionales hechas contemporáneas. La obra se convierte en un símbolo poético de memoria, devoción y belleza ucraniana.',
     'petrykivka-02':
       'Esta obra es una pintura Petrykivka original que celebra una sola flor abriéndose sobre negro, bordeada de hojas naranjas que captan la luz. Los trazos clásicos se colocan con confianza contemporánea. La composición evoca elegancia, foco y festividad silenciosa.',
     'petrykivka-03':
@@ -156,15 +156,15 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'petrykivka-05':
       'Esta obra es una pintura Petrykivka original que celebra la primavera con flores verdeazuladas y burdeos sobre fondo blanco. Cada pétalo se coloca con el toque ligero y aéreo de la tradición. La obra se convierte en una flor contemporánea poética de frescura, gracia y alegría.',
     'petrykivka-06':
-      'Esta obra es una pintura Petrykivka original que celebra una alta trepadora de flores rojas, hojas verdes y bayas azules. El formato estrecho se lee despacio, como un camino por el verano. La composición evoca abundancia, maestría y deleite silencioso.',
+      'Esta pintura Petrykivka celebra una alta trepadora de flores rojas, hojas verdes y bayas azules. El formato estrecho se lee despacio, como un camino por el verano. La composición evoca abundancia, maestría y deleite silencioso.',
     'petrykivka-07':
-      'Esta obra es una pintura Petrykivka original que celebra flores naranjas y azules que ascienden por un tallo verde. Los trazos clásicos mantienen el movimiento vivo y preciso. La obra se convierte en una pieza contemporánea poética de crecimiento, color y elegancia popular.',
+      'Esta pintura Petrykivka celebra flores naranjas y azules que ascienden por un tallo verde. Los trazos clásicos mantienen el movimiento vivo y preciso. La obra se convierte en una pieza contemporánea poética de crecimiento, color y elegancia popular.',
     'petrykivka-08':
-      'Esta obra es una pintura Petrykivka original que celebra el ave mítica surgiendo de un fondo negro entre florales ornamentales. Tradición e historia se encuentran en una sola forma vivida. La composición evoca asombro, herencia y valor luminoso.',
+      'Esta pintura Petrykivka celebra el ave mítica surgiendo de un fondo negro entre florales ornamentales. Tradición e historia se encuentran en una sola forma vivida. La composición evoca asombro, herencia y valor luminoso.',
     'petrykivka-09':
-      'Esta obra es una pintura Petrykivka original que celebra tres flores rojo fuego a lo largo de un tallo vertical con bayas y hojas. El formato alto se siente como un marcador del verano. La obra se convierte en una pieza contemporánea poética de calor, ritmo y oficio.',
+      'Esta pintura Petrykivka celebra tres flores rojo fuego a lo largo de un tallo vertical con bayas y hojas. El formato alto se siente como un marcador del verano. La obra se convierte en una pieza contemporánea poética de calor, ritmo y oficio.',
     'petrykivka-10':
-      'Esta obra es una pintura Petrykivka original que celebra motivos florales abriéndose hacia fuera en un lienzo redondo. Una paleta más quieta, casi monocroma, deja que el ritmo de los trazos lidere. La composición evoca meditación, equilibrio y belleza popular refinada.',
+      'Esta pintura Petrykivka celebra motivos florales abriéndose hacia fuera en un lienzo redondo. Una paleta más quieta, casi monocroma, deja que el ritmo de los trazos lidere. La composición evoca meditación, equilibrio y belleza popular refinada.',
     'plain-air-collection-01':
       'Esta obra es una pintura acrílica original que celebra la lejanía elevada mediante un cielo azul pálido y nieve serena. Las montañas se sostienen con color claro y calmado, sin ruido. La obra se convierte en un paisaje contemporáneo poético de quietud, aire y asombro.',
     'plain-air-collection-02':
@@ -176,7 +176,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'pop-art-01':
       'Este es un retrato en estilo pop-art que captura la energía imparable y el impulso legendario de Tina Turner. Los colores audaces, los trazos dinámicos y una paleta expresiva encarnan un espíritu musical indomable. La obra llena el espacio de fuerza, carisma y color vivo, convirtiendo un icono familiar en un manifiesto moderno de libertad y pura energía.',
     'pop-art-02':
-      'Esta obra es una pintura de técnica mixta original que celebra la vida interior mediante campos pastel atravesados por la palabra manuscrita Thoughts. La mente se hace visible sin volverse ruidosa. La composición evoca reflexión, suavidad e intimidad contemporánea.',
+      'Esta pintura de técnica mixta celebra la vida interior mediante campos pastel atravesados por la palabra manuscrita Thoughts. La mente se hace visible sin volverse ruidosa. La composición evoca reflexión, suavidad e intimidad contemporánea.',
     'textured-and-light-01':
       'Esta obra es un díptico de técnica mixta original que celebra la plenitud mediante un círculo blanco y dorado que abarca dos paneles. Líneas texturizadas concéntricas construyen un resplandor sereno donde se encuentran los lienzos. La obra se convierte en un símbolo contemporáneo poético de conexión, luz y dos lugares que se hacen uno.',
     'textured-and-light-02':
