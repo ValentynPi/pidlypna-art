@@ -44,11 +44,11 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'female-portraits-03':
       'This piece celebrates the meeting of wild instinct and gentle grace through the striking triad of a woman, a tiger, and blooming peonies. Bold color and thick impasto strokes capture both fierce power and tender care within a single frame. The composition stands as a contemporary poetic exploration of courage, beauty, and quiet devotion.',
     'floral-collection-01':
-      'This work is an original acrylic painting that celebrates summer’s generosity through three blooms in a green vase against teal. Palette-knife petals catch the light as if the room were still warm from the afternoon. The composition transforms a simple still life into a poetic contemporary piece of joy, abundance, and calm.',
+      'This acrylic painting celebrates summer’s generosity through three blooms in a green vase against teal. Palette-knife petals catch the light as if the room were still warm from the afternoon. The composition transforms a simple still life into a poetic contemporary piece of joy, abundance, and calm.',
     'floral-collection-02':
-      'This work is an original acrylic painting that celebrates perfume and memory through white blossoms in glass against deep burgundy. Delicate clusters are built with patient, luminous strokes. The work transforms a still life into a contemporary meditation on tenderness, home, and quiet luxury.',
+      'This acrylic painting celebrates perfume and memory through white blossoms in glass against deep burgundy. Delicate clusters are built with patient, luminous strokes. The work transforms a still life into a contemporary meditation on tenderness, home, and quiet luxury.',
     'floral-collection-03':
-      'This work is an original acrylic painting that celebrates flowers after dark through thick paint and a burgundy ground. Light finds the petals the way a lamp finds a table late in the evening. The composition becomes a poetic contemporary still life of intimacy, richness, and calm.',
+      'This acrylic painting celebrates flowers after dark through thick paint and a burgundy ground. Light finds the petals the way a lamp finds a table late in the evening. The composition becomes a poetic contemporary still life of intimacy, richness, and calm.',
     'inspired-by-nature-01':
       'This work is an original acrylic painting that celebrates looking closely — light, air, and distance held in paint. Observed with care and finished with contemporary restraint, the landscape keeps the freshness of being there. The work evokes presence, patience, and quiet sophistication.',
     'inspired-by-places-01':
@@ -136,11 +136,11 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'female-portraits-03':
       'Esta obra que celebra el encuentro entre la fuerza salvaje y la delicadeza a través de la unión de una mujer, un tigre y peonías en flor. El color audaz y las texturas de impasto denso reúnen la ferocidad y la ternura en un solo lienzo. La composición se convierte en un relato poético y contemporáneo sobre el coraje, la belleza y la entrega interior.',
     'floral-collection-01':
-      'Esta obra es una pintura acrílica original que celebra la generosidad del verano con tres flores en un jarrón verde sobre fondo turquesa. Los pétalos de espátula captan la luz como si la habitación aún guardara el calor de la tarde. La composición transforma un bodegón sencillo en una pieza contemporánea poética de alegría, abundancia y calma.',
+      'Esta pintura acrílica celebra la generosidad del verano con tres flores en un jarrón verde sobre fondo turquesa. Los pétalos de espátula captan la luz como si la habitación aún guardara el calor de la tarde. La composición transforma un bodegón sencillo en una pieza contemporánea poética de alegría, abundancia y calma.',
     'floral-collection-02':
-      'Esta obra es una pintura acrílica original que celebra perfume y memoria con flores blancas en cristal sobre un burdeos profundo. Racimos delicados se construyen con trazos pacientes y luminosos. La obra transforma un bodegón en una meditación contemporánea sobre la ternura, el hogar y el lujo discreto.',
+      'Esta pintura acrílica celebra perfume y memoria con flores blancas en cristal sobre un burdeos profundo. Racimos delicados se construyen con trazos pacientes y luminosos. La obra transforma un bodegón en una meditación contemporánea sobre la ternura, el hogar y el lujo discreto.',
     'floral-collection-03':
-      'Esta obra es una pintura acrílica original que celebra las flores después del anochecer con pintura densa y fondo burdeos. La luz encuentra los pétalos como una lámpara encuentra una mesa al final de la noche. La composición se convierte en un bodegón contemporáneo poético de intimidad, riqueza y calma.',
+      'Esta pintura acrílica celebra las flores después del anochecer con pintura densa y fondo burdeos. La luz encuentra los pétalos como una lámpara encuentra una mesa al final de la noche. La composición se convierte en un bodegón contemporáneo poético de intimidad, riqueza y calma.',
     'inspired-by-nature-01':
       'Esta obra es una pintura acrílica original que celebra mirar de cerca: luz, aire y distancia sostenidos en la pintura. Observado con cuidado y terminado con contención contemporánea, el paisaje conserva la frescura de haber estado allí. La obra evoca presencia, paciencia y sofisticación serena.',
     'inspired-by-places-01':
@@ -228,11 +228,11 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'female-portraits-03':
       'Ця робота оспівує зустріч дикої сили та тендітності через гармонію трьох образів: жінки, тигра та розквітлих півоній. Сміливий колір і густі пастозні мазки тримають у собі як лють і міць, так і турботу в одному кадрі. Композиція перетворюється на поетичну сучасну розповідь про мужність, красу й внутрішню відданість своєму єству.',
     'floral-collection-01':
-      'Ця робота оспівує щедрість літа через три квітки в зеленій вазі на бірюзовому тлі. Пелюстки мастихіну ловлять світло так, ніби кімната ще тепла від дня. Композиція перетворює простий натюрморт на поетичний сучасний твір радості, достатку й спокою.',
+      'Ця акрилова картина оспівує щедрість літа через три квітки в зеленій вазі на бірюзовому тлі. Пелюстки мастихіну ловлять світло так, ніби кімната ще тепла від дня. Композиція перетворює простий натюрморт на поетичний сучасний твір радості, достатку й спокою.',
     'floral-collection-02':
-      'Ця робота оспівує аромат і пам’ять через білі суцвіття в склі на глибокому бордовому тлі. Делікатні грона побудовані терплячими світлими мазками. Робота перетворює натюрморт на сучасну медитацію про ніжність, дім і тиху розкіш.',
+      'Ця акрилова картина оспівує аромат і пам’ять через білі суцвіття в склі на глибокому бордовому тлі. Делікатні грона побудовані терплячими світлими мазками. Робота перетворює натюрморт на сучасну медитацію про ніжність, дім і тиху розкіш.',
     'floral-collection-03':
-      'Ця робота оспівує квіти після темряви через густу фарбу й бордовий ґрунт. Світло знаходить пелюстки так, як лампа знаходить стіл пізно ввечері. Композиція стає поетичним сучасним натюрмортом близькості, багатства й спокою.',
+      'Ця акрилова картина оспівує квіти після темряви через густу фарбу й бордовий ґрунт. Світло знаходить пелюстки так, як лампа знаходить стіл пізно ввечері. Композиція стає поетичним сучасним натюрмортом близькості, багатства й спокою.',
     'inspired-by-nature-01':
       'Ця робота оспівує уважний погляд: світло, повітря й відстань, утримані в фарбі. Спостережено з турботою й завершено з сучасною стриманістю, пейзаж зберігає свіжість присутності. Робота викликає відчуття присутності, терпіння й тихої витонченості.',
     'inspired-by-places-01':
