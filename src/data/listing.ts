@@ -94,18 +94,32 @@ export function listingDescription(
   artwork: Artwork,
   language: Language = 'en',
 ): string {
-  const desc = getArtworkDescription(artwork.id, language, artwork.description);
-  if (language === 'en') return desc;
-
+  let desc = getArtworkDescription(artwork.id, language, artwork.description);
   const localized = getArtworkTitle(artwork.id, language, artwork.title);
   const english = getArtworkTitle(artwork.id, 'en', artwork.title);
-  if (localized === english) return desc;
 
   // Descriptions often open with the English title — swap it for the localized name.
-  if (desc.startsWith(english)) {
-    return localized + desc.slice(english.length);
+  if (language !== 'en' && localized !== english && desc.startsWith(english)) {
+    desc = localized + desc.slice(english.length);
+  }
+
+  // Title is already the lightbox heading — don't repeat it in the body.
+  desc = stripLeadingTitle(desc, localized);
+  if (localized !== english) {
+    desc = stripLeadingTitle(desc, english);
   }
   return desc;
+}
+
+/** Remove a leading artwork title (and common separators / linking verbs). */
+function stripLeadingTitle(desc: string, title: string): string {
+  if (!title || !desc.startsWith(title)) return desc;
+  let rest = desc.slice(title.length);
+  rest = rest.replace(/^\s*(?:—|–|-|:)\s*/u, '');
+  rest = rest.replace(/^(?:is|es)\s+/i, '');
+  rest = rest.trimStart();
+  if (!rest) return desc;
+  return rest.charAt(0).toUpperCase() + rest.slice(1);
 }
 
 function formatDimension(raw: string, t: TranslateFn): string {
