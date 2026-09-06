@@ -40,7 +40,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'female-portraits-01':
       'This mixed-media piece celebrates the quiet strength of a woman through a monochrome profile crowned by a lush, sculptural arrangement of flowers. Thick impasto petals in white, pink, magenta, and green bloom across the form, while neon accents and bold color blocks give the piece a modern edge. The composition transforms a portrait into a poetic symbol of identity, beauty, and inner blossoming.',
     'female-portraits-02':
-      'This work is an original acrylic painting that celebrates a woman merging with sea and sky. Tide, horizon, and figure share one breath, painted in layered, luminous color. The work becomes a poetic contemporary portrait of belonging, freedom, and quiet transformation.',
+      'This acrylic painting celebrates a woman merging with sea and sky. Tide, horizon, and figure share one breath, painted in layered, luminous color. The work becomes a poetic contemporary portrait of belonging, freedom, and quiet transformation.',
     'female-portraits-03':
       'This piece celebrates the meeting of wild instinct and gentle grace through the striking triad of a woman, a tiger, and blooming peonies. Bold color and thick impasto strokes capture both fierce power and tender care within a single frame. The composition stands as a contemporary poetic exploration of courage, beauty, and quiet devotion.',
     'floral-collection-01':
@@ -92,7 +92,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'textured-and-light-03':
       'This work is an original acrylic painting that celebrates sweetness and celebration through a peach cake with roses and strawberries built in thick, luminous paint. Frosting and petals share the same sculptural joy. The work becomes a poetic contemporary still life of delight, care, and festivity.',
     'ukrainian-symbolism-01':
-      'This work is an original acrylic painting celebrating a face woven with Ukrainian embroidery — memory held in the skin. Realism and folk pattern share one portrait, as if the past were still speaking. The composition becomes a poetic contemporary work of identity, devotion, and belonging.',
+      'This acrylic painting celebrates a face woven with Ukrainian embroidery — memory held in the skin. Realism and folk pattern share one portrait, as if the past were still speaking. The composition becomes a poetic contemporary work of identity, devotion, and belonging.',
   },
   es: {
     'abstract-art-01':
@@ -132,7 +132,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'female-portraits-01':
       'Esta obra en técnica mixta que celebra la fuerza silenciosa de la mujer a través de un perfil sobrio coronado por un frondoso arreglo escultórico de flores. Los pétalos de impasto espeso en tonos blancos, rosas, magenta y verdes florecen sobre el rostro, mientras que los acentos contemporáneos y bloques geométricos aportan una visión moderna. La composición convierte el retrato en un símbolo poético de identidad, belleza y florecimiento interior.',
     'female-portraits-02':
-      'Esta obra es una pintura acrílica original que celebra a una mujer fundiéndose con mar y cielo. Marea, horizonte y figura comparten un mismo aliento, pintados en color luminoso y en capas. La obra se convierte en un retrato contemporáneo poético de pertenencia, libertad y transformación silenciosa.',
+      'Esta pintura acrílica celebra a una mujer fundiéndose con mar y cielo. Marea, horizonte y figura comparten un mismo aliento, pintados en color luminoso y en capas. La obra se convierte en un retrato contemporáneo poético de pertenencia, libertad y transformación silenciosa.',
     'female-portraits-03':
       'Esta obra que celebra el encuentro entre la fuerza salvaje y la delicadeza a través de la unión de una mujer, un tigre y peonías en flor. El color audaz y las texturas de impasto denso reúnen la ferocidad y la ternura en un solo lienzo. La composición se convierte en un relato poético y contemporáneo sobre el coraje, la belleza y la entrega interior.',
     'floral-collection-01':
@@ -184,7 +184,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'textured-and-light-03':
       'Esta obra es una pintura acrílica original que celebra dulzura y celebración con un pastel melocotón de rosas y fresas construido en pintura densa y luminosa. Glaseado y pétalos comparten la misma alegría escultórica. La obra se convierte en un bodegón contemporáneo poético de deleite, cuidado y festividad.',
     'ukrainian-symbolism-01':
-      'Esta obra es una pintura acrílica original que celebra un rostro tejido con bordado ucraniano: la memoria sostenida en la piel. Realismo y patrón popular comparten un retrato, como si el pasado siguiera hablando. La composición se convierte en una obra contemporánea poética de identidad, devoción y pertenencia.',
+      'Esta pintura acrílica celebra un rostro tejido con bordado ucraniano: la memoria sostenida en la piel. Realismo y patrón popular comparten un retrato, como si el pasado siguiera hablando. La composición se convierte en una obra contemporánea poética de identidad, devoción y pertenencia.',
   },
   uk: {
     'abstract-art-01':
