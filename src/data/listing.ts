@@ -114,8 +114,8 @@ export function listingDescription(
 /** Remove a leading artwork title (and common separators / linking verbs). */
 function stripLeadingTitle(desc: string, title: string): string {
   if (!title || !desc.startsWith(title)) return desc;
-  let rest = desc.slice(title.length);
-  rest = rest.replace(/^\s*(?:—|–|-|:|\.)\s*/u, '');
+  let rest = desc.slice(title.length).trimStart();
+  rest = rest.replace(/^(?:—|–|-|:|\.)\s*/u, '');
   rest = rest.replace(/^(?:is|es)\s+/i, '');
   rest = rest.trimStart();
   if (!rest) return desc;
