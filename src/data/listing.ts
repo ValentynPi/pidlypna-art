@@ -115,7 +115,7 @@ export function listingDescription(
 function stripLeadingTitle(desc: string, title: string): string {
   if (!title || !desc.startsWith(title)) return desc;
   let rest = desc.slice(title.length);
-  rest = rest.replace(/^\s*(?:—|–|-|:)\s*/u, '');
+  rest = rest.replace(/^\s*(?:—|–|-|:|\.)\s*/u, '');
   rest = rest.replace(/^(?:is|es)\s+/i, '');
   rest = rest.trimStart();
   if (!rest) return desc;
