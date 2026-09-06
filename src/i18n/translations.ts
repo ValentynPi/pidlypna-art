@@ -177,7 +177,7 @@ const en: TranslationTree = {
     shippingNote: 'Worldwide shipping available.',
     careNote:
       'Avoid direct sunlight and high humidity. Dust gently with a soft, dry cloth. Do not use liquid cleaners on the painted surface.',
-    authenticityValue: 'Original handmade artwork',
+    authenticityValue: 'Handmade artwork',
     certificationValue: 'Signed and dated Certificate of Authenticity (CoA)',
     signedValue: 'Signed',
     customizationsText:
@@ -474,7 +474,7 @@ const es: TranslationTree = {
     shippingNote: 'Envío disponible a todo el mundo.',
     careNote:
       'Evita la luz solar directa y la humedad alta. Limpia con un paño suave y seco. No uses limpiadores líquidos sobre la superficie pintada.',
-    authenticityValue: 'Obra original hecha a mano',
+    authenticityValue: 'Obra de arte hecha a mano',
     certificationValue: 'Certificado de autenticidad firmado y fechado (CoA)',
     signedValue: 'Firmada',
     customizationsText:
@@ -771,7 +771,7 @@ const uk: TranslationTree = {
     shippingNote: 'Доставка доступна по всьому світу.',
     careNote:
       'Уникайте прямого сонця та високої вологості. Обережно протирайте м’якою сухою тканиною. Не використовуйте рідкі засоби на поверхні живопису.',
-    authenticityValue: 'Оригінальний витвір ручної роботи',
+    authenticityValue: 'Авторська робота',
     certificationValue: 'Підписаний і датований сертифікат автентичності (CoA)',
     signedValue: 'Підписано',
     customizationsText:
