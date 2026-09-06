@@ -625,10 +625,11 @@ export const artworks: Artwork[] = [
     certificateOfAuthenticity: true,
     availability: 'Available',
     description: 'A small floral sprig in blue and gold — intimate, deliberate, almost calligraphic.',
-    image: photos.workshopPetrykivkaGold1,
+    image: photos.petrykivka_blue_gold_1,
     imageAlt: 'Blue & Gold — front view',
     images: [
-      { src: photos.workshopPetrykivkaGold2, alt: 'Blue & Gold — detail view' },
+      { src: photos.petrykivka_blue_gold_2, alt: 'Blue & Gold — detail view' },
+      { src: photos.petrykivka_blue_gold_3, alt: 'Blue & Gold — alternate view' },
     ],
     collectionId: 'petrykivka',
     featured: true,
