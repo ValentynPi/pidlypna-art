@@ -75,6 +75,9 @@ export function listingMaterialsFull(artwork: Artwork, t: TranslateFn): string {
   if (artwork.id === 'female-portraits-01' || artwork.title === 'Blooming Silence') {
     return t('lightbox.materialsFloralCrown');
   }
+  if (artwork.id === 'ukrainian-symbolism-01') {
+    return t('lightbox.materialsHeritage');
+  }
   if (materials.includes('alcohol ink')) {
     return t('lightbox.materialsAlcoholInk', { surface });
   }

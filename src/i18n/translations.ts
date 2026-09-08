@@ -210,6 +210,8 @@ const en: TranslationTree = {
     materialsGouache: 'Canvas (cotton), pine stretcher bars, gouache paints',
     materialsMetallic:
       'Canvas (cotton), pine stretcher bars, acrylic paints, textured paste, gold leaf',
+    materialsHeritage:
+      'Canvas (cotton), pine stretcher bars, acrylic paints',
     materialsDefault:
       'Canvas (cotton), pine stretcher bars, acrylic paints, textured paste',
   },
@@ -507,6 +509,8 @@ const es: TranslationTree = {
     materialsGouache: 'Lienzo (algodón), bastidor de pino, pinturas gouache',
     materialsMetallic:
       'Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada, pan de oro',
+    materialsHeritage:
+      'Lienzo (algodón), bastidor de pino, pinturas acrílicas',
     materialsDefault:
       'Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada',
   },
@@ -804,6 +808,8 @@ const uk: TranslationTree = {
     materialsGouache: 'Полотно (бавовна), сосновий підрамник, гуаш',
     materialsMetallic:
       'Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста, поталь',
+    materialsHeritage:
+      'Полотно (бавовна), сосновий підрамник, акрилові фарби',
     materialsDefault:
       'Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста',
   },
