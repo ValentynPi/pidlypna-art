@@ -8,7 +8,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'abstract-art-02':
       'This work is an original acrylic painting that captures the last warmth of sunset through expressive impasto and delicate peach tones. A red glow gathers on dark water while a single yellow accent holds the light like a held breath. The composition turns evening into a contemporary meditation on warmth, memory, and calm.',
     'abstract-art-03':
-      'Signals in the Chaos. In the modern metropolis, we are surrounded by millions of lights, yet we so easily lose each other in the endless noise. This piece captures the story of two souls — a man and a woman — moving through the labyrinth of a big city. The arrows, symbols, and fragmented lines represent the motion, confusion, and obstacles of urban life, where so many signals cross, making it difficult to find one another amidst the chaos.',
+      'In the modern metropolis, we are surrounded by millions of lights, yet we so easily lose each other in the endless noise. This piece captures the story of two souls — a man and a woman — moving through the labyrinth of a big city. The arrows, symbols, and fragmented lines represent the motion, confusion, and obstacles of urban life, where so many signals cross, making it difficult to find one another amidst the chaos.',
     'abstract-art-04':
       'This mixed-media piece explores duality through a single tree split between golden light and cool shadow. Two climates meet in one trunk, capturing the sense of belonging to more than one place at once. The composition stands as a contemporary poetic symbol of home, change, and internal balance.',
     'abstract-art-05':
@@ -100,7 +100,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'abstract-art-02':
       'Esta obra es una pintura acrílica original que captura el último calor del atardecer con impasto expresivo y tonos melocotón delicados. Un resplandor rojo se reúne sobre el agua oscura mientras un acento amarillo sostiene la luz como un aliento contenido. La composición convierte la noche en una meditación contemporánea sobre el calor, la memoria y la calma.',
     'abstract-art-03':
-      'Señales en el caos. En la metrópolis moderna estamos rodeados de millones de luces, pero a menudo nos perdemos en este ruido interminable. Esta obra habla de dos personas —un hombre y una mujer— que intentan encontrarse en el laberinto de la gran ciudad. Las flechas, los símbolos y los trazos dispersos simbolizan el movimiento, la confusión y los obstáculos de la vida urbana, donde hay tantas señales que resulta difícil conectar y verse de verdad.',
+      'En la metrópolis moderna estamos rodeados de millones de luces, pero a menudo nos perdemos en este ruido interminable. Esta obra habla de dos personas —un hombre y una mujer— que intentan encontrarse en el laberinto de la gran ciudad. Las flechas, los símbolos y los trazos dispersos simbolizan el movimiento, la confusión y los obstáculos de la vida urbana, donde hay tantas señales que resulta difícil conectar y verse de verdad.',
     'abstract-art-04':
       'Esta obra que explora la dualidad a través de un único árbol dividido entre la luz dorada y la sombra fresca. Dos climas convergen en un solo tronco, reflejando cómo la sensación de hogar puede habitar en más de un lugar a la vez. La composición se convierte en un símbolo poético de pertenencia, cambio y equilibrio.',
     'abstract-art-05':
@@ -192,7 +192,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'abstract-art-02':
       'Ця робота ловить останнє тепло заходу через виразний імпасто та ніжно-персикові тони. Червоне сяйво збирається на темній воді, а жовтий акцент тримає світло, мов затамований подих. Композиція перетворює вечір на сучасну медитацію про тепло, пам’ять і спокій.',
     'abstract-art-03':
-      'Сигнали в хаосі. У сучасному мегаполісі ми оточені мільйонами вогнів, але часто втрачаємо одне одного в цьому нескінченному шумі. Ця робота — про двох людей, чоловіка та жінку, чиї шляхи перетинаються в лабіринті великого міста. Стрілки, позначки та хаотичні штрихи символізують рух, розгубленість і перешкоди сучасного життя, де стільки сигналів, але так важко почути найголовніше та знайти ту саму людину.',
+      'У сучасному мегаполісі ми оточені мільйонами вогнів, але часто втрачаємо одне одного в цьому нескінченному шумі. Ця робота — про двох людей, чоловіка та жінку, чиї шляхи перетинаються в лабіринті великого міста. Стрілки, позначки та хаотичні штрихи символізують рух, розгубленість і перешкоди сучасного життя, де стільки сигналів, але так важко почути найголовніше та знайти ту саму людину.',
     'abstract-art-04':
       'Це полотно досліджує тему дуальності через образ єдиного дерева, розділеного між золотим світлом і прохолодною тінню. Два клімати зливаються в один стовбур, відтворюючи відчуття того, що дім може знаходитися в кількох місцях водночас. Це сучасний поетичний символ пошуку балансу, зміни та нерозривного зв’язку між різними частинами власного життя.',
     'abstract-art-05':
