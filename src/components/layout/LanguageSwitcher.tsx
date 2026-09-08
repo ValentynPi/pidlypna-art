@@ -11,30 +11,35 @@ export function LanguageSwitcher({ onDark = false, compact = false }: LanguageSw
 
   return (
     <div
-      className={`flex items-center gap-1 ${compact ? '' : ''}`}
+      className={`flex items-center rounded-sm p-0.5 ${
+        onDark ? 'bg-cream/10 ring-1 ring-cream/15' : 'bg-ink/5 ring-1 ring-ink/8'
+      }`}
       role="group"
       aria-label={t('nav.language')}
     >
       {LANGUAGES.map((item) => {
         const active = language === item.code;
+        const label = item.code === 'uk' ? 'UA' : item.code.toUpperCase();
         return (
           <button
             key={item.code}
             type="button"
             onClick={() => setLanguage(item.code as Language)}
-            className={`px-1.5 py-1 text-[0.65rem] tracking-[0.16em] uppercase transition-colors ${
+            title={item.native}
+            className={`${compact ? 'min-w-[2.25rem] px-1.5' : 'min-w-[2.5rem] px-2'} py-1.5 text-[0.7rem] tracking-[0.14em] uppercase transition-colors ${
               active
                 ? onDark
-                  ? 'text-gold'
-                  : 'text-terracotta'
+                  ? 'bg-gold font-semibold text-ink shadow-sm'
+                  : 'bg-terracotta font-semibold text-cream shadow-sm'
                 : onDark
-                  ? 'text-cream/50 hover:text-cream'
-                  : 'text-ink-soft hover:text-ink'
+                  ? 'font-medium text-cream/45 hover:text-cream'
+                  : 'font-medium text-ink-soft hover:text-ink'
             }`}
             aria-pressed={active}
+            aria-current={active ? 'true' : undefined}
             lang={item.code}
           >
-            {item.code === 'uk' ? 'UA' : item.code.toUpperCase()}
+            {label}
           </button>
         );
       })}
