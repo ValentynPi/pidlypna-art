@@ -24,7 +24,7 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
 
   return (
     <>
-      <div className={`grid ${gridClass} gap-3 md:gap-4`}>
+      <div className={`grid ${gridClass} gap-5 md:gap-7`}>
         {artworks.map((artwork, index) => {
           const viewCount = getArtworkImages(artwork).length;
           return (

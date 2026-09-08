@@ -19,8 +19,8 @@ export function GalleryPage() {
         description={t('gallery.description')}
       />
 
-      <section className="mx-auto max-w-[90rem] px-6 pb-24 md:px-10 lg:px-16">
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-3">
+      <section className="mx-auto max-w-[90rem] px-5 pb-28 sm:px-6 md:px-10 lg:px-16">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4">
           {collections.map((collection, index) => (
             <CollectionCard
               key={collection.id}

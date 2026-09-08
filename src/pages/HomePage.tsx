@@ -21,26 +21,26 @@ export function HomePage() {
 
       <section className="relative overflow-hidden bg-blush">
         <div className="grid lg:grid-cols-2">
-          <div className="relative min-h-[280px] sm:min-h-[360px] lg:min-h-[600px]">
+          <div className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[680px]">
             <LazyImage
               src={photos.tigerBloom}
               alt="Tiger Bloom — surreal painting by Viktoria Paladios"
               className="object-cover"
               wrapperClassName="h-full w-full"
             />
-            <div className="absolute inset-0 bg-teal-deep/20" />
+            <div className="absolute inset-0 bg-teal-deep/15" />
           </div>
-          <div className="flex flex-col justify-center section-padding">
+          <div className="flex flex-col justify-center px-6 py-16 sm:px-10 sm:py-24 md:px-14 lg:px-20 lg:py-28">
             <ScrollReveal>
-              <blockquote className="font-serif text-xl leading-snug text-ink sm:text-2xl md:text-3xl lg:text-4xl">
+              <blockquote className="max-w-xl font-serif text-2xl leading-snug text-ink sm:text-3xl md:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">
                 <span className="text-gold">&ldquo;</span>
                 {t('home.quote')}
                 <span className="text-gold">&rdquo;</span>
               </blockquote>
-              <HandLine variant="swirl" className="mt-8 w-32 text-terracotta" />
-              <p className="mt-6 text-xl leading-[0.95] md:text-2xl">
+              <HandLine variant="swirl" className="mt-10 w-36 text-terracotta" />
+              <p className="mt-8 text-xl leading-[0.95] md:text-2xl">
                 <span className="name-viktoria block !text-ink">Viktoria Paladios</span>
-                <span className="name-art mt-1 block text-[0.92em]">Art</span>
+                <span className="name-art mt-1 block text-[0.92em] !text-terracotta">Art</span>
               </p>
             </ScrollReveal>
           </div>
@@ -49,7 +49,7 @@ export function HomePage() {
 
       <CollectionsStrip />
 
-      <section className="bg-teal-deep px-6 py-20 text-center md:px-10 lg:px-16">
+      <section className="bg-teal-deep px-6 py-24 text-center md:px-10 md:py-28 lg:px-16">
         <ScrollReveal>
           <p className="text-[0.65rem] tracking-[0.35em] text-gold uppercase">
             {t('home.commissions')}
@@ -57,7 +57,7 @@ export function HomePage() {
           <h2 className="display-heading mt-6 text-3xl text-cream md:text-5xl">
             {t('home.together')}
           </h2>
-          <Button to="/contact" variant="gold" className="mt-10">
+          <Button to="/contact" variant="gold" className="mt-12">
             {t('home.getInTouch')}
           </Button>
         </ScrollReveal>
