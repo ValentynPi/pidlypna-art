@@ -14,7 +14,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'abstract-art-05':
       'This piece is an abstract landscape celebrating the meeting of metal and nature, where rich copper texture meets deep teal water. A dark ridge holds the light, evoking a shoreline of memory. The work transforms an abstract horizon into a quiet contemporary piece that evokes depth, time, and refined calm.',
     'abstract-art-06':
-      'This work is an original acrylic painting that celebrates movement through mint, rose, and white in airy, layered brushstrokes. The color travels across the canvas like water finding its way. The composition becomes a poetic, contemporary piece that evokes lightness, breath, and delicate sophistication.',
+      'This acrylic painting celebrates movement through mint, rose, and white in airy, layered brushstrokes. The color travels across the canvas like water finding its way. The composition becomes a poetic, contemporary piece that evokes lightness, breath, and delicate sophistication.',
     'abstract-art-07':
       'This work is an original acrylic painting that celebrates ascent through blue, white, and earth tones stacked like architecture. Light rises in measured strokes, as if a window were opening from within the paint. The work transforms abstraction into a contemporary meditation on hope, structure, and quiet lift.',
     'affirmation-collection-01':
@@ -50,7 +50,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'floral-collection-03':
       'This acrylic painting celebrates flowers after dark through thick paint and a burgundy ground. Light finds the petals the way a lamp finds a table late in the evening. The composition becomes a poetic contemporary still life of intimacy, richness, and calm.',
     'inspired-by-nature-01':
-      'This work is an original acrylic painting that celebrates looking closely — light, air, and distance held in paint. Observed with care and finished with contemporary restraint, the landscape keeps the freshness of being there. The work evokes presence, patience, and quiet sophistication.',
+      'This acrylic painting celebrates looking closely — light, air, and distance held in paint. Observed with care and finished with contemporary restraint, the landscape keeps the freshness of being there. The work evokes presence, patience, and quiet sophistication.',
     'inspired-by-places-01':
       'This piece was born from a fleeting one-day journey to Mont-Saint-Michel. Staying for the night was a luxury beyond reach back then, but it sparked a dream that lingers on. A golden hot air balloon floats above the majestic silhouette of the abbey as a symbol of aspirations that refuse to fade. The mixed-media canvas captures the light of the road, the quiet of longing, and the enduring belief that one day, this dream will finally witness the sunrise from within those ancient walls.',
     'petrykivka-01':
@@ -76,7 +76,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'plain-air-collection-01':
       'This work is an original acrylic painting that celebrates high distance through pale blue sky and quiet snow. The mountains are held with clear, calm color rather than noise. The work becomes a poetic contemporary landscape of stillness, air, and awe.',
     'plain-air-collection-02':
-      'This work is an original acrylic painting that celebrates painting on location — color as an immediate response to light. Fresh strokes keep the hour visible on the canvas. The composition evokes presence, weather, and the pleasure of looking.',
+      'This piece was born from personal impressions after visiting La Mancha. Standing right beside these historic windmills shifts time and space — the sweeping winds, wide-open fields, and the echo of Don Quixote\'s spirit come alive all around. The canvas captures the immediate light and atmosphere of the road, turning a real memory into a poetic landscape.',
     'plain-air-collection-03':
       'This work is an original acrylic painting that celebrates purple rows leading toward gold ground and distant mountains. The landscape is both place and perfume, painted with Mediterranean warmth. The work becomes a poetic contemporary piece of travel, calm, and summer light.',
     'plain-air-collection-04':
@@ -106,7 +106,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'abstract-art-05':
       'Esta obra que celebra el encuentro entre el metal y el paisaje a través de texturas de cobre y aguas azul verdoso. Una cresta oscura retiene la luz como si fuera la orilla de la memoria. La composición transforma un horizonte abstracto en una pieza contemporánea serena que evoca profundidad, tiempo y una calma refinada.',
     'abstract-art-06':
-      'Esta obra es una pintura acrílica original que celebra el movimiento a través de menta, rosa y blanco en pinceladas aéreas y superpuestas. El color atraviesa el lienzo como el agua buscando su camino. La composición se convierte en una pieza contemporánea poética que evoca ligereza, respiración y una sofisticación delicada.',
+      'Esta pintura acrílica celebra el movimiento a través de menta, rosa y blanco en pinceladas aéreas y superpuestas. El color atraviesa el lienzo como el agua buscando su camino. La composición se convierte en una pieza contemporánea poética que evoca ligereza, respiración y una sofisticación delicada.',
     'abstract-art-07':
       'Esta obra es una pintura acrílica original que celebra el ascenso mediante azules, blancos y tonos tierra apilados como arquitectura. La luz sube en trazos medidos, como si una ventana se abriera desde dentro de la pintura. La obra transforma la abstracción en una meditación contemporánea sobre la esperanza, la estructura y el elevamiento sereno.',
     'affirmation-collection-01':
@@ -168,7 +168,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'plain-air-collection-01':
       'Esta obra es una pintura acrílica original que celebra la lejanía elevada mediante un cielo azul pálido y nieve serena. Las montañas se sostienen con color claro y calmado, sin ruido. La obra se convierte en un paisaje contemporáneo poético de quietud, aire y asombro.',
     'plain-air-collection-02':
-      'Esta obra es una pintura acrílica original que celebra pintar en el lugar: el color como respuesta inmediata a la luz. Los trazos frescos mantienen la hora visible en el lienzo. La composición evoca presencia, clima y el placer de mirar.',
+      'Esta obra nace de la impresión personal tras visitar La Mancha. Estar junto a estos molinos históricos transforma el tiempo y el espacio: el viento, los campos abiertos y el eco de las historias de Don Quixote cobran vida alrededor. El lienzo captura la luz fugaz y la atmósfera del camino, convirtiendo un recuerdo real en un paisaje poético.',
     'plain-air-collection-03':
       'Esta obra es una pintura acrílica original que celebra filas púrpura que llevan hacia tierra dorada y montañas lejanas. El paisaje es lugar y perfume, pintado con calor mediterráneo. La obra se convierte en una pieza contemporánea poética de viaje, calma y luz de verano.',
     'plain-air-collection-04':
@@ -198,7 +198,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'abstract-art-05':
       'Ця робота — абстрактний пейзаж, де текстурована мідь зустрічається з глибокою бірюзовою водою. Темний гребінь утримує світло, немов берегова лінія пам’яті. Полотно перетворює абстрактний горизонт на спокійний сучасний витвір мистецтва, що викликає відчуття глибини, часу та витонченого спокою.',
     'abstract-art-06':
-      'М’який плин — оригінальна акрилова картина, що оспівує рух через м’ятні, рожеві та білі повітряні шаруваті мазки. Колір іде полотном, як вода, що шукає свій шлях. Композиція стає поетичним сучасним твором про легкість, подих і ніжну витонченість.',
+      'Ця акрилова картина оспівує рух через м’ятні, рожеві та білі повітряні шаруваті мазки. Колір іде полотном, як вода, що шукає свій шлях. Композиція стає поетичним сучасним твором про легкість, подих і ніжну витонченість.',
     'abstract-art-07':
       'Ця робота оспівує підйом через сині, білі та землисті тони, складені як архітектура. Світло піднімається мірними мазками, ніби вікно відкривається зсередини фарби. Робота перетворює абстракцію на сучасну медитацію про надію, структуру та тихий злет.',
     'affirmation-collection-01':
@@ -260,7 +260,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
     'plain-air-collection-01':
       'Ця робота оспівує високу далечінь через блідо-блакитне небо й тихий сніг. Гори тримаються ясним спокійним кольором, без шуму. Робота стає поетичним сучасним пейзажем тиші, повітря й благоговіння.',
     'plain-air-collection-02':
-      'Ця робота оспівує живопис на пленері: колір як миттєва відповідь на світло. Свіжі мазки зберігають годину видимою на полотні. Композиція викликає присутність, погоду й радість дивитися.',
+      'Ця робота народилася з особистих вражень після поїздки до Ла-Манчі. Коли стоїш поруч із цими величними млинами, відчуваєш зовсім інший час і простір — вітер, простори полів та відлуння історій Дон Кіхота оживають довкола. Полотно зберігає миттєве світло й атмосферу дороги, перетворюючи реальний спогад на поетичний пейзаж.',
     'plain-air-collection-03':
       'Ця робота оспівує фіолетові ряди, які ведуть до золотої землі й далеких гір. Пейзаж — і місце, і аромат, написаний середземноморським теплом. Робота стає поетичним сучасним твором подорожі, спокою й літнього світла.',
     'plain-air-collection-04':

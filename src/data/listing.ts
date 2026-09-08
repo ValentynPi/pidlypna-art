@@ -35,9 +35,36 @@ export function madeToOrderText(
   return t('lightbox.madeToOrderAvailable');
 }
 
+const MIXED_MEDIA_TEXTURE_IDS = new Set([
+  'female-portraits-02',
+  'female-portraits-03',
+  'abstract-art-01',
+  'abstract-art-02',
+  'abstract-art-03',
+  'abstract-art-06',
+  'floral-collection-01',
+  'floral-collection-03',
+]);
+
+const TRADITIONAL_BRUSH_IDS = new Set([
+  'ukrainian-symbolism-01',
+  'inspired-by-nature-01',
+  'plain-air-collection-01',
+  'plain-air-collection-02',
+  'plain-air-collection-03',
+  'plain-air-collection-04',
+  'floral-collection-02',
+]);
+
 export function listingMedium(artwork: Artwork, t: TranslateFn): string {
   const materials = artwork.materials.toLowerCase();
   const surface = translateSurfaceOn(artwork.surface, t);
+  if (
+    artwork.id === 'female-portraits-02' ||
+    artwork.id === 'female-portraits-03'
+  ) {
+    return t('lightbox.mediumMixed', { surface });
+  }
   if (materials.includes('alcohol ink')) return t('lightbox.mediumAlcoholInk', { surface });
   if (materials.includes('gouache')) return t('lightbox.mediumGouache', { surface });
   if (materials.includes('metallic')) return t('lightbox.mediumMetallic', { surface });
@@ -46,7 +73,48 @@ export function listingMedium(artwork: Artwork, t: TranslateFn): string {
   return t('lightbox.mediumDefault', { surface });
 }
 
+const TECHNIQUE_KEYS: Record<string, string> = {
+  'atmospheric abstract landscape': 'lightbox.techniqueAtmosphericLandscape',
+  'abstract sunset landscape': 'lightbox.techniqueAbstractSunset',
+  'abstract cityscape': 'lightbox.techniqueAbstractCityscape',
+  'split-tone tree composition': 'lightbox.techniqueSplitToneTree',
+  'textured abstract landscape': 'lightbox.techniqueTexturedLandscape',
+  'gestural abstract': 'lightbox.techniqueGesturalAbstract',
+  'abstract vertical composition': 'lightbox.techniqueAbstractVertical',
+  'text affirmation seascape': 'lightbox.techniqueTextSeascape',
+  'word and image composition': 'lightbox.techniqueWordImage',
+  'text affirmation skyscape': 'lightbox.techniqueTextSkyscape',
+  'text affirmation abstract': 'lightbox.techniqueTextAbstract',
+  'fluid landscape': 'lightbox.techniqueFluidLandscape',
+  'circular fluid composition': 'lightbox.techniqueCircularFluid',
+  'fluid abstract': 'lightbox.techniqueFluidAbstract',
+  'circular fluid landscape': 'lightbox.techniqueCircularFluidLandscape',
+  'portrait with floral headpiece': 'lightbox.techniquePortraitFloral',
+  'surrealist portrait': 'lightbox.techniqueSurrealistPortrait',
+  'floral still life': 'lightbox.techniqueFloralStillLife',
+  'textured floral still life': 'lightbox.techniqueTexturedFloralStillLife',
+  'landscape study': 'lightbox.techniqueLandscapeStudy',
+  'imaginative landscape': 'lightbox.techniqueImaginativeLandscape',
+  'petrykivka decorative painting': 'lightbox.techniquePetrykivka',
+  'mountain landscape': 'lightbox.techniqueMountainLandscape',
+  'plein air landscape': 'lightbox.techniquePleinAir',
+  'expressive color portrait': 'lightbox.techniqueExpressivePortrait',
+  'textured diptych': 'lightbox.techniqueTexturedDiptych',
+  'textured abstract composition': 'lightbox.techniqueTexturedAbstract',
+  'textured still life': 'lightbox.techniqueTexturedStillLife',
+  'portrait with folk embroidery motifs': 'lightbox.techniquePortraitEmbroidery',
+};
+
 export function listingTechniqueLabel(artwork: Artwork, t: TranslateFn): string {
+  if (MIXED_MEDIA_TEXTURE_IDS.has(artwork.id)) {
+    return t('lightbox.techniqueMixedMediaTexture');
+  }
+  if (
+    TRADITIONAL_BRUSH_IDS.has(artwork.id) ||
+    artwork.collectionId === 'plain-air-collection'
+  ) {
+    return t('lightbox.techniqueTraditionalBrush');
+  }
   if (artwork.technique.trim().toLowerCase() === 'textured abstract landscape') {
     return t('lightbox.techniqueTexturedLandscape');
   }
@@ -65,6 +133,10 @@ export function listingTechniqueLabel(artwork: Artwork, t: TranslateFn): string 
   if (artwork.materials.toLowerCase().includes('acrylic')) {
     return t('lightbox.techniqueImpasto');
   }
+
+  const techniqueKey = TECHNIQUE_KEYS[artwork.technique.trim().toLowerCase()];
+  if (techniqueKey) return t(techniqueKey);
+
   return artwork.technique;
 }
 
@@ -89,6 +161,18 @@ export function listingMaterialsFull(artwork: Artwork, t: TranslateFn): string {
   }
   if (materials.includes('metallic')) {
     return t('lightbox.materialsMetallic');
+  }
+  if (
+    artwork.collectionId === 'petrykivka' ||
+    artwork.collectionId === 'plain-air-collection' ||
+    artwork.id === 'inspired-by-nature-01' ||
+    artwork.id === 'abstract-art-06' ||
+    artwork.id === 'pop-art-01' ||
+    artwork.id === 'pop-art-02' ||
+    TRADITIONAL_BRUSH_IDS.has(artwork.id) ||
+    MIXED_MEDIA_TEXTURE_IDS.has(artwork.id)
+  ) {
+    return t('lightbox.materialsAcrylicNoPaste');
   }
   return t('lightbox.materialsDefault');
 }
