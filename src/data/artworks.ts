@@ -791,8 +791,9 @@ export const artworks: Artwork[] = [
     image: photos.pop_art_vibrant_spirit_1,
     imageAlt: 'Vibrant Tina — front view',
     images: [
-      { src: photos.pop_art_vibrant_spirit_2, alt: 'Vibrant Tina — alternate view' },
-      { src: photos.pop_art_vibrant_spirit_3, alt: 'Vibrant Tina — alternate view' },
+      { src: photos.pop_art_vibrant_spirit_2, alt: 'Vibrant Tina — wall angle' },
+      { src: photos.pop_art_vibrant_spirit_3, alt: 'Vibrant Tina — wall angle' },
+      { src: photos.pop_art_vibrant_spirit_4, alt: 'Vibrant Tina — wall angle' },
     ],
     collectionId: 'pop-art',
     featured: true,
@@ -812,6 +813,9 @@ export const artworks: Artwork[] = [
     description: 'Pastel fields crossed by the handwritten word Thoughts — mind made visible.',
     image: photos.pop_art_thoughts_1,
     imageAlt: 'Thoughts — front view',
+    images: [
+      { src: photos.pop_art_thoughts_2, alt: 'Thoughts — canvas edge' },
+    ],
     collectionId: 'pop-art',
     featured: true,
   },
