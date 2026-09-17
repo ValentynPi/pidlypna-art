@@ -38,9 +38,9 @@ export function madeToOrderText(
 const MIXED_MEDIA_TEXTURE_IDS = new Set([
   'female-portraits-02',
   'female-portraits-03',
-  'abstract-art-01',
   'abstract-art-02',
   'abstract-art-03',
+  'abstract-art-04',
   'abstract-art-06',
   'floral-collection-01',
   'floral-collection-03',

@@ -4,13 +4,13 @@ import type { Language } from './types';
 export const artworkDescriptions: Record<Language, Record<string, string>> = {
   en: {
     'abstract-art-01':
-      'This work is an original acrylic painting that celebrates the hush between sky and water through layered palette-knife textures and pale cream light. A dark horizon divides cool reflection from open air, as if dawn were still deciding its color. The peaceful composition transforms a simple landscape into a poetic contemporary work that evokes stillness, distance, and quiet sophistication.',
-    'abstract-art-02':
-      'This work is an original acrylic painting that captures the last warmth of sunset through expressive impasto and delicate peach tones. A red glow gathers on dark water while a single yellow accent holds the light like a held breath. The composition turns evening into a contemporary meditation on warmth, memory, and calm.',
-    'abstract-art-03':
-      'In the modern metropolis, we are surrounded by millions of lights, yet we so easily lose each other in the endless noise. This piece captures the story of two souls — a man and a woman — moving through the labyrinth of a big city. The arrows, symbols, and fragmented lines represent the motion, confusion, and obstacles of urban life, where so many signals cross, making it difficult to find one another amidst the chaos.',
-    'abstract-art-04':
       'This mixed-media piece explores duality through a single tree split between golden light and cool shadow. Two climates meet in one trunk, capturing the sense of belonging to more than one place at once. The composition stands as a contemporary poetic symbol of home, change, and internal balance.',
+    'abstract-art-02':
+      'This work is an original acrylic painting that celebrates the hush between sky and water through layered palette-knife textures and pale cream light. A dark horizon divides cool reflection from open air, as if dawn were still deciding its color. The peaceful composition transforms a simple landscape into a poetic contemporary work that evokes stillness, distance, and quiet sophistication.',
+    'abstract-art-03':
+      'This work is an original acrylic painting that captures the last warmth of sunset through expressive impasto and delicate peach tones. A red glow gathers on dark water while a single yellow accent holds the light like a held breath. The composition turns evening into a contemporary meditation on warmth, memory, and calm.',
+    'abstract-art-04':
+      'In the modern metropolis, we are surrounded by millions of lights, yet we so easily lose each other in the endless noise. This piece captures the story of two souls — a man and a woman — moving through the labyrinth of a big city. The arrows, symbols, and fragmented lines represent the motion, confusion, and obstacles of urban life, where so many signals cross, making it difficult to find one another amidst the chaos.',
     'abstract-art-05':
       'This piece is an abstract landscape celebrating the meeting of metal and nature, where rich copper texture meets deep teal water. A dark ridge holds the light, evoking a shoreline of memory. The work transforms an abstract horizon into a quiet contemporary piece that evokes depth, time, and refined calm.',
     'abstract-art-06':
@@ -88,13 +88,13 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
   },
   es: {
     'abstract-art-01':
-      'Esta obra es una pintura acrílica original que celebra el silencio entre cielo y agua mediante texturas de espátula en capas y una luz crema pálida. Un horizonte oscuro divide el reflejo fresco del aire abierto, como si el amanecer aún estuviera eligiendo su color. La composición serena transforma un paisaje sencillo en una obra contemporánea poética que evoca quietud, distancia y sofisticación discreta.',
-    'abstract-art-02':
-      'Esta obra es una pintura acrílica original que captura el último calor del atardecer con impasto expresivo y tonos melocotón delicados. Un resplandor rojo se reúne sobre el agua oscura mientras un acento amarillo sostiene la luz como un aliento contenido. La composición convierte la noche en una meditación contemporánea sobre el calor, la memoria y la calma.',
-    'abstract-art-03':
-      'En la metrópolis moderna estamos rodeados de millones de luces, pero a menudo nos perdemos en este ruido interminable. Esta obra habla de dos personas —un hombre y una mujer— que intentan encontrarse en el laberinto de la gran ciudad. Las flechas, los símbolos y los trazos dispersos simbolizan el movimiento, la confusión y los obstáculos de la vida urbana, donde hay tantas señales que resulta difícil conectar y verse de verdad.',
-    'abstract-art-04':
       'Esta obra que explora la dualidad a través de un único árbol dividido entre la luz dorada y la sombra fresca. Dos climas convergen en un solo tronco, reflejando cómo la sensación de hogar puede habitar en más de un lugar a la vez. La composición se convierte en un símbolo poético de pertenencia, cambio y equilibrio.',
+    'abstract-art-02':
+      'Esta obra es una pintura acrílica original que celebra el silencio entre cielo y agua mediante texturas de espátula en capas y una luz crema pálida. Un horizonte oscuro divide el reflejo fresco del aire abierto, como si el amanecer aún estuviera eligiendo su color. La composición serena transforma un paisaje sencillo en una obra contemporánea poética que evoca quietud, distancia y sofisticación discreta.',
+    'abstract-art-03':
+      'Esta obra es una pintura acrílica original que captura el último calor del atardecer con impasto expresivo y tonos melocotón delicados. Un resplandor rojo se reúne sobre el agua oscura mientras un acento amarillo sostiene la luz como un aliento contenido. La composición convierte la noche en una meditación contemporánea sobre el calor, la memoria y la calma.',
+    'abstract-art-04':
+      'En la metrópolis moderna estamos rodeados de millones de luces, pero a menudo nos perdemos en este ruido interminable. Esta obra habla de dos personas —un hombre y una mujer— que intentan encontrarse en el laberinto de la gran ciudad. Las flechas, los símbolos y los trazos dispersos simbolizan el movimiento, la confusión y los obstáculos de la vida urbana, donde hay tantas señales que resulta difícil conectar y verse de verdad.',
     'abstract-art-05':
       'Esta obra que celebra el encuentro entre el metal y el paisaje a través de texturas de cobre y aguas azul verdoso. Una cresta oscura retiene la luz como si fuera la orilla de la memoria. La composición transforma un horizonte abstracto en una pieza contemporánea serena que evoca profundidad, tiempo y una calma refinada.',
     'abstract-art-06':
@@ -172,13 +172,13 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
   },
   uk: {
     'abstract-art-01':
-      'Ця робота оспівує тишу між небом і водою через шаруваті фактури мастихіну та бліде кремове світло. Темний горизонт ділить прохолодне відображення й відкрите повітря, ніби світанок ще обирає свій колір. Спокійна композиція перетворює простий пейзаж на поетичну сучасну роботу, що викликає відчуття тиші, відстані та стриманої витонченості.',
-    'abstract-art-02':
-      'Ця робота ловить останнє тепло заходу через виразний імпасто та ніжно-персикові тони. Червоне сяйво збирається на темній воді, а жовтий акцент тримає світло, мов затамований подих. Композиція перетворює вечір на сучасну медитацію про тепло, пам’ять і спокій.',
-    'abstract-art-03':
-      'У сучасному мегаполісі ми оточені мільйонами вогнів, але часто втрачаємо одне одного в цьому нескінченному шумі. Ця робота — про двох людей, чоловіка та жінку, чиї шляхи перетинаються в лабіринті великого міста. Стрілки, позначки та хаотичні штрихи символізують рух, розгубленість і перешкоди сучасного життя, де стільки сигналів, але так важко почути найголовніше та знайти ту саму людину.',
-    'abstract-art-04':
       'Це полотно досліджує тему дуальності через образ єдиного дерева, розділеного між золотим світлом і прохолодною тінню. Два клімати зливаються в один стовбур, відтворюючи відчуття того, що дім може знаходитися в кількох місцях водночас. Це сучасний поетичний символ пошуку балансу, зміни та нерозривного зв’язку між різними частинами власного життя.',
+    'abstract-art-02':
+      'Ця робота оспівує тишу між небом і водою через шаруваті фактури мастихіну та бліде кремове світло. Темний горизонт ділить прохолодне відображення й відкрите повітря, ніби світанок ще обирає свій колір. Спокійна композиція перетворює простий пейзаж на поетичну сучасну роботу, що викликає відчуття тиші, відстані та стриманої витонченості.',
+    'abstract-art-03':
+      'Ця робота ловить останнє тепло заходу через виразний імпасто та ніжно-персикові тони. Червоне сяйво збирається на темній воді, а жовтий акцент тримає світло, мов затамований подих. Композиція перетворює вечір на сучасну медитацію про тепло, пам’ять і спокій.',
+    'abstract-art-04':
+      'У сучасному мегаполісі ми оточені мільйонами вогнів, але часто втрачаємо одне одного в цьому нескінченному шумі. Ця робота — про двох людей, чоловіка та жінку, чиї шляхи перетинаються в лабіринті великого міста. Стрілки, позначки та хаотичні штрихи символізують рух, розгубленість і перешкоди сучасного життя, де стільки сигналів, але так важко почути найголовніше та знайти ту саму людину.',
     'abstract-art-05':
       'Ця робота — абстрактний пейзаж, де текстурована мідь зустрічається з глибокою бірюзовою водою. Темний гребінь утримує світло, немов берегова лінія пам’яті. Полотно перетворює абстрактний горизонт на спокійний сучасний витвір мистецтва, що викликає відчуття глибини, часу та витонченого спокою.',
     'abstract-art-06':

@@ -7,7 +7,7 @@ export const CARE_INSTRUCTIONS =
 
 export const artworks: Artwork[] = [
   {
-    id: 'abstract-art-04',
+    id: 'abstract-art-01',
     title: 'Roots in Two Worlds',
     year: 2025,
     dimensions: 'Contact for dimensions',
@@ -26,7 +26,7 @@ export const artworks: Artwork[] = [
     featured: true,
   },
   {
-    id: 'abstract-art-01',
+    id: 'abstract-art-02',
     title: 'Mist Horizon',
     year: 2025,
     dimensions: 'Contact for dimensions',
@@ -49,7 +49,7 @@ export const artworks: Artwork[] = [
     featured: true,
   },
   {
-    id: 'abstract-art-02',
+    id: 'abstract-art-03',
     title: 'Beyond Visibility',
     year: 2025,
     dimensions: 'Contact for dimensions',
@@ -71,7 +71,7 @@ export const artworks: Artwork[] = [
     featured: true,
   },
   {
-    id: 'abstract-art-03',
+    id: 'abstract-art-04',
     title: 'Separated by a metropolis',
     year: 2025,
     dimensions: 'Contact for dimensions',
@@ -1021,7 +1021,9 @@ export function getArtworkImages(artwork: Artwork): ArtworkImage[] {
 }
 
 export function getArtworksByCollection(collectionId: string): Artwork[] {
-  return artworks.filter((a) => a.collectionId === collectionId);
+  return artworks
+    .filter((a) => a.collectionId === collectionId)
+    .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
 }
 
 export function getArtworkById(id: string): Artwork | undefined {
