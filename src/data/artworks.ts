@@ -7,6 +7,25 @@ export const CARE_INSTRUCTIONS =
 
 export const artworks: Artwork[] = [
   {
+    id: 'abstract-art-04',
+    title: 'Roots in Two Worlds',
+    year: 2025,
+    dimensions: 'Contact for dimensions',
+    materials: 'Mixed media',
+    technique: 'Split-tone tree composition',
+    surface: 'Canvas',
+    framing: 'Unframed',
+    signed: true,
+    certificateOfAuthenticity: true,
+    availability: 'Available',
+    description:
+      'Roots in Two Worlds. This mixed-media piece explores duality through a single tree split between golden light and cool shadow.',
+    image: photos.abstract_art_day_and_night_1,
+    imageAlt: 'Roots in Two Worlds — front view',
+    collectionId: 'abstract-art',
+    featured: true,
+  },
+  {
     id: 'abstract-art-01',
     title: 'Mist Horizon',
     year: 2025,
@@ -74,25 +93,7 @@ export const artworks: Artwork[] = [
     collectionId: 'abstract-art',
     featured: true,
   },
-  {
-    id: 'abstract-art-04',
-    title: 'Roots in Two Worlds',
-    year: 2025,
-    dimensions: 'Contact for dimensions',
-    materials: 'Mixed media',
-    technique: 'Split-tone tree composition',
-    surface: 'Canvas',
-    framing: 'Unframed',
-    signed: true,
-    certificateOfAuthenticity: true,
-    availability: 'Available',
-    description:
-      'Roots in Two Worlds. This mixed-media piece explores duality through a single tree split between golden light and cool shadow.',
-    image: photos.abstract_art_day_and_night_1,
-    imageAlt: 'Roots in Two Worlds — front view',
-    collectionId: 'abstract-art',
-    featured: true,
-  },
+
   {
     id: 'abstract-art-05',
     title: 'Between Time and Depth',
