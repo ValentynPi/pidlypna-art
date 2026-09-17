@@ -17,6 +17,15 @@ const ALBUMS = [
       'Compositions that speak through color, gesture, and form — atmospheres beyond the literal.',
     paintings: [
       {
+        slug: 'day-and-night',
+        title: 'Roots in Two Worlds',
+        files: ['photo_2026-08-05_13-58-35.jpg'],
+        materials: 'Mixed media',
+        technique: 'Split-tone tree composition',
+        description:
+          'A single tree divided between warm gold light and cool darkness — two worlds in one trunk.',
+      },
+      {
         slug: 'mist-horizon',
         title: 'Mist Horizon',
         files: [
@@ -56,15 +65,6 @@ const ALBUMS = [
           'An abstracted city skyline glowing from within — warm light rising through dark towers.',
       },
       {
-        slug: 'day-and-night',
-        title: 'Roots in Two Worlds',
-        files: ['photo_2026-08-05_13-58-35.jpg'],
-        materials: 'Mixed media',
-        technique: 'Split-tone tree composition',
-        description:
-          'A single tree divided between warm gold light and cool darkness — two worlds in one trunk.',
-      },
-      {
         slug: 'patina-horizon',
         title: 'Between Time and Depth',
         files: [
@@ -102,66 +102,6 @@ const ALBUMS = [
         technique: 'Abstract vertical composition',
         description:
           'Blue, white, and earth tones rising in vertical strokes — light as architecture.',
-      },
-    ],
-  },
-  {
-    folder: 'Affirmation Collection',
-    id: 'affirmation-collection',
-    name: 'Affirmation Collection',
-    intro:
-      'Words and images woven together — paintings that hold strength, intention, and daily courage.',
-    paintings: [
-      {
-        slug: 'soy-fuerte',
-        title: 'Soy Fuerte',
-        files: [
-          'PXL_20260811_162142153.jpg',
-          'PXL_20260811_162157218.jpg',
-          'PXL_20260811_162219270.jpg',
-          'PXL_20260716_163536870.jpg',
-          'PXL_20260716_163540648.jpg',
-          'PXL_20260716_163718888.jpg',
-        ],
-        materials: 'Acrylic',
-        technique: 'Text affirmation seascape',
-        description:
-          'Stylized blue waves carry the words Soy Fuerte — strength written into the sea.',
-      },
-      {
-        slug: 'shine-love-create',
-        title: 'Shine · Love · Create',
-        files: [
-          'PXL_20260716_163930583.jpg',
-          'PXL_20260716_164005846.jpg',
-          'PXL_20260716_164057293.jpg',
-        ],
-        materials: 'Mixed media',
-        technique: 'Word and image composition',
-        description:
-          'Сяй · Кохай · Твори — shine, love, create — written into soft pink light.',
-      },
-      {
-        slug: 'joy',
-        title: 'Joy',
-        files: [
-          'PXL_20260811_161953886.jpg',
-          'PXL_20260811_162002033.jpg',
-          'PXL_20260811_162010779.jpg',
-        ],
-        materials: 'Acrylic',
-        technique: 'Text affirmation skyscape',
-        description:
-          'Joy written into a soft blue sky over lavender and peach clouds.',
-      },
-      {
-        slug: 'bloom-anyway',
-        title: 'Bloom Anyway',
-        files: ['PXL_20260811_162036676.jpg'],
-        materials: 'Acrylic',
-        technique: 'Text affirmation abstract',
-        description:
-          'Bloom anyway — pink words across blue and plum swirling light.',
       },
     ],
   },
@@ -351,28 +291,6 @@ const ALBUMS = [
     ],
   },
   {
-    folder: 'Inspired by Nature',
-    id: 'inspired-by-nature',
-    name: 'Inspired by Nature',
-    intro:
-      'Landscapes, seas, and skies observed with feeling — nature translated into color and light.',
-    paintings: [
-      {
-        slug: 'nature-study',
-        title: 'Nature Study',
-        files: [
-          'PXL_20260717_125711965.jpg',
-          'PXL_20260717_125716513.jpg',
-          'PXL_20260717_125732407.jpg',
-        ],
-        materials: 'Oil',
-        technique: 'Landscape study',
-        description:
-          'A nature study observed on location — light, air, and distance held in paint.',
-      },
-    ],
-  },
-  {
     folder: 'Inspired by Places',
     id: 'inspired-by-places',
     name: 'Inspired by Places',
@@ -396,6 +314,19 @@ const ALBUMS = [
         technique: 'Imaginative landscape',
         description:
           'A golden hot air balloon over Mont-Saint-Michel — travel held as dream and memory.',
+      },
+      {
+        slug: 'nature-study',
+        title: 'Sorrow',
+        files: [
+          'PXL_20260717_125711965.jpg',
+          'PXL_20260717_125716513.jpg',
+          'PXL_20260717_125732407.jpg',
+        ],
+        materials: 'Oil',
+        technique: 'Landscape study',
+        description:
+          'A nature study observed on location — light, air, and distance held in paint.',
       },
     ],
   },
@@ -820,7 +751,6 @@ const legacyPhotos = {
   heritageFace: 'ukrainian-symbolism-heritage-1.jpg',
   sunsetNew: 'abstract-art-ember-reflection-1.jpg',
   inkPastelLandscape: 'alcohol-ink-art-pastel-hills-1.jpg',
-  soyFuerte: 'affirmation-collection-soy-fuerte-1.jpg',
   tigerBloom: 'female-portraits-tiger-bloom-1.jpg',
   floralCrownClean: 'female-portraits-floral-crown-1.jpg',
   snowPeaks: 'plain-air-collection-snow-peaks-1.jpg',

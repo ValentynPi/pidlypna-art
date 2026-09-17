@@ -17,14 +17,6 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'This acrylic painting celebrates movement through mint, rose, and white in airy, layered brushstrokes. The color travels across the canvas like water finding its way. The composition becomes a poetic, contemporary piece that evokes lightness, breath, and delicate sophistication.',
     'abstract-art-07':
       'This work is an original acrylic painting that celebrates ascent through blue, white, and earth tones stacked like architecture. Light rises in measured strokes, as if a window were opening from within the paint. The work transforms abstraction into a contemporary meditation on hope, structure, and quiet lift.',
-    'affirmation-collection-01':
-      'This work is an original acrylic painting that celebrates inner strength through stylized waves and hand-lettered words. The sea carries the phrase like a vow, each crest painted with confident, contemporary rhythm. The composition becomes a poetic artwork of courage, devotion, and calm power.',
-    'affirmation-collection-02':
-      'This work is an original mixed-media painting that celebrates a life motto written in Ukrainian — Сяй, Кохай, Твори — across soft pink light. The words rest inside the color as if they had always belonged there. The work transforms language into a contemporary symbol of joy, devotion, and making.',
-    'affirmation-collection-03':
-      'This work is an original acrylic painting that celebrates gladness through a pale blue sky and clouds of lavender and peach. The word itself is painted into the atmosphere, light and unforced. The composition becomes a poetic contemporary piece that evokes serenity, warmth, and quiet happiness.',
-    'affirmation-collection-04':
-      'This work is an original acrylic painting that celebrates resilience through pink lettering across swirling blue and plum light. The words insist on beauty even when the season is difficult. The work transforms an affirmation into a contemporary painting of hope, tenderness, and strength.',
     'alcohol-ink-art-01':
       'This work is an original alcohol-ink painting that celebrates landscape as breath through rose, lavender, and yellow veils. Ink is allowed to travel, bloom, and settle into hills that feel remembered rather than mapped. The composition becomes a poetic contemporary work that evokes softness, distance, and calm.',
     'alcohol-ink-art-02':
@@ -109,14 +101,6 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'Esta pintura acrílica celebra el movimiento a través de menta, rosa y blanco en pinceladas aéreas y superpuestas. El color atraviesa el lienzo como el agua buscando su camino. La composición se convierte en una pieza contemporánea poética que evoca ligereza, respiración y una sofisticación delicada.',
     'abstract-art-07':
       'Esta obra es una pintura acrílica original que celebra el ascenso mediante azules, blancos y tonos tierra apilados como arquitectura. La luz sube en trazos medidos, como si una ventana se abriera desde dentro de la pintura. La obra transforma la abstracción en una meditación contemporánea sobre la esperanza, la estructura y el elevamiento sereno.',
-    'affirmation-collection-01':
-      'Esta obra es una pintura acrílica original que celebra la fuerza interior mediante olas estilizadas y palabras escritas a mano. El mar lleva la frase como un voto; cada cresta está pintada con ritmo contemporáneo y seguro. La composición se convierte en una obra poética de valor, devoción y poder sereno.',
-    'affirmation-collection-02':
-      'Esta obra es una pintura de técnica mixta original que celebra un lema de vida escrito en ucraniano — Сяй, Кохай, Твори — sobre una luz rosa suave. Las palabras descansan en el color como si siempre hubieran pertenecido allí. La obra transforma el lenguaje en un símbolo contemporáneo de alegría, devoción y creación.',
-    'affirmation-collection-03':
-      'Esta obra es una pintura acrílica original que celebra la alegría a través de un cielo azul pálido y nubes de lavanda y melocotón. La palabra misma está pintada en la atmósfera, ligera y sin forzar. La composición se convierte en una pieza contemporánea poética que evoca serenidad, calidez y felicidad quieta.',
-    'affirmation-collection-04':
-      'Esta obra es una pintura acrílica original que celebra la resiliencia con tipografía rosa sobre luz azul y ciruela en remolino. Las palabras insisten en la belleza incluso cuando la estación es difícil. La obra transforma una afirmación en una pintura contemporánea de esperanza, ternura y fuerza.',
     'alcohol-ink-art-01':
       'Esta obra es una pintura original en tinta alcohólica que celebra el paisaje como respiración mediante velos de rosa, lavanda y amarillo. La tinta viaja, florece y se asienta en colinas que se sienten recordadas más que cartografiadas. La composición se convierte en una obra contemporánea poética de suavidad, distancia y calma.',
     'alcohol-ink-art-02':
@@ -201,14 +185,6 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'Ця акрилова картина оспівує рух через м’ятні, рожеві та білі повітряні шаруваті мазки. Колір іде полотном, як вода, що шукає свій шлях. Композиція стає поетичним сучасним твором про легкість, подих і ніжну витонченість.',
     'abstract-art-07':
       'Ця робота оспівує підйом через сині, білі та землисті тони, складені як архітектура. Світло піднімається мірними мазками, ніби вікно відкривається зсередини фарби. Робота перетворює абстракцію на сучасну медитацію про надію, структуру та тихий злет.',
-    'affirmation-collection-01':
-      'Ця робота оспівує внутрішню силу через стилізовані хвилі та рукописні слова. Море несе фразу, мов обітницю; кожен гребінь написаний упевненим сучасним ритмом. Композиція стає поетичним твором про мужність, відданість і спокійну силу.',
-    'affirmation-collection-02':
-      'Ця робота оспівує життєве гасло українською — Сяй, Кохай, Твори — на м’якому рожевому світлі. Слова лежать у кольорі так, ніби завжди там були. Робота перетворює мову на сучасний символ радості, відданості та творення.',
-    'affirmation-collection-03':
-      'Ця робота оспівує радість через блідо-блакитне небо та хмари лаванди й персика. Саме слово вписане в атмосферу — легко й невимушено. Композиція стає поетичним сучасним твором про спокій, тепло й тихе щастя.',
-    'affirmation-collection-04':
-      'Ця робота оспівує стійкість через рожевий напис на круговерті синього й сливового світла. Слова наполягають на красі навіть у складну пору. Робота перетворює афірмацію на сучасний живопис надії, ніжності й сили.',
     'alcohol-ink-art-01':
       'Ця робота оспівує пейзаж як подих через рожеві, лавандові та жовті вуалі. Чорнилу дають текти, розквітати й осідати в пагорби, які відчуваються згаданими, а не накресленими. Композиція стає поетичною сучасною роботою про м’якість, відстань і спокій.',
     'alcohol-ink-art-02':

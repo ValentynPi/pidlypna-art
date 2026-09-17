@@ -22,6 +22,14 @@ export function App() {
               <Route index element={<HomePage />} />
               <Route path="about" element={<AboutPage />} />
               <Route path="gallery" element={<GalleryPage />} />
+              <Route
+                path="gallery/affirmation-collection"
+                element={<Navigate to="/gallery" replace />}
+              />
+              <Route
+                path="gallery/inspired-by-nature"
+                element={<Navigate to="/gallery/inspired-by-places" replace />}
+              />
               <Route path="gallery/:slug" element={<GalleryCollectionPage />} />
               <Route path="workshops" element={<Navigate to="/" replace />} />
               <Route path="charity" element={<CharityPage />} />

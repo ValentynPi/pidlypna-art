@@ -81,10 +81,7 @@ const TECHNIQUE_KEYS: Record<string, string> = {
   'textured abstract landscape': 'lightbox.techniqueTexturedLandscape',
   'gestural abstract': 'lightbox.techniqueGesturalAbstract',
   'abstract vertical composition': 'lightbox.techniqueAbstractVertical',
-  'text affirmation seascape': 'lightbox.techniqueTextSeascape',
   'word and image composition': 'lightbox.techniqueWordImage',
-  'text affirmation skyscape': 'lightbox.techniqueTextSkyscape',
-  'text affirmation abstract': 'lightbox.techniqueTextAbstract',
   'fluid landscape': 'lightbox.techniqueFluidLandscape',
   'circular fluid composition': 'lightbox.techniqueCircularFluid',
   'fluid abstract': 'lightbox.techniqueFluidAbstract',
@@ -120,9 +117,6 @@ export function listingTechniqueLabel(artwork: Artwork, t: TranslateFn): string 
   }
   if (artwork.collectionId === 'petrykivka') return t('lightbox.techniquePetrykivka');
   if (artwork.collectionId === 'alcohol-ink-art') return t('lightbox.techniqueFluidInk');
-  if (artwork.collectionId === 'affirmation-collection') {
-    return t('lightbox.techniqueHandLettered');
-  }
   if (
     artwork.collectionId === 'textured-and-light' ||
     artwork.collectionId === 'female-portraits' ||

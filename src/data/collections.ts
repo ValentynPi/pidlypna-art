@@ -51,14 +51,6 @@ export const collections: Collection[] = [
     intro: 'Bold color, graphic energy, and contemporary icons — art that speaks with confidence.',
   },
   {
-    id: 'inspired-by-nature',
-    name: 'Inspired by Nature',
-    slug: 'inspired-by-nature',
-    coverImage: photos.inspired_by_nature_cover,
-    coverAlt: 'Inspired by Nature collection cover',
-    intro: 'Landscapes, seas, and skies observed with feeling — nature translated into color and light.',
-  },
-  {
     id: 'inspired-by-places',
     name: 'Inspired by Places',
     slug: 'inspired-by-places',
@@ -89,14 +81,6 @@ export const collections: Collection[] = [
     coverImage: photos.textured_and_light_cover,
     coverAlt: 'Textured & Light collection cover',
     intro: 'Surface as story — impasto, metallic layers, and tactile depths you can almost feel.',
-  },
-  {
-    id: 'affirmation-collection',
-    name: 'Affirmation Collection',
-    slug: 'affirmation-collection',
-    coverImage: photos.affirmation_collection_cover,
-    coverAlt: 'Affirmation Collection collection cover',
-    intro: 'Words and images woven together — paintings that hold strength, intention, and daily courage.',
   },
 ];
 

@@ -194,7 +194,6 @@ const en: TranslationTree = {
     mediumDefault: 'Original painting on {{surface}}',
     techniquePetrykivka: 'Traditional Petrykivka brushwork',
     techniqueFluidInk: 'Fluid ink technique',
-    techniqueHandLettered: 'Hand-lettered mixed media',
     techniqueImpasto: 'Impasto texture',
     techniqueTraditionalBrush: 'Traditional brush painting',
     techniqueMixedMediaTexture: 'Mixed-media texture',
@@ -205,10 +204,7 @@ const en: TranslationTree = {
     techniqueSplitToneTree: 'Split-tone tree composition',
     techniqueGesturalAbstract: 'Gestural abstract',
     techniqueAbstractVertical: 'Abstract vertical composition',
-    techniqueTextSeascape: 'Text affirmation seascape',
     techniqueWordImage: 'Word and image composition',
-    techniqueTextSkyscape: 'Text affirmation skyscape',
-    techniqueTextAbstract: 'Text affirmation abstract',
     techniqueFluidLandscape: 'Fluid landscape',
     techniqueCircularFluid: 'Circular fluid composition',
     techniqueFluidAbstract: 'Fluid abstract',
@@ -290,11 +286,9 @@ const en: TranslationTree = {
   },
   collections: {
     'abstract-art': 'Abstract Art',
-    'affirmation-collection': 'Affirmation Collection',
     'alcohol-ink-art': 'Alcohol Ink Art',
     'female-portraits': 'Female Portraits',
     'floral-collection': 'Floral Collection',
-    'inspired-by-nature': 'Inspired by Nature',
     'inspired-by-places': 'Inspired by Places',
     petrykivka: 'Petrykivka',
     'plain-air-collection': 'Plein Air Collection',
@@ -315,8 +309,6 @@ const en: TranslationTree = {
       'The Ukrainian decorative painting tradition — stylized florals, berries, and brush-stroke ornaments.',
     'pop-art':
       'Bold color, graphic energy, and contemporary icons — art that speaks with confidence.',
-    'inspired-by-nature':
-      'Landscapes, seas, and skies observed with feeling — nature translated into color and light.',
     'inspired-by-places':
       'Landmarks remembered in paint — cities, coasts, and journeys translated into atmosphere.',
     'plain-air-collection':
@@ -325,8 +317,6 @@ const en: TranslationTree = {
       'Fluid pigment on panel — luminous landscapes and circles born from chance and control.',
     'textured-and-light':
       'Surface as story — impasto, metallic layers, and tactile depths you can almost feel.',
-    'affirmation-collection':
-      'Words and images woven together — paintings that hold strength, intention, and daily courage.',
   },
 };
 
@@ -524,7 +514,6 @@ const es: TranslationTree = {
     mediumDefault: 'Pintura original sobre {{surface}}',
     techniquePetrykivka: 'Pincelada tradicional Petrykivka',
     techniqueFluidInk: 'Técnica de tinta fluida',
-    techniqueHandLettered: 'Técnica mixta con tipografía a mano',
     techniqueImpasto: 'Textura de impasto',
     techniqueTraditionalBrush: 'Pintura tradicional a pincel',
     techniqueMixedMediaTexture: 'Textura de técnica mixta',
@@ -535,10 +524,7 @@ const es: TranslationTree = {
     techniqueSplitToneTree: 'Composición de árbol en tonos divididos',
     techniqueGesturalAbstract: 'Abstracción gestual',
     techniqueAbstractVertical: 'Composición abstracta vertical',
-    techniqueTextSeascape: 'Marina con afirmación textual',
     techniqueWordImage: 'Composición de palabra e imagen',
-    techniqueTextSkyscape: 'Cielo con afirmación textual',
-    techniqueTextAbstract: 'Abstracción con afirmación textual',
     techniqueFluidLandscape: 'Paisaje fluido',
     techniqueCircularFluid: 'Composición fluida circular',
     techniqueFluidAbstract: 'Abstracción fluida',
@@ -620,11 +606,9 @@ const es: TranslationTree = {
   },
   collections: {
     'abstract-art': 'Arte abstracto',
-    'affirmation-collection': 'Colección de afirmaciones',
     'alcohol-ink-art': 'Tinta de alcohol',
     'female-portraits': 'Retratos femeninos',
     'floral-collection': 'Colección floral',
-    'inspired-by-nature': 'Inspirado en la naturaleza',
     'inspired-by-places': 'Inspirado en lugares',
     petrykivka: 'Petrykivka',
     'plain-air-collection': 'Plein air',
@@ -645,8 +629,6 @@ const es: TranslationTree = {
       'La tradición ucraniana de pintura decorativa — flores estilizadas, bayas y ornamentos de pincel.',
     'pop-art':
       'Color audaz, energía gráfica e iconos contemporáneos — arte que habla con confianza.',
-    'inspired-by-nature':
-      'Paisajes, mares y cielos observados con sentimiento — la naturaleza traducida en color y luz.',
     'inspired-by-places':
       'Lugares recordados en pintura — ciudades, costas y viajes convertidos en atmósfera.',
     'plain-air-collection':
@@ -655,8 +637,6 @@ const es: TranslationTree = {
       'Pigmento fluido sobre panel — paisajes luminosos y círculos nacidos del azar y el control.',
     'textured-and-light':
       'La superficie como relato — impasto, capas metálicas y profundidades táctiles que casi se sienten.',
-    'affirmation-collection':
-      'Palabras e imágenes entrelazadas — pinturas que guardan fuerza, intención y valor cotidiano.',
   },
 };
 
@@ -854,7 +834,6 @@ const uk: TranslationTree = {
     mediumDefault: 'Оригінальний живопис на {{surface}}',
     techniquePetrykivka: 'Традиційний петриківський розпис',
     techniqueFluidInk: 'Техніка плинних чорнил',
-    techniqueHandLettered: 'Змішана техніка з рукописним текстом',
     techniqueImpasto: 'Фактура імпасто',
     techniqueTraditionalBrush: 'Живопис пензлем',
     techniqueMixedMediaTexture: 'Фактура змішаної техніки',
@@ -865,10 +844,7 @@ const uk: TranslationTree = {
     techniqueSplitToneTree: 'Композиція дерева у двох тонах',
     techniqueGesturalAbstract: 'Жестова абстракція',
     techniqueAbstractVertical: 'Абстрактна вертикальна композиція',
-    techniqueTextSeascape: 'Морський пейзаж з текстовою афірмацією',
     techniqueWordImage: 'Композиція слова й образу',
-    techniqueTextSkyscape: 'Небесний пейзаж з текстовою афірмацією',
-    techniqueTextAbstract: 'Абстракція з текстовою афірмацією',
     techniqueFluidLandscape: 'Плинний пейзаж',
     techniqueCircularFluid: 'Кругла плинна композиція',
     techniqueFluidAbstract: 'Плинна абстракція',
@@ -950,11 +926,9 @@ const uk: TranslationTree = {
   },
   collections: {
     'abstract-art': 'Абстракція',
-    'affirmation-collection': 'Афірмації',
     'alcohol-ink-art': 'Алкогольні чорнила',
     'female-portraits': 'Жіночі портрети',
     'floral-collection': 'Квіткова колекція',
-    'inspired-by-nature': 'Натхненні природою',
     'inspired-by-places': 'Натхненні місцями',
     petrykivka: 'Петриківка',
     'plain-air-collection': 'Пленер',
@@ -975,8 +949,6 @@ const uk: TranslationTree = {
       'Українська традиція декоративного розпису — стилізовані квіти, ягоди й орнаменти мазка.',
     'pop-art':
       'Сміливий колір, графічна енергія й сучасні ікони — мистецтво, що говорить упевнено.',
-    'inspired-by-nature':
-      'Пейзажі, моря й небеса, побачені з чуттям — природа, перекладена кольором і світлом.',
     'inspired-by-places':
       'Місця, збережені в фарбі — міста, узбережжя й подорожі, перетворені на атмосферу.',
     'plain-air-collection':
@@ -985,8 +957,6 @@ const uk: TranslationTree = {
       'Рідкий пігмент на панелі — світлі пейзажі й кола, народжені з випадку й контролю.',
     'textured-and-light':
       'Поверхня як історія — імпасто, металеві шари й відчутна глибина, яку майже можна торкнути.',
-    'affirmation-collection':
-      'Слова й образи, сплетені разом — картини сили, наміру й щоденної відваги.',
   },
 };
 
