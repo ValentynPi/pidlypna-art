@@ -300,7 +300,7 @@ const en: TranslationTree = {
     'plain-air-collection': 'Plein Air Collection',
     'pop-art': 'Pop Art',
     'textured-and-light': 'Textured & Light',
-    'ukrainian-symbolism': 'Ukrainian Symbolism',
+    'ukrainian-symbolism': 'Identity & Symbols',
   },
   collectionIntros: {
     'ukrainian-symbolism':
@@ -630,7 +630,7 @@ const es: TranslationTree = {
     'plain-air-collection': 'Plein air',
     'pop-art': 'Pop art',
     'textured-and-light': 'Textura y luz',
-    'ukrainian-symbolism': 'Simbolismo ucraniano',
+    'ukrainian-symbolism': 'Identidad y símbolos',
   },
   collectionIntros: {
     'ukrainian-symbolism':
@@ -960,7 +960,7 @@ const uk: TranslationTree = {
     'plain-air-collection': 'Пленер',
     'pop-art': 'Поп-арт',
     'textured-and-light': 'Текстура і світло',
-    'ukrainian-symbolism': 'Українська символіка',
+    'ukrainian-symbolism': 'Ідентичність та символи',
   },
   collectionIntros: {
     'ukrainian-symbolism':

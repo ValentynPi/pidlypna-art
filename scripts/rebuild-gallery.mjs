@@ -670,7 +670,7 @@ const ALBUMS = [
   {
     folder: 'Ukrainian Symbolism',
     id: 'ukrainian-symbolism',
-    name: 'Ukrainian Symbolism',
+    name: 'Identity & Symbols',
     intro:
       'Heritage held in paint — embroidery, memory, and symbols that carry Ukraine into the present.',
     paintings: [

@@ -4,10 +4,10 @@ import type { Collection } from '../types';
 export const collections: Collection[] = [
   {
     id: 'ukrainian-symbolism',
-    name: 'Ukrainian Symbolism',
+    name: 'Identity & Symbols',
     slug: 'ukrainian-symbolism',
     coverImage: photos.ukrainian_symbolism_cover,
-    coverAlt: 'Ukrainian Symbolism collection cover',
+    coverAlt: 'Identity & Symbols collection cover',
     intro: 'Heritage held in paint — embroidery, memory, and symbols that carry Ukraine into the present.',
   },
   {
