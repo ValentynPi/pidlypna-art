@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Layout } from './components/layout/Layout';
 import { HomePage } from './pages/HomePage';
@@ -11,6 +11,11 @@ import { JourneyPage } from './pages/JourneyPage';
 import { ContactPage } from './pages/ContactPage';
 import { CharityPage } from './pages/CharityPage';
 import { LanguageProvider } from './i18n/LanguageContext';
+
+function InspiredByNatureArtworkRedirect() {
+  const { artworkSlug } = useParams<{ artworkSlug: string }>();
+  return <Navigate to={`/gallery/inspired-by-places/${artworkSlug ?? ''}`} replace />;
+}
 
 export function App() {
   return (
@@ -30,7 +35,11 @@ export function App() {
                 path="gallery/inspired-by-nature"
                 element={<Navigate to="/gallery/inspired-by-places" replace />}
               />
-              <Route path="gallery/:slug" element={<GalleryCollectionPage />} />
+              <Route
+                path="gallery/inspired-by-nature/:artworkSlug"
+                element={<InspiredByNatureArtworkRedirect />}
+              />
+              <Route path="gallery/:slug/:artworkSlug?" element={<GalleryCollectionPage />} />
               <Route path="workshops" element={<Navigate to="/" replace />} />
               <Route path="charity" element={<CharityPage />} />
               <Route path="exhibitions" element={<ExhibitionsPage />} />

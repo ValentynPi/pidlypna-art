@@ -1,5 +1,6 @@
 import { useEffect, useCallback, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { getArtworkPath } from '../../data/artworkPaths';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Artwork } from '../../types';
 import { getArtworkImages } from '../../data/artworks';
@@ -33,6 +34,7 @@ export function Lightbox({
   const [viewIndex, setViewIndex] = useState(0);
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const [copied, setCopied] = useState(false);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex < artworks.length - 1;
@@ -42,6 +44,7 @@ export function Lightbox({
     setViewIndex(0);
     setDetailsOpen(false);
     setExpanded(false);
+    setCopied(false);
   }, [currentIndex]);
 
   const cycleView = useCallback(
@@ -265,6 +268,23 @@ export function Lightbox({
                   {t(`collections.${collection.id}`)}
                 </Link>
               )}
+
+              <button
+                type="button"
+                onClick={async () => {
+                  const url = `${window.location.origin}${getArtworkPath(artwork)}`;
+                  try {
+                    await navigator.clipboard.writeText(url);
+                    setCopied(true);
+                    window.setTimeout(() => setCopied(false), 2000);
+                  } catch {
+                    window.prompt(t('lightbox.copyLink'), url);
+                  }
+                }}
+                className="mt-3 text-left text-[0.65rem] tracking-[0.18em] text-gold/80 uppercase transition-colors hover:text-gold"
+              >
+                {copied ? t('lightbox.linkCopied') : t('lightbox.copyLink')}
+              </button>
 
               <p className="mt-5 text-sm leading-relaxed text-cream/70 md:mt-6">
                 {listingDescription(artwork, language)}
