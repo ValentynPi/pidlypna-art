@@ -84,6 +84,16 @@ export const collections: Collection[] = [
   },
 ];
 
+const HIDDEN_COLLECTION_IDS = new Set([
+  'affirmation-collection',
+  'inspired-by-nature',
+]);
+
+export const galleryCollections = collections.filter(
+  (collection) => !HIDDEN_COLLECTION_IDS.has(collection.id),
+);
+
 export function getCollectionById(id: string): Collection | undefined {
+  if (HIDDEN_COLLECTION_IDS.has(id)) return undefined;
   return collections.find((c) => c.id === id);
 }

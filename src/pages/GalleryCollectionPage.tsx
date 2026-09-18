@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 import { PageMeta } from '../components/ui/PageMeta';
 import { PageHeader } from '../components/ui/PageHeader';
 import { GalleryGrid } from '../components/gallery/GalleryGrid';
-import { collections } from '../data/collections';
+import { galleryCollections } from '../data/collections';
 import { getArtworksByCollection } from '../data/artworks';
 import { getArtworkBySlug, getArtworkPath } from '../data/artworkPaths';
 import { listingDescription } from '../data/listing';
@@ -12,7 +12,7 @@ import { getArtworkTitle } from '../i18n/artworkTitles';
 export function GalleryCollectionPage() {
   const { slug, artworkSlug } = useParams<{ slug: string; artworkSlug?: string }>();
   const { t, language } = useLanguage();
-  const collection = collections.find((c) => c.slug === slug);
+  const collection = galleryCollections.find((c) => c.slug === slug);
   const artworks = collection ? getArtworksByCollection(collection.id) : [];
   const activeArtwork =
     collection && artworkSlug ? getArtworkBySlug(collection.slug, artworkSlug) : undefined;

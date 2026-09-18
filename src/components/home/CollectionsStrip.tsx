@@ -1,5 +1,5 @@
 import { CollectionCard } from '../gallery/CollectionCard';
-import { collections } from '../../data/collections';
+import { galleryCollections } from '../../data/collections';
 import { ScrollReveal } from '../ui/ScrollReveal';
 import { SectionLabel } from '../ui/SectionLabel';
 import { useLanguage } from '../../i18n/LanguageContext';
@@ -15,8 +15,8 @@ export function CollectionsStrip() {
         </h2>
       </ScrollReveal>
 
-      <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 lg:mt-16 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4">
-        {collections.map((collection, index) => (
+      <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-3">
+        {galleryCollections.map((collection, index) => (
           <CollectionCard
             key={collection.id}
             collection={collection}
