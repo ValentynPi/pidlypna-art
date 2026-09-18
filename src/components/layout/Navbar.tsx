@@ -25,11 +25,14 @@ export function Navbar() {
 
   useEffect(() => {
     setIsOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
     return () => {
       document.body.style.overflow = '';
     };
-  }, [isOpen, location.pathname]);
+  }, [isOpen]);
 
   const isActive = (path: string) =>
     location.pathname === path ||
@@ -46,7 +49,7 @@ export function Navbar() {
       }`}
     >
       <nav
-        className={`mx-auto flex max-w-[90rem] items-center justify-between px-5 py-4 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-500 sm:px-6 sm:py-6 md:px-10 lg:px-16 ${
+        className={`relative z-50 mx-auto flex max-w-[90rem] items-center justify-between px-5 py-4 pt-[max(1rem,env(safe-area-inset-top))] transition-all duration-500 sm:px-6 sm:py-6 md:px-10 lg:px-16 ${
           scrolled ? 'py-3 sm:py-4' : ''
         }`}
       >
@@ -116,7 +119,8 @@ export function Navbar() {
         <div className="flex items-center gap-2 lg:hidden">
           <LanguageSwitcher onDark={!isOpen && onDarkHero && !scrolled} compact />
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            type="button"
+            onClick={() => setIsOpen((open) => !open)}
             className={`relative z-50 flex h-11 w-11 shrink-0 touch-manipulation flex-col items-center justify-center gap-1.5 ${
               isOpen ? 'text-ink' : onDarkHero && !scrolled ? 'text-cream' : 'text-ink'
             }`}
