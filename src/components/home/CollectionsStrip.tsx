@@ -15,7 +15,7 @@ export function CollectionsStrip() {
         </h2>
       </ScrollReveal>
 
-      <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-3">
+      <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {galleryCollections.map((collection, index) => (
           <CollectionCard
             key={collection.id}

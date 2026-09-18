@@ -119,7 +119,7 @@ export function Lightbox({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 bg-ink"
+        className="fixed inset-0 z-[80] bg-ink"
         onClick={onClose}
       >
         <motion.div
@@ -133,8 +133,9 @@ export function Lightbox({
           onClick={(e) => e.stopPropagation()}
         >
           <button
+            type="button"
             onClick={onClose}
-            className="absolute top-[max(0.75rem,env(safe-area-inset-top))] right-3 z-20 flex h-11 w-11 touch-manipulation items-center justify-center rounded-full bg-ink/60 text-cream backdrop-blur-sm md:top-5 md:right-5 md:bg-transparent"
+            className="absolute top-[max(0.75rem,env(safe-area-inset-top))] right-3 z-30 flex h-12 w-12 touch-manipulation items-center justify-center rounded-full bg-ink/70 text-cream backdrop-blur-sm md:top-5 md:right-5"
             aria-label={t('lightbox.close')}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -155,7 +156,7 @@ export function Lightbox({
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="flex min-h-0 flex-1 cursor-zoom-in items-center justify-center px-2 pt-12 pb-2 md:p-4"
+                className="flex min-h-0 flex-1 cursor-zoom-in items-center justify-center px-3 pt-14 pb-2 md:p-4"
                 onClick={() => setExpanded(true)}
                 role="button"
                 tabIndex={0}
@@ -171,7 +172,7 @@ export function Lightbox({
                   src={activeView.src}
                   alt={activeView.alt}
                   objectFit="contain"
-                  className="max-h-[72svh] w-auto md:max-h-[94vh]"
+                  className="max-h-[62svh] w-auto md:max-h-[94vh]"
                   wrapperClassName="flex h-full w-full items-center justify-center bg-transparent"
                 />
               </motion.div>

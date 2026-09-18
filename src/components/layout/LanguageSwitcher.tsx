@@ -26,7 +26,7 @@ export function LanguageSwitcher({ onDark = false, compact = false }: LanguageSw
             type="button"
             onClick={() => setLanguage(item.code as Language)}
             title={item.native}
-            className={`${compact ? 'min-w-[2.25rem] px-1.5' : 'min-w-[2.5rem] px-2'} py-1.5 text-[0.7rem] tracking-[0.14em] uppercase transition-colors ${
+            className={`${compact ? 'min-h-11 min-w-[2.5rem] px-2' : 'min-w-[2.5rem] px-2'} py-1.5 text-[0.7rem] tracking-[0.14em] uppercase transition-colors touch-manipulation ${
               active
                 ? onDark
                   ? 'bg-gold font-semibold text-ink shadow-sm'

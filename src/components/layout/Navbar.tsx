@@ -121,7 +121,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen((open) => !open)}
-            className={`relative z-50 flex h-11 w-11 shrink-0 touch-manipulation flex-col items-center justify-center gap-1.5 ${
+            className={`relative z-50 flex h-12 w-12 shrink-0 touch-manipulation flex-col items-center justify-center gap-1.5 ${
               isOpen ? 'text-ink' : onDarkHero && !scrolled ? 'text-cream' : 'text-ink'
             }`}
             aria-label={t('nav.menu')}
@@ -163,7 +163,7 @@ export function Navbar() {
                   >
                     <Link
                       to={link.to}
-                      className={`block py-2.5 font-serif text-3xl transition-colors touch-manipulation sm:text-4xl ${
+                      className={`block min-h-12 py-3 font-serif text-3xl transition-colors touch-manipulation sm:text-4xl ${
                         isActive(link.to) ? 'text-terracotta' : 'text-ink hover:text-terracotta'
                       }`}
                     >

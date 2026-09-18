@@ -66,7 +66,7 @@ export function GalleryCollectionPage() {
         backLabel={t('gallery.back')}
       />
 
-      <section className="mx-auto max-w-[90rem] px-6 pb-24 md:px-10 lg:px-16">
+      <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 md:px-10 lg:px-16">
         <GalleryGrid artworks={artworks} />
       </section>
     </>

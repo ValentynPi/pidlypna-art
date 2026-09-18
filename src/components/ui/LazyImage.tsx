@@ -20,13 +20,14 @@ export function LazyImage({
   const [loaded, setLoaded] = useState(false);
   const fitClass = objectFit === 'contain' ? 'object-contain' : 'object-cover';
   const sizeClass =
-    objectFit === 'contain' ? 'max-h-full max-w-full' : 'h-full w-full';
+    objectFit === 'contain' ? 'max-h-full max-w-full' : 'h-full w-full max-w-none';
   const positionClass = wrapperClassName.includes('absolute')
     ? 'overflow-hidden'
     : 'relative overflow-hidden';
+  const alignClass = objectFit === 'contain' ? 'flex items-center justify-center' : '';
 
   return (
-    <div className={`${positionClass} bg-cream-dark ${wrapperClassName}`}>
+    <div className={`${positionClass} ${alignClass} bg-cream-dark ${wrapperClassName}`}>
       {!loaded && (
         <div className="absolute inset-0 animate-pulse bg-cream-dark" />
       )}

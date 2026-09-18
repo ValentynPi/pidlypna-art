@@ -25,7 +25,6 @@
 
 @layer base {
   html {
-    overflow-anchor: none;
     overflow-x: clip;
     scroll-behavior: auto;
     -webkit-text-size-adjust: 100%;
@@ -33,15 +32,18 @@
   }
 
   body {
-    overflow-anchor: none;
-    overflow-x: clip;
     @apply bg-cream font-sans text-ink antialiased;
+  }
+
+  a,
+  button,
+  [role='button'] {
+    touch-action: manipulation;
   }
 
   img,
   video {
     max-width: 100%;
-    height: auto;
   }
 
   ::selection {
@@ -72,7 +74,7 @@
   }
 
   .section-padding {
-    @apply px-5 py-20 sm:px-6 sm:py-28 md:px-10 md:py-32 lg:px-16 lg:py-36;
+    @apply px-5 py-16 sm:px-6 sm:py-24 md:px-10 md:py-32 lg:px-16;
   }
 
   .display-heading {

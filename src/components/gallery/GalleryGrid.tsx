@@ -41,8 +41,8 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
               key={artwork.id}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '0px 0px -40px 0px' }}
-              transition={{ duration: 0.6, delay: index * 0.06 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.2) }}
               className="relative aspect-[4/5] overflow-hidden bg-ink"
             >
               <Link
@@ -52,10 +52,11 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
                 <LazyImage
                   src={artwork.image}
                   alt={artwork.imageAlt}
-                  wrapperClassName="absolute inset-0 h-full w-full"
-                  className="transition-transform duration-1000 ease-out group-hover:scale-105"
+                  objectFit="contain"
+                  wrapperClassName="absolute inset-0 h-full w-full bg-ink"
+                  className="p-3 sm:p-4"
                 />
-                <div className="absolute inset-0 bg-ink/25 transition-all duration-500 sm:bg-ink/0 sm:group-hover:bg-ink/35" />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/85 via-transparent to-transparent" />
                 <div className="absolute top-3 left-3 font-serif text-2xl text-cream/25 sm:top-4 sm:left-4 sm:text-3xl sm:text-cream/20">
                   {String(index + 1).padStart(2, '0')}
                 </div>
@@ -64,7 +65,7 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
                     {viewCount} views
                   </div>
                 )}
-                <div className="absolute right-0 bottom-0 left-0 translate-y-0 bg-ink/80 p-4 backdrop-blur-sm transition-transform duration-500 sm:translate-y-full sm:p-5 sm:group-hover:translate-y-0">
+                <div className="absolute right-0 bottom-0 left-0 bg-ink/80 p-4 backdrop-blur-sm sm:p-5">
                   <p className="font-serif text-lg text-cream sm:text-xl">
                     {getArtworkTitle(artwork.id, language, artwork.title)}
                   </p>

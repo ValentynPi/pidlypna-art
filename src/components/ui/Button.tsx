@@ -34,7 +34,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const base =
-    'group inline-flex items-center justify-center gap-2 px-8 py-3.5 text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300';
+    'group inline-flex min-h-12 items-center justify-center gap-2 px-8 py-3.5 text-xs font-medium tracking-[0.2em] uppercase transition-all duration-300 touch-manipulation';
 
   const content = (
     <>

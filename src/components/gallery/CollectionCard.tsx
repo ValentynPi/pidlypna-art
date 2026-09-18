@@ -13,20 +13,22 @@ export function CollectionCard({ collection, index }: CollectionCardProps) {
   const { t } = useLanguage();
   const name = t(`collections.${collection.id}`);
   return (
-    <ScrollReveal delay={index * 0.05}>
-      <Link to={`/gallery/${collection.slug}`} className="group block">
-        <div className="relative aspect-[3/4] overflow-hidden bg-ink">
+    <ScrollReveal delay={Math.min(index * 0.03, 0.18)}>
+      <Link to={`/gallery/${collection.slug}`} className="group block touch-manipulation">
+        <div className="relative aspect-[4/5] overflow-hidden bg-ink">
           <LazyImage
             src={collection.coverImage}
             alt={collection.coverAlt}
-            className="transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+            objectFit="contain"
+            wrapperClassName="absolute inset-0 h-full w-full bg-ink"
+            className="p-2 transition-transform duration-700 ease-out sm:p-0 sm:group-hover:scale-[1.03]"
           />
-          <div className="absolute inset-0 bg-ink/20 transition-colors duration-500 group-hover:bg-ink/40" />
-          <div className="absolute top-4 left-4 font-serif text-xl text-cream/30 md:text-2xl">
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/80 via-ink/20 to-transparent" />
+          <div className="absolute top-2.5 left-2.5 font-serif text-lg text-cream/35 md:text-xl">
             {String(index + 1).padStart(2, '0')}
           </div>
-          <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-ink/80 via-ink/35 to-transparent p-5 pt-16 md:p-6">
-            <h3 className="font-serif text-lg leading-snug text-cream md:text-xl">
+          <div className="absolute inset-x-0 bottom-0 p-3 md:p-3.5">
+            <h3 className="font-serif text-sm leading-snug text-cream md:text-base">
               {name}
             </h3>
           </div>

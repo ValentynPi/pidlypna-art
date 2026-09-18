@@ -114,7 +114,7 @@ export function ContactSection() {
                       href={link.href}
                       target={link.external ? '_blank' : undefined}
                       rel={link.external ? 'noopener noreferrer' : undefined}
-                      className="text-ink-soft transition-colors hover:text-terracotta"
+                      className="inline-flex min-h-11 items-center text-ink-soft transition-colors hover:text-terracotta"
                     >
                       {link.value}
                     </a>

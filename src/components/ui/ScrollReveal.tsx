@@ -10,7 +10,7 @@ interface ScrollRevealProps {
 
 const variants: Record<string, Variants> = {
   up: {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 16 },
     visible: { opacity: 1, y: 0 },
   },
   down: {
@@ -41,9 +41,9 @@ export function ScrollReveal({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '0px 0px -40px 0px' }}
+      viewport={{ once: true, amount: 0.15 }}
       variants={variants[direction]}
-      transition={{ duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{ duration: 0.45, delay, ease: [0.25, 0.1, 0.25, 1] }}
       className={className}
     >
       {children}

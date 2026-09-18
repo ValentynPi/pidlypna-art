@@ -68,7 +68,7 @@ export function Footer() {
                   <li key={link.to}>
                     <Link
                       to={link.to}
-                      className="text-sm text-cream/50 transition-colors hover:text-cream"
+                      className="inline-flex min-h-11 items-center text-sm text-cream/50 transition-colors hover:text-cream"
                     >
                       {link.label}
                     </Link>
@@ -88,7 +88,7 @@ export function Footer() {
                   <li key={link.to}>
                     <Link
                       to={link.to}
-                      className="text-sm text-cream/50 transition-colors hover:text-cream"
+                      className="inline-flex min-h-11 items-center text-sm text-cream/50 transition-colors hover:text-cream"
                     >
                       {link.label}
                     </Link>
@@ -107,7 +107,7 @@ export function Footer() {
                       href={link.href}
                       target={link.external ? '_blank' : undefined}
                       rel={link.external ? 'noopener noreferrer' : undefined}
-                      className="transition-colors hover:text-cream"
+                      className="inline-flex min-h-11 items-center transition-colors hover:text-cream"
                     >
                       {link.label}
                     </a>
