@@ -65,6 +65,16 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'This Petrykivka painting celebrates three flame-red flowers along a vertical stem with berries and leaves. The tall format feels like a bookmark of summer. The work becomes a poetic contemporary piece of warmth, rhythm, and craft.',
     'petrykivka-10':
       'This Petrykivka painting celebrates floral motifs turning outward on a round canvas. A quieter, almost monochrome palette lets the rhythm of the strokes lead. The composition evokes meditation, balance, and refined folk beauty.',
+    'petrykivka-11':
+      'This Petrykivka painting celebrates coral dahlias opening on a warm brown ground, with dark berries and deep green leaves. White highlights catch the light the way petals do in late sun. The composition evokes abundance, craft, and the warmth of a summer garden.',
+    'petrykivka-12':
+      'This Petrykivka painting celebrates white blossoms traced with red veins on a dark brown ground. Berry clusters and curling leaves keep the rhythm of the tradition. The work becomes a poetic contemporary piece of contrast, tenderness, and folk elegance.',
+    'petrykivka-13':
+      'This Petrykivka painting celebrates crimson and rose flowers blooming against black, with sage leaves and small buds. Classic strokes glow on the dark ground. The composition evokes festivity, depth, and quiet richness.',
+    'petrykivka-14':
+      'This Petrykivka painting celebrates a russet songbird among cobalt flowers and berry clusters on a warm ground. The long tail carries the eye through the ornament. The work becomes a poetic contemporary piece of story, color, and living tradition.',
+    'petrykivka-15':
+      'This Petrykivka painting celebrates a blue bouquet opening on a honey-colored ground, edged in white and ringed with dark berries. The central bloom holds the composition like a jewel. The work evokes calm, craft, and the cool light of folk ornament.',
     'plain-air-collection-01':
       'This work is an original acrylic painting that celebrates high distance through pale blue sky and quiet snow. The mountains are held with clear, calm color rather than noise. The work becomes a poetic contemporary landscape of stillness, air, and awe.',
     'plain-air-collection-02':
@@ -149,6 +159,16 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'Esta pintura Petrykivka celebra tres flores rojo fuego a lo largo de un tallo vertical con bayas y hojas. El formato alto se siente como un marcador del verano. La obra se convierte en una pieza contemporánea poética de calor, ritmo y oficio.',
     'petrykivka-10':
       'Esta pintura Petrykivka celebra motivos florales abriéndose hacia fuera en un lienzo redondo. Una paleta más quieta, casi monocroma, deja que el ritmo de los trazos lidere. La composición evoca meditación, equilibrio y belleza popular refinada.',
+    'petrykivka-11':
+      'Esta pintura Petrykivka celebra dalias coral que se abren sobre un fondo marrón cálido, con bayas oscuras y hojas verde profundo. Los blancos captan la luz como los pétalos al sol de la tarde. La composición evoca abundancia, oficio y el calor de un jardín de verano.',
+    'petrykivka-12':
+      'Esta pintura Petrykivka celebra flores blancas trazadas con venas rojas sobre un fondo marrón oscuro. Racimos de bayas y hojas que se enroscan guardan el ritmo de la tradición. La obra se convierte en una pieza contemporánea poética de contraste, ternura y elegancia popular.',
+    'petrykivka-13':
+      'Esta pintura Petrykivka celebra flores carmesí y rosa que florecen sobre negro, con hojas salvia y pequeños capullos. Los trazos clásicos brillan sobre el fondo oscuro. La composición evoca festividad, profundidad y riqueza serena.',
+    'petrykivka-14':
+      'Esta pintura Petrykivka celebra un pájaro rufo entre flores cobalto y racimos de bayas sobre un fondo cálido. La larga cola lleva la mirada a través del ornamento. La obra se convierte en una pieza contemporánea poética de relato, color y tradición viva.',
+    'petrykivka-15':
+      'Esta pintura Petrykivka celebra un ramo azul que se abre sobre un fondo color miel, bordeado de blanco y rodeado de bayas oscuras. La flor central sostiene la composición como una joya. La obra evoca calma, oficio y la luz fresca del ornamento popular.',
     'plain-air-collection-01':
       'Esta obra es una pintura acrílica original que celebra la lejanía elevada mediante un cielo azul pálido y nieve serena. Las montañas se sostienen con color claro y calmado, sin ruido. La obra se convierte en un paisaje contemporáneo poético de quietud, aire y asombro.',
     'plain-air-collection-02':
@@ -233,6 +253,16 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'Ця робота оспівує три полум’яно-червоні квіти вздовж вертикального стебла з ягодами й листям. Високий формат відчувається як закладка літа. Робота стає поетичним сучасним твором тепла, ритму й ремесла.',
     'petrykivka-10':
       'Ця робота оспівує квіткові мотиви, які розходяться на круглому полотні. Спокійніша, майже монохромна палітра дає вести ритму мазків. Композиція викликає медитацію, рівновагу й витончену народну красу.',
+    'petrykivka-11':
+      'Ця робота оспівує коралові жоржини, що розкриваються на теплому коричневому тлі, з темними ягодами й глибоким зеленим листям. Білі відблиски ловлять світло так, як пелюстки в пізньому сонці. Композиція викликає відчуття достатку, ремесла й тепла літнього саду.',
+    'petrykivka-12':
+      'Ця робота оспівує білі квіти з червоними прожилками на темно-коричневому тлі. Грона ягід і закручене листя тримають ритм традиції. Робота стає поетичним сучасним твором контрасту, ніжності й народної елегантності.',
+    'petrykivka-13':
+      'Ця робота оспівує малинові й рожеві квіти, що квітнуть на чорному тлі, із шавлієвим листям і маленькими бутонами. Класичні мазки світяться на темному ґрунті. Композиція викликає відчуття свята, глибини й тихого багатства.',
+    'petrykivka-14':
+      'Ця робота оспівує рудого співучого птаха серед кобальтових квітів і ягідних грон на теплому тлі. Довгий хвіст веде погляд крізь орнамент. Робота стає поетичним сучасним твором оповіді, кольору й живої традиції.',
+    'petrykivka-15':
+      'Ця робота оспівує синій букет, що розкривається на медовому тлі, з білими краями пелюсток і темними ягодами. Центральна квітка тримає композицію, мов коштовність. Робота викликає спокій, ремесло й прохолодне світло народного орнаменту.',
     'plain-air-collection-01':
       'Ця робота оспівує високу далечінь через блідо-блакитне небо й тихий сніг. Гори тримаються ясним спокійним кольором, без шуму. Робота стає поетичним сучасним пейзажем тиші, повітря й благоговіння.',
     'plain-air-collection-02':
