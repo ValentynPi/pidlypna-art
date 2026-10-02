@@ -160,6 +160,7 @@ export const photos = {
   petrykivka_crimson_roses_1: `${base}/petrykivka-crimson-roses-1.jpg`,
   petrykivka_bird_in_bloom_1: `${base}/petrykivka-bird-in-bloom-1.jpg`,
   petrykivka_azure_ornament_1: `${base}/petrykivka-azure-ornament-1.jpg`,
+  petrykivka_peonies_in_garden_1: `${base}/petrykivka-peonies-in-garden-1.jpg`,
   plain_air_collection_snow_peaks_1: `${base}/plain-air-collection-snow-peaks-1.jpg`,
   plain_air_collection_snow_peaks_2: `${base}/plain-air-collection-snow-peaks-2.jpg`,
   plain_air_collection_snow_peaks_3: `${base}/plain-air-collection-snow-peaks-3.jpg`,

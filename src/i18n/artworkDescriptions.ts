@@ -71,6 +71,8 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'This Petrykivka painting celebrates a russet songbird among cobalt flowers and berry clusters on a warm ground. The long tail carries the eye through the ornament. The work becomes a poetic contemporary piece of story, color, and living tradition.',
     'petrykivka-15':
       'This Petrykivka painting celebrates a blue bouquet opening on a honey-colored ground, edged in white and ringed with dark berries. The central bloom holds the composition like a jewel. The work evokes calm, craft, and the cool light of folk ornament.',
+    'petrykivka-16':
+      'This Petrykivka painting celebrates pink and rose peonies blooming on a black ground, with teal leaves and curling stems. Classic strokes keep the bouquet lush and balanced. The composition evokes summer abundance, craft, and the quiet joy of a garden in full bloom.',
     'plain-air-collection-01':
       'This work is an original acrylic painting that celebrates high distance through pale blue sky and quiet snow. The mountains are held with clear, calm color rather than noise. The work becomes a poetic contemporary landscape of stillness, air, and awe.',
     'plain-air-collection-02':
@@ -161,6 +163,8 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'Esta pintura Petrykivka celebra un pájaro rufo entre flores cobalto y racimos de bayas sobre un fondo cálido. La larga cola lleva la mirada a través del ornamento. La obra se convierte en una pieza contemporánea poética de relato, color y tradición viva.',
     'petrykivka-15':
       'Esta pintura Petrykivka celebra un ramo azul que se abre sobre un fondo color miel, bordeado de blanco y rodeado de bayas oscuras. La flor central sostiene la composición como una joya. La obra evoca calma, oficio y la luz fresca del ornamento popular.',
+    'petrykivka-16':
+      'Esta pintura Petrykivka celebra peonías rosadas y rojizas que florecen sobre fondo negro, con hojas verdeazuladas y tallos que se curvan. Los trazos clásicos mantienen el ramo abundante y equilibrado. La composición evoca la abundancia del verano, el oficio y la alegría silenciosa de un jardín en plena floración.',
     'plain-air-collection-01':
       'Esta obra es una pintura acrílica original que celebra la lejanía elevada mediante un cielo azul pálido y nieve serena. Las montañas se sostienen con color claro y calmado, sin ruido. La obra se convierte en un paisaje contemporáneo poético de quietud, aire y asombro.',
     'plain-air-collection-02':
@@ -251,6 +255,8 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'Ця робота оспівує рудого співучого птаха серед кобальтових квітів і ягідних грон на теплому тлі. Довгий хвіст веде погляд крізь орнамент. Робота стає поетичним сучасним твором оповіді, кольору й живої традиції.',
     'petrykivka-15':
       'Ця робота оспівує синій букет, що розкривається на медовому тлі, з білими краями пелюсток і темними ягодами. Центральна квітка тримає композицію, мов коштовність. Робота викликає спокій, ремесло й прохолодне світло народного орнаменту.',
+    'petrykivka-16':
+      'Ця робота оспівує рожеві й малинові півонії, що квітнуть на чорному тлі, з бірюзовим листям і закрученими стеблами. Класичні мазки тримають букет пишним і збалансованим. Композиція викликає літній достаток, ремесло й тиху радість саду в розквіті.',
     'plain-air-collection-01':
       'Ця робота оспівує високу далечінь через блідо-блакитне небо й тихий сніг. Гори тримаються ясним спокійним кольором, без шуму. Робота стає поетичним сучасним пейзажем тиші, повітря й благоговіння.',
     'plain-air-collection-02':
