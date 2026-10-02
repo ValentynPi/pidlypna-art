@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "titles": {
+    "en": {},
+    "uk": {},
+    "es": {}
+  },
+  "galleryOrder": {
+    "petrykivka": [
+      "petrykivka-01",
+      "petrykivka-11",
+      "petrykivka-12",
+      "petrykivka-13",
+      "petrykivka-14",
+      "petrykivka-15",
+      "petrykivka-16",
+      "petrykivka-17",
+      "petrykivka-18",
+      "petrykivka-19",
+      "petrykivka-20",
+      "petrykivka-02",
+      "petrykivka-04",
+      "petrykivka-05",
+      "petrykivka-06",
+      "petrykivka-08",
+      "petrykivka-09",
+      "petrykivka-10"
+    ]
+  },
+  "artworks": {}
+}

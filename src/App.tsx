@@ -11,6 +11,7 @@ import { JourneyPage } from './pages/JourneyPage';
 import { ContactPage } from './pages/ContactPage';
 import { CharityPage } from './pages/CharityPage';
 import { LanguageProvider } from './i18n/LanguageContext';
+import { AdminApp } from './admin/AdminApp';
 
 function InspiredByNatureArtworkRedirect() {
   const { artworkSlug } = useParams<{ artworkSlug: string }>();
@@ -23,6 +24,7 @@ export function App() {
       <LanguageProvider>
         <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
           <Routes>
+            <Route path="admin/*" element={<AdminApp />} />
             <Route element={<Layout />}>
               <Route index element={<HomePage />} />
               <Route path="about" element={<AboutPage />} />

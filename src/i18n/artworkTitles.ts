@@ -1,4 +1,5 @@
 import type { Language } from './types';
+import { getTitleFromContent } from '../data/siteContent';
 
 /** Localized artwork titles. Falls back to English entry, then artwork.title. */
 export const artworkTitles: Record<Language, Record<string, string>> = {
@@ -163,6 +164,7 @@ export function getArtworkTitle(
   fallback = '',
 ): string {
   return (
+    getTitleFromContent(artworkId, language) ??
     artworkTitles[language][artworkId] ??
     artworkTitles.en[artworkId] ??
     fallback

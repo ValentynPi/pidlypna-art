@@ -1,4 +1,10 @@
 import { photos } from './images';
+import {
+  applyArtworkPatch,
+  getArtworkSizeCmFromContent,
+  getGalleryOrder,
+  isArtworkHidden,
+} from './siteContent';
 import type { Artwork, ArtworkImage } from '../types';
 
 export const SHIPPING_NOTE = 'Worldwide shipping available.';
@@ -1139,21 +1145,38 @@ export function listingMaterials(artwork: Artwork): string {
   }).join(', ');
 }
 
+function resolveListingSize(artwork: Artwork) {
+  const fromContent = getArtworkSizeCmFromContent(artwork.id);
+  if (fromContent) return fromContent;
+  const legacy = LISTING_SIZE_CM[artwork.title];
+  if (!legacy) return undefined;
+  return {
+    width: legacy.width,
+    height: legacy.height,
+    label:
+      artwork.title === 'Spiral Garden'
+        ? ('diameter' as const)
+        : artwork.title === 'Halo'
+          ? ('triptych' as const)
+          : undefined,
+  };
+}
+
 export function listingWidth(artwork: Artwork): string {
-  const size = LISTING_SIZE_CM[artwork.title];
+  const size = resolveListingSize(artwork);
   return size ? `${cmToInches(size.width)} inches` : 'Contact';
 }
 
 export function listingHeight(artwork: Artwork): string {
-  const size = LISTING_SIZE_CM[artwork.title];
+  const size = resolveListingSize(artwork);
   return size ? `${cmToInches(size.height)} inches` : 'Contact';
 }
 
 export function listingSizeCm(artwork: Artwork): string {
-  const size = LISTING_SIZE_CM[artwork.title];
+  const size = resolveListingSize(artwork);
   if (!size) return artwork.dimensions;
-  if (artwork.title === 'Halo') return `2 × ${size.width} × ${size.height} cm`;
-  if (artwork.title === 'Spiral Garden') return `Ø ${size.width} cm`;
+  if (size.label === 'triptych') return `2 × ${size.width} × ${size.height} cm`;
+  if (size.label === 'diameter') return `Ø ${size.width} cm`;
   return `${size.width} × ${size.height} cm`;
 }
 
@@ -1170,44 +1193,29 @@ export function getArtworkImages(artwork: Artwork): ArtworkImage[] {
   return extras.length > 0 ? [cover, ...extras] : [cover];
 }
 
-/** Gallery order for Petrykivka (new works featured right after Kalyna Night). */
-const PETRYKIVKA_GALLERY_ORDER = [
-  'petrykivka-01',
-  'petrykivka-11',
-  'petrykivka-12',
-  'petrykivka-13',
-  'petrykivka-14',
-  'petrykivka-15',
-  'petrykivka-16',
-  'petrykivka-17',
-  'petrykivka-18',
-  'petrykivka-19',
-  'petrykivka-20',
-  'petrykivka-02',
-  'petrykivka-04',
-  'petrykivka-05',
-  'petrykivka-06',
-  'petrykivka-08',
-  'petrykivka-09',
-  'petrykivka-10',
-];
+function sortArtworksForCollection(list: Artwork[], collectionId: string): Artwork[] {
+  const orderIds = getGalleryOrder(collectionId);
+  if (!orderIds?.length) {
+    return [...list].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+  }
+  const order = new Map<string, number>(orderIds.map((id, index) => [id, index]));
+  return [...list].sort((a, b) => {
+    const indexA = order.get(a.id) ?? 999;
+    const indexB = order.get(b.id) ?? 999;
+    if (indexA !== indexB) return indexA - indexB;
+    return a.id.localeCompare(b.id, undefined, { numeric: true });
+  });
+}
 
 export function getArtworksByCollection(collectionId: string): Artwork[] {
-  const filtered = artworks.filter((a) => a.collectionId === collectionId);
-  if (collectionId === 'petrykivka') {
-    const order = new Map<string, number>(
-      PETRYKIVKA_GALLERY_ORDER.map((id, index) => [id, index]),
-    );
-    return filtered.sort((a, b) => {
-      const indexA = order.get(a.id) ?? 999;
-      const indexB = order.get(b.id) ?? 999;
-      if (indexA !== indexB) return indexA - indexB;
-      return a.id.localeCompare(b.id, undefined, { numeric: true });
-    });
-  }
-  return filtered.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+  const filtered = artworks
+    .filter((a) => a.collectionId === collectionId && !isArtworkHidden(a.id))
+    .map(applyArtworkPatch);
+  return sortArtworksForCollection(filtered, collectionId);
 }
 
 export function getArtworkById(id: string): Artwork | undefined {
-  return artworks.find((a) => a.id === id);
+  const found = artworks.find((a) => a.id === id);
+  if (!found || isArtworkHidden(id)) return undefined;
+  return applyArtworkPatch(found);
 }
