@@ -15,20 +15,20 @@ export function CollectionCard({ collection, index }: CollectionCardProps) {
   return (
     <ScrollReveal delay={Math.min(index * 0.03, 0.18)}>
       <Link to={`/gallery/${collection.slug}`} className="group block touch-manipulation">
-        <div className="relative aspect-[4/5] overflow-hidden bg-ink">
+        <div className="relative aspect-[4/5] overflow-hidden bg-cream-dark">
           <LazyImage
             src={collection.coverImage}
             alt={collection.coverAlt}
             objectFit="contain"
-            wrapperClassName="absolute inset-0 h-full w-full bg-ink"
-            className="p-2 transition-transform duration-700 ease-out sm:p-0 sm:group-hover:scale-[1.03]"
+            wrapperClassName="absolute inset-0 h-full w-full"
+            className="p-1 transition-transform duration-700 ease-out sm:p-2 sm:group-hover:scale-[1.03]"
           />
-          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/80 via-ink/20 to-transparent" />
-          <div className="absolute top-2.5 left-2.5 font-serif text-lg text-cream/35 md:text-xl">
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-cream/95 via-cream/15 to-transparent" />
+          <div className="absolute top-2.5 left-2.5 font-serif text-lg text-ink/15 md:text-xl">
             {String(index + 1).padStart(2, '0')}
           </div>
-          <div className="absolute inset-x-0 bottom-0 p-3 md:p-3.5">
-            <h3 className="font-serif text-sm leading-snug text-cream md:text-base">
+          <div className="absolute inset-x-0 bottom-0 border-t border-ink/8 bg-cream/95 p-3 md:p-3.5">
+            <h3 className="font-serif text-sm leading-snug text-ink md:text-base">
               {name}
             </h3>
           </div>

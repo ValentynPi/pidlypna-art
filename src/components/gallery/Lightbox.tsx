@@ -145,7 +145,7 @@ export function Lightbox({
 
           {/* Image stage */}
           <div
-            className="relative flex min-h-0 flex-[1.4] flex-col bg-ink md:flex-[1.7]"
+            className="relative flex min-h-0 flex-[1.4] flex-col bg-cream-dark md:flex-[1.7]"
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
           >
@@ -379,7 +379,7 @@ export function Lightbox({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="absolute inset-0 z-30 flex cursor-zoom-out items-center justify-center bg-ink p-2 sm:p-4"
+              className="absolute inset-0 z-30 flex cursor-zoom-out items-center justify-center bg-cream p-2 sm:p-4"
               onClick={(e) => {
                 e.stopPropagation();
                 setExpanded(false);

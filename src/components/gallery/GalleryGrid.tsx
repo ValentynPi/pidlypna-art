@@ -43,7 +43,7 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.2) }}
-              className="relative aspect-[4/5] overflow-hidden bg-ink"
+              className="relative aspect-[4/5] overflow-hidden bg-cream-dark"
             >
               <Link
                 to={href}
@@ -53,23 +53,23 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
                   src={artwork.image}
                   alt={artwork.imageAlt}
                   objectFit="contain"
-                  wrapperClassName="absolute inset-0 h-full w-full bg-ink"
-                  className="p-3 sm:p-4"
+                  wrapperClassName="absolute inset-0 h-full w-full"
+                  className="p-1 sm:p-2"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/85 via-transparent to-transparent" />
-                <div className="absolute top-3 left-3 font-serif text-2xl text-cream/25 sm:top-4 sm:left-4 sm:text-3xl sm:text-cream/20">
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-cream/95 via-cream/10 to-transparent" />
+                <div className="absolute top-3 left-3 font-serif text-2xl text-ink/15 sm:top-4 sm:left-4 sm:text-3xl">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 {viewCount > 1 && (
-                  <div className="absolute top-3 right-3 border border-cream/30 bg-ink/70 px-2 py-1 text-[0.6rem] tracking-[0.15em] text-cream/80 uppercase backdrop-blur-sm sm:top-4 sm:right-4">
+                  <div className="absolute top-3 right-3 border border-ink/10 bg-cream/90 px-2 py-1 text-[0.6rem] tracking-[0.15em] text-ink-soft uppercase backdrop-blur-sm sm:top-4 sm:right-4">
                     {viewCount} views
                   </div>
                 )}
-                <div className="absolute right-0 bottom-0 left-0 bg-ink/80 p-4 backdrop-blur-sm sm:p-5">
-                  <p className="font-serif text-lg text-cream sm:text-xl">
+                <div className="absolute right-0 bottom-0 left-0 border-t border-ink/8 bg-cream/95 p-4 backdrop-blur-sm sm:p-5">
+                  <p className="font-serif text-lg text-ink sm:text-xl">
                     {getArtworkTitle(artwork.id, language, artwork.title)}
                   </p>
-                  <p className="mt-1 text-[0.65rem] tracking-wider text-cream/50 uppercase sm:text-xs">
+                  <p className="mt-1 text-[0.65rem] tracking-wider text-ink-soft uppercase sm:text-xs">
                     {listingMedium(artwork, t)}
                     {viewCount > 1 ? ` · ${viewCount} angles` : ''}
                   </p>
