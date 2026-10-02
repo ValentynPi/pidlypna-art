@@ -6,7 +6,9 @@ import { useAdminAuth } from './AdminAuthContext';
 import { useAdminSiteContent } from './AdminSiteContentContext';
 import { uploadRepoImage } from './github';
 import {
+  isCustomArtwork,
   patchFor,
+  removeArtworkFromSite,
   updateArtworkDescription,
   updateArtworkPatch,
   updateArtworkTitle,
@@ -24,7 +26,9 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState('');
 
-  const preview = resolvePublicImage(patch.image ?? artwork.image);
+  const rawImage = patch.image ?? artwork.image;
+  const preview = rawImage ? resolvePublicImage(rawImage) : '';
+  const isCustom = isCustomArtwork(content, artwork.id);
 
   function applyPatch(partial: Parameters<typeof updateArtworkPatch>[2]) {
     setContent((prev) => updateArtworkPatch(prev, artwork.id, partial));
@@ -73,7 +77,9 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="sticky top-0 flex items-center justify-between border-b border-ink/10 bg-cream/95 px-5 py-4 backdrop-blur">
-          <p className="text-[0.65rem] tracking-[0.3em] text-terracotta uppercase">Edit artwork</p>
+          <p className="text-[0.65rem] tracking-[0.3em] text-terracotta uppercase">
+            {isCustom ? 'New artwork' : 'Edit artwork'}
+          </p>
           <button
             type="button"
             onClick={onClose}
@@ -85,8 +91,12 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
         </div>
 
         <div className="px-5 py-5">
-          <div className="aspect-[4/5] overflow-hidden bg-cream-dark">
-            <img src={preview} alt="" className="h-full w-full object-contain" />
+          <div className="flex aspect-[4/5] items-center justify-center overflow-hidden bg-cream-dark">
+            {preview ? (
+              <img src={preview} alt="" className="h-full w-full object-contain" />
+            ) : (
+              <p className="px-4 text-center text-sm text-ink-soft">Upload a photo below</p>
+            )}
           </div>
 
           <div className="mt-5 space-y-4">
@@ -208,6 +218,27 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
             </label>
 
             {message && <p className="text-sm text-ink-soft">{message}</p>}
+
+            <button
+              type="button"
+              onClick={() => {
+                if (
+                  !window.confirm(
+                    'Remove this painting from the website? Publish to make it permanent.',
+                  )
+                ) {
+                  return;
+                }
+                setContent((prev) =>
+                  removeArtworkFromSite(prev, artwork.id, artwork.collectionId),
+                );
+                setDirty(true);
+                onClose();
+              }}
+              className="mt-4 w-full border border-red-200 py-3 text-xs tracking-widest text-red-800 uppercase"
+            >
+              Delete painting
+            </button>
           </div>
         </div>
       </motion.div>

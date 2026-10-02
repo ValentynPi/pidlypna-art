@@ -2,9 +2,12 @@ import { photos } from './images';
 import {
   applyArtworkPatch,
   getArtworkSizeCmFromContent,
+  getCustomArtworksFromContent,
   getGalleryOrder,
+  isArtworkDeleted,
   isArtworkHidden,
 } from './siteContent';
+import { storedToArtwork } from './storedArtwork';
 import type { Artwork, ArtworkImage } from '../types';
 
 export const SHIPPING_NOTE = 'Worldwide shipping available.';
@@ -910,7 +913,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'plain-air-collection-04',
-    title: 'Blossom Path',
+    title: 'Almond in bloom',
     year: 2025,
     dimensions: 'Contact for dimensions',
     materials: 'Acrylic',
@@ -922,10 +925,10 @@ export const artworks: Artwork[] = [
     availability: 'Available',
     description: 'A path through blossoming trees toward distant mountains — spring light in rows.',
     image: photos.plain_air_collection_blossom_path_1,
-    imageAlt: 'Blossom Path — front view',
+    imageAlt: 'Almond in bloom — front view',
     images: [
-      { src: photos.plain_air_collection_blossom_path_2, alt: 'Blossom Path — alternate view' },
-      { src: photos.plain_air_collection_blossom_path_3, alt: 'Blossom Path — alternate view' },
+      { src: photos.plain_air_collection_blossom_path_2, alt: 'Almond in bloom — alternate view' },
+      { src: photos.plain_air_collection_blossom_path_3, alt: 'Almond in bloom — alternate view' },
     ],
     collectionId: 'plain-air-collection',
     featured: true,
@@ -1209,15 +1212,25 @@ function sortArtworksForCollection(list: Artwork[], collectionId: string): Artwo
   });
 }
 
+function catalogArtworks(): Artwork[] {
+  const custom = getCustomArtworksFromContent().map(storedToArtwork);
+  return [...artworks, ...custom];
+}
+
 export function getArtworksByCollection(collectionId: string): Artwork[] {
-  const filtered = artworks
-    .filter((a) => a.collectionId === collectionId && !isArtworkHidden(a.id))
+  const filtered = catalogArtworks()
+    .filter(
+      (a) =>
+        a.collectionId === collectionId &&
+        !isArtworkDeleted(a.id) &&
+        !isArtworkHidden(a.id),
+    )
     .map(applyArtworkPatch);
   return sortArtworksForCollection(filtered, collectionId);
 }
 
 export function getArtworkById(id: string): Artwork | undefined {
-  const found = artworks.find((a) => a.id === id);
-  if (!found || isArtworkHidden(id)) return undefined;
+  const found = catalogArtworks().find((a) => a.id === id);
+  if (!found || isArtworkDeleted(id) || isArtworkHidden(id)) return undefined;
   return applyArtworkPatch(found);
 }

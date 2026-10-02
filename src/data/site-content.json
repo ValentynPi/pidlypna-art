@@ -144,10 +144,11 @@
       "petrykivka-10"
     ]
   },
+  "customArtworks": [],
+  "deletedArtworkIds": [
+    "petrykivka-14"
+  ],
   "artworks": {
-    "petrykivka-14": {
-      "hidden": true
-    },
     "petrykivka-18": {
       "sizeCm": {
         "width": 20,

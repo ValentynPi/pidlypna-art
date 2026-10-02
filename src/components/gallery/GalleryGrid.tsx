@@ -10,7 +10,8 @@ import { getArtworkTitle } from '../../i18n/artworkTitles';
 import { useAdminAuth } from '../../admin/AdminAuthContext';
 import { useAdminSiteContent } from '../../admin/AdminSiteContentContext';
 import { ArtworkEditSheet } from '../../admin/ArtworkEditSheet';
-import { updateGalleryOrder } from '../../admin/artworkEditorUtils';
+import { addArtworkToCollection, updateGalleryOrder } from '../../admin/artworkEditorUtils';
+import { storedToArtwork } from '../../data/storedArtwork';
 import { LazyImage } from '../ui/LazyImage';
 import { Lightbox } from './Lightbox';
 
@@ -25,7 +26,7 @@ export function GalleryGrid({ artworks, collectionId, columns = 3 }: GalleryGrid
   const navigate = useNavigate();
   const { slug, artworkSlug } = useParams<{ slug: string; artworkSlug?: string }>();
   const { token } = useAdminAuth();
-  const { setContent, setDirty } = useAdminSiteContent();
+  const { content, setContent, setDirty } = useAdminSiteContent();
   const [editingArtwork, setEditingArtwork] = useState<Artwork | null>(null);
   const dragId = useRef<string | null>(null);
 
@@ -72,10 +73,25 @@ export function GalleryGrid({ artworks, collectionId, columns = 3 }: GalleryGrid
   return (
     <>
       {canEdit && (
-        <p className="mb-6 text-sm text-ink-soft">
-          Drag works to reorder, or use ↑↓. Tap a painting to preview; use Edit to change titles and
-          photos.
-        </p>
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-sm text-ink-soft">
+            Drag to reorder · Edit titles &amp; photos · Publish when done
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              if (!collectionId) return;
+              const next = addArtworkToCollection(content, collectionId);
+              const stored = next.customArtworks[next.customArtworks.length - 1];
+              setContent(next);
+              setDirty(true);
+              if (stored) setEditingArtwork(storedToArtwork(stored));
+            }}
+            className="rounded border border-terracotta/40 bg-white px-4 py-2 text-[0.65rem] tracking-widest text-terracotta uppercase"
+          >
+            + Add painting
+          </button>
+        </div>
       )}
 
       <div className={`grid ${gridClass} gap-6 md:gap-8`}>
@@ -108,9 +124,9 @@ export function GalleryGrid({ artworks, collectionId, columns = 3 }: GalleryGrid
 
               <Link to={href} className="block touch-manipulation">
                 <div className="aspect-[4/5] overflow-hidden bg-cream-dark">
-                  <LazyImage
-                    src={artwork.image}
-                    alt={artwork.imageAlt}
+                <LazyImage
+                  src={artwork.image || undefined}
+                  alt={artwork.imageAlt}
                     objectFit="contain"
                     plain
                     wrapperClassName="h-full w-full"

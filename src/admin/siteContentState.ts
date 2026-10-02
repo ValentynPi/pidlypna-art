@@ -51,6 +51,8 @@ export function mergeEditorContent(remote: SiteContent): SiteContent {
     },
     galleryOrder: { ...seed.galleryOrder, ...remote.galleryOrder },
     artworks: { ...remote.artworks },
+    customArtworks: remote.customArtworks ?? [],
+    deletedArtworkIds: remote.deletedArtworkIds ?? [],
   };
 }
 

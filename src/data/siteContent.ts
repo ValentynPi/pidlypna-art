@@ -30,6 +30,8 @@ export function mergeSiteContent(partial: Partial<SiteContent>): SiteContent {
     },
     galleryOrder: { ...siteContent.galleryOrder, ...partial.galleryOrder },
     artworks: { ...siteContent.artworks, ...partial.artworks },
+    customArtworks: partial.customArtworks ?? siteContent.customArtworks ?? [],
+    deletedArtworkIds: partial.deletedArtworkIds ?? siteContent.deletedArtworkIds ?? [],
   };
 }
 
@@ -61,6 +63,14 @@ export function applyArtworkPatch(artwork: Artwork): Artwork {
 
 export function isArtworkHidden(artworkId: string): boolean {
   return activeSiteContent().artworks[artworkId]?.hidden === true;
+}
+
+export function isArtworkDeleted(artworkId: string): boolean {
+  return (activeSiteContent().deletedArtworkIds ?? []).includes(artworkId);
+}
+
+export function getCustomArtworksFromContent(): import('./siteContentTypes').StoredArtwork[] {
+  return activeSiteContent().customArtworks ?? [];
 }
 
 export function getGalleryOrder(collectionId: string): string[] | undefined {
@@ -109,6 +119,8 @@ export function normalizeSiteContent(raw: unknown): SiteContent {
     },
     galleryOrder: data.galleryOrder ?? {},
     artworks: data.artworks ?? {},
+    customArtworks: Array.isArray(data.customArtworks) ? data.customArtworks : [],
+    deletedArtworkIds: Array.isArray(data.deletedArtworkIds) ? data.deletedArtworkIds : [],
   };
 }
 

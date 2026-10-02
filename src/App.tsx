@@ -22,6 +22,10 @@ function InspiredByNatureArtworkRedirect() {
   return <Navigate to={`/gallery/inspired-by-places/${artworkSlug ?? ''}`} replace />;
 }
 
+function BlossomPathRedirect() {
+  return <Navigate to="/gallery/plain-air-collection/almond-in-bloom" replace />;
+}
+
 export function App() {
   return (
     <HelmetProvider>
@@ -46,7 +50,11 @@ export function App() {
                     path="gallery/inspired-by-nature/:artworkSlug"
                     element={<InspiredByNatureArtworkRedirect />}
                   />
-                  <Route path="gallery/:slug/:artworkSlug?" element={<GalleryCollectionPage />} />
+                  <Route
+                path="gallery/plain-air-collection/blossom-path"
+                element={<BlossomPathRedirect />}
+              />
+              <Route path="gallery/:slug/:artworkSlug?" element={<GalleryCollectionPage />} />
                   <Route path="workshops" element={<Navigate to="/" replace />} />
                   <Route path="charity" element={<CharityPage />} />
                   <Route path="exhibitions" element={<ExhibitionsPage />} />

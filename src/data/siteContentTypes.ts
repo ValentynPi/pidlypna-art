@@ -1,4 +1,4 @@
-import type { ArtworkAvailability, ArtworkImage } from '../types';
+import type { ArtworkAvailability, ArtworkFraming, ArtworkImage } from '../types';
 import type { Language } from '../i18n/types';
 
 export interface ArtworkSizeCm {
@@ -19,12 +19,34 @@ export interface ArtworkContentPatch {
   hidden?: boolean;
 }
 
+export interface StoredArtwork {
+  id: string;
+  collectionId: string;
+  title: string;
+  year: number;
+  dimensions: string;
+  materials: string;
+  technique: string;
+  surface: string;
+  framing: ArtworkFraming;
+  signed: boolean;
+  certificateOfAuthenticity: boolean;
+  availability: ArtworkAvailability;
+  description: string;
+  image: string;
+  imageAlt: string;
+  images?: ArtworkImage[];
+  featured?: boolean;
+}
+
 export interface SiteContent {
   version: number;
   titles: Record<Language, Record<string, string>>;
   descriptions: Record<Language, Record<string, string>>;
   galleryOrder: Record<string, string[]>;
   artworks: Record<string, ArtworkContentPatch>;
+  customArtworks: StoredArtwork[];
+  deletedArtworkIds: string[];
 }
 
 export const SITE_CONTENT_PATH = 'src/data/site-content.json';
@@ -35,4 +57,6 @@ export const EMPTY_SITE_CONTENT: SiteContent = {
   descriptions: { en: {}, uk: {}, es: {} },
   galleryOrder: {},
   artworks: {},
+  customArtworks: [],
+  deletedArtworkIds: [],
 };
