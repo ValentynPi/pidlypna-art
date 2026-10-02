@@ -49,16 +49,12 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'This Petrykivka painting celebrates the kalyna berry as a living emblem of home. White fruit and leaves bloom against deep burgundy in traditional brushstrokes made contemporary. The work becomes a poetic symbol of memory, devotion, and Ukrainian beauty.',
     'petrykivka-02':
       'This work is an original Petrykivka painting that celebrates a single flower opening against black, edged with orange leaves that catch the light. Classic strokes are placed with contemporary confidence. The composition evokes elegance, focus, and quiet festivity.',
-    'petrykivka-03':
-      'This work is an original Petrykivka painting that celebrates an intimate floral sprig in Ukraine’s colors. The small format feels almost calligraphic — a note written in blossom. The work becomes a poetic contemporary piece of delicacy, heritage, and charm.',
     'petrykivka-04':
       'This work is an original Petrykivka painting that celebrates gold petal strokes among blue leaves and berry trails. Traditional rhythm meets a luminous, contemporary palette. The composition evokes celebration, craft, and the warmth of remembered gardens.',
     'petrykivka-05':
       'This work is an original Petrykivka painting that celebrates spring through teal and burgundy flowers on a white ground. Each petal is placed with the light, airy touch of the tradition. The work becomes a poetic contemporary bloom of freshness, grace, and joy.',
     'petrykivka-06':
       'This Petrykivka painting celebrates a tall climb of red blossoms, green leaves, and blue berries. The narrow format is read slowly, like a path through summer. The composition evokes abundance, craftsmanship, and quiet delight.',
-    'petrykivka-07':
-      'This Petrykivka painting celebrates orange and blue flowers winding upward along a green stem. Classic strokes keep the movement lively and precise. The work becomes a poetic contemporary piece of growth, color, and folk elegance.',
     'petrykivka-08':
       'This Petrykivka painting celebrates the mythical bird rising from a black ground among ornamental florals. Tradition and story meet in a single, vivid form. The composition evokes wonder, heritage, and luminous courage.',
     'petrykivka-09':
@@ -143,16 +139,12 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'Esta pintura Petrykivka celebra la baya de kalyna como emblema vivo del hogar. Fruto blanco y hojas florecen sobre un burdeos profundo con pinceladas tradicionales hechas contemporáneas. La obra se convierte en un símbolo poético de memoria, devoción y belleza ucraniana.',
     'petrykivka-02':
       'Esta obra es una pintura Petrykivka original que celebra una sola flor abriéndose sobre negro, bordeada de hojas naranjas que captan la luz. Los trazos clásicos se colocan con confianza contemporánea. La composición evoca elegancia, foco y festividad silenciosa.',
-    'petrykivka-03':
-      'Esta obra es una pintura Petrykivka original que celebra un ramito floral íntimo en los colores de Ucrania. El formato pequeño se siente casi caligráfico: una nota escrita en flor. La obra se convierte en una pieza contemporánea poética de delicadeza, herencia y encanto.',
     'petrykivka-04':
       'Esta obra es una pintura Petrykivka original que celebra trazos de pétalos dorados entre hojas azules y senderos de bayas. El ritmo tradicional encuentra una paleta luminosa y contemporánea. La composición evoca celebración, oficio y el calor de jardines recordados.',
     'petrykivka-05':
       'Esta obra es una pintura Petrykivka original que celebra la primavera con flores verdeazuladas y burdeos sobre fondo blanco. Cada pétalo se coloca con el toque ligero y aéreo de la tradición. La obra se convierte en una flor contemporánea poética de frescura, gracia y alegría.',
     'petrykivka-06':
       'Esta pintura Petrykivka celebra una alta trepadora de flores rojas, hojas verdes y bayas azules. El formato estrecho se lee despacio, como un camino por el verano. La composición evoca abundancia, maestría y deleite silencioso.',
-    'petrykivka-07':
-      'Esta pintura Petrykivka celebra flores naranjas y azules que ascienden por un tallo verde. Los trazos clásicos mantienen el movimiento vivo y preciso. La obra se convierte en una pieza contemporánea poética de crecimiento, color y elegancia popular.',
     'petrykivka-08':
       'Esta pintura Petrykivka celebra el ave mítica surgiendo de un fondo negro entre florales ornamentales. Tradición e historia se encuentran en una sola forma vivida. La composición evoca asombro, herencia y valor luminoso.',
     'petrykivka-09':
@@ -237,16 +229,12 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'Ця робота оспівує калину як живий символ дому. Білі ягоди й листя квітнуть на глибокому бордовому тлі традиційними мазками, зробленими сучасними. Робота стає поетичним символом пам’яті, відданості й української краси.',
     'petrykivka-02':
       'Ця робота оспівує одну квітку, яка розкривається на чорному тлі, обрамлену помаранчевим листям, що ловить світло. Класичні мазки поставлені з сучасною впевненістю. Композиція викликає відчуття елегантності, зосередженості й тихого свята.',
-    'petrykivka-03':
-      'Ця робота оспівує інтимну квіткову гілочку в кольорах України. Малий формат майже каліграфічний — ніби нотатка, написана цвітом. Робота стає поетичним сучасним твором ніжності, спадщини й чарівності.',
     'petrykivka-04':
       'Ця робота оспівує золоті пелюсткові мазки серед синього листя й ягідних стежок. Традиційний ритм зустрічає світлу сучасну палітру. Композиція викликає відчуття свята, ремесла й тепла згаданих садів.',
     'petrykivka-05':
       'Ця робота оспівує весну через бірюзові й бордові квіти на білому тлі. Кожна пелюстка поставлена легким повітряним дотиком традиції. Робота стає поетичним сучасним цвітінням свіжості, грації й радості.',
     'petrykivka-06':
       'Ця робота оспівує високий підйом червоних квітів, зеленого листя й синіх ягід. Вузький формат читається повільно, мов стежка крізь літо. Композиція викликає відчуття достатку, майстерності й тихої втіхи.',
-    'petrykivka-07':
-      'Ця робота оспівує помаранчеві й сині квіти, які в’ються вгору зеленим стеблом. Класичні мазки тримають рух живим і точним. Робота стає поетичним сучасним твором зростання, кольору й народної елегантності.',
     'petrykivka-08':
       'Ця робота оспівує міфічного птаха, який піднімається з чорного тла серед орнаментальних квітів. Традиція й оповідь зустрічаються в одній яскравій формі. Композиція викликає подив, спадщину й світлу мужність.',
     'petrykivka-09':
