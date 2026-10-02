@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { RouterLink } from './RouterLink';
 import { SectionLabel } from './SectionLabel';
 import { HandLine } from './HandLine';
 
@@ -23,14 +23,14 @@ export function PageHeader({
     <section className={`pt-28 pb-12 sm:pt-32 sm:pb-16 md:pt-40 md:pb-20 ${light ? 'bg-ink text-cream' : ''}`}>
       <div className="mx-auto max-w-7xl px-5 md:px-10 lg:px-16">
         {backTo && (
-          <Link
+          <RouterLink
             to={backTo}
             className={`mb-6 inline-flex min-h-11 items-center text-[0.65rem] tracking-[0.3em] uppercase transition-colors touch-manipulation ${
               light ? 'text-gold hover:text-cream' : 'text-terracotta hover:text-ink'
             }`}
           >
             ← {backLabel}
-          </Link>
+          </RouterLink>
         )}
         <SectionLabel light={light}>{label}</SectionLabel>
         <h1

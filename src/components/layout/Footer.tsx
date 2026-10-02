@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { RouterLink } from '../ui/RouterLink';
 import { social } from '../../data/social';
 import { useLanguage } from '../../i18n/LanguageContext';
 
@@ -66,12 +66,12 @@ export function Footer() {
                   { to: '/about', label: t('nav.about') },
                 ].map((link) => (
                   <li key={link.to}>
-                    <Link
+                    <RouterLink
                       to={link.to}
                       className="inline-flex min-h-11 items-center text-sm text-cream/50 transition-colors hover:text-cream"
                     >
                       {link.label}
-                    </Link>
+                    </RouterLink>
                   </li>
                 ))}
               </ul>
@@ -86,12 +86,12 @@ export function Footer() {
                   { to: '/charity', label: t('nav.charity') },
                 ].map((link) => (
                   <li key={link.to}>
-                    <Link
+                    <RouterLink
                       to={link.to}
                       className="inline-flex min-h-11 items-center text-sm text-cream/50 transition-colors hover:text-cream"
                     >
                       {link.label}
-                    </Link>
+                    </RouterLink>
                   </li>
                 ))}
               </ul>

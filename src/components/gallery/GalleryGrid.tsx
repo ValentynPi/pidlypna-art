@@ -70,7 +70,9 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
         <Lightbox
           artworks={artworks}
           currentIndex={lightboxIndex}
-          onClose={() => navigate(slug ? `/gallery/${slug}` : '/gallery')}
+          onClose={() =>
+            navigate(slug ? `/gallery/${slug}` : '/gallery', { replace: true })
+          }
           onNavigate={(index) => {
             const next = artworks[index];
             if (next) navigate(getArtworkPath(next), { replace: true });

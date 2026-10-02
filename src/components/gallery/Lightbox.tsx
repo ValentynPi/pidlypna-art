@@ -1,5 +1,5 @@
 import { useEffect, useCallback, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { RouterLink } from '../ui/RouterLink';
 import { getArtworkPath } from '../../data/artworkPaths';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Artwork } from '../../types';
@@ -262,13 +262,12 @@ export function Lightbox({
               </h3>
 
               {collection && (
-                <Link
+                <RouterLink
                   to={`/gallery/${collection.slug}`}
-                  onClick={onClose}
                   className="mt-2 inline-block text-xs tracking-[0.2em] text-cream/45 uppercase transition-colors hover:text-gold"
                 >
                   {t(`collections.${collection.id}`)}
-                </Link>
+                </RouterLink>
               )}
 
               <button

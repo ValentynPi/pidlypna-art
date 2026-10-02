@@ -24,6 +24,12 @@ export function getArtworkPath(artwork: Artwork): string {
   return `/gallery/${collectionSlug}/${getArtworkSlug(artwork)}`;
 }
 
+/** True when the URL is an individual artwork (lightbox) route, e.g. /gallery/petrykivka/enchanted-garden */
+export function isArtworkDetailPath(pathname: string): boolean {
+  const normalized = pathname.replace(/\/$/, '') || '/';
+  return /^\/gallery\/[^/]+\/[^/]+$/.test(normalized);
+}
+
 export function getArtworkBySlug(
   collectionSlug: string,
   artworkSlug: string,

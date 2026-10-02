@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { RouterLink } from '../ui/RouterLink';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -53,7 +54,7 @@ export function Navbar() {
           scrolled ? 'py-3 sm:py-4' : ''
         }`}
       >
-        <Link to="/" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
+        <RouterLink to="/" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
           <span
             translate="no"
             className={`notranslate flex h-9 w-9 shrink-0 items-center justify-center border font-serif text-sm transition-colors ${
@@ -71,12 +72,12 @@ export function Navbar() {
           >
             Viktoria Paladios
           </span>
-        </Link>
+        </RouterLink>
 
         <ul className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
             <li key={link.to}>
-              <Link
+              <RouterLink
                 to={link.to}
                 className={`relative px-4 py-2 text-xs tracking-[0.15em] uppercase transition-colors ${
                   isActive(link.to)
@@ -97,14 +98,14 @@ export function Navbar() {
                     }`}
                   />
                 )}
-              </Link>
+              </RouterLink>
             </li>
           ))}
         </ul>
 
         <div className="hidden items-center gap-4 lg:flex">
           <LanguageSwitcher onDark={onDarkHero && !scrolled} />
-          <Link
+          <RouterLink
             to="/gallery"
             className={`border px-5 py-2.5 text-xs font-semibold tracking-[0.15em] uppercase transition-colors ${
               onDarkHero && !scrolled
@@ -113,7 +114,7 @@ export function Navbar() {
             }`}
           >
             {t('nav.viewArt')}
-          </Link>
+          </RouterLink>
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
@@ -161,23 +162,23 @@ export function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.06 }}
                   >
-                    <Link
+                    <RouterLink
                       to={link.to}
                       className={`block min-h-12 py-3 font-serif text-3xl transition-colors touch-manipulation sm:text-4xl ${
                         isActive(link.to) ? 'text-terracotta' : 'text-ink hover:text-terracotta'
                       }`}
                     >
                       {link.label}
-                    </Link>
+                    </RouterLink>
                   </motion.li>
                 ))}
               </ul>
-              <Link
+              <RouterLink
                 to="/gallery"
                 className="mt-8 inline-flex w-full items-center justify-center border border-black/10 bg-white px-5 py-3.5 text-xs font-semibold tracking-[0.15em] text-black uppercase touch-manipulation sm:w-auto"
               >
                 {t('nav.viewArt')}
-              </Link>
+              </RouterLink>
             </div>
             <div className="border-t border-ink/10 px-6 py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:px-10 sm:py-8">
               <p className="text-xs tracking-widest text-ink-soft uppercase">
