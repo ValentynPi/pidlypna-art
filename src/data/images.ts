@@ -163,7 +163,7 @@ export const photos = {
   petrykivka_peonies_in_garden_1: `${base}/petrykivka-peonies-in-garden-1.jpg?v=3`,
   petrykivka_frosty_patterns_1: `${base}/petrykivka-frosty-patterns-1.jpg?v=3`,
   petrykivka_blue_glow_1: `${base}/petrykivka-blue-glow-1.jpg?v=3`,
-  petrykivka_autumn_melody_1: `${base}/petrykivka-autumn-melody-1.jpg?v=3`,
+  petrykivka_autumn_melody_1: `${base}/petrykivka-autumn-melody-1.jpg?v=4`,
   petrykivka_enchanted_garden_1: `${base}/petrykivka-enchanted-garden-1.jpg?v=3`,
   plain_air_collection_snow_peaks_1: `${base}/plain-air-collection-snow-peaks-1.jpg`,
   plain_air_collection_snow_peaks_2: `${base}/plain-air-collection-snow-peaks-2.jpg`,
