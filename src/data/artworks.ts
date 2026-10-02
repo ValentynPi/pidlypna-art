@@ -1072,10 +1072,37 @@ export function getArtworkImages(artwork: Artwork): ArtworkImage[] {
   return extras.length > 0 ? [cover, ...extras] : [cover];
 }
 
+/** Gallery order for Petrykivka (new works featured right after Kalyna Night). */
+const PETRYKIVKA_GALLERY_ORDER = [
+  'petrykivka-01',
+  'petrykivka-11',
+  'petrykivka-12',
+  'petrykivka-13',
+  'petrykivka-14',
+  'petrykivka-15',
+  'petrykivka-02',
+  'petrykivka-04',
+  'petrykivka-05',
+  'petrykivka-06',
+  'petrykivka-08',
+  'petrykivka-09',
+  'petrykivka-10',
+];
+
 export function getArtworksByCollection(collectionId: string): Artwork[] {
-  return artworks
-    .filter((a) => a.collectionId === collectionId)
-    .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+  const filtered = artworks.filter((a) => a.collectionId === collectionId);
+  if (collectionId === 'petrykivka') {
+    const order = new Map<string, number>(
+      PETRYKIVKA_GALLERY_ORDER.map((id, index) => [id, index]),
+    );
+    return filtered.sort((a, b) => {
+      const indexA = order.get(a.id) ?? 999;
+      const indexB = order.get(b.id) ?? 999;
+      if (indexA !== indexB) return indexA - indexB;
+      return a.id.localeCompare(b.id, undefined, { numeric: true });
+    });
+  }
+  return filtered.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
 }
 
 export function getArtworkById(id: string): Artwork | undefined {
