@@ -1,0 +1,6 @@
+materialsDefault:`Canvas (cotton), pine stretcher bars, acrylic paints, textured paste`},charity:{metaTitle:`Charity & Initiatives`,label:`Charity`,ti
+materialsDefault:`Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada`},charity:{metaTitle:`Caridad e iniciativas`,label:`Carida
+materialsDefault:`Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста`},charity:{metaTitle:`Благодійність та ініціативи`,label:`Благ
+materialsMetallic:`Canvas (cotton), pine stretcher bars, acrylic paints, textured paste, gold leaf`,materialsDefault:`Canvas (cotton), pine stretcher bars, acry
+materialsMetallic:`Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada, pan de oro`,materialsDefault:`Lienzo (algodón), bastidor de pino, 
+materialsMetallic:`Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста, поталь`,materialsDefault:`Полотно (бавовна), сосновий підрамник, акрил

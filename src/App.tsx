@@ -11,7 +11,11 @@ import { JourneyPage } from './pages/JourneyPage';
 import { ContactPage } from './pages/ContactPage';
 import { CharityPage } from './pages/CharityPage';
 import { LanguageProvider } from './i18n/LanguageContext';
-import { AdminApp } from './admin/AdminApp';
+import { AdminAuthProvider } from './admin/AdminAuthContext';
+import { AdminSiteContentProvider } from './admin/AdminSiteContentContext';
+import { AdminLoginPage } from './admin/AdminLoginPage';
+import { AdminRedirect } from './admin/AdminRedirect';
+import { AdminEditBar } from './admin/AdminEditBar';
 
 function InspiredByNatureArtworkRedirect() {
   const { artworkSlug } = useParams<{ artworkSlug: string }>();
@@ -22,35 +26,41 @@ export function App() {
   return (
     <HelmetProvider>
       <LanguageProvider>
-        <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
-          <Routes>
-            <Route path="admin/*" element={<AdminApp />} />
-            <Route element={<Layout />}>
-              <Route index element={<HomePage />} />
-              <Route path="about" element={<AboutPage />} />
-              <Route path="gallery" element={<GalleryPage />} />
-              <Route
-                path="gallery/affirmation-collection"
-                element={<Navigate to="/gallery" replace />}
-              />
-              <Route
-                path="gallery/inspired-by-nature"
-                element={<Navigate to="/gallery/inspired-by-places" replace />}
-              />
-              <Route
-                path="gallery/inspired-by-nature/:artworkSlug"
-                element={<InspiredByNatureArtworkRedirect />}
-              />
-              <Route path="gallery/:slug/:artworkSlug?" element={<GalleryCollectionPage />} />
-              <Route path="workshops" element={<Navigate to="/" replace />} />
-              <Route path="charity" element={<CharityPage />} />
-              <Route path="exhibitions" element={<ExhibitionsPage />} />
-              <Route path="press" element={<PressPage />} />
-              <Route path="journey" element={<JourneyPage />} />
-              <Route path="contact" element={<ContactPage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <AdminAuthProvider>
+          <AdminSiteContentProvider>
+            <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+              <Routes>
+                <Route element={<Layout />}>
+                  <Route index element={<HomePage />} />
+                  <Route path="about" element={<AboutPage />} />
+                  <Route path="gallery" element={<GalleryPage />} />
+                  <Route
+                    path="gallery/affirmation-collection"
+                    element={<Navigate to="/gallery" replace />}
+                  />
+                  <Route
+                    path="gallery/inspired-by-nature"
+                    element={<Navigate to="/gallery/inspired-by-places" replace />}
+                  />
+                  <Route
+                    path="gallery/inspired-by-nature/:artworkSlug"
+                    element={<InspiredByNatureArtworkRedirect />}
+                  />
+                  <Route path="gallery/:slug/:artworkSlug?" element={<GalleryCollectionPage />} />
+                  <Route path="workshops" element={<Navigate to="/" replace />} />
+                  <Route path="charity" element={<CharityPage />} />
+                  <Route path="exhibitions" element={<ExhibitionsPage />} />
+                  <Route path="press" element={<PressPage />} />
+                  <Route path="journey" element={<JourneyPage />} />
+                  <Route path="contact" element={<ContactPage />} />
+                  <Route path="admin" element={<AdminRedirect />} />
+                  <Route path="admin/login" element={<AdminLoginPage />} />
+                </Route>
+              </Routes>
+              <AdminEditBar />
+            </BrowserRouter>
+          </AdminSiteContentProvider>
+        </AdminAuthProvider>
       </LanguageProvider>
     </HelmetProvider>
   );

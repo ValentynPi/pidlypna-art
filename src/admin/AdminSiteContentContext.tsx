@@ -7,6 +7,7 @@ import {
   useState,
   type ReactNode,
 } from 'react';
+import { setSiteContentOverride } from '../data/siteContent';
 import type { SiteContent } from '../data/siteContentTypes';
 import { useAdminAuth } from './AdminAuthContext';
 import { fetchRemoteSiteContent, publishSiteContent } from './github';
@@ -67,6 +68,15 @@ export function AdminSiteContentProvider({ children }: { children: ReactNode }) 
   useEffect(() => {
     void reload();
   }, [reload]);
+
+  useEffect(() => {
+    if (!token) {
+      setSiteContentOverride(null);
+      return;
+    }
+    setSiteContentOverride(content);
+    return () => setSiteContentOverride(null);
+  }, [token, content]);
 
   const publish = useCallback(async () => {
     if (!token) throw new Error('Not signed in.');

@@ -1,0 +1,53 @@
+OLD:
+    mediumMetallic: 'Mixed media with metallic leaf on {{surface}}',
+    mediumMixed: 'Mixed media on {{surface}}',
+    mediumAcrylic: 'Professional acrylics on {{surface}}',
+    mediumDefault: 'Original painting on {{surface}}',
+    techniquePetrykivka: 'Traditional Petrykivka brushwork',
+    techniqueFluidInk: 'Fluid ink technique',
+    techniqueHandLettered: 'Hand-lettered mixed media',
+    techniqueImpasto: 'Impasto texture',
+    techniqueTexturedLandscape: 'Textured abstract landscape',
+    surfaceCanvas: 'canvas',
+    surfacePaper: 'paper',
+    surfaceWood: 'wood',
+    surfaceOnCanvas: 'canvas',
+    surfaceOnPaper: 'paper',
+    surfaceOnWood: 'wood',
+    materialsFloralCrown:
+      'Canvas (cotton), pine stretcher, acrylic paints, textured paste, acrylic markers',
+    materialsAlcoholInk: '{{surface}}, alcohol ink',
+    materialsGouachePaper: 'paper, cotton, gouache paints',
+    materialsGouache: 'Canvas (cotton), pine stretcher, gouache paints',
+    materialsMetallic:
+      'Canvas (cotton), pine stretcher, acrylic paints, textured paste, metallic leaf',
+    materialsDefault:
+      'Canvas (cotton), pine stretcher, acrylic paints, textured paste',
+  },
+
+NEW:
+    mediumMetallic: 'Mixed media with gold leaf on {{surface}}',
+    mediumMixed: 'Mixed media on {{surface}}',
+    mediumAcrylic: 'Professional acrylics on {{surface}}',
+    mediumDefault: 'Original painting on {{surface}}',
+    techniquePetrykivka: 'Traditional Petrykivka brushwork',
+    techniqueFluidInk: 'Fluid ink technique',
+    techniqueHandLettered: 'Hand-lettered mixed media',
+    techniqueImpasto: 'Impasto texture',
+    techniqueTexturedLandscape: 'Textured abstract landscape',
+    surfaceCanvas: 'canvas',
+    surfacePaper: 'paper',
+    surfaceWood: 'wood',
+    surfaceOnCanvas: 'canvas',
+    surfaceOnPaper: 'paper',
+    surfaceOnWood: 'wood',
+    materialsFloralCrown:
+      'Canvas (cotton), pine stretcher bars, acrylic paints, textured paste, acrylic markers',
+    materialsAlcoholInk: '{{surface}}, alcohol ink',
+    materialsGouachePaper: 'paper, cotton, gouache paints',
+    materialsGouache: 'Canvas (cotton), pine stretcher bars, gouache paints',
+    materialsMetallic:
+      'Canvas (cotton), pine stretcher bars, acrylic paints, textured paste, gold leaf',
+    materialsDefault:
+      'Canvas (cotton), pine stretcher bars, acrylic paints, textured paste',
+  },

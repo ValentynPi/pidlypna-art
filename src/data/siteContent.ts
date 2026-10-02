@@ -5,6 +5,16 @@ import { EMPTY_SITE_CONTENT } from './siteContentTypes';
 
 export const siteContent = siteContentJson as SiteContent;
 
+let siteContentOverride: SiteContent | null = null;
+
+export function setSiteContentOverride(next: SiteContent | null): void {
+  siteContentOverride = next;
+}
+
+function activeSiteContent(): SiteContent {
+  return siteContentOverride ?? siteContent;
+}
+
 export function mergeSiteContent(partial: Partial<SiteContent>): SiteContent {
   return {
     version: partial.version ?? siteContent.version ?? 1,
@@ -26,7 +36,7 @@ export function resolvePublicImage(path: string): string {
 }
 
 export function applyArtworkPatch(artwork: Artwork): Artwork {
-  const patch = siteContent.artworks[artwork.id];
+  const patch = activeSiteContent().artworks[artwork.id];
   if (!patch) return artwork;
 
   const next: Artwork = { ...artwork };
@@ -45,23 +55,23 @@ export function applyArtworkPatch(artwork: Artwork): Artwork {
 }
 
 export function isArtworkHidden(artworkId: string): boolean {
-  return siteContent.artworks[artworkId]?.hidden === true;
+  return activeSiteContent().artworks[artworkId]?.hidden === true;
 }
 
 export function getGalleryOrder(collectionId: string): string[] | undefined {
-  const order = siteContent.galleryOrder[collectionId];
+  const order = activeSiteContent().galleryOrder[collectionId];
   return order?.length ? order : undefined;
 }
 
 export function getArtworkSizeCmFromContent(artworkId: string): ArtworkSizeCm | undefined {
-  return siteContent.artworks[artworkId]?.sizeCm;
+  return activeSiteContent().artworks[artworkId]?.sizeCm;
 }
 
 export function getTitleFromContent(
   artworkId: string,
   language: keyof SiteContent['titles'],
 ): string | undefined {
-  const value = siteContent.titles[language][artworkId];
+  const value = activeSiteContent().titles[language][artworkId];
   return value?.trim() ? value : undefined;
 }
 

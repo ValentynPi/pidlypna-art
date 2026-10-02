@@ -1,7 +1,9 @@
+import { useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { PageMeta } from '../components/ui/PageMeta';
 import { PageHeader } from '../components/ui/PageHeader';
 import { GalleryGrid } from '../components/gallery/GalleryGrid';
+import { useAdminSiteContent } from '../admin/AdminSiteContentContext';
 import { galleryCollections } from '../data/collections';
 import { getArtworksByCollection } from '../data/artworks';
 import { getArtworkBySlug, getArtworkPath } from '../data/artworkPaths';
@@ -12,8 +14,12 @@ import { getArtworkTitle } from '../i18n/artworkTitles';
 export function GalleryCollectionPage() {
   const { slug, artworkSlug } = useParams<{ slug: string; artworkSlug?: string }>();
   const { t, language } = useLanguage();
+  const { content } = useAdminSiteContent();
   const collection = galleryCollections.find((c) => c.slug === slug);
-  const artworks = collection ? getArtworksByCollection(collection.id) : [];
+  const artworks = useMemo(
+    () => (collection ? getArtworksByCollection(collection.id) : []),
+    [collection, content],
+  );
   const activeArtwork =
     collection && artworkSlug ? getArtworkBySlug(collection.slug, artworkSlug) : undefined;
 
@@ -66,8 +72,8 @@ export function GalleryCollectionPage() {
         backLabel={t('gallery.back')}
       />
 
-      <section className="mx-auto max-w-[90rem] px-4 pb-20 sm:px-6 md:px-10 lg:px-16">
-        <GalleryGrid artworks={artworks} />
+      <section className="mx-auto max-w-[90rem] px-4 pb-28 sm:px-6 md:px-10 lg:px-16 sm:pb-32">
+        <GalleryGrid artworks={artworks} collectionId={collection.id} />
       </section>
     </>
   );
