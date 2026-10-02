@@ -1,4 +1,4 @@
-export const CONTACT_EMAIL = 'hello@viktoria-p.art';
+export const CONTACT_EMAIL = 'info@viktoria-p.art';
 
 export const social = {
   instagram: {
