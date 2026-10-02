@@ -24,9 +24,9 @@ function readStoredLanguage(): Language {
   const stored = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
   if (stored === 'en' || stored === 'es' || stored === 'uk') return stored;
   const nav = window.navigator.language.toLowerCase();
-  if (nav.startsWith('uk')) return 'uk';
   if (nav.startsWith('es')) return 'es';
-  return 'en';
+  if (nav.startsWith('en')) return 'en';
+  return 'uk';
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

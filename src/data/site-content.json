@@ -1,14 +1,127 @@
 {
-  "version": 1,
+  "version": 2,
   "titles": {
-    "en": {},
-    "uk": {},
-    "es": {}
+    "en": {
+      "petrykivka-01": "Kalyna Night",
+      "petrykivka-02": "Blue Bloom",
+      "petrykivka-04": "Golden Petals",
+      "petrykivka-05": "Teal Peonies",
+      "petrykivka-06": "Red Berry Vine",
+      "petrykivka-08": "Firebird",
+      "petrykivka-09": "Flame Sprig",
+      "petrykivka-10": "Spiral Garden",
+      "petrykivka-11": "Coral Garden",
+      "petrykivka-12": "White Bloom",
+      "petrykivka-13": "Crimson Roses",
+      "petrykivka-14": "Bird in Bloom",
+      "petrykivka-15": "Azure Ornament",
+      "petrykivka-16": "Peonies in the garden",
+      "petrykivka-17": "Frosty patterns",
+      "petrykivka-18": "Blue glow",
+      "petrykivka-19": "Autumn melody",
+      "petrykivka-20": "Enchanted garden"
+    },
+    "uk": {
+      "petrykivka-01": "Калина вночі",
+      "petrykivka-02": "Блакитний розквіт",
+      "petrykivka-04": "Золоті пелюстки",
+      "petrykivka-05": "Бірюзові півонії",
+      "petrykivka-06": "Червона ягідна лоза",
+      "petrykivka-08": "Жар-птиця",
+      "petrykivka-10": "Спіральний сад",
+      "petrykivka-11": "Кораловий сад",
+      "petrykivka-12": "Білий цвіт",
+      "petrykivka-13": "Малинові троянди",
+      "petrykivka-14": "Птах у цвіту",
+      "petrykivka-15": "Лазуровий орнамент",
+      "petrykivka-16": "Півонії в саду",
+      "petrykivka-17": "Морозні візерунки",
+      "petrykivka-18": "Блакитне сяйво",
+      "petrykivka-19": "Осіння мелодія",
+      "petrykivka-20": "Зачарований сад"
+    },
+    "es": {
+      "petrykivka-01": "Noche de kalyna",
+      "petrykivka-02": "Floración azul",
+      "petrykivka-04": "Pétalos dorados",
+      "petrykivka-05": "Peonías verdeazules",
+      "petrykivka-06": "Enredadera de bayas rojas",
+      "petrykivka-08": "Pájaro de fuego",
+      "petrykivka-09": "Ramita de llama",
+      "petrykivka-10": "Jardín en espiral",
+      "petrykivka-11": "Jardín coral",
+      "petrykivka-12": "Flor blanca",
+      "petrykivka-13": "Rosas carmesí",
+      "petrykivka-14": "Pájaro en flor",
+      "petrykivka-15": "Adorno añil",
+      "petrykivka-16": "Peonías en el jardín",
+      "petrykivka-17": "Diseños escarchados",
+      "petrykivka-18": "Resplandor azul",
+      "petrykivka-19": "Melodía de otoño",
+      "petrykivka-20": "Jardín encantado"
+    }
   },
   "descriptions": {
-    "en": {},
-    "uk": {},
-    "es": {}
+    "en": {
+      "petrykivka-01": "This Petrykivka painting celebrates the kalyna berry as a living emblem of home. White fruit and leaves bloom against deep burgundy in traditional brushstrokes made contemporary. The work becomes a poetic symbol of memory, devotion, and Ukrainian beauty.",
+      "petrykivka-02": "This work is an original Petrykivka painting that celebrates a single flower opening against black, edged with orange leaves that catch the light. Classic strokes are placed with contemporary confidence. The composition evokes elegance, focus, and quiet festivity.",
+      "petrykivka-04": "This work is an original Petrykivka painting that celebrates gold petal strokes among blue leaves and berry trails. Traditional rhythm meets a luminous, contemporary palette. The composition evokes celebration, craft, and the warmth of remembered gardens.",
+      "petrykivka-05": "This work is an original Petrykivka painting that celebrates spring through teal and burgundy flowers on a white ground. Each petal is placed with the light, airy touch of the tradition. The work becomes a poetic contemporary bloom of freshness, grace, and joy.",
+      "petrykivka-06": "This Petrykivka painting celebrates a tall climb of red blossoms, green leaves, and blue berries. The narrow format is read slowly, like a path through summer. The composition evokes abundance, craftsmanship, and quiet delight.",
+      "petrykivka-08": "This Petrykivka painting celebrates the mythical bird rising from a black ground among ornamental florals. Tradition and story meet in a single, vivid form. The composition evokes wonder, heritage, and luminous courage.",
+      "petrykivka-09": "This Petrykivka painting celebrates three flame-red flowers along a vertical stem with berries and leaves. The tall format feels like a bookmark of summer. The work becomes a poetic contemporary piece of warmth, rhythm, and craft.",
+      "petrykivka-10": "This Petrykivka painting celebrates floral motifs turning outward on a round canvas. A quieter, almost monochrome palette lets the rhythm of the strokes lead. The composition evokes meditation, balance, and refined folk beauty.",
+      "petrykivka-11": "This Petrykivka painting celebrates coral dahlias opening on a warm brown ground, with dark berries and deep green leaves. White highlights catch the light the way petals do in late sun. The composition evokes abundance, craft, and the warmth of a summer garden.",
+      "petrykivka-12": "This Petrykivka painting celebrates white blossoms traced with red veins on a dark brown ground. Berry clusters and curling leaves keep the rhythm of the tradition. The work becomes a poetic contemporary piece of contrast, tenderness, and folk elegance.",
+      "petrykivka-13": "This Petrykivka painting celebrates crimson and rose flowers blooming against black, with sage leaves and small buds. Classic strokes glow on the dark ground. The composition evokes festivity, depth, and quiet richness.",
+      "petrykivka-14": "This Petrykivka painting celebrates a russet songbird among cobalt flowers and berry clusters on a warm ground. The long tail carries the eye through the ornament. The work becomes a poetic contemporary piece of story, color, and living tradition.",
+      "petrykivka-15": "This Petrykivka painting celebrates a blue bouquet opening on a honey-colored ground, edged in white and ringed with dark berries. The central bloom holds the composition like a jewel. The work evokes calm, craft, and the cool light of folk ornament.",
+      "petrykivka-16": "This Petrykivka painting celebrates pink and rose peonies blooming on a black ground, with teal leaves and curling stems. Classic strokes keep the bouquet lush and balanced. The composition evokes summer abundance, craft, and the quiet joy of a garden in full bloom.",
+      "petrykivka-17": "This Petrykivka painting celebrates white blossoms and red-veined leaves on a dark brown ground, drawn with the fine rhythm of frost on glass. Berry clusters and curling tendrils fill the space with delicate movement. The composition evokes winter light, craft, and the lace-like beauty of folk ornament.",
+      "petrykivka-18": "This Petrykivka painting celebrates a symmetrical blue bouquet glowing on a warm tan ground, edged in white with dark berry accents. Classic strokes keep the ornament balanced and luminous. The composition evokes calm, craft, and the cool radiance of folk color.",
+      "petrykivka-19": "This Petrykivka painting celebrates coral flowers and purple berries blooming on a warm tan ground in balanced ornament. White highlights catch the petals like late autumn light. The composition evokes harvest warmth, craft, and the gentle rhythm of an autumn melody.",
+      "petrykivka-20": "This Petrykivka painting celebrates a russet bird resting among cobalt flowers and berry trails on a warm tan ground. Classic strokes weave bird and blossom into one enchanted scene. The composition evokes story, color, and the quiet magic of a folk garden."
+    },
+    "uk": {
+      "petrykivka-01": "Ця робота оспівує калину як живий символ дому. Білі ягоди й листя квітнуть на глибокому бордовому тлі традиційними мазками, зробленими сучасними. Робота стає поетичним символом пам’яті, відданості й української краси.",
+      "petrykivka-02": "Ця робота оспівує одну квітку, яка розкривається на чорному тлі, обрамлену помаранчевим листям, що ловить світло. Класичні мазки поставлені з сучасною впевненістю. Композиція викликає відчуття елегантності, зосередженості й тихого свята.",
+      "petrykivka-04": "Ця робота оспівує золоті пелюсткові мазки серед синього листя й ягідних стежок. Традиційний ритм зустрічає світлу сучасну палітру. Композиція викликає відчуття свята, ремесла й тепла згаданих садів.",
+      "petrykivka-05": "Ця робота оспівує весну через бірюзові й бордові квіти на білому тлі. Кожна пелюстка поставлена легким повітряним дотиком традиції. Робота стає поетичним сучасним цвітінням свіжості, грації й радості.",
+      "petrykivka-06": "Ця робота оспівує високий підйом червоних квітів, зеленого листя й синіх ягід. Вузький формат читається повільно, мов стежка крізь літо. Композиція викликає відчуття достатку, майстерності й тихої втіхи.",
+      "petrykivka-08": "Ця робота оспівує міфічного птаха, який піднімається з чорного тла серед орнаментальних квітів. Традиція й оповідь зустрічаються в одній яскравій формі. Композиція викликає подив, спадщину й світлу мужність.",
+      "petrykivka-09": "Ця робота оспівує три полум’яно-червоні квіти вздовж вертикального стебла з ягодами й листям. Високий формат відчувається як закладка літа. Робота стає поетичним сучасним твором тепла, ритму й ремесла.",
+      "petrykivka-10": "Ця робота оспівує квіткові мотиви, які розходяться на круглому полотні. Спокійніша, майже монохромна палітра дає вести ритму мазків. Композиція викликає медитацію, рівновагу й витончену народну красу.",
+      "petrykivka-11": "Ця робота оспівує коралові жоржини, що розкриваються на теплому коричневому тлі, з темними ягодами й глибоким зеленим листям. Білі відблиски ловлять світло так, як пелюстки в пізньому сонці. Композиція викликає відчуття достатку, ремесла й тепла літнього саду.",
+      "petrykivka-12": "Ця робота оспівує білі квіти з червоними прожилками на темно-коричневому тлі. Грона ягід і закручене листя тримають ритм традиції. Робота стає поетичним сучасним твором контрасту, ніжності й народної елегантності.",
+      "petrykivka-13": "Ця робота оспівує малинові й рожеві квіти, що квітнуть на чорному тлі, із шавлієвим листям і маленькими бутонами. Класичні мазки світяться на темному ґрунті. Композиція викликає відчуття свята, глибини й тихого багатства.",
+      "petrykivka-14": "Ця робота оспівує рудого співучого птаха серед кобальтових квітів і ягідних грон на теплому тлі. Довгий хвіст веде погляд крізь орнамент. Робота стає поетичним сучасним твором оповіді, кольору й живої традиції.",
+      "petrykivka-15": "Ця робота оспівує синій букет, що розкривається на медовому тлі, з білими краями пелюсток і темними ягодами. Центральна квітка тримає композицію, мов коштовність. Робота викликає спокій, ремесло й прохолодне світло народного орнаменту.",
+      "petrykivka-16": "Ця робота оспівує рожеві й малинові півонії, що квітнуть на чорному тлі, з бірюзовим листям і закрученими стеблами. Класичні мазки тримають букет пишним і збалансованим. Композиція викликає літній достаток, ремесло й тиху радість саду в розквіті.",
+      "petrykivka-17": "Ця робота оспівує білі квіти й листя з червоними прожилками на темно-коричневому тлі, написані тонким ритмом, мов мороз на склі. Грона ягід і закручені завитки наповнюють простір делікатним рухом. Композиція викликає зимове світло, ремесло й мереживну красу народного орнаменту.",
+      "petrykivka-18": "Ця робота оспівує симетричний синій букет, що сяє на теплому медовому тлі, з білими краями пелюсток і темними ягідними акцентами. Класичні мазки тримають орнамент збалансованим і світлим. Композиція викликає спокій, ремесло й прохолодне сяйво народного кольору.",
+      "petrykivka-19": "Ця робота оспівує коралові квіти й фіолетові ягоди на теплому медовому тлі в збалансованому орнаменті. Білі відблиски ловлять пелюстки, мов пізньоосіннє світло. Композиція викликає тепло жнив, ремесло й м’який ритм осінньої мелодії.",
+      "petrykivka-20": "Ця робота оспівує рудого птаха серед кобальтових квітів і ягідних стежок на теплому медовому тлі. Класичні мазки переплітають птаха й цвіт у зачаровану сцену. Композиція викликає оповідь, колір і тиху магію народного саду."
+    },
+    "es": {
+      "petrykivka-01": "Esta pintura Petrykivka celebra la baya de kalyna como emblema vivo del hogar. Fruto blanco y hojas florecen sobre un burdeos profundo con pinceladas tradicionales hechas contemporáneas. La obra se convierte en un símbolo poético de memoria, devoción y belleza ucraniana.",
+      "petrykivka-02": "Esta obra es una pintura Petrykivka original que celebra una sola flor abriéndose sobre negro, bordeada de hojas naranjas que captan la luz. Los trazos clásicos se colocan con confianza contemporánea. La composición evoca elegancia, foco y festividad silenciosa.",
+      "petrykivka-04": "Esta obra es una pintura Petrykivka original que celebra trazos de pétalos dorados entre hojas azules y senderos de bayas. El ritmo tradicional encuentra una paleta luminosa y contemporánea. La composición evoca celebración, oficio y el calor de jardines recordados.",
+      "petrykivka-05": "Esta obra es una pintura Petrykivka original que celebra la primavera con flores verdeazuladas y burdeos sobre fondo blanco. Cada pétalo se coloca con el toque ligero y aéreo de la tradición. La obra se convierte en una flor contemporánea poética de frescura, gracia y alegría.",
+      "petrykivka-06": "Esta pintura Petrykivka celebra una alta trepadora de flores rojas, hojas verdes y bayas azules. El formato estrecho se lee despacio, como un camino por el verano. La composición evoca abundancia, maestría y deleite silencioso.",
+      "petrykivka-08": "Esta pintura Petrykivka celebra el ave mítica surgiendo de un fondo negro entre florales ornamentales. Tradición e historia se encuentran en una sola forma vivida. La composición evoca asombro, herencia y valor luminoso.",
+      "petrykivka-09": "Esta pintura Petrykivka celebra tres flores rojo fuego a lo largo de un tallo vertical con bayas y hojas. El formato alto se siente como un marcador del verano. La obra se convierte en una pieza contemporánea poética de calor, ritmo y oficio.",
+      "petrykivka-10": "Esta pintura Petrykivka celebra motivos florales abriéndose hacia fuera en un lienzo redondo. Una paleta más quieta, casi monocroma, deja que el ritmo de los trazos lidere. La composición evoca meditación, equilibrio y belleza popular refinada.",
+      "petrykivka-11": "Esta pintura Petrykivka celebra dalias coral que se abren sobre un fondo marrón cálido, con bayas oscuras y hojas verde profundo. Los blancos captan la luz como los pétalos al sol de la tarde. La composición evoca abundancia, oficio y el calor de un jardín de verano.",
+      "petrykivka-12": "Esta pintura Petrykivka celebra flores blancas trazadas con venas rojas sobre un fondo marrón oscuro. Racimos de bayas y hojas que se enroscan guardan el ritmo de la tradición. La obra se convierte en una pieza contemporánea poética de contraste, ternura y elegancia popular.",
+      "petrykivka-13": "Esta pintura Petrykivka celebra flores carmesí y rosa que florecen sobre negro, con hojas salvia y pequeños capullos. Los trazos clásicos brillan sobre el fondo oscuro. La composición evoca festividad, profundidad y riqueza serena.",
+      "petrykivka-14": "Esta pintura Petrykivka celebra un pájaro rufo entre flores cobalto y racimos de bayas sobre un fondo cálido. La larga cola lleva la mirada a través del ornamento. La obra se convierte en una pieza contemporánea poética de relato, color y tradición viva.",
+      "petrykivka-15": "Esta pintura Petrykivka celebra un ramo azul que se abre sobre un fondo color miel, bordeado de blanco y rodeado de bayas oscuras. La flor central sostiene la composición como una joya. La obra evoca calma, oficio y la luz fresca del ornamento popular.",
+      "petrykivka-16": "Esta pintura Petrykivka celebra peonías rosadas y rojizas que florecen sobre fondo negro, con hojas verdeazuladas y tallos que se curvan. Los trazos clásicos mantienen el ramo abundante y equilibrado. La composición evoca la abundancia del verano, el oficio y la alegría silenciosa de un jardín en plena floración.",
+      "petrykivka-17": "Esta pintura Petrykivka celebra flores blancas y hojas con venas rojas sobre fondo marrón oscuro, trazadas con el ritmo fino de la escarcha sobre el cristal. Racimos de bayas y volutas llenan el espacio con movimiento delicado. La composición evoca la luz invernal, el oficio y la belleza encajada del ornamento popular.",
+      "petrykivka-18": "Esta pintura Petrykivka celebra un ramo azul simétrico que resplandece sobre fondo marrón cálido, bordeado de blanco con acentos de bayas oscuras. Los trazos clásicos mantienen el ornamento equilibrado y luminoso. La composición evoca calma, oficio y el resplandor fresco del color popular.",
+      "petrykivka-19": "Esta pintura Petrykivka celebra flores coral y bayas púrpuras que florecen sobre fondo marrón cálido en un ornamento equilibrado. Los blancos captan los pétalos como la luz tardía del otoño. La composición evoca la calidez de la cosecha, el oficio y el ritmo suave de una melodía otoñal.",
+      "petrykivka-20": "Esta pintura Petrykivka celebra un pájaro rufo posado entre flores cobalto y senderos de bayas sobre fondo marrón cálido. Los trazos clásicos entrelazan ave y flor en una escena encantada. La composición evoca relato, color y la magia silenciosa de un jardín popular."
+    }
   },
   "galleryOrder": {
     "petrykivka": [
@@ -16,7 +129,6 @@
       "petrykivka-11",
       "petrykivka-12",
       "petrykivka-13",
-      "petrykivka-14",
       "petrykivka-15",
       "petrykivka-16",
       "petrykivka-17",
@@ -32,5 +144,49 @@
       "petrykivka-10"
     ]
   },
-  "artworks": {}
+  "artworks": {
+    "petrykivka-14": {
+      "hidden": true
+    },
+    "petrykivka-18": {
+      "sizeCm": {
+        "width": 20,
+        "height": 20
+      },
+      "image": "/images/petrykivka-blue-glow-1.jpg?v=3"
+    },
+    "petrykivka-19": {
+      "sizeCm": {
+        "width": 20,
+        "height": 20
+      },
+      "image": "/images/petrykivka-autumn-melody-1.jpg?v=3"
+    },
+    "petrykivka-20": {
+      "sizeCm": {
+        "width": 30,
+        "height": 30
+      },
+      "image": "/images/petrykivka-enchanted-garden-1.jpg?v=3"
+    },
+    "petrykivka-16": {
+      "image": "/images/petrykivka-peonies-in-garden-1.jpg?v=3"
+    },
+    "petrykivka-17": {
+      "image": "/images/petrykivka-frosty-patterns-1.jpg?v=3"
+    },
+    "petrykivka-02": {
+      "image": "/images/petrykivka-blue-bloom-1.jpg?v=3",
+      "images": [
+        {
+          "src": "/images/petrykivka-blue-bloom-2.jpg?v=3",
+          "alt": "Blue Bloom — alternate view"
+        },
+        {
+          "src": "/images/petrykivka-blue-bloom-3.jpg?v=3",
+          "alt": "Blue Bloom — alternate view"
+        }
+      ]
+    }
+  }
 }
