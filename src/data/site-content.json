@@ -153,6 +153,7 @@
         "width": 20,
         "height": 20
       },
+      "dimensions": "20 × 20 cm",
       "image": "/images/petrykivka-blue-glow-1.jpg?v=3"
     },
     "petrykivka-19": {
@@ -160,6 +161,7 @@
         "width": 20,
         "height": 20
       },
+      "dimensions": "20 × 20 cm",
       "image": "/images/petrykivka-autumn-melody-1.jpg?v=3"
     },
     "petrykivka-20": {
@@ -170,6 +172,11 @@
       "image": "/images/petrykivka-enchanted-garden-1.jpg?v=3"
     },
     "petrykivka-16": {
+      "sizeCm": {
+        "width": 24,
+        "height": 30
+      },
+      "dimensions": "24 × 30 cm",
       "image": "/images/petrykivka-peonies-in-garden-1.jpg?v=3"
     },
     "petrykivka-17": {
