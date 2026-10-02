@@ -2,6 +2,7 @@ import { artworks } from '../data/artworks';
 import { galleryCollections } from '../data/collections';
 import { cloneSiteContent, normalizeSiteContent } from '../data/siteContent';
 import type { SiteContent } from '../data/siteContentTypes';
+import { artworkDescriptions } from '../i18n/artworkDescriptions';
 import { artworkTitles } from '../i18n/artworkTitles';
 import type { Artwork } from '../types';
 
@@ -10,6 +11,9 @@ export function buildInitialSiteContent(): SiteContent {
   for (const lang of ['en', 'uk', 'es'] as const) {
     for (const [id, title] of Object.entries(artworkTitles[lang])) {
       if (!base.titles[lang][id]) base.titles[lang][id] = title;
+    }
+    for (const [id, description] of Object.entries(artworkDescriptions[lang])) {
+      if (!base.descriptions[lang][id]) base.descriptions[lang][id] = description;
     }
   }
   for (const collection of galleryCollections) {
@@ -39,6 +43,11 @@ export function mergeEditorContent(remote: SiteContent): SiteContent {
       en: { ...seed.titles.en, ...remote.titles.en },
       uk: { ...seed.titles.uk, ...remote.titles.uk },
       es: { ...seed.titles.es, ...remote.titles.es },
+    },
+    descriptions: {
+      en: { ...seed.descriptions.en, ...remote.descriptions.en },
+      uk: { ...seed.descriptions.uk, ...remote.descriptions.uk },
+      es: { ...seed.descriptions.es, ...remote.descriptions.es },
     },
     galleryOrder: { ...seed.galleryOrder, ...remote.galleryOrder },
     artworks: { ...remote.artworks },

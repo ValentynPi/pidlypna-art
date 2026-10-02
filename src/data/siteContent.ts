@@ -23,6 +23,11 @@ export function mergeSiteContent(partial: Partial<SiteContent>): SiteContent {
       uk: { ...siteContent.titles.uk, ...partial.titles?.uk },
       es: { ...siteContent.titles.es, ...partial.titles?.es },
     },
+    descriptions: {
+      en: { ...siteContent.descriptions.en, ...partial.descriptions?.en },
+      uk: { ...siteContent.descriptions.uk, ...partial.descriptions?.uk },
+      es: { ...siteContent.descriptions.es, ...partial.descriptions?.es },
+    },
     galleryOrder: { ...siteContent.galleryOrder, ...partial.galleryOrder },
     artworks: { ...siteContent.artworks, ...partial.artworks },
   };
@@ -75,6 +80,14 @@ export function getTitleFromContent(
   return value?.trim() ? value : undefined;
 }
 
+export function getDescriptionFromContent(
+  artworkId: string,
+  language: keyof SiteContent['descriptions'],
+): string | undefined {
+  const value = activeSiteContent().descriptions[language][artworkId];
+  return value?.trim() ? value : undefined;
+}
+
 export function cloneSiteContent(): SiteContent {
   return structuredClone(siteContent);
 }
@@ -88,6 +101,11 @@ export function normalizeSiteContent(raw: unknown): SiteContent {
       en: data.titles?.en ?? {},
       uk: data.titles?.uk ?? {},
       es: data.titles?.es ?? {},
+    },
+    descriptions: {
+      en: data.descriptions?.en ?? {},
+      uk: data.descriptions?.uk ?? {},
+      es: data.descriptions?.es ?? {},
     },
     galleryOrder: data.galleryOrder ?? {},
     artworks: data.artworks ?? {},

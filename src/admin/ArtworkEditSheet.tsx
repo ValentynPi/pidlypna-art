@@ -5,7 +5,12 @@ import { resolvePublicImage } from '../data/siteContent';
 import { useAdminAuth } from './AdminAuthContext';
 import { useAdminSiteContent } from './AdminSiteContentContext';
 import { uploadRepoImage } from './github';
-import { patchFor, updateArtworkPatch, updateArtworkTitle } from './artworkEditorUtils';
+import {
+  patchFor,
+  updateArtworkDescription,
+  updateArtworkPatch,
+  updateArtworkTitle,
+} from './artworkEditorUtils';
 
 interface ArtworkEditSheetProps {
   artwork: Artwork;
@@ -28,6 +33,11 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
 
   function applyTitle(lang: 'en' | 'uk' | 'es', value: string) {
     setContent((prev) => updateArtworkTitle(prev, artwork.id, lang, value));
+    setDirty(true);
+  }
+
+  function applyDescription(lang: 'en' | 'uk' | 'es', value: string) {
+    setContent((prev) => updateArtworkDescription(prev, artwork.id, lang, value));
     setDirty(true);
   }
 
@@ -89,6 +99,20 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
                   value={content.titles[lang][artwork.id] ?? ''}
                   onChange={(e) => applyTitle(lang, e.target.value)}
                   className="mt-1.5 w-full border-b border-ink/15 bg-transparent py-2 font-serif text-xl text-ink outline-none focus:border-terracotta"
+                />
+              </label>
+            ))}
+
+            {(['uk', 'en', 'es'] as const).map((lang) => (
+              <label key={`desc-${lang}`} className="block">
+                <span className="text-[0.65rem] tracking-[0.25em] text-ink-soft uppercase">
+                  Description · {lang}
+                </span>
+                <textarea
+                  rows={5}
+                  value={content.descriptions[lang][artwork.id] ?? ''}
+                  onChange={(e) => applyDescription(lang, e.target.value)}
+                  className="mt-1.5 w-full resize-y rounded border border-ink/10 bg-white/60 px-3 py-2 text-sm leading-relaxed text-ink outline-none focus:border-terracotta"
                 />
               </label>
             ))}

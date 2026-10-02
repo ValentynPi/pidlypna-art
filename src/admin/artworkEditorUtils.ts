@@ -47,3 +47,18 @@ export function updateArtworkTitle(
     },
   };
 }
+
+export function updateArtworkDescription(
+  content: SiteContent,
+  id: string,
+  lang: 'en' | 'uk' | 'es',
+  value: string,
+): SiteContent {
+  return {
+    ...content,
+    descriptions: {
+      ...content.descriptions,
+      [lang]: { ...content.descriptions[lang], [id]: value },
+    },
+  };
+}

@@ -1,4 +1,5 @@
 import type { Language } from './types';
+import { getDescriptionFromContent } from '../data/siteContent';
 
 /** Artwork lightbox descriptions by language. Falls back to English. */
 export const artworkDescriptions: Record<Language, Record<string, string>> = {
@@ -310,6 +311,7 @@ export function getArtworkDescription(
   fallback = '',
 ): string {
   return (
+    getDescriptionFromContent(artworkId, language) ??
     artworkDescriptions[language][artworkId] ??
     artworkDescriptions.en[artworkId] ??
     fallback

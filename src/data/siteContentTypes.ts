@@ -22,6 +22,7 @@ export interface ArtworkContentPatch {
 export interface SiteContent {
   version: number;
   titles: Record<Language, Record<string, string>>;
+  descriptions: Record<Language, Record<string, string>>;
   galleryOrder: Record<string, string[]>;
   artworks: Record<string, ArtworkContentPatch>;
 }
@@ -31,6 +32,7 @@ export const SITE_CONTENT_PATH = 'src/data/site-content.json';
 export const EMPTY_SITE_CONTENT: SiteContent = {
   version: 1,
   titles: { en: {}, uk: {}, es: {} },
+  descriptions: { en: {}, uk: {}, es: {} },
   galleryOrder: {},
   artworks: {},
 };
