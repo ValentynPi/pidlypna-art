@@ -82,12 +82,6 @@ export function ContactSection() {
       href: social.tiktok.href,
       external: true,
     },
-    {
-      label: t('contact.whatsapp'),
-      value: t('contact.whatsappValue'),
-      href: 'https://wa.me/34000000000',
-      external: true,
-    },
   ];
 
   return (

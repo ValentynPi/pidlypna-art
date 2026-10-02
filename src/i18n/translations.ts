@@ -124,7 +124,7 @@ const en: TranslationTree = {
   contact: {
     metaTitle: 'Contact',
     metaDesc:
-      'Contact Viktoria Paladios — contemporary artist based in Castellón, Spain. Email, Instagram, YouTube, TikTok, Facebook, WhatsApp.',
+      'Contact Viktoria Paladios — contemporary artist based in Castellón, Spain. Email, Instagram, YouTube, TikTok, Facebook.',
     label: 'Get in Touch',
     title: "Let's connect",
     intro:
@@ -139,8 +139,6 @@ const en: TranslationTree = {
     tiktokValue: 'Short studio videos',
     facebook: 'Facebook',
     facebookValue: 'Community page',
-    whatsapp: 'WhatsApp',
-    whatsappValue: 'Send a message',
     name: 'Name',
     message: 'Message',
     send: 'Send Message',
@@ -447,7 +445,7 @@ const es: TranslationTree = {
   contact: {
     metaTitle: 'Contacto',
     metaDesc:
-      'Contacta con Viktoria Paladios — artista contemporánea en Castellón, España. Email, Instagram, YouTube, TikTok, Facebook, WhatsApp.',
+      'Contacta con Viktoria Paladios — artista contemporánea en Castellón, España. Email, Instagram, YouTube, TikTok, Facebook.',
     label: 'Contacto',
     title: 'Hablemos',
     intro:
@@ -462,8 +460,6 @@ const es: TranslationTree = {
     tiktokValue: 'Vídeos cortos del taller',
     facebook: 'Facebook',
     facebookValue: 'Página de la comunidad',
-    whatsapp: 'WhatsApp',
-    whatsappValue: 'Enviar un mensaje',
     name: 'Nombre',
     message: 'Mensaje',
     send: 'Enviar mensaje',
@@ -770,7 +766,7 @@ const uk: TranslationTree = {
   contact: {
     metaTitle: 'Контакти',
     metaDesc:
-      'Зв’язок із Вікторією Паладіос — сучасна художниця в Кастельйоні, Іспанія. Email, Instagram, YouTube, TikTok, Facebook, WhatsApp.',
+      'Зв’язок із Вікторією Паладіос — сучасна художниця в Кастельйоні, Іспанія. Email, Instagram, YouTube, TikTok, Facebook.',
     label: "Зв'язатися",
     title: 'Давайте познайомимося',
     intro:
@@ -785,8 +781,6 @@ const uk: TranslationTree = {
     tiktokValue: 'Короткі відео з майстерні',
     facebook: 'Facebook',
     facebookValue: 'Сторінка спільноти',
-    whatsapp: 'WhatsApp',
-    whatsappValue: 'Надіслати повідомлення',
     name: "Ім'я",
     message: 'Повідомлення',
     send: 'Надіслати',
