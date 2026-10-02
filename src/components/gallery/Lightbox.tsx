@@ -172,6 +172,7 @@ export function Lightbox({
                   src={activeView.src}
                   alt={activeView.alt}
                   objectFit="contain"
+                  plain
                   className="max-h-[62svh] w-auto md:max-h-[94vh]"
                   wrapperClassName="flex h-full w-full items-center justify-center bg-transparent"
                 />

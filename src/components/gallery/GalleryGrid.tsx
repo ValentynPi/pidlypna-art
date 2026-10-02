@@ -1,5 +1,4 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import type { Artwork } from '../../types';
 import { getArtworkImages } from '../../data/artworks';
 import { getArtworkPath, getArtworkSlug } from '../../data/artworkPaths';
@@ -32,50 +31,37 @@ export function GalleryGrid({ artworks, columns = 3 }: GalleryGridProps) {
 
   return (
     <>
-      <div className={`grid ${gridClass} gap-3 md:gap-4`}>
-        {artworks.map((artwork, index) => {
+      <div className={`grid ${gridClass} gap-6 md:gap-8`}>
+        {artworks.map((artwork) => {
           const viewCount = getArtworkImages(artwork).length;
           const href = getArtworkPath(artwork);
+          const title = getArtworkTitle(artwork.id, language, artwork.title);
           return (
-            <motion.div
+            <Link
               key={artwork.id}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.2) }}
-              className="relative aspect-[4/5] overflow-hidden bg-cream-dark"
+              to={href}
+              className="group block touch-manipulation text-left"
             >
-              <Link
-                to={href}
-                className="group absolute inset-0 cursor-pointer text-left touch-manipulation"
-              >
+              <div className="aspect-[4/5] overflow-hidden bg-cream-dark">
                 <LazyImage
                   src={artwork.image}
                   alt={artwork.imageAlt}
                   objectFit="contain"
-                  wrapperClassName="absolute inset-0 h-full w-full"
-                  className="p-1 sm:p-2"
+                  plain
+                  wrapperClassName="h-full w-full"
+                  className="h-full w-full"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-cream/95 via-cream/10 to-transparent" />
-                <div className="absolute top-3 left-3 font-serif text-2xl text-ink/15 sm:top-4 sm:left-4 sm:text-3xl">
-                  {String(index + 1).padStart(2, '0')}
-                </div>
-                {viewCount > 1 && (
-                  <div className="absolute top-3 right-3 border border-ink/10 bg-cream/90 px-2 py-1 text-[0.6rem] tracking-[0.15em] text-ink-soft uppercase backdrop-blur-sm sm:top-4 sm:right-4">
-                    {viewCount} views
-                  </div>
-                )}
-                <div className="absolute right-0 bottom-0 left-0 border-t border-ink/8 bg-cream/95 p-4 backdrop-blur-sm sm:p-5">
-                  <p className="font-serif text-lg text-ink sm:text-xl">
-                    {getArtworkTitle(artwork.id, language, artwork.title)}
-                  </p>
-                  <p className="mt-1 text-[0.65rem] tracking-wider text-ink-soft uppercase sm:text-xs">
-                    {listingMedium(artwork, t)}
-                    {viewCount > 1 ? ` · ${viewCount} angles` : ''}
-                  </p>
-                </div>
-              </Link>
-            </motion.div>
+              </div>
+              <div className="mt-3">
+                <p className="font-serif text-lg text-ink group-hover:text-terracotta md:text-xl">
+                  {title}
+                </p>
+                <p className="mt-1 text-[0.65rem] tracking-wider text-ink-soft uppercase sm:text-xs">
+                  {listingMedium(artwork, t)}
+                  {viewCount > 1 ? ` · ${viewCount} angles` : ''}
+                </p>
+              </div>
+            </Link>
           );
         })}
       </div>
