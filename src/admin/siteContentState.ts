@@ -37,7 +37,7 @@ export function parseSiteContentJson(json: string): SiteContent {
 
 export function mergeEditorContent(remote: SiteContent): SiteContent {
   const seed = buildInitialSiteContent();
-  return {
+  const merged: SiteContent = {
     version: remote.version ?? 1,
     titles: {
       en: { ...seed.titles.en, ...remote.titles.en },
@@ -54,6 +54,24 @@ export function mergeEditorContent(remote: SiteContent): SiteContent {
     customArtworks: remote.customArtworks ?? [],
     deletedArtworkIds: remote.deletedArtworkIds ?? [],
   };
+  return prepareSiteContentForPublish(merged);
+}
+
+/** Normalize content before save so deleted works never reappear from gallery order. */
+export function prepareSiteContentForPublish(content: SiteContent): SiteContent {
+  const deleted = new Set(content.deletedArtworkIds ?? []);
+  const galleryOrder: SiteContent['galleryOrder'] = {};
+  for (const [collectionId, ids] of Object.entries(content.galleryOrder ?? {})) {
+    galleryOrder[collectionId] = (ids ?? []).filter((id) => !deleted.has(id));
+  }
+  const customArtworks = (content.customArtworks ?? []).filter((a) => !deleted.has(a.id));
+  const deletedArtworkIds = [...deleted];
+  return {
+    ...content,
+    galleryOrder,
+    customArtworks,
+    deletedArtworkIds,
+  };
 }
 
 export function orderedArtworksForCollection(
@@ -66,7 +84,9 @@ export function orderedArtworksForCollection(
   );
   const list: Artwork[] = [];
   const seen = new Set<string>();
+  const deleted = new Set(content.deletedArtworkIds ?? []);
   for (const id of order) {
+    if (deleted.has(id)) continue;
     const art = byId.get(id);
     if (art) {
       list.push(art);
@@ -74,7 +94,7 @@ export function orderedArtworksForCollection(
     }
   }
   for (const art of byId.values()) {
-    if (!seen.has(art.id)) list.push(art);
+    if (!seen.has(art.id) && !deleted.has(art.id)) list.push(art);
   }
   return list;
 }

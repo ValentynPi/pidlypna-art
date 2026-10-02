@@ -15,6 +15,7 @@ import {
   buildInitialSiteContent,
   mergeEditorContent,
   parseSiteContentJson,
+  prepareSiteContentForPublish,
   serializeSiteContent,
 } from './siteContentState';
 
@@ -27,7 +28,7 @@ interface AdminSiteContentContextValue {
   dirty: boolean;
   setDirty: (dirty: boolean) => void;
   reload: () => Promise<void>;
-  publish: () => Promise<void>;
+  publish: (override?: SiteContent) => Promise<void>;
   lastSavedAt: Date | null;
   error: string | null;
 }
@@ -78,25 +79,31 @@ export function AdminSiteContentProvider({ children }: { children: ReactNode }) 
     return () => setSiteContentOverride(null);
   }, [token, content]);
 
-  const publish = useCallback(async () => {
-    if (!token) throw new Error('Not signed in.');
-    setSaving(true);
-    setError(null);
-    try {
-      const json = serializeSiteContent(content);
-      await publishSiteContent(json, token, remoteSha);
-      setLastSavedAt(new Date());
-      setDirty(false);
-      const remote = await fetchRemoteSiteContent(token);
-      setRemoteSha(remote.sha);
-    } catch (err) {
-      const message = err instanceof Error ? err.message : 'Publish failed.';
-      setError(message);
-      throw err;
-    } finally {
-      setSaving(false);
-    }
-  }, [token, content, remoteSha]);
+  const publish = useCallback(
+    async (override?: SiteContent) => {
+      if (!token) throw new Error('Not signed in.');
+      setSaving(true);
+      setError(null);
+      try {
+        const payload = prepareSiteContentForPublish(override ?? content);
+        if (override) {
+          setContent(payload);
+        }
+        const json = serializeSiteContent(payload);
+        const newSha = await publishSiteContent(json, token, remoteSha);
+        setLastSavedAt(new Date());
+        setDirty(false);
+        setRemoteSha(newSha || undefined);
+      } catch (err) {
+        const message = err instanceof Error ? err.message : 'Publish failed.';
+        setError(message);
+        throw err;
+      } finally {
+        setSaving(false);
+      }
+    },
+    [token, content, remoteSha],
+  );
 
   const value = useMemo(
     () => ({

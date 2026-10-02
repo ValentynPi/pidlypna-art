@@ -21,7 +21,7 @@ interface ArtworkEditSheetProps {
 
 export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
   const { token } = useAdminAuth();
-  const { content, setContent, setDirty } = useAdminSiteContent();
+  const { content, setContent, setDirty, publish, saving } = useAdminSiteContent();
   const patch = patchFor(content.artworks, artwork.id);
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState('');
@@ -221,23 +221,38 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
 
             <button
               type="button"
+              disabled={saving}
               onClick={() => {
-                if (
-                  !window.confirm(
-                    'Remove this painting from the website? Publish to make it permanent.',
-                  )
-                ) {
-                  return;
-                }
-                setContent((prev) =>
-                  removeArtworkFromSite(prev, artwork.id, artwork.collectionId),
-                );
-                setDirty(true);
-                onClose();
+                void (async () => {
+                  if (
+                    !window.confirm(
+                      'Remove this painting from the live website? It may take a few minutes to update everywhere.',
+                    )
+                  ) {
+                    return;
+                  }
+                  setMessage('Removing and saving…');
+                  const next = removeArtworkFromSite(
+                    content,
+                    artwork.id,
+                    artwork.collectionId,
+                  );
+                  setDirty(true);
+                  try {
+                    await publish(next);
+                    setMessage('');
+                    onClose();
+                  } catch {
+                    setContent(next);
+                    setMessage(
+                      'Removed here, but saving failed. Tap Publish at the bottom of the page.',
+                    );
+                  }
+                })();
               }}
-              className="mt-4 w-full border border-red-200 py-3 text-xs tracking-widest text-red-800 uppercase"
+              className="mt-4 w-full border border-red-200 py-3 text-xs tracking-widest text-red-800 uppercase disabled:opacity-45"
             >
-              Delete painting
+              {saving ? 'Saving…' : 'Delete painting'}
             </button>
           </div>
         </div>

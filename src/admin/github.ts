@@ -118,12 +118,30 @@ export async function publishSiteContent(
   json: string,
   token: string,
   sha?: string,
-): Promise<void> {
-  await writeRepoFile(
-    SITE_CONTENT_PATH,
-    json,
-    token,
-    'Update site content from admin',
-    sha,
-  );
+): Promise<string> {
+  try {
+    await writeRepoFile(
+      SITE_CONTENT_PATH,
+      json,
+      token,
+      'Update site content from admin',
+      sha,
+    );
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    if (sha && (message.includes('409') || message.toLowerCase().includes('sha'))) {
+      const fresh = await readRepoFile(SITE_CONTENT_PATH, token);
+      await writeRepoFile(
+        SITE_CONTENT_PATH,
+        json,
+        token,
+        'Update site content from admin',
+        fresh?.sha,
+      );
+    } else {
+      throw err;
+    }
+  }
+  const after = await readRepoFile(SITE_CONTENT_PATH, token);
+  return after?.sha ?? '';
 }

@@ -75,7 +75,7 @@ export function GalleryGrid({ artworks, collectionId, columns = 3 }: GalleryGrid
       {canEdit && (
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-ink-soft">
-            Drag to reorder · Edit titles &amp; photos · Publish when done
+            Drag to reorder · Edit titles &amp; photos · Publish saves other edits · Delete saves immediately
           </p>
           <button
             type="button"
