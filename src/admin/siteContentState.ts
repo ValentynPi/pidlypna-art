@@ -1,5 +1,6 @@
 import { artworks } from '../data/artworks';
 import { galleryCollections } from '../data/collections';
+import { enrichCustomArtworksForSave } from './artworkEditorUtils';
 import { cloneSiteContent, normalizeSiteContent } from '../data/siteContent';
 import type { SiteContent } from '../data/siteContentTypes';
 import { artworkDescriptions } from '../i18n/artworkDescriptions';
@@ -59,15 +60,16 @@ export function mergeEditorContent(remote: SiteContent): SiteContent {
 
 /** Normalize content before save so deleted works never reappear from gallery order. */
 export function prepareSiteContentForPublish(content: SiteContent): SiteContent {
-  const deleted = new Set(content.deletedArtworkIds ?? []);
+  const enriched = enrichCustomArtworksForSave(content);
+  const deleted = new Set(enriched.deletedArtworkIds ?? []);
   const galleryOrder: SiteContent['galleryOrder'] = {};
-  for (const [collectionId, ids] of Object.entries(content.galleryOrder ?? {})) {
+  for (const [collectionId, ids] of Object.entries(enriched.galleryOrder ?? {})) {
     galleryOrder[collectionId] = (ids ?? []).filter((id) => !deleted.has(id));
   }
-  const customArtworks = (content.customArtworks ?? []).filter((a) => !deleted.has(a.id));
+  const customArtworks = (enriched.customArtworks ?? []).filter((a) => !deleted.has(a.id));
   const deletedArtworkIds = [...deleted];
   return {
-    ...content,
+    ...enriched,
     galleryOrder,
     customArtworks,
     deletedArtworkIds,

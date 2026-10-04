@@ -22,6 +22,7 @@ interface ArtworkEditSheetProps {
 export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
   const { token } = useAdminAuth();
   const { content, setContent, setDirty, publish, saving } = useAdminSiteContent();
+  const [savingToSite, setSavingToSite] = useState(false);
   const patch = patchFor(content.artworks, artwork.id);
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState('');
@@ -52,11 +53,33 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
     try {
       const path = await uploadRepoImage(file, token);
       applyPatch({ image: path });
-      setMessage('Photo uploaded — tap Publish when you are ready.');
+      setMessage('Photo uploaded — tap Save to website when ready.');
     } catch (err) {
       setMessage(err instanceof Error ? err.message : 'Upload failed.');
     } finally {
       setUploading(false);
+    }
+  }
+
+  async function onSaveToWebsite() {
+    if (!token) return;
+    const hasPhoto = Boolean(preview?.trim());
+    if (isCustom && !hasPhoto) {
+      setMessage('Upload a photo before saving to the website.');
+      return;
+    }
+    setSavingToSite(true);
+    setMessage('Saving to live website…');
+    try {
+      await publish(content);
+      setMessage('Saved — the live site updates in a few minutes.');
+      if (isCustom) {
+        setTimeout(() => onClose(), 1200);
+      }
+    } catch (err) {
+      setMessage(err instanceof Error ? err.message : 'Could not save. Try Publish at the bottom.');
+    } finally {
+      setSavingToSite(false);
     }
   }
 
@@ -221,7 +244,16 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
 
             <button
               type="button"
-              disabled={saving}
+              disabled={saving || savingToSite || uploading}
+              onClick={() => void onSaveToWebsite()}
+              className="mt-2 w-full bg-terracotta py-3 text-xs font-semibold tracking-widest text-white uppercase disabled:opacity-45"
+            >
+              {savingToSite || saving ? 'Saving…' : 'Save to website'}
+            </button>
+
+            <button
+              type="button"
+              disabled={saving || savingToSite}
               onClick={() => {
                 void (async () => {
                   if (

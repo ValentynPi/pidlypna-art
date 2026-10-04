@@ -107,6 +107,14 @@ export function isCustomArtwork(content: SiteContent, id: string): boolean {
   return (content.customArtworks ?? []).some((a) => a.id === id);
 }
 
+/** Merge CMS patches into customArtworks before writing site-content.json. */
+export function enrichCustomArtworksForSave(content: SiteContent): SiteContent {
+  const customArtworks = (content.customArtworks ?? []).map((stored) =>
+    syncStoredArtwork(stored, patchFor(content.artworks, stored.id), content.titles.en[stored.id]),
+  );
+  return { ...content, customArtworks };
+}
+
 export function addArtworkToCollection(content: SiteContent, collectionId: string): SiteContent {
   const id = nextArtworkId(
     collectionId,

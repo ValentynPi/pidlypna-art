@@ -14,8 +14,14 @@ export function slugifyTitle(title: string): string {
     .replace(/^-+|-+$/g, '');
 }
 
+const GENERIC_SLUG_TITLES = new Set(['new artwork', 'new painting', 'untitled']);
+
 export function getArtworkSlug(artwork: Artwork): string {
-  return slugifyTitle(artwork.title) || artwork.id;
+  const slug = slugifyTitle(artwork.title);
+  if (!slug || GENERIC_SLUG_TITLES.has(artwork.title.trim().toLowerCase())) {
+    return artwork.id;
+  }
+  return slug;
 }
 
 export function getArtworkPath(artwork: Artwork): string {

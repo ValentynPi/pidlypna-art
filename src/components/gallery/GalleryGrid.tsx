@@ -74,8 +74,10 @@ export function GalleryGrid({ artworks, collectionId, columns = 3 }: GalleryGrid
     <>
       {canEdit && (
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-          <p className="text-sm text-ink-soft">
-            Drag to reorder · Edit titles &amp; photos · Publish saves other edits · Delete saves immediately
+          <p className="max-w-xl text-sm text-ink-soft">
+            <strong className="font-normal text-ink">Add:</strong> + Add painting → upload photo → titles →{' '}
+            <strong className="font-normal text-ink">Save to website</strong>. Reorder with drag or ↑↓. Delete
+            saves immediately.
           </p>
           <button
             type="button"
@@ -87,7 +89,7 @@ export function GalleryGrid({ artworks, collectionId, columns = 3 }: GalleryGrid
               setDirty(true);
               if (stored) setEditingArtwork(storedToArtwork(stored));
             }}
-            className="rounded border border-terracotta/40 bg-white px-4 py-2 text-[0.65rem] tracking-widest text-terracotta uppercase"
+            className="shrink-0 rounded bg-terracotta px-5 py-2.5 text-[0.65rem] font-semibold tracking-widest text-white uppercase shadow-sm"
           >
             + Add painting
           </button>
