@@ -6,6 +6,8 @@ import { useAdminAuth } from './AdminAuthContext';
 import { useAdminSiteContent } from './AdminSiteContentContext';
 import { uploadRepoImage } from './github';
 import {
+  buildPhotoPatch,
+  getArtworkPhotosForEditor,
   isCustomArtwork,
   patchFor,
   removeArtworkFromSite,
@@ -27,8 +29,14 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState('');
 
-  const rawImage = patch.image ?? artwork.image;
-  const preview = rawImage ? resolvePublicImage(rawImage) : '';
+  const photoSet = getArtworkPhotosForEditor(artwork, patch);
+  const allPhotos = photoSet.cover
+    ? [
+        { src: photoSet.cover, alt: patch.imageAlt ?? artwork.imageAlt },
+        ...photoSet.extras,
+      ]
+    : photoSet.extras;
+  const preview = photoSet.cover ? resolvePublicImage(photoSet.cover) : '';
   const isCustom = isCustomArtwork(content, artwork.id);
 
   function applyPatch(partial: Parameters<typeof updateArtworkPatch>[2]) {
@@ -46,14 +54,26 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
     setDirty(true);
   }
 
-  async function onUpload(file: File) {
-    if (!token) return;
+  function applyPhotos(cover: string, extras: typeof photoSet.extras) {
+    applyPatch(buildPhotoPatch(cover, extras));
+  }
+
+  async function onUploadFiles(fileList: FileList | null) {
+    if (!token || !fileList?.length) return;
     setUploading(true);
     setMessage('');
     try {
-      const path = await uploadRepoImage(file, token);
-      applyPatch({ image: path });
-      setMessage('Photo uploaded — tap Save to website when ready.');
+      let { cover, extras } = getArtworkPhotosForEditor(artwork, patchFor(content.artworks, artwork.id));
+      for (const file of Array.from(fileList)) {
+        const path = await uploadRepoImage(file, token);
+        if (!cover) {
+          cover = path;
+        } else {
+          extras = [...extras, { src: path, alt: artwork.imageAlt || 'Detail' }];
+        }
+      }
+      applyPhotos(cover, extras);
+      setMessage('Photos uploaded — tap Save to website when ready.');
     } catch (err) {
       setMessage(err instanceof Error ? err.message : 'Upload failed.');
     } finally {
@@ -61,9 +81,35 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
     }
   }
 
+  function setCoverPhoto(index: number) {
+    if (index <= 0 || index >= allPhotos.length) return;
+    const nextCover = allPhotos[index]!;
+    const nextExtras = allPhotos
+      .filter((_, i) => i !== index)
+      .map((p) => ({ src: p.src, alt: p.alt }));
+    applyPhotos(nextCover.src, nextExtras);
+  }
+
+  function removePhoto(index: number) {
+    if (index < 0 || index >= allPhotos.length) return;
+    if (allPhotos.length === 1) {
+      applyPhotos('', []);
+      return;
+    }
+    if (index === 0) {
+      const rest = allPhotos.slice(1).map((p) => ({ src: p.src, alt: p.alt }));
+      applyPhotos(rest[0]?.src ?? '', rest.slice(1));
+      return;
+    }
+    applyPhotos(
+      photoSet.cover,
+      photoSet.extras.filter((_, i) => i !== index - 1),
+    );
+  }
+
   async function onSaveToWebsite() {
     if (!token) return;
-    const hasPhoto = Boolean(preview?.trim());
+    const hasPhoto = allPhotos.some((p) => p.src.trim());
     if (isCustom && !hasPhoto) {
       setMessage('Upload a photo before saving to the website.');
       return;
@@ -150,30 +196,67 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
               </label>
             ))}
 
-            <label className="block">
+            <div className="block">
               <span className="text-[0.65rem] tracking-[0.25em] text-ink-soft uppercase">
-                Photo path
+                Photos ({allPhotos.length}) · first is gallery cover
               </span>
-              <input
-                value={patch.image ?? ''}
-                placeholder="/images/your-photo.jpg"
-                onChange={(e) => applyPatch({ image: e.target.value || undefined })}
-                className="mt-1.5 w-full border-b border-ink/15 bg-transparent py-2 font-mono text-xs text-ink outline-none focus:border-terracotta"
-              />
-            </label>
+              {allPhotos.length > 0 ? (
+                <ul className="mt-3 space-y-3">
+                  {allPhotos.map((photo, index) => (
+                    <li
+                      key={`${photo.src}-${index}`}
+                      className="flex gap-3 rounded border border-ink/10 bg-white/50 p-2"
+                    >
+                      <img
+                        src={resolvePublicImage(photo.src)}
+                        alt=""
+                        className="h-20 w-16 shrink-0 object-contain bg-cream-dark"
+                      />
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate font-mono text-[0.65rem] text-ink-soft">{photo.src}</p>
+                        <p className="mt-1 text-xs text-ink">
+                          {index === 0 ? 'Cover (grid)' : `Angle ${index + 1}`}
+                        </p>
+                        <div className="mt-2 flex flex-wrap gap-2">
+                          {index > 0 && (
+                            <button
+                              type="button"
+                              onClick={() => setCoverPhoto(index)}
+                              className="rounded border border-ink/15 px-2 py-1 text-[0.6rem] tracking-wider uppercase"
+                            >
+                              Set cover
+                            </button>
+                          )}
+                          <button
+                            type="button"
+                            onClick={() => removePhoto(index)}
+                            className="rounded border border-red-200 px-2 py-1 text-[0.6rem] tracking-wider text-red-800 uppercase"
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-2 text-sm text-ink-soft">No photos yet — upload below.</p>
+              )}
+            </div>
 
             <label className="block">
               <span className="text-[0.65rem] tracking-[0.25em] text-ink-soft uppercase">
-                Replace photo
+                Add photos
               </span>
               <input
                 type="file"
                 accept="image/*"
+                multiple
                 disabled={uploading}
                 className="mt-2 block w-full text-sm text-ink-soft file:mr-3 file:rounded file:border file:border-ink/15 file:bg-white file:px-3 file:py-1.5 file:text-xs file:tracking-wider file:uppercase"
                 onChange={(e) => {
-                  const file = e.target.files?.[0];
-                  if (file) void onUpload(file);
+                  void onUploadFiles(e.target.files);
+                  e.target.value = '';
                 }}
               />
             </label>

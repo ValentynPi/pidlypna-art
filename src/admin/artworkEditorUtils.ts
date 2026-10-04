@@ -1,6 +1,64 @@
 import { artworks } from '../data/artworks';
 import type { ArtworkContentPatch, SiteContent, StoredArtwork } from '../data/siteContentTypes';
 import { defaultStoredArtwork, nextArtworkId } from '../data/storedArtwork';
+import type { Artwork, ArtworkImage } from '../types';
+
+/** Store paths like `/images/foo.jpg` in site-content.json. */
+export function toStorageImagePath(src: string): string {
+  if (!src) return '';
+  const withoutQuery = src.split('?')[0] ?? src;
+  if (withoutQuery.startsWith('/images/')) return withoutQuery;
+  try {
+    const parsed = new URL(withoutQuery, 'https://viktoria-p.art');
+    const path = parsed.pathname;
+    if (path.includes('/images/')) {
+      return path.slice(path.indexOf('/images/'));
+    }
+    return path;
+  } catch {
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+    if (base && withoutQuery.startsWith(base)) {
+      return withoutQuery.slice(base.length) || withoutQuery;
+    }
+    return withoutQuery;
+  }
+}
+
+export interface EditorPhotoSet {
+  cover: string;
+  extras: ArtworkImage[];
+}
+
+export function getArtworkPhotosForEditor(
+  artwork: Artwork,
+  patch: ArtworkContentPatch,
+): EditorPhotoSet {
+  const cover = toStorageImagePath(patch.image ?? artwork.image);
+  let extras: ArtworkImage[];
+  if (patch.images !== undefined) {
+    extras = patch.images.map((img) => ({
+      src: toStorageImagePath(img.src),
+      alt: img.alt,
+    }));
+  } else {
+    extras = (artwork.images ?? []).map((img) => ({
+      src: toStorageImagePath(img.src),
+      alt: img.alt,
+    }));
+  }
+  extras = extras.filter((img) => img.src && img.src !== cover);
+  return { cover, extras };
+}
+
+export function buildPhotoPatch(cover: string, extras: ArtworkImage[]): Partial<ArtworkContentPatch> {
+  const normalizedExtras = extras
+    .map((img) => ({ src: toStorageImagePath(img.src), alt: img.alt.trim() || 'Detail' }))
+    .filter((img) => img.src && img.src !== cover);
+  return {
+    image: cover || undefined,
+    images: normalizedExtras.length > 0 ? normalizedExtras : [],
+  };
+}
 
 export function patchFor(
   artworks: Record<string, ArtworkContentPatch>,
@@ -28,7 +86,7 @@ function syncStoredArtwork(
   const next = { ...stored };
   if (patch.image !== undefined) next.image = patch.image;
   if (patch.imageAlt) next.imageAlt = patch.imageAlt;
-  if (patch.images) next.images = patch.images;
+  if (patch.images !== undefined) next.images = patch.images;
   if (patch.dimensions) next.dimensions = patch.dimensions;
   if (patch.availability) next.availability = patch.availability;
   if (patch.title) next.title = patch.title;

@@ -50,7 +50,7 @@ export function applyArtworkPatch(artwork: Artwork): Artwork {
   if (patch.title) next.title = patch.title;
   if (patch.image) next.image = resolvePublicImage(patch.image);
   if (patch.imageAlt) next.imageAlt = patch.imageAlt;
-  if (patch.images) {
+  if (patch.images !== undefined) {
     next.images = patch.images.map((img) => ({
       src: resolvePublicImage(img.src),
       alt: img.alt,
