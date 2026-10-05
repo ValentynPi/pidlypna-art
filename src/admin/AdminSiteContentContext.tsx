@@ -4,8 +4,11 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
+  type Dispatch,
   type ReactNode,
+  type SetStateAction,
 } from 'react';
 import { setSiteContentOverride } from '../data/siteContent';
 import type { SiteContent } from '../data/siteContentTypes';
@@ -29,6 +32,7 @@ interface AdminSiteContentContextValue {
   setDirty: (dirty: boolean) => void;
   reload: () => Promise<void>;
   publish: (override?: SiteContent) => Promise<void>;
+  getContentSnapshot: () => SiteContent;
   lastSavedAt: Date | null;
   error: string | null;
 }
@@ -37,7 +41,19 @@ const AdminSiteContentContext = createContext<AdminSiteContentContextValue | nul
 
 export function AdminSiteContentProvider({ children }: { children: ReactNode }) {
   const { token } = useAdminAuth();
-  const [content, setContent] = useState<SiteContent>(() => buildInitialSiteContent());
+  const [content, setContentState] = useState<SiteContent>(() => buildInitialSiteContent());
+  const contentRef = useRef(content);
+  contentRef.current = content;
+
+  const setContent = useCallback((action: SetStateAction<SiteContent>) => {
+    setContentState((prev) => {
+      const next = typeof action === 'function' ? action(prev) : action;
+      contentRef.current = next;
+      return next;
+    });
+  }, []) as Dispatch<SetStateAction<SiteContent>>;
+
+  const getContentSnapshot = useCallback(() => contentRef.current, []);
   const [remoteSha, setRemoteSha] = useState<string | undefined>();
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -85,15 +101,16 @@ export function AdminSiteContentProvider({ children }: { children: ReactNode }) 
       setSaving(true);
       setError(null);
       try {
-        const payload = prepareSiteContentForPublish(override ?? content);
-        if (override) {
-          setContent(payload);
-        }
+        const payload = prepareSiteContentForPublish(override ?? contentRef.current);
+        setContent(payload);
         const json = serializeSiteContent(payload);
         const newSha = await publishSiteContent(json, token, remoteSha);
         setLastSavedAt(new Date());
         setDirty(false);
         setRemoteSha(newSha || undefined);
+        const remote = await fetchRemoteSiteContent(token);
+        setContent(mergeEditorContent(parseSiteContentJson(remote.json)));
+        setRemoteSha(remote.sha);
       } catch (err) {
         const message = err instanceof Error ? err.message : 'Publish failed.';
         setError(message);
@@ -102,7 +119,7 @@ export function AdminSiteContentProvider({ children }: { children: ReactNode }) 
         setSaving(false);
       }
     },
-    [token, content, remoteSha],
+    [token, remoteSha, setContent],
   );
 
   const value = useMemo(
@@ -116,6 +133,7 @@ export function AdminSiteContentProvider({ children }: { children: ReactNode }) 
       setDirty,
       reload,
       publish,
+      getContentSnapshot,
       lastSavedAt,
       error,
     }),
@@ -127,6 +145,7 @@ export function AdminSiteContentProvider({ children }: { children: ReactNode }) 
       dirty,
       reload,
       publish,
+      getContentSnapshot,
       lastSavedAt,
       error,
     ],

@@ -167,9 +167,15 @@ export function isCustomArtwork(content: SiteContent, id: string): boolean {
 
 /** Merge CMS patches into customArtworks before writing site-content.json. */
 export function enrichCustomArtworksForSave(content: SiteContent): SiteContent {
-  const customArtworks = (content.customArtworks ?? []).map((stored) =>
-    syncStoredArtwork(stored, patchFor(content.artworks, stored.id), content.titles.en[stored.id]),
-  );
+  const customArtworks = (content.customArtworks ?? []).map((stored) => {
+    const synced = syncStoredArtwork(
+      stored,
+      patchFor(content.artworks, stored.id),
+      content.titles.en[stored.id],
+    );
+    const description = content.descriptions.en[stored.id]?.trim();
+    return description ? { ...synced, description } : synced;
+  });
   return { ...content, customArtworks };
 }
 

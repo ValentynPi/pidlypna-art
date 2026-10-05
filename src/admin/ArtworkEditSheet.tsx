@@ -23,7 +23,8 @@ interface ArtworkEditSheetProps {
 
 export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
   const { token } = useAdminAuth();
-  const { content, setContent, setDirty, publish, saving } = useAdminSiteContent();
+  const { content, setContent, setDirty, publish, getContentSnapshot, saving } =
+    useAdminSiteContent();
   const [savingToSite, setSavingToSite] = useState(false);
   const patch = patchFor(content.artworks, artwork.id);
   const [uploading, setUploading] = useState(false);
@@ -73,7 +74,7 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
         }
       }
       applyPhotos(cover, extras);
-      setMessage('Photos uploaded — tap Save to website when ready.');
+      setMessage('Photos uploaded — tap Save to website (wait until upload finishes).');
     } catch (err) {
       setMessage(err instanceof Error ? err.message : 'Upload failed.');
     } finally {
@@ -117,8 +118,8 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
     setSavingToSite(true);
     setMessage('Saving to live website…');
     try {
-      await publish(content);
-      setMessage('Saved — the live site updates in a few minutes.');
+      await publish(getContentSnapshot());
+      setMessage('Saved — wait 2–3 minutes, then refresh the gallery (Ctrl+F5).');
       if (isCustom) {
         setTimeout(() => onClose(), 1200);
       }

@@ -1214,7 +1214,9 @@ function sortArtworksForCollection(list: Artwork[], collectionId: string): Artwo
 
 function catalogArtworks(): Artwork[] {
   const custom = getCustomArtworksFromContent().map(storedToArtwork);
-  return [...artworks, ...custom];
+  const customIds = new Set(custom.map((a) => a.id));
+  const builtIn = artworks.filter((a) => !customIds.has(a.id));
+  return [...builtIn, ...custom];
 }
 
 export function getArtworksByCollection(collectionId: string): Artwork[] {
