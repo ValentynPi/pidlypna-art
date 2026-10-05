@@ -51,7 +51,9 @@
       "petrykivka-11": "Coral Garden",
       "petrykivka-15": "Azure Ornament",
       "petrykivka-13": "Crimson Roses",
-      "ukrainian-symbolism-02": "Among the spikelets"
+      "ukrainian-symbolism-02": "Among the spikelets",
+      "ukrainian-symbolism-03": "New artwork",
+      "ukrainian-symbolism-04": "New artwork"
     },
     "uk": {
       "petrykivka-01": "Калина вночі",
@@ -103,7 +105,9 @@
       "petrykivka-11": "Кораловий сад",
       "petrykivka-15": "Лазуровий орнамент",
       "petrykivka-13": "Малинові троянди",
-      "ukrainian-symbolism-02": "Серед колосся"
+      "ukrainian-symbolism-02": "Серед колосся",
+      "ukrainian-symbolism-03": "",
+      "ukrainian-symbolism-04": "A"
     },
     "es": {
       "petrykivka-01": "Noche de kalyna",
@@ -155,7 +159,9 @@
       "petrykivka-11": "Jardín coral",
       "petrykivka-15": "Adorno añil",
       "petrykivka-13": "Rosas carmesí",
-      "ukrainian-symbolism-02": "Entre las espigas"
+      "ukrainian-symbolism-02": "Entre las espigas",
+      "ukrainian-symbolism-03": "",
+      "ukrainian-symbolism-04": "A"
     }
   },
   "descriptions": {
@@ -209,7 +215,9 @@
       "petrykivka-11": "This Petrykivka painting celebrates coral dahlias opening on a warm brown ground, with dark berries and deep green leaves. White highlights catch the light the way petals do in late sun. The composition evokes abundance, craft, and the warmth of a summer garden.",
       "petrykivka-15": "This Petrykivka painting celebrates a blue bouquet opening on a honey-colored ground, edged in white and ringed with dark berries. The central bloom holds the composition like a jewel. The work evokes calm, craft, and the cool light of folk ornament.",
       "petrykivka-13": "This Petrykivka painting celebrates crimson and rose flowers blooming against black, with sage leaves and small buds. Classic strokes glow on the dark ground. The composition evokes festivity, depth, and quiet richness.",
-      "ukrainian-symbolism-02": "\"Among the spikelets\" is an original artwork that combines deep symbolism, folk motifs, and modern artistic aesthetics. The canvas depicts a female figure in a traditional embroidered blouse, carefully holding a sheaf of golden wheat against the background of the night sky. The work is filled with warmth, respect for roots, and an indomitable life force. The painting will become a unique accent in the interior or a valuable gift."
+      "ukrainian-symbolism-02": "\"Among the spikelets\" is an original artwork that combines deep symbolism, folk motifs, and modern artistic aesthetics. The canvas depicts a female figure in a traditional embroidered blouse, carefully holding a sheaf of golden wheat against the background of the night sky. The work is filled with warmth, respect for roots, and an indomitable life force. The painting will become a unique accent in the interior or a valuable gift.",
+      "ukrainian-symbolism-03": "",
+      "ukrainian-symbolism-04": ""
     },
     "uk": {
       "petrykivka-01": "Ця робота оспівує калину як живий символ дому. Білі ягоди й листя квітнуть на глибокому бордовому тлі традиційними мазками, зробленими сучасними. Робота стає поетичним символом пам’яті, відданості й української краси.",
@@ -261,7 +269,9 @@
       "petrykivka-11": "Ця робота оспівує коралові жоржини, що розкриваються на теплому коричневому тлі, з темними ягодами й глибоким зеленим листям. Білі відблиски ловлять світло так, як пелюстки в пізньому сонці. Композиція викликає відчуття достатку, ремесла й тепла літнього саду.",
       "petrykivka-15": "Ця робота оспівує синій букет, що розкривається на медовому тлі, з білими краями пелюсток і темними ягодами. Центральна квітка тримає композицію, мов коштовність. Робота викликає спокій, ремесло й прохолодне світло народного орнаменту.",
       "petrykivka-13": "Ця робота оспівує малинові й рожеві квіти, що квітнуть на чорному тлі, із шавлієвим листям і маленькими бутонами. Класичні мазки світяться на темному ґрунті. Композиція викликає відчуття свята, глибини й тихого багатства.",
-      "ukrainian-symbolism-02": "«Серед колосся» — це оригінальна авторська робота, яка поєднує глибокий символізм, народні мотиви та сучасну художню естетику. На полотні зображена жіноча постать у традиційній вишиванці, що дбайливо тримає оберемок золотого колосся на тлі нічного неба. Робота наповнена теплом, повагою до коріння та незламною життєвою силою. Картина  стане унікальним акцентом в інтер'єрі або цінним подарунком."
+      "ukrainian-symbolism-02": "«Серед колосся» — це оригінальна авторська робота, яка поєднує глибокий символізм, народні мотиви та сучасну художню естетику. На полотні зображена жіноча постать у традиційній вишиванці, що дбайливо тримає оберемок золотого колосся на тлі нічного неба. Робота наповнена теплом, повагою до коріння та незламною життєвою силою. Картина  стане унікальним акцентом в інтер'єрі або цінним подарунком.",
+      "ukrainian-symbolism-03": "",
+      "ukrainian-symbolism-04": ""
     },
     "es": {
       "petrykivka-01": "Esta pintura Petrykivka celebra la baya de kalyna como emblema vivo del hogar. Fruto blanco y hojas florecen sobre un burdeos profundo con pinceladas tradicionales hechas contemporáneas. La obra se convierte en un símbolo poético de memoria, devoción y belleza ucraniana.",
@@ -313,7 +323,9 @@
       "petrykivka-11": "Esta pintura Petrykivka celebra dalias coral que se abren sobre un fondo marrón cálido, con bayas oscuras y hojas verde profundo. Los blancos captan la luz como los pétalos al sol de la tarde. La composición evoca abundancia, oficio y el calor de un jardín de verano.",
       "petrykivka-15": "Esta pintura Petrykivka celebra un ramo azul que se abre sobre un fondo color miel, bordeado de blanco y rodeado de bayas oscuras. La flor central sostiene la composición como una joya. La obra evoca calma, oficio y la luz fresca del ornamento popular.",
       "petrykivka-13": "Esta pintura Petrykivka celebra flores carmesí y rosa que florecen sobre negro, con hojas salvia y pequeños capullos. Los trazos clásicos brillan sobre el fondo oscuro. La composición evoca festividad, profundidad y riqueza serena.",
-      "ukrainian-symbolism-02": "«Entre las espigas» es una obra de autor original que combina un profundo simbolismo, motivos populares y una estética artística moderna. El lienzo representa una figura femenina con una blusa tradicional bordada, sosteniendo con cuidado un haz de trigo dorado sobre el fondo del cielo nocturno. La obra está llena de calidez, respeto por las raíces y una fuerza vital indomable. El cuadro se convertirá en un acento único en el interior o en un regalo valioso."
+      "ukrainian-symbolism-02": "«Entre las espigas» es una obra de autor original que combina un profundo simbolismo, motivos populares y una estética artística moderna. El lienzo representa una figura femenina con una blusa tradicional bordada, sosteniendo con cuidado un haz de trigo dorado sobre el fondo del cielo nocturno. La obra está llena de calidez, respeto por las raíces y una fuerza vital indomable. El cuadro se convertirá en un acento único en el interior o en un regalo valioso.",
+      "ukrainian-symbolism-03": "",
+      "ukrainian-symbolism-04": ""
     }
   },
   "galleryOrder": {
@@ -334,7 +346,9 @@
     ],
     "ukrainian-symbolism": [
       "ukrainian-symbolism-01",
-      "ukrainian-symbolism-02"
+      "ukrainian-symbolism-02",
+      "ukrainian-symbolism-03",
+      "ukrainian-symbolism-04"
     ],
     "female-portraits": [
       "female-portraits-01",
@@ -437,6 +451,23 @@
         "width": 50,
         "height": 60
       }
+    },
+    "ukrainian-symbolism-04": {
+      "image": "/images/image-25-.png",
+      "images": [
+        {
+          "src": "/images/image-26-.png",
+          "alt": "New artwork"
+        },
+        {
+          "src": "/images/image-27-.png",
+          "alt": "New artwork"
+        }
+      ],
+      "sizeCm": {
+        "width": 12,
+        "height": 112
+      }
     }
   },
   "customArtworks": [
@@ -456,6 +487,50 @@
       "description": "\"Among the spikelets\" is an original artwork that combines deep symbolism, folk motifs, and modern artistic aesthetics. The canvas depicts a female figure in a traditional embroidered blouse, carefully holding a sheaf of golden wheat against the background of the night sky. The work is filled with warmth, respect for roots, and an indomitable life force. The painting will become a unique accent in the interior or a valuable gift.",
       "image": "/images/5337023896881930384.jpg",
       "imageAlt": "New artwork"
+    },
+    {
+      "id": "ukrainian-symbolism-03",
+      "collectionId": "ukrainian-symbolism",
+      "title": "New artwork",
+      "year": 2026,
+      "dimensions": "Contact for dimensions",
+      "materials": "Acrylic",
+      "technique": "Mixed media",
+      "surface": "Canvas",
+      "framing": "Unframed",
+      "signed": true,
+      "certificateOfAuthenticity": true,
+      "availability": "Available",
+      "description": "",
+      "image": "",
+      "imageAlt": "New artwork"
+    },
+    {
+      "id": "ukrainian-symbolism-04",
+      "collectionId": "ukrainian-symbolism",
+      "title": "New artwork",
+      "year": 2026,
+      "dimensions": "12 × 112 cm",
+      "materials": "Acrylic",
+      "technique": "Mixed media",
+      "surface": "Canvas",
+      "framing": "Unframed",
+      "signed": true,
+      "certificateOfAuthenticity": true,
+      "availability": "Available",
+      "description": "",
+      "image": "/images/image-25-.png",
+      "imageAlt": "New artwork",
+      "images": [
+        {
+          "src": "/images/image-26-.png",
+          "alt": "New artwork"
+        },
+        {
+          "src": "/images/image-27-.png",
+          "alt": "New artwork"
+        }
+      ]
     }
   ],
   "deletedArtworkIds": [
