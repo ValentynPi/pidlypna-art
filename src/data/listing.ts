@@ -1,8 +1,10 @@
 import type { Artwork } from '../types';
 import { listingHeight, listingWidth } from './artworks';
+import { getListingDetailOverride } from './siteContent';
 import { getArtworkDescription } from '../i18n/artworkDescriptions';
 import { getArtworkTitle } from '../i18n/artworkTitles';
 import type { Language } from '../i18n/types';
+import type { ListingDetailKey } from './siteContentTypes';
 
 export type TranslateFn = (path: string, params?: Record<string, string>) => string;
 
@@ -210,6 +212,15 @@ function formatDimension(raw: string, t: TranslateFn): string {
   return raw;
 }
 
+function listingDetailValue(
+  artwork: Artwork,
+  key: ListingDetailKey,
+  language: Language,
+  computed: string,
+): string {
+  return getListingDetailOverride(artwork.id, key, language) ?? computed;
+}
+
 export function listingDetails(
   artwork: Artwork,
   t: TranslateFn,
@@ -220,23 +231,55 @@ export function listingDetails(
       labelKey: 'lightbox.name',
       value: getArtworkTitle(artwork.id, language, artwork.title),
     },
-    { labelKey: 'lightbox.medium', value: listingMedium(artwork, t) },
-    { labelKey: 'lightbox.technique', value: listingTechniqueLabel(artwork, t) },
-    { labelKey: 'lightbox.authenticity', value: t('lightbox.authenticityValue') },
+    {
+      labelKey: 'lightbox.medium',
+      value: listingDetailValue(artwork, 'medium', language, listingMedium(artwork, t)),
+    },
+    {
+      labelKey: 'lightbox.technique',
+      value: listingDetailValue(
+        artwork,
+        'technique',
+        language,
+        listingTechniqueLabel(artwork, t),
+      ),
+    },
+    {
+      labelKey: 'lightbox.authenticity',
+      value: listingDetailValue(artwork, 'authenticity', language, t('lightbox.authenticityValue')),
+    },
     {
       labelKey: 'lightbox.certification',
-      value: artwork.certificateOfAuthenticity
-        ? t('lightbox.certificationValue')
-        : t('lightbox.signedValue'),
+      value: listingDetailValue(
+        artwork,
+        'certification',
+        language,
+        artwork.certificateOfAuthenticity
+          ? t('lightbox.certificationValue')
+          : t('lightbox.signedValue'),
+      ),
     },
-    { labelKey: 'lightbox.materials', value: listingMaterialsFull(artwork, t) },
+    {
+      labelKey: 'lightbox.materials',
+      value: listingDetailValue(artwork, 'materials', language, listingMaterialsFull(artwork, t)),
+    },
     {
       labelKey: 'lightbox.width',
-      value: formatDimension(listingWidth(artwork), t),
+      value: listingDetailValue(
+        artwork,
+        'width',
+        language,
+        formatDimension(listingWidth(artwork), t),
+      ),
     },
     {
       labelKey: 'lightbox.height',
-      value: formatDimension(listingHeight(artwork), t),
+      value: listingDetailValue(
+        artwork,
+        'height',
+        language,
+        formatDimension(listingHeight(artwork), t),
+      ),
     },
   ];
 }

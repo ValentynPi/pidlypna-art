@@ -58,7 +58,21 @@ export function applyArtworkPatch(artwork: Artwork): Artwork {
   }
   if (patch.dimensions) next.dimensions = patch.dimensions;
   if (patch.availability) next.availability = patch.availability;
+  if (patch.materials) next.materials = patch.materials;
+  if (patch.technique) next.technique = patch.technique;
+  if (patch.surface) next.surface = patch.surface;
   return next;
+}
+
+export function getListingDetailOverride(
+  artworkId: string,
+  key: import('./siteContentTypes').ListingDetailKey,
+  language: import('../i18n/types').Language,
+): string | undefined {
+  const listing = activeSiteContent().artworks[artworkId]?.listing?.[key];
+  if (!listing) return undefined;
+  const value = listing[language]?.trim() || listing.en?.trim() || listing.uk?.trim() || listing.es?.trim();
+  return value || undefined;
 }
 
 export function isArtworkHidden(artworkId: string): boolean {

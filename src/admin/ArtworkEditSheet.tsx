@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import type { Artwork } from '../types';
-import { resolvePublicImage } from '../data/siteContent';
-import { editorImageUrlWithFallback } from './editorImageUrl';
+import { AdminPhotoPreview } from './AdminPhotoPreview';
 import { useAdminAuth } from './AdminAuthContext';
 import { useAdminSiteContent } from './AdminSiteContentContext';
 import { uploadRepoImage } from './github';
+import { listingDetails } from '../data/listing';
+import { LISTING_DETAIL_KEYS, type ListingDetailKey } from '../data/siteContentTypes';
+import { useLanguage } from '../i18n/LanguageContext';
 import {
   buildPhotoPatch,
   getArtworkPhotosForEditor,
@@ -13,9 +15,20 @@ import {
   patchFor,
   removeArtworkFromSite,
   updateArtworkDescription,
+  updateArtworkListingField,
   updateArtworkPatch,
   updateArtworkTitle,
 } from './artworkEditorUtils';
+
+const LISTING_FIELD_LABELS: Record<ListingDetailKey, string> = {
+  medium: 'Medium',
+  technique: 'Technique',
+  authenticity: 'Authenticity',
+  certification: 'Certification',
+  materials: 'Materials (full line)',
+  width: 'Width',
+  height: 'Height',
+};
 
 interface ArtworkEditSheetProps {
   artwork: Artwork;
@@ -23,6 +36,7 @@ interface ArtworkEditSheetProps {
 }
 
 export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
+  const { t } = useLanguage();
   const { token } = useAdminAuth();
   const { content, setContent, setDirty, publish, getContentSnapshot, saving } =
     useAdminSiteContent();
@@ -42,15 +56,6 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
       : photoSet.extras
   ).filter((p) => p.src.trim());
 
-  function displayPhotoUrl(storagePath: string): string {
-    return (
-      localPreviews[storagePath] ??
-      editorImageUrlWithFallback(storagePath) ??
-      resolvePublicImage(storagePath)
-    );
-  }
-
-  const preview = photoSet.cover ? displayPhotoUrl(photoSet.cover) : '';
   const isCustom = isCustomArtwork(content, artwork.id);
 
   function applyPatch(partial: Parameters<typeof updateArtworkPatch>[2]) {
@@ -66,6 +71,17 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
   function applyDescription(lang: 'en' | 'uk' | 'es', value: string) {
     setContent((prev) => updateArtworkDescription(prev, artwork.id, lang, value));
     setDirty(true);
+  }
+
+  function applyListingField(key: ListingDetailKey, lang: 'en' | 'uk' | 'es', value: string) {
+    setContent((prev) => updateArtworkListingField(prev, artwork.id, key, lang, value));
+    setDirty(true);
+  }
+
+  function defaultListingValue(lang: 'en' | 'uk' | 'es', key: ListingDetailKey): string {
+    const rows = listingDetails(artwork, t, lang);
+    const index = LISTING_DETAIL_KEYS.indexOf(key) + 1;
+    return rows[index]?.value ?? '';
   }
 
   function applyPhotos(cover: string, extras: typeof photoSet.extras) {
@@ -177,8 +193,12 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
 
         <div className="px-5 py-5">
           <div className="flex aspect-[4/5] items-center justify-center overflow-hidden bg-cream-dark">
-            {preview ? (
-              <img src={preview} alt="" className="h-full w-full object-contain" decoding="async" />
+            {photoSet.cover ? (
+              <AdminPhotoPreview
+                storagePath={photoSet.cover}
+                localSrc={localPreviews[photoSet.cover]}
+                className="h-full w-full object-contain"
+              />
             ) : (
               <p className="px-4 text-center text-sm text-ink-soft">Upload a photo below</p>
             )}
@@ -223,9 +243,9 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
                       key={`${photo.src}-${index}`}
                       className="flex gap-3 rounded border border-ink/10 bg-white/50 p-2"
                     >
-                      <img
-                        src={displayPhotoUrl(photo.src)}
-                        alt=""
+                      <AdminPhotoPreview
+                        storagePath={photo.src}
+                        localSrc={localPreviews[photo.src]}
                         className="h-20 w-16 shrink-0 object-contain bg-cream-dark"
                       />
                       <div className="min-w-0 flex-1">
@@ -276,6 +296,67 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
                 }}
               />
             </label>
+
+            <div className="space-y-3 border-t border-ink/10 pt-4">
+              <p className="text-[0.65rem] tracking-[0.25em] text-terracotta uppercase">
+                Artwork data (affects details when no override)
+              </p>
+              <label className="block">
+                <span className="text-[0.65rem] tracking-[0.25em] text-ink-soft uppercase">
+                  Materials (short)
+                </span>
+                <input
+                  value={patch.materials ?? artwork.materials}
+                  onChange={(e) => applyPatch({ materials: e.target.value })}
+                  className="mt-1.5 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none focus:border-terracotta"
+                />
+              </label>
+              <label className="block">
+                <span className="text-[0.65rem] tracking-[0.25em] text-ink-soft uppercase">
+                  Technique (short)
+                </span>
+                <input
+                  value={patch.technique ?? artwork.technique}
+                  onChange={(e) => applyPatch({ technique: e.target.value })}
+                  className="mt-1.5 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none focus:border-terracotta"
+                />
+              </label>
+              <label className="block">
+                <span className="text-[0.65rem] tracking-[0.25em] text-ink-soft uppercase">
+                  Surface
+                </span>
+                <input
+                  value={patch.surface ?? artwork.surface}
+                  onChange={(e) => applyPatch({ surface: e.target.value })}
+                  placeholder="Canvas, Paper, Wood…"
+                  className="mt-1.5 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none focus:border-terracotta"
+                />
+              </label>
+            </div>
+
+            <div className="space-y-4 border-t border-ink/10 pt-4">
+              <p className="text-[0.65rem] tracking-[0.25em] text-terracotta uppercase">
+                Details panel (lightbox) · leave blank for automatic text
+              </p>
+              {(['uk', 'en', 'es'] as const).map((lang) => (
+                <div key={`listing-${lang}`} className="space-y-3 rounded border border-ink/10 bg-white/40 p-3">
+                  <p className="text-xs font-medium tracking-wider text-ink uppercase">{lang}</p>
+                  {LISTING_DETAIL_KEYS.map((key) => (
+                    <label key={`${lang}-${key}`} className="block">
+                      <span className="text-[0.6rem] tracking-[0.2em] text-ink-soft uppercase">
+                        {LISTING_FIELD_LABELS[key]}
+                      </span>
+                      <input
+                        value={patch.listing?.[key]?.[lang] ?? ''}
+                        placeholder={defaultListingValue(lang, key)}
+                        onChange={(e) => applyListingField(key, lang, e.target.value)}
+                        className="mt-1 w-full border-b border-ink/15 bg-transparent py-1.5 text-sm text-ink outline-none placeholder:text-ink-soft/50 focus:border-terracotta"
+                      />
+                    </label>
+                  ))}
+                </div>
+              ))}
+            </div>
 
             <div className="grid grid-cols-2 gap-4">
               <label className="block">

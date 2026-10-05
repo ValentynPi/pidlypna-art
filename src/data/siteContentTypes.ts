@@ -8,6 +8,23 @@ export interface ArtworkSizeCm {
   label?: 'diameter' | 'triptych';
 }
 
+export const LISTING_DETAIL_KEYS = [
+  'medium',
+  'technique',
+  'authenticity',
+  'certification',
+  'materials',
+  'width',
+  'height',
+] as const;
+
+export type ListingDetailKey = (typeof LISTING_DETAIL_KEYS)[number];
+
+/** Optional per-language overrides for lightbox “Details” rows. */
+export type ArtworkListingOverrides = Partial<
+  Record<ListingDetailKey, Partial<Record<Language, string>>>
+>;
+
 export interface ArtworkContentPatch {
   title?: string;
   image?: string;
@@ -17,6 +34,10 @@ export interface ArtworkContentPatch {
   sizeCm?: ArtworkSizeCm;
   availability?: ArtworkAvailability;
   hidden?: boolean;
+  materials?: string;
+  technique?: string;
+  surface?: string;
+  listing?: ArtworkListingOverrides;
 }
 
 export interface StoredArtwork {

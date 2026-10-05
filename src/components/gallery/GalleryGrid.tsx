@@ -7,7 +7,8 @@ import { getArtworkPath, getArtworkSlug } from '../../data/artworkPaths';
 import { listingMedium } from '../../data/listing';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { getArtworkTitle } from '../../i18n/artworkTitles';
-import { editorImageUrlWithFallback } from '../../admin/editorImageUrl';
+import { AdminPhotoPreview } from '../../admin/AdminPhotoPreview';
+import { toStorageImagePath } from '../../admin/artworkEditorUtils';
 import { useAdminAuth } from '../../admin/AdminAuthContext';
 import { useAdminSiteContent } from '../../admin/AdminSiteContentContext';
 import { ArtworkEditSheet } from '../../admin/ArtworkEditSheet';
@@ -33,11 +34,6 @@ export function GalleryGrid({ artworks, collectionId, columns = 3 }: GalleryGrid
 
   const canEdit = Boolean(token && collectionId);
 
-  function gridImageSrc(image: string | undefined): string | undefined {
-    if (!image) return undefined;
-    if (canEdit) return editorImageUrlWithFallback(image) ?? image;
-    return image;
-  }
   const lightboxIndex = artworkSlug
     ? artworks.findIndex(
         (artwork) => getArtworkSlug(artwork) === artworkSlug || artwork.id === artworkSlug,
@@ -132,15 +128,22 @@ export function GalleryGrid({ artworks, collectionId, columns = 3 }: GalleryGrid
               )}
 
               <Link to={href} className="block touch-manipulation">
-                <div className="aspect-[4/5] overflow-hidden bg-cream-dark">
-                <LazyImage
-                  src={gridImageSrc(artwork.image || undefined)}
-                  alt={artwork.imageAlt}
-                    objectFit="contain"
-                    plain
-                    wrapperClassName="h-full w-full"
-                    className="h-full w-full"
-                  />
+                <div className="flex aspect-[4/5] items-center justify-center overflow-hidden bg-cream-dark">
+                  {canEdit && artwork.image ? (
+                    <AdminPhotoPreview
+                      storagePath={toStorageImagePath(artwork.image)}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                  ) : (
+                    <LazyImage
+                      src={artwork.image || undefined}
+                      alt={artwork.imageAlt}
+                      objectFit="contain"
+                      plain
+                      wrapperClassName="h-full w-full"
+                      className="h-full w-full"
+                    />
+                  )}
                 </div>
                 <div className="mt-3">
                   <p className="font-serif text-lg text-ink group-hover:text-terracotta md:text-xl">

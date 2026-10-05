@@ -1,5 +1,11 @@
 import { artworks } from '../data/artworks';
-import type { ArtworkContentPatch, SiteContent, StoredArtwork } from '../data/siteContentTypes';
+import type {
+  ArtworkContentPatch,
+  ListingDetailKey,
+  SiteContent,
+  StoredArtwork,
+} from '../data/siteContentTypes';
+import type { Language } from '../i18n/types';
 import { defaultStoredArtwork, nextArtworkId } from '../data/storedArtwork';
 import type { Artwork, ArtworkImage } from '../types';
 
@@ -94,7 +100,39 @@ function syncStoredArtwork(
   if (patch.sizeCm) {
     next.dimensions = `${patch.sizeCm.width} × ${patch.sizeCm.height} cm`;
   }
+  if (patch.materials) next.materials = patch.materials;
+  if (patch.technique) next.technique = patch.technique;
+  if (patch.surface) next.surface = patch.surface;
   return next;
+}
+
+export function updateArtworkListingField(
+  content: SiteContent,
+  id: string,
+  key: ListingDetailKey,
+  lang: Language,
+  value: string,
+): SiteContent {
+  const prev = patchFor(content.artworks, id);
+  const listing = { ...prev.listing };
+  const row = { ...listing[key], [lang]: value };
+  if (!value.trim()) {
+    delete row[lang];
+  }
+  if (Object.keys(row).length > 0) {
+    listing[key] = row;
+  } else {
+    delete listing[key];
+  }
+  const prevPatch = patchFor(content.artworks, id);
+  const nextPatch: ArtworkContentPatch = { ...prevPatch, listing };
+  if (Object.keys(listing).length === 0) {
+    delete nextPatch.listing;
+  }
+  return {
+    ...content,
+    artworks: { ...content.artworks, [id]: nextPatch },
+  };
 }
 
 export function updateArtworkPatch(

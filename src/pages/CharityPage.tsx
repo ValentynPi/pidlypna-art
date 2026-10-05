@@ -30,10 +30,6 @@ const events: CharityEvent[] = [
         alt: 'Instructor with participants at the pysanka master class',
       },
       {
-        src: photos.charityPysanka2025_3,
-        alt: 'Children decorating pysanky at long workshop tables',
-      },
-      {
         src: photos.charityPysanka2025_4,
         alt: 'Dyeing eggs during the charity pysankarstvo class',
       },
