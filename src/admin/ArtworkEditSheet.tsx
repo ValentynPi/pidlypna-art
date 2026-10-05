@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import type { Artwork } from '../types';
 import { resolvePublicImage } from '../data/siteContent';
+import { editorImageUrlWithFallback } from './editorImageUrl';
 import { useAdminAuth } from './AdminAuthContext';
 import { useAdminSiteContent } from './AdminSiteContentContext';
 import { uploadRepoImage } from './github';
@@ -29,15 +30,27 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
   const patch = patchFor(content.artworks, artwork.id);
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState('');
+  const [localPreviews, setLocalPreviews] = useState<Record<string, string>>({});
 
   const photoSet = getArtworkPhotosForEditor(artwork, patch);
-  const allPhotos = photoSet.cover
-    ? [
-        { src: photoSet.cover, alt: patch.imageAlt ?? artwork.imageAlt },
-        ...photoSet.extras,
-      ]
-    : photoSet.extras;
-  const preview = photoSet.cover ? resolvePublicImage(photoSet.cover) : '';
+  const allPhotos = (
+    photoSet.cover
+      ? [
+          { src: photoSet.cover, alt: patch.imageAlt ?? artwork.imageAlt },
+          ...photoSet.extras,
+        ]
+      : photoSet.extras
+  ).filter((p) => p.src.trim());
+
+  function displayPhotoUrl(storagePath: string): string {
+    return (
+      localPreviews[storagePath] ??
+      editorImageUrlWithFallback(storagePath) ??
+      resolvePublicImage(storagePath)
+    );
+  }
+
+  const preview = photoSet.cover ? displayPhotoUrl(photoSet.cover) : '';
   const isCustom = isCustomArtwork(content, artwork.id);
 
   function applyPatch(partial: Parameters<typeof updateArtworkPatch>[2]) {
@@ -67,6 +80,8 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
       let { cover, extras } = getArtworkPhotosForEditor(artwork, patchFor(content.artworks, artwork.id));
       for (const file of Array.from(fileList)) {
         const path = await uploadRepoImage(file, token);
+        const blobUrl = URL.createObjectURL(file);
+        setLocalPreviews((prev) => ({ ...prev, [path]: blobUrl }));
         if (!cover) {
           cover = path;
         } else {
@@ -163,7 +178,7 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
         <div className="px-5 py-5">
           <div className="flex aspect-[4/5] items-center justify-center overflow-hidden bg-cream-dark">
             {preview ? (
-              <img src={preview} alt="" className="h-full w-full object-contain" />
+              <img src={preview} alt="" className="h-full w-full object-contain" decoding="async" />
             ) : (
               <p className="px-4 text-center text-sm text-ink-soft">Upload a photo below</p>
             )}
@@ -209,7 +224,7 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
                       className="flex gap-3 rounded border border-ink/10 bg-white/50 p-2"
                     >
                       <img
-                        src={resolvePublicImage(photo.src)}
+                        src={displayPhotoUrl(photo.src)}
                         alt=""
                         className="h-20 w-16 shrink-0 object-contain bg-cream-dark"
                       />

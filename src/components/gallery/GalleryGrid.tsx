@@ -7,6 +7,7 @@ import { getArtworkPath, getArtworkSlug } from '../../data/artworkPaths';
 import { listingMedium } from '../../data/listing';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { getArtworkTitle } from '../../i18n/artworkTitles';
+import { editorImageUrlWithFallback } from '../../admin/editorImageUrl';
 import { useAdminAuth } from '../../admin/AdminAuthContext';
 import { useAdminSiteContent } from '../../admin/AdminSiteContentContext';
 import { ArtworkEditSheet } from '../../admin/ArtworkEditSheet';
@@ -31,6 +32,12 @@ export function GalleryGrid({ artworks, collectionId, columns = 3 }: GalleryGrid
   const dragId = useRef<string | null>(null);
 
   const canEdit = Boolean(token && collectionId);
+
+  function gridImageSrc(image: string | undefined): string | undefined {
+    if (!image) return undefined;
+    if (canEdit) return editorImageUrlWithFallback(image) ?? image;
+    return image;
+  }
   const lightboxIndex = artworkSlug
     ? artworks.findIndex(
         (artwork) => getArtworkSlug(artwork) === artworkSlug || artwork.id === artworkSlug,
@@ -127,7 +134,7 @@ export function GalleryGrid({ artworks, collectionId, columns = 3 }: GalleryGrid
               <Link to={href} className="block touch-manipulation">
                 <div className="aspect-[4/5] overflow-hidden bg-cream-dark">
                 <LazyImage
-                  src={artwork.image || undefined}
+                  src={gridImageSrc(artwork.image || undefined)}
                   alt={artwork.imageAlt}
                     objectFit="contain"
                     plain
