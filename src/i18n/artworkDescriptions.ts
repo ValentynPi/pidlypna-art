@@ -100,7 +100,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'This work is an original mixed-media painting that celebrates quiet architecture through textured metallic arcs on clean white ground. Each curve is built in relief, catching real light as you move. The composition evokes elegance, space, and refined calm.',
     'textured-and-light-03':
       'This work is an original acrylic painting that celebrates sweetness and celebration through a peach cake with roses and strawberries built in thick, luminous paint. Frosting and petals share the same sculptural joy. The work becomes a poetic contemporary still life of delight, care, and festivity.',
-    'ukrainian-symbolism-01':
+    'ukrainian-symbolism-05':
       'This acrylic painting celebrates a face woven with Ukrainian embroidery — memory held in the skin. Realism and folk pattern share one portrait, as if the past were still speaking. The composition becomes a poetic contemporary work of identity, devotion, and belonging.',
   },
   es: {
@@ -200,7 +200,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'Esta obra es una pintura de técnica mixta original que celebra una arquitectura quieta mediante arcos metálicos texturizados sobre fondo blanco limpio. Cada curva se construye en relieve y captura la luz real al moverte. La composición evoca elegancia, espacio y calma refinada.',
     'textured-and-light-03':
       'Esta obra es una pintura acrílica original que celebra dulzura y celebración con un pastel melocotón de rosas y fresas construido en pintura densa y luminosa. Glaseado y pétalos comparten la misma alegría escultórica. La obra se convierte en un bodegón contemporáneo poético de deleite, cuidado y festividad.',
-    'ukrainian-symbolism-01':
+    'ukrainian-symbolism-05':
       'Esta pintura acrílica celebra un rostro tejido con bordado ucraniano: la memoria sostenida en la piel. Realismo y patrón popular comparten un retrato, como si el pasado siguiera hablando. La composición se convierte en una obra contemporánea poética de identidad, devoción y pertenencia.',
   },
   uk: {
@@ -300,7 +300,7 @@ export const artworkDescriptions: Record<Language, Record<string, string>> = {
       'Ця робота оспівує тиху архітектуру через фактурні металеві дуги на чистому білому тлі. Кожна крива побудована рельєфом і ловить справжнє світло, коли ви рухаєтесь. Композиція викликає елегантність, простір і витончений спокій.',
     'textured-and-light-03':
       'Ця робота оспівує солодкість і свято через персиковий торт із трояндами та полуницею, побудований густою світлою фарбою. Глазур і пелюстки ділять ту саму скульптурну радість. Робота стає поетичним сучасним натюрмортом насолоди, турботи й святковості.',
-    'ukrainian-symbolism-01':
+    'ukrainian-symbolism-05':
       'Ця робота оспівує обличчя, вплетене в українську вишивку — пам’ять, утримана в шкірі. Реалізм і народний орнамент ділять один портрет, ніби минуле все ще говорить. Композиція стає поетичною сучасною роботою про ідентичність, відданість і належність.',
   },
 };

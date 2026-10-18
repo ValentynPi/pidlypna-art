@@ -49,7 +49,7 @@ const MIXED_MEDIA_TEXTURE_IDS = new Set([
 ]);
 
 const TRADITIONAL_BRUSH_IDS = new Set([
-  'ukrainian-symbolism-01',
+  'ukrainian-symbolism-05',
   'inspired-by-nature-01',
   'plain-air-collection-01',
   'plain-air-collection-02',
@@ -143,7 +143,7 @@ export function listingMaterialsFull(artwork: Artwork, t: TranslateFn): string {
   if (artwork.id === 'female-portraits-01' || artwork.title === 'Blooming Silence') {
     return t('lightbox.materialsFloralCrown');
   }
-  if (artwork.id === 'ukrainian-symbolism-01') {
+  if (artwork.id === 'ukrainian-symbolism-05') {
     return t('lightbox.materialsHeritage');
   }
   if (materials.includes('alcohol ink')) {

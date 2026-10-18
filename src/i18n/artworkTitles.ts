@@ -56,6 +56,7 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'ukrainian-symbolism-02': 'Among the spikelets',
     'ukrainian-symbolism-03': 'Sisters',
     'ukrainian-symbolism-04': 'The golden thread of time',
+    'ukrainian-symbolism-05': 'Heritage',
   },
   es: {
     'abstract-art-01': 'Raíces en dos mundos',
@@ -110,6 +111,7 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'ukrainian-symbolism-02': 'Entre espigas',
     'ukrainian-symbolism-03': 'Hermanas',
     'ukrainian-symbolism-04': 'La hebra dorada del tiempo',
+    'ukrainian-symbolism-05': 'Herencia',
   },
   uk: {
     'abstract-art-01': 'Коріння в двох світах',
@@ -164,6 +166,7 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'ukrainian-symbolism-02': 'Серед колосся',
     'ukrainian-symbolism-03': 'Сестри',
     'ukrainian-symbolism-04': 'Золота пряжа часу',
+    'ukrainian-symbolism-05': 'Спадщина',
   },
 };
 
