@@ -436,12 +436,22 @@
       ]
     },
     "ukrainian-symbolism-03": {
-      "hidden": true,
+      "image": "/images/ukrainian-symbolism-sisters-1.jpg",
       "sizeCm": {
         "width": 50,
         "height": 60
       },
-      "dimensions": "50 × 60 cm"
+      "dimensions": "50 × 60 cm",
+      "images": [
+        {
+          "src": "/images/ukrainian-symbolism-sisters-2.jpg",
+          "alt": "Sisters — alternate view"
+        },
+        {
+          "src": "/images/ukrainian-symbolism-sisters-3.jpg",
+          "alt": "Sisters — detail"
+        }
+      ]
     },
     "ukrainian-symbolism-04": {
       "hidden": true,
@@ -494,8 +504,18 @@
       "certificateOfAuthenticity": true,
       "availability": "Available",
       "description": "",
-      "image": "",
-      "imageAlt": "Sisters"
+      "image": "/images/ukrainian-symbolism-sisters-1.jpg",
+      "imageAlt": "Sisters — front view",
+      "images": [
+        {
+          "src": "/images/ukrainian-symbolism-sisters-2.jpg",
+          "alt": "Sisters — alternate view"
+        },
+        {
+          "src": "/images/ukrainian-symbolism-sisters-3.jpg",
+          "alt": "Sisters — detail"
+        }
+      ]
     },
     {
       "id": "ukrainian-symbolism-04",
