@@ -52,10 +52,10 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'textured-and-light-01': 'Halo',
     'textured-and-light-02': 'Gold Arcs',
     'textured-and-light-03': 'Rose Cake',
-    'ukrainian-symbolism-01': 'Vilna Ya',
+    'ukrainian-symbolism-01': 'Free',
     'ukrainian-symbolism-02': 'Among the spikelets',
     'ukrainian-symbolism-03': 'Sisters',
-    'ukrainian-symbolism-04': 'The golden thread of time',
+    'ukrainian-symbolism-04': 'The Golden Yarn of Time',
     'ukrainian-symbolism-05': 'Heritage',
   },
   es: {

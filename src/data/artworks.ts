@@ -1054,7 +1054,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'ukrainian-symbolism-01',
-    title: 'Vilna Ya',
+    title: 'Free',
     year: 2025,
     dimensions: '50 × 60 cm',
     materials: 'Acrylic',
@@ -1066,10 +1066,10 @@ export const artworks: Artwork[] = [
     availability: 'Available',
     description: '',
     image: photos.ukrainian_symbolism_vilna_ya_1,
-    imageAlt: 'Vilna Ya — front view',
+    imageAlt: 'Free — front view',
     images: [
-      { src: photos.ukrainian_symbolism_vilna_ya_2, alt: 'Vilna Ya — alternate view' },
-      { src: photos.ukrainian_symbolism_vilna_ya_3, alt: 'Vilna Ya — detail' },
+      { src: photos.ukrainian_symbolism_vilna_ya_2, alt: 'Free — alternate view' },
+      { src: photos.ukrainian_symbolism_vilna_ya_3, alt: 'Free — detail' },
     ],
     collectionId: 'ukrainian-symbolism',
     featured: false,

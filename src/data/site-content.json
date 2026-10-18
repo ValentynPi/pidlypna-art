@@ -45,10 +45,10 @@
       "textured-and-light-01": "Halo",
       "textured-and-light-02": "Gold Arcs",
       "textured-and-light-03": "Rose Cake",
-      "ukrainian-symbolism-01": "Vilna Ya",
+      "ukrainian-symbolism-01": "Free",
       "ukrainian-symbolism-02": "Among the spikelets",
       "ukrainian-symbolism-03": "Sisters",
-      "ukrainian-symbolism-04": "The golden thread of time",
+      "ukrainian-symbolism-04": "The Golden Yarn of Time",
       "ukrainian-symbolism-05": "Heritage"
     },
     "uk": {
@@ -427,11 +427,11 @@
       "images": [
         {
           "src": "/images/ukrainian-symbolism-vilna-ya-2.jpg",
-          "alt": "Vilna Ya — alternate view"
+          "alt": "Free — alternate view"
         },
         {
           "src": "/images/ukrainian-symbolism-vilna-ya-3.jpg",
-          "alt": "Vilna Ya — detail"
+          "alt": "Free — detail"
         }
       ]
     },
@@ -506,11 +506,11 @@
       "images": [
         {
           "src": "/images/ukrainian-symbolism-golden-thread-2.jpg",
-          "alt": "The golden thread of time — alternate view"
+          "alt": "The Golden Yarn of Time — alternate view"
         },
         {
           "src": "/images/ukrainian-symbolism-golden-thread-3.jpg",
-          "alt": "The golden thread of time — detail"
+          "alt": "The Golden Yarn of Time — detail"
         }
       ]
     }
@@ -613,7 +613,7 @@
     {
       "id": "ukrainian-symbolism-04",
       "collectionId": "ukrainian-symbolism",
-      "title": "The golden thread of time",
+      "title": "The Golden Yarn of Time",
       "year": 2026,
       "dimensions": "50 × 60 cm",
       "materials": "Acrylic",
@@ -625,15 +625,15 @@
       "availability": "Available",
       "description": "",
       "image": "/images/ukrainian-symbolism-golden-thread-1.jpg",
-      "imageAlt": "The golden thread of time — front view",
+      "imageAlt": "The Golden Yarn of Time — front view",
       "images": [
         {
           "src": "/images/ukrainian-symbolism-golden-thread-2.jpg",
-          "alt": "The golden thread of time — alternate view"
+          "alt": "The Golden Yarn of Time — alternate view"
         },
         {
           "src": "/images/ukrainian-symbolism-golden-thread-3.jpg",
-          "alt": "The golden thread of time — detail"
+          "alt": "The Golden Yarn of Time — detail"
         }
       ]
     }
