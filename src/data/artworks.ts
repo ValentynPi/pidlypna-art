@@ -1054,7 +1054,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'ukrainian-symbolism-01',
-    title: 'Heritage',
+    title: 'Vilna Ya',
     year: 2025,
     dimensions: 'Contact for dimensions',
     materials: 'Acrylic',

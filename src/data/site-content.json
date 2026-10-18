@@ -45,8 +45,10 @@
       "textured-and-light-01": "Halo",
       "textured-and-light-02": "Gold Arcs",
       "textured-and-light-03": "Rose Cake",
-      "ukrainian-symbolism-01": "Heritage",
-      "ukrainian-symbolism-02": "Among the spikelets"
+      "ukrainian-symbolism-01": "Vilna Ya",
+      "ukrainian-symbolism-02": "Among the spikelets",
+      "ukrainian-symbolism-03": "Sisters",
+      "ukrainian-symbolism-04": "The golden thread of time"
     },
     "uk": {
       "petrykivka-01": "Калина вночі",
@@ -92,8 +94,10 @@
       "textured-and-light-01": "Ореол",
       "textured-and-light-02": "Золоті дуги",
       "textured-and-light-03": "Торт із трояндами",
-      "ukrainian-symbolism-01": "Спадщина",
-      "ukrainian-symbolism-02": "Серед колосся"
+      "ukrainian-symbolism-01": "ВільнаЯ",
+      "ukrainian-symbolism-02": "Серед колосся",
+      "ukrainian-symbolism-03": "Сестри",
+      "ukrainian-symbolism-04": "Золота пряжа часу"
     },
     "es": {
       "petrykivka-01": "Noche de kalyna",
@@ -139,8 +143,10 @@
       "textured-and-light-01": "Halo",
       "textured-and-light-02": "Arcos dorados",
       "textured-and-light-03": "Pastel de rosas",
-      "ukrainian-symbolism-01": "Herencia",
-      "ukrainian-symbolism-02": "Entre las espigas"
+      "ukrainian-symbolism-01": "Libre",
+      "ukrainian-symbolism-02": "Entre espigas",
+      "ukrainian-symbolism-03": "Hermanas",
+      "ukrainian-symbolism-04": "La hebra dorada del tiempo"
     }
   },
   "descriptions": {
@@ -304,7 +310,9 @@
     ],
     "ukrainian-symbolism": [
       "ukrainian-symbolism-01",
-      "ukrainian-symbolism-02"
+      "ukrainian-symbolism-02",
+      "ukrainian-symbolism-03",
+      "ukrainian-symbolism-04"
     ],
     "female-portraits": [
       "female-portraits-01",
@@ -402,12 +410,20 @@
         }
       ]
     },
+    "ukrainian-symbolism-01": {
+      "sizeCm": {
+        "width": 50,
+        "height": 60
+      },
+      "dimensions": "50 × 60 cm"
+    },
     "ukrainian-symbolism-02": {
       "image": "/images/5348273197914202001.jpg",
       "sizeCm": {
         "width": 50,
         "height": 60
       },
+      "dimensions": "50 × 60 cm",
       "images": [
         {
           "src": "/images/5348273197914201999.jpg",
@@ -418,6 +434,22 @@
           "alt": "New artwork"
         }
       ]
+    },
+    "ukrainian-symbolism-03": {
+      "hidden": true,
+      "sizeCm": {
+        "width": 50,
+        "height": 60
+      },
+      "dimensions": "50 × 60 cm"
+    },
+    "ukrainian-symbolism-04": {
+      "hidden": true,
+      "sizeCm": {
+        "width": 50,
+        "height": 60
+      },
+      "dimensions": "50 × 60 cm"
     }
   },
   "customArtworks": [
@@ -447,6 +479,40 @@
           "alt": "New artwork"
         }
       ]
+    },
+    {
+      "id": "ukrainian-symbolism-03",
+      "collectionId": "ukrainian-symbolism",
+      "title": "Sisters",
+      "year": 2026,
+      "dimensions": "50 × 60 cm",
+      "materials": "Acrylic",
+      "technique": "Mixed media",
+      "surface": "Canvas",
+      "framing": "Unframed",
+      "signed": true,
+      "certificateOfAuthenticity": true,
+      "availability": "Available",
+      "description": "",
+      "image": "",
+      "imageAlt": "Sisters"
+    },
+    {
+      "id": "ukrainian-symbolism-04",
+      "collectionId": "ukrainian-symbolism",
+      "title": "The golden thread of time",
+      "year": 2026,
+      "dimensions": "50 × 60 cm",
+      "materials": "Acrylic",
+      "technique": "Mixed media",
+      "surface": "Canvas",
+      "framing": "Unframed",
+      "signed": true,
+      "certificateOfAuthenticity": true,
+      "availability": "Available",
+      "description": "",
+      "image": "",
+      "imageAlt": "The golden thread of time"
     }
   ],
   "deletedArtworkIds": [
@@ -454,7 +520,6 @@
     "petrykivka-11",
     "petrykivka-12",
     "petrykivka-15",
-    "petrykivka-13",
-    "ukrainian-symbolism-04"
+    "petrykivka-13"
   ]
 }

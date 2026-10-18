@@ -52,7 +52,10 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'textured-and-light-01': 'Halo',
     'textured-and-light-02': 'Gold Arcs',
     'textured-and-light-03': 'Rose Cake',
-    'ukrainian-symbolism-01': 'Heritage',
+    'ukrainian-symbolism-01': 'Vilna Ya',
+    'ukrainian-symbolism-02': 'Among the spikelets',
+    'ukrainian-symbolism-03': 'Sisters',
+    'ukrainian-symbolism-04': 'The golden thread of time',
   },
   es: {
     'abstract-art-01': 'Raíces en dos mundos',
@@ -103,7 +106,10 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'textured-and-light-01': 'Halo',
     'textured-and-light-02': 'Arcos dorados',
     'textured-and-light-03': 'Pastel de rosas',
-    'ukrainian-symbolism-01': 'Herencia',
+    'ukrainian-symbolism-01': 'Libre',
+    'ukrainian-symbolism-02': 'Entre espigas',
+    'ukrainian-symbolism-03': 'Hermanas',
+    'ukrainian-symbolism-04': 'La hebra dorada del tiempo',
   },
   uk: {
     'abstract-art-01': 'Коріння в двох світах',
@@ -154,7 +160,10 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'textured-and-light-01': 'Ореол',
     'textured-and-light-02': 'Золоті дуги',
     'textured-and-light-03': 'Торт із трояндами',
-    'ukrainian-symbolism-01': 'Спадщина',
+    'ukrainian-symbolism-01': 'ВільнаЯ',
+    'ukrainian-symbolism-02': 'Серед колосся',
+    'ukrainian-symbolism-03': 'Сестри',
+    'ukrainian-symbolism-04': 'Золота пряжа часу',
   },
 };
 
