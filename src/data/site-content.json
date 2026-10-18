@@ -411,11 +411,22 @@
       ]
     },
     "ukrainian-symbolism-01": {
+      "image": "/images/ukrainian-symbolism-vilna-ya-1.jpg",
       "sizeCm": {
         "width": 50,
         "height": 60
       },
-      "dimensions": "50 × 60 cm"
+      "dimensions": "50 × 60 cm",
+      "images": [
+        {
+          "src": "/images/ukrainian-symbolism-vilna-ya-2.jpg",
+          "alt": "Vilna Ya — alternate view"
+        },
+        {
+          "src": "/images/ukrainian-symbolism-vilna-ya-3.jpg",
+          "alt": "Vilna Ya — detail"
+        }
+      ]
     },
     "ukrainian-symbolism-02": {
       "image": "/images/5348273197914202001.jpg",
