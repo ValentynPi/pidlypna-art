@@ -454,12 +454,22 @@
       ]
     },
     "ukrainian-symbolism-04": {
-      "hidden": true,
+      "image": "/images/ukrainian-symbolism-golden-thread-1.jpg",
       "sizeCm": {
         "width": 50,
         "height": 60
       },
-      "dimensions": "50 × 60 cm"
+      "dimensions": "50 × 60 cm",
+      "images": [
+        {
+          "src": "/images/ukrainian-symbolism-golden-thread-2.jpg",
+          "alt": "The golden thread of time — alternate view"
+        },
+        {
+          "src": "/images/ukrainian-symbolism-golden-thread-3.jpg",
+          "alt": "The golden thread of time — detail"
+        }
+      ]
     }
   },
   "customArtworks": [
@@ -531,8 +541,18 @@
       "certificateOfAuthenticity": true,
       "availability": "Available",
       "description": "",
-      "image": "",
-      "imageAlt": "The golden thread of time"
+      "image": "/images/ukrainian-symbolism-golden-thread-1.jpg",
+      "imageAlt": "The golden thread of time — front view",
+      "images": [
+        {
+          "src": "/images/ukrainian-symbolism-golden-thread-2.jpg",
+          "alt": "The golden thread of time — alternate view"
+        },
+        {
+          "src": "/images/ukrainian-symbolism-golden-thread-3.jpg",
+          "alt": "The golden thread of time — detail"
+        }
+      ]
     }
   ],
   "deletedArtworkIds": [
