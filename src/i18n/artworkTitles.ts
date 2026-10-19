@@ -110,7 +110,7 @@ export const artworkTitles: Record<Language, Record<string, string>> = {
     'ukrainian-symbolism-01': 'Libre',
     'ukrainian-symbolism-02': 'Entre espigas',
     'ukrainian-symbolism-03': 'Hermanas',
-    'ukrainian-symbolism-04': 'La hebra dorada del tiempo',
+    'ukrainian-symbolism-04': 'El hilo dorado del tiempo',
     'ukrainian-symbolism-05': 'Herencia',
   },
   uk: {

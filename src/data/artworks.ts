@@ -1064,7 +1064,8 @@ export const artworks: Artwork[] = [
     signed: true,
     certificateOfAuthenticity: true,
     availability: 'Available',
-    description: '',
+    description:
+      'Free is a manifesto of inner freedom, resilience, and an uplifting spirit. The canvas depicts a woman in a traditional embroidered blouse, with a blue and yellow ribbon in her hair and her face lifted toward the open sky.',
     image: photos.ukrainian_symbolism_vilna_ya_1,
     imageAlt: 'Free — front view',
     images: [
