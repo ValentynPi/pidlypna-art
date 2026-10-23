@@ -22,6 +22,7 @@ export function AboutPage() {
       <PageMeta
         title={t('about.metaTitle')}
         description={t('about.metaDesc')}
+        canonical="/about"
       />
 
       <PageHeader

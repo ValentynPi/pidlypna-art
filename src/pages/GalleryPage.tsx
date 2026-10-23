@@ -13,6 +13,7 @@ export function GalleryPage() {
       <PageMeta
         title={t('gallery.metaTitle')}
         description={t('gallery.metaDesc')}
+        canonical="/gallery"
       />
 
       <PageHeader

@@ -118,6 +118,7 @@ export function CharityPage() {
       <PageMeta
         title={t('charity.metaTitle')}
         description={t('charity.event1Title')}
+        canonical="/charity"
       />
       <PageHeader label={t('charity.label')} title={t('charity.title')} />
 

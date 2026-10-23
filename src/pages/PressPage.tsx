@@ -11,6 +11,7 @@ export function PressPage() {
       <PageMeta
         title={t('press.metaTitle')}
         description={t('press.metaDesc')}
+        canonical="/press"
       />
 
       <PageHeader

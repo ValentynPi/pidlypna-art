@@ -11,6 +11,7 @@ export function ExhibitionsPage() {
       <PageMeta
         title={t('exhibitions.metaTitle')}
         description={t('exhibitions.metaDesc')}
+        canonical="/exhibitions"
       />
 
       <PageHeader

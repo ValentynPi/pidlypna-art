@@ -16,6 +16,8 @@ export function HomePage() {
       <PageMeta
         title={t('home.metaTitle')}
         description={t('home.metaDesc')}
+        canonical="/"
+        image={photos.ukrainian_symbolism_heritage_1}
       />
       <Hero />
 

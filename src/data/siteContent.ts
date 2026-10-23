@@ -37,7 +37,10 @@ export function mergeSiteContent(partial: Partial<SiteContent>): SiteContent {
 
 export function resolvePublicImage(path: string): string {
   if (path.startsWith('http://') || path.startsWith('https://')) return path;
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  const base =
+    typeof import.meta.env?.BASE_URL === 'string'
+      ? import.meta.env.BASE_URL.replace(/\/$/, '')
+      : '';
   if (path.startsWith('/')) return `${base}${path}`;
   return `${base}/images/${path}`;
 }

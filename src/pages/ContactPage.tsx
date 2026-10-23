@@ -9,6 +9,7 @@ export function ContactPage() {
       <PageMeta
         title={t('contact.metaTitle')}
         description={t('contact.metaDesc')}
+        canonical="/contact"
       />
       <div className="pt-16 md:pt-20">
         <ContactSection />

@@ -1,6 +1,8 @@
 /** Local photos from /public/images — mapped to site sections */
 
-const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/images`;
+const assetBase =
+  typeof import.meta.env?.BASE_URL === 'string' ? import.meta.env.BASE_URL : '/';
+const base = `${assetBase.replace(/\/$/, '')}/images`;
 
 export const photos = {
   // Legacy refs for About, Workshops, Journey, Exhibitions

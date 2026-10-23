@@ -27,7 +27,11 @@ export function AdminLoginPage() {
 
   return (
     <>
-      <PageMeta title="Edit site" description="Sign in to edit gallery content." />
+      <PageMeta
+        title="Edit site"
+        description="Sign in to edit gallery content."
+        noindex
+      />
       <PageHeader
         label="Studio"
         title="Edit the site"

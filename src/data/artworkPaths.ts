@@ -1,8 +1,9 @@
 import type { Artwork } from '../types';
-import { artworks, getArtworksByCollection } from './artworks';
-import { collections, getCollectionById } from './collections';
+import { getArtworksByCollection } from './artworks';
+import { collections, galleryCollections, getCollectionById } from './collections';
+import { SITE_URL } from '../seo/config';
 
-export const SITE_URL = 'https://viktoria-p.art';
+export { SITE_URL };
 
 export function slugifyTitle(title: string): string {
   return title
@@ -50,5 +51,11 @@ export function getArtworkBySlug(
 }
 
 export function getAllArtworkPaths(): string[] {
-  return artworks.map(getArtworkPath);
+  const paths: string[] = [];
+  for (const collection of galleryCollections) {
+    for (const artwork of getArtworksByCollection(collection.id)) {
+      paths.push(getArtworkPath(artwork));
+    }
+  }
+  return paths;
 }

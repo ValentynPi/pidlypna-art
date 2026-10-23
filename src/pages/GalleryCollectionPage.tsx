@@ -10,6 +10,7 @@ import { getArtworkBySlug, getArtworkPath } from '../data/artworkPaths';
 import { listingDescription } from '../data/listing';
 import { useLanguage } from '../i18n/LanguageContext';
 import { getArtworkTitle } from '../i18n/artworkTitles';
+import { ArtworkSeo } from '../components/seo/ArtworkSeo';
 
 export function GalleryCollectionPage() {
   const { slug, artworkSlug } = useParams<{ slug: string; artworkSlug?: string }>();
@@ -61,8 +62,13 @@ export function GalleryCollectionPage() {
         title={artworkTitle}
         description={artworkDesc}
         image={activeArtwork?.image}
+        imageAlt={activeArtwork ? `${artworkTitle} — painting by Viktoria Paladios` : undefined}
         canonical={activeArtwork ? getArtworkPath(activeArtwork) : `/gallery/${collection.slug}`}
+        ogType={activeArtwork ? 'article' : 'website'}
       />
+      {activeArtwork && (
+        <ArtworkSeo artwork={activeArtwork} title={artworkTitle} description={artworkDesc} />
+      )}
 
       <PageHeader
         label={t('gallery.collectionLabel')}

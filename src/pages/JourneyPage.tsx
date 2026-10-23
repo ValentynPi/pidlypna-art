@@ -13,6 +13,7 @@ export function JourneyPage() {
       <PageMeta
         title={t('journey.metaTitle')}
         description={t('journey.metaDesc')}
+        canonical="/journey"
       />
 
       <PageHeader
