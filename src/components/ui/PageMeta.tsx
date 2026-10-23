@@ -7,6 +7,7 @@ import {
   SITE_URL,
 } from '../../seo/config';
 import { absoluteImageUrl, absoluteUrl, truncateMetaDescription } from '../../seo/urls';
+import { social } from '../../data/social';
 
 interface PageMetaProps {
   title: string;
@@ -54,6 +55,8 @@ export function PageMeta({
       <link rel="alternate" hrefLang="uk" href={canonicalUrl ?? `${SITE_URL}/`} />
       <link rel="alternate" hrefLang="es" href={canonicalUrl ?? `${SITE_URL}/`} />
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <link rel="me" href={social.instagram.href} />
+      <link rel="me" href={social.facebook.href} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content={locale} />
       <meta property="og:title" content={fullTitle} />

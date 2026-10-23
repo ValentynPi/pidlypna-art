@@ -30,9 +30,9 @@ const en: TranslationTree = {
     place: 'Castellón de la Plana · Spain',
   },
   home: {
-    metaTitle: 'Contemporary Ukrainian Artist in Castellón, Spain',
+    metaTitle: 'Viktoria Paladios — Ukrainian Artist in Castellón, Spain',
     metaDesc:
-      'Viktoria Paladios — original acrylic paintings, Petrykivka decorative art, female portraits, and Ukrainian identity series. Studio in Castellón de la Plana. Commissions welcome.',
+      'Official site of Viktoria Paladios — contemporary Ukrainian painter in Castellón, Spain. Original acrylics, Petrykivka, portraits, Identity collection. Commissions welcome.',
     quote:
       'I paint the distance between where I come from and where I stand now — every canvas a bridge, every color a word in a language I am still learning to speak.',
     workshopsTitle: 'Workshops',
@@ -45,9 +45,9 @@ const en: TranslationTree = {
     collectionsTitle: 'Explore the collections',
   },
   about: {
-    metaTitle: 'About',
+    metaTitle: 'Viktoria Paladios — About the Artist',
     metaDesc:
-      'The story of Viktoria Paladios — contemporary Ukrainian painting bridging tradition and Mediterranean life in Spain.',
+      'About Viktoria Paladios — Ukrainian contemporary painter based in Castellón, Spain. Petrykivka, identity, portraits, and Mediterranean light.',
     label: 'About the Artist',
     title: 'A story written in color',
     p1: 'I learned to see color before I knew how to read. Growing up in Ukraine, childhood afternoons were spent beside my grandmother, watching her embroider vyshyvanka patterns by lamplight — every stitch a story, every motif a silent prayer.',
@@ -352,9 +352,9 @@ const es: TranslationTree = {
     place: 'Castellón de la Plana · España',
   },
   home: {
-    metaTitle: 'Artista ucraniana contemporánea en Castellón, España',
+    metaTitle: 'Viktoria Paladios — Artista ucraniana en Castellón, España',
     metaDesc:
-      'Viktoria Paladios — pinturas originales, arte decorativo Petrykivka, retratos e identidad ucraniana. Estudio en Castellón de la Plana. Encargos disponibles.',
+      'Sitio oficial de Viktoria Paladios — pintora ucraniana contemporánea en Castellón. Acrílicos, Petrykivka, retratos e identidad. Encargos disponibles.',
     quote:
       'Pinto la distancia entre de dónde vengo y dónde estoy ahora: cada lienzo es un puente, cada color una palabra en un idioma que aún estoy aprendiendo a hablar.',
     workshopsTitle: 'Talleres',
@@ -367,9 +367,9 @@ const es: TranslationTree = {
     collectionsTitle: 'Explorar las colecciones',
   },
   about: {
-    metaTitle: 'Sobre mí',
+    metaTitle: 'Viktoria Paladios — Sobre la artista',
     metaDesc:
-      'La historia de Viktoria Paladios — pintura contemporánea ucraniana entre la tradición y la vida mediterránea en España.',
+      'Sobre Viktoria Paladios — pintora ucraniana contemporánea en Castellón, España. Petrykivka, identidad, retratos y luz mediterránea.',
     label: 'Sobre la artista',
     title: 'Una historia escrita en color',
     p1: 'Aprendí a ver el color antes de saber leer. De niña en Ucrania, pasaba las tardes junto a mi abuela, viéndola bordar patrones de vyshyvanka a la luz de la lámpara: cada puntada una historia, cada motivo una oración silenciosa.',
@@ -674,9 +674,9 @@ const uk: TranslationTree = {
     place: 'Кастельон-де-ла-Плана · Іспанія',
   },
   home: {
-    metaTitle: 'Сучасна українська художниця в Кастельйоні, Іспанія',
+    metaTitle: 'Viktoria Paladios — українська художниця в Кастельйоні',
     metaDesc:
-      'Вікторія Паладіос — авторський живопис, петриківський розпис, портрети та серія «Ідентичність». Студія в Кастельон-де-ла-Плана. Приймаю замовлення.',
+      'Офіційний сайт Viktoria Paladios (Вікторія Паладіос) — сучасний український живопис у Кастельйоні, Іспанія. Петриківка, портрети, «Ідентичність». Замовлення.',
     quote:
       'Мої полотна — це міст між минулим і теперішнім, між місцем, де я народилася, і тим, де я є зараз. Кожна фарба тут — слово мови, яку я щодня пізнаю наново.',
     workshopsTitle: 'Майстер-класи',
@@ -689,9 +689,9 @@ const uk: TranslationTree = {
     collectionsTitle: 'Ознайомитися з колекціями',
   },
   about: {
-    metaTitle: 'Про мене',
+    metaTitle: 'Viktoria Paladios — про художницю',
     metaDesc:
-      'Історія Вікторії Паладіос — сучасний український живопис між традицією та середземноморським життям в Іспанії.',
+      'Про Viktoria Paladios (Вікторію Паладіос) — українська художниця в Кастельйоні, Іспанія. Петриківка, ідентичність, портрети.',
     label: 'Про художницю',
     title: 'Історія, написана кольором',
     p1: 'Я навчилася бачити колір раніше, ніж читати. Дитячі вечори в Україні минули біля бабусі: при світлі лампи вона вишивала сорочку за сорочкою — кожен стібок був історією, кожен узор — тихою молитвою.',
