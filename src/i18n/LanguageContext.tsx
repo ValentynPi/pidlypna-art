@@ -9,6 +9,7 @@ import {
 } from 'react';
 import { translations } from './translations';
 import { LANGUAGE_STORAGE_KEY, type Language } from './types';
+import { readInitialLanguage } from './detectLanguage';
 import { getNested, interpolate } from './utils';
 
 interface LanguageContextValue {
@@ -19,18 +20,8 @@ interface LanguageContextValue {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-function readStoredLanguage(): Language {
-  if (typeof window === 'undefined') return 'en';
-  const stored = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-  if (stored === 'en' || stored === 'es' || stored === 'uk') return stored;
-  const nav = window.navigator.language.toLowerCase();
-  if (nav.startsWith('es')) return 'es';
-  if (nav.startsWith('en')) return 'en';
-  return 'uk';
-}
-
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(readStoredLanguage);
+  const [language, setLanguageState] = useState<Language>(readInitialLanguage);
 
   useEffect(() => {
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);

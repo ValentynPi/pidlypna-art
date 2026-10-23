@@ -54,6 +54,15 @@ export function PageMeta({
       <link rel="alternate" hrefLang="en" href={canonicalUrl ?? `${SITE_URL}/`} />
       <link rel="alternate" hrefLang="uk" href={canonicalUrl ?? `${SITE_URL}/`} />
       <link rel="alternate" hrefLang="es" href={canonicalUrl ?? `${SITE_URL}/`} />
+      {language !== 'en' && (
+        <meta property="og:locale:alternate" content={LOCALE_BY_LANGUAGE.en} />
+      )}
+      {language !== 'uk' && (
+        <meta property="og:locale:alternate" content={LOCALE_BY_LANGUAGE.uk} />
+      )}
+      {language !== 'es' && (
+        <meta property="og:locale:alternate" content={LOCALE_BY_LANGUAGE.es} />
+      )}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       <link rel="me" href={social.instagram.href} />
       <link rel="me" href={social.facebook.href} />
