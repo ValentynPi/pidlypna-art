@@ -12,11 +12,49 @@ function authHeaders(token: string): HeadersInit {
 }
 
 export async function verifyGitHubToken(token: string): Promise<{ login: string }> {
-  const res = await fetch('https://api.github.com/user', { headers: authHeaders(token) });
-  if (!res.ok) {
-    throw new Error('Invalid token or insufficient permissions.');
+  const userRes = await fetch('https://api.github.com/user', { headers: authHeaders(token) });
+  if (!userRes.ok) {
+    if (userRes.status === 401) {
+      throw new Error(
+        'Token not accepted (401). Paste the full token (github_pat_… or ghp_…), with no spaces. Check expiry.',
+      );
+    }
+    if (userRes.status === 403) {
+      throw new Error(
+        'Token forbidden (403). Fine-grained token: under Account permissions set Profile to Read-only, then save.',
+      );
+    }
+    throw new Error(`GitHub rejected the token (HTTP ${userRes.status}).`);
   }
-  const data = (await res.json()) as { login: string };
+  const data = (await userRes.json()) as { login: string };
+
+  const repoRes = await fetch(`https://api.github.com/repos/${GITHUB_REPO}`, {
+    headers: authHeaders(token),
+  });
+  if (repoRes.status === 404) {
+    throw new Error(
+      `This token cannot see ${GITHUB_REPO}. Select that repository when creating the token (must be logged in as ${data.login}).`,
+    );
+  }
+  if (!repoRes.ok) {
+    throw new Error(
+      `No access to ${GITHUB_REPO} (HTTP ${repoRes.status}). Grant repository access on the token.`,
+    );
+  }
+
+  const probeRes = await fetch(
+    `https://api.github.com/repos/${GITHUB_REPO}/contents/${SITE_CONTENT_PATH}`,
+    { headers: authHeaders(token) },
+  );
+  if (probeRes.status !== 200 && probeRes.status !== 404) {
+    if (probeRes.status === 403) {
+      throw new Error(
+        'Contents permission missing. On the token: Repository permissions → Contents → Read and write.',
+      );
+    }
+    throw new Error(`Cannot read site content via API (HTTP ${probeRes.status}).`);
+  }
+
   return { login: data.login };
 }
 

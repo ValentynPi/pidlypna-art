@@ -40,19 +40,43 @@ export function AdminLoginPage() {
         backLabel="Home"
       />
       <section className="mx-auto max-w-xl px-5 pb-24 md:px-10 lg:px-16">
-        <p className="text-sm leading-relaxed text-ink-soft">
-          Use a GitHub fine-grained token for{' '}
-          <strong className="font-normal text-ink">pidlypna-art</strong> with{' '}
-          <strong className="font-normal text-ink">Contents: Read and write</strong>.{' '}
+        <div className="space-y-3 text-sm leading-relaxed text-ink-soft">
+          <p>
+            Sign in with a personal access token for repo{' '}
+            <strong className="font-normal text-ink">ValentynPi/pidlypna-art</strong> (branch{' '}
+            <strong className="font-normal text-ink">main</strong>).
+          </p>
+          <p className="text-[0.8rem]">
+            <strong className="font-normal text-ink">Fine-grained token</strong> (recommended):
+          </p>
+          <ol className="list-decimal space-y-1 pl-5 text-[0.8rem]">
+            <li>Resource owner: your GitHub user (owner of the repo).</li>
+            <li>Repository access: Only <strong className="font-normal text-ink">pidlypna-art</strong>.</li>
+            <li>Repository permissions: <strong className="font-normal text-ink">Contents → Read and write</strong>.</li>
+            <li>Account permissions: <strong className="font-normal text-ink">Profile → Read-only</strong> (needed for sign-in).</li>
+          </ol>
+          <p className="text-[0.8rem]">
+            Or a <strong className="font-normal text-ink">classic token</strong> with scope{' '}
+            <strong className="font-normal text-ink">repo</strong>.
+          </p>
           <a
-            href="https://github.com/settings/personal-access-tokens"
+            href="https://github.com/settings/personal-access-tokens/new"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-terracotta underline"
+          >
+            Create fine-grained token
+          </a>
+          {' · '}
+          <a
+            href="https://github.com/settings/tokens/new?scopes=repo&description=pidlypna-art%20admin"
             target="_blank"
             rel="noopener noreferrer"
             className="text-terracotta underline"
           >
-            Create a token
+            Create classic token
           </a>
-        </p>
+        </div>
         <form onSubmit={onSubmit} className="mt-8 space-y-5">
           <label className="block">
             <span className="text-[0.65rem] tracking-[0.3em] text-ink-soft uppercase">
