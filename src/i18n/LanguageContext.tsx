@@ -11,7 +11,7 @@ import { translations } from './translations';
 import { LANGUAGE_STORAGE_KEY, type Language } from './types';
 import { readInitialLanguage } from './detectLanguage';
 import { getNested, interpolate } from './utils';
-import { getPageCopyOverride } from '../data/pageContent';
+import { defaultPageCopy, resolvePageCopy } from '../data/pageContent';
 import { AdminSiteContentContext } from '../admin/AdminSiteContentContext';
 
 interface LanguageContextValue {
@@ -38,13 +38,21 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = useCallback(
     (path: string, params?: Record<string, string>) => {
-      const override =
-        cmsContent?.pageCopy?.[language]?.[path]?.trim() ||
-        getPageCopyOverride(language, path);
+      const resolved = resolvePageCopy(language, path, cmsContent?.pageCopy);
+      const isMeta = path.includes('.meta');
+      if (resolved === 'hidden') {
+        if (isMeta) {
+          const fallback = defaultPageCopy(language, path) || path;
+          return interpolate(fallback, params);
+        }
+        return '';
+      }
+      if (resolved !== 'default') {
+        return interpolate(resolved, params);
+      }
       const value =
-        override ||
-        getNested(translations[language], path) ||
-        getNested(translations.en, path) ||
+        getNested(translations[language], path) ??
+        getNested(translations.en, path) ??
         path;
       return interpolate(value, params);
     },

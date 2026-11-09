@@ -11,9 +11,12 @@ import {
   appendCharityPhotos,
   getEditableCharityEvents,
   getNotableEncountersList,
-  pageCopyValue,
+  hidePageCopyBlock,
+  pageCopyEditorValue,
+  pageCopyOverrideState,
   removeCharityPhoto,
   removeNotableEncounter,
+  resetPageCopyOverride,
   updateCharityInstagram,
   updateCharityLocalizedField,
   updateCharityPhotoAlt,
@@ -129,7 +132,9 @@ export function PageEditSheet({ page, onClose }: PageEditSheetProps) {
           <section>
             <h3 className="font-serif text-lg text-ink">Page text</h3>
             <p className="mt-1 text-xs text-ink-soft">
-              Leave a field empty to keep the built-in translation for that language.
+              You see the current site text below. Clear a field and publish to remove that block, or
+              use <strong>Hide on page</strong>. <strong>Restore default</strong> brings back the
+              built-in translation.
             </p>
             <div className="mt-4 space-y-6">
               {copyFields.map((field) => (
@@ -139,27 +144,79 @@ export function PageEditSheet({ page, onClose }: PageEditSheetProps) {
                   </p>
                   <p className="mt-0.5 font-mono text-[0.65rem] text-ink-soft">{field.path}</p>
                   <div className="mt-3 space-y-3">
-                    {LANGS.map((lang) => (
-                      <label key={lang} className="block">
-                        <span className="text-[0.65rem] tracking-[0.2em] text-ink-soft uppercase">
-                          {lang}
-                        </span>
-                        {field.multiline ? (
-                          <textarea
-                            rows={4}
-                            value={pageCopyValue(content, lang, field.path)}
-                            onChange={(e) => applyCopy(lang, field.path, e.target.value)}
-                            className="mt-1 w-full rounded border border-ink/15 bg-white/50 px-3 py-2 text-sm text-ink outline-none focus:border-terracotta"
-                          />
-                        ) : (
-                          <input
-                            value={pageCopyValue(content, lang, field.path)}
-                            onChange={(e) => applyCopy(lang, field.path, e.target.value)}
-                            className="mt-1 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none focus:border-terracotta"
-                          />
-                        )}
-                      </label>
-                    ))}
+                    {LANGS.map((lang) => {
+                      const state = pageCopyOverrideState(content.pageCopy, lang, field.path);
+                      return (
+                        <motion.div layout key={lang} className="rounded-md bg-white/40 p-3">
+                          <motion.div
+                            layout
+                            className="mb-2 flex flex-wrap items-center justify-between gap-2"
+                          >
+                            <span className="text-[0.65rem] tracking-[0.2em] text-ink-soft uppercase">
+                              {lang}
+                            </span>
+                            <span
+                              className={`text-[0.6rem] tracking-wide uppercase ${
+                                state === 'hidden'
+                                  ? 'text-terracotta'
+                                  : state === 'custom'
+                                    ? 'text-gold'
+                                    : 'text-ink-soft'
+                              }`}
+                            >
+                              {state === 'hidden'
+                                ? 'Hidden on page'
+                                : state === 'custom'
+                                  ? 'Custom text'
+                                  : 'Default text'}
+                            </span>
+                          </motion.div>
+                          {field.multiline ? (
+                            <textarea
+                              rows={4}
+                              value={pageCopyEditorValue(content.pageCopy, lang, field.path)}
+                              onChange={(e) => applyCopy(lang, field.path, e.target.value)}
+                              className="w-full rounded border border-ink/15 bg-white/50 px-3 py-2 text-sm text-ink outline-none focus:border-terracotta"
+                            />
+                          ) : (
+                            <input
+                              value={pageCopyEditorValue(content.pageCopy, lang, field.path)}
+                              onChange={(e) => applyCopy(lang, field.path, e.target.value)}
+                              className="w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none focus:border-terracotta"
+                            />
+                          )}
+                          <motion.div
+                            layout
+                            className="mt-2 flex flex-wrap gap-2"
+                          >
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setContent((prev) =>
+                                  hidePageCopyBlock(prev, lang, field.path),
+                                );
+                                setDirty(true);
+                              }}
+                              className="text-[0.6rem] tracking-wide text-terracotta uppercase"
+                            >
+                              Hide on page
+                            </button>
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setContent((prev) =>
+                                  resetPageCopyOverride(prev, lang, field.path),
+                                );
+                                setDirty(true);
+                              }}
+                              className="text-[0.6rem] tracking-wide text-ink-soft uppercase"
+                            >
+                              Restore default
+                            </button>
+                          </motion.div>
+                        </motion.div>
+                      );
+                    })}
                   </div>
                 </div>
               ))}

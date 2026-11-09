@@ -1,3 +1,8 @@
+import {
+  defaultPageCopy,
+  pageCopyEditorValue,
+  pageCopyOverrideState,
+} from '../data/pageContent';
 import { defaultCharityEvents } from '../data/charityEvents';
 import type {
   CharityEventContent,
@@ -6,6 +11,8 @@ import type {
   StoredNotableEncounter,
 } from '../data/siteContentTypes';
 import type { Language } from '../i18n/types';
+
+export { pageCopyEditorValue, pageCopyOverrideState, defaultPageCopy };
 
 export type EditablePageId = 'about' | 'charity' | 'encounters';
 
@@ -52,14 +59,6 @@ export const PAGE_COPY_FIELDS: Record<EditablePageId, PageCopyField[]> = {
   ],
 };
 
-export function pageCopyValue(
-  content: SiteContent,
-  lang: Language,
-  path: string,
-): string {
-  return content.pageCopy?.[lang]?.[path] ?? '';
-}
-
 export function updatePageCopy(
   content: SiteContent,
   lang: Language,
@@ -71,13 +70,32 @@ export function updatePageCopy(
     uk: { ...content.pageCopy?.uk },
     es: { ...content.pageCopy?.es },
   };
-  const trimmed = value.trim();
-  if (trimmed) {
-    pageCopy[lang][path] = value;
-  } else {
-    delete pageCopy[lang][path];
-  }
+  pageCopy[lang] = { ...pageCopy[lang], [path]: value };
   return { ...content, pageCopy };
+}
+
+/** Remove CMS override — built-in translation shows again. */
+export function resetPageCopyOverride(
+  content: SiteContent,
+  lang: Language,
+  path: string,
+): SiteContent {
+  const pageCopy = {
+    en: { ...content.pageCopy?.en },
+    uk: { ...content.pageCopy?.uk },
+    es: { ...content.pageCopy?.es },
+  };
+  delete pageCopy[lang][path];
+  return { ...content, pageCopy };
+}
+
+/** Hide this block on the live page for one language. */
+export function hidePageCopyBlock(
+  content: SiteContent,
+  lang: Language,
+  path: string,
+): SiteContent {
+  return updatePageCopy(content, lang, path, '');
 }
 
 export function getEditableCharityEvents(content: SiteContent): CharityEventContent[] {

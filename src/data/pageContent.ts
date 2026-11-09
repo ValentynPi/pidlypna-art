@@ -1,8 +1,67 @@
 import type { Language } from '../i18n/types';
+import { translations } from '../i18n/translations';
+import { getNested } from '../i18n/utils';
 import type { CharityEventContent, StoredNotableEncounter } from './siteContentTypes';
+import type { PageCopyByLanguage } from './siteContentTypes';
 import type { NotableEncounter } from '../types';
 import { defaultCharityEvents } from './charityEvents';
 import { activeSiteContent, resolvePublicImage } from './siteContent';
+
+export type PageCopyResolution = 'default' | 'hidden' | string;
+
+function pageCopyMap(
+  language: Language,
+  live?: PageCopyByLanguage,
+): Record<string, string> | undefined {
+  return live?.[language] ?? activeSiteContent().pageCopy?.[language];
+}
+
+export function resolvePageCopy(
+  language: Language,
+  path: string,
+  live?: PageCopyByLanguage,
+): PageCopyResolution {
+  const map = pageCopyMap(language, live);
+  if (!map || !Object.prototype.hasOwnProperty.call(map, path)) return 'default';
+  const value = map[path];
+  if (value === '' || (typeof value === 'string' && !value.trim())) return 'hidden';
+  return value;
+}
+
+export function defaultPageCopy(language: Language, path: string): string {
+  return (
+    getNested(translations[language], path) ??
+    getNested(translations.en, path) ??
+    ''
+  );
+}
+
+/** Text shown in admin inputs (CMS override or built-in translation). */
+export function pageCopyEditorValue(
+  live: PageCopyByLanguage | undefined,
+  language: Language,
+  path: string,
+): string {
+  const map = live?.[language];
+  if (map && Object.prototype.hasOwnProperty.call(map, path)) {
+    return map[path] ?? '';
+  }
+  return defaultPageCopy(language, path);
+}
+
+export type PageCopyOverrideState = 'default' | 'custom' | 'hidden';
+
+export function pageCopyOverrideState(
+  live: PageCopyByLanguage | undefined,
+  language: Language,
+  path: string,
+): PageCopyOverrideState {
+  const map = live?.[language];
+  if (!map || !Object.prototype.hasOwnProperty.call(map, path)) return 'default';
+  const value = map[path];
+  if (value === '' || (typeof value === 'string' && !value.trim())) return 'hidden';
+  return 'custom';
+}
 
 export function localizedText(
   map: Partial<Record<Language, string>> | undefined,
@@ -18,9 +77,11 @@ export function localizedText(
   );
 }
 
+/** @deprecated Use resolvePageCopy — kept for callers that only need custom text. */
 export function getPageCopyOverride(language: Language, path: string): string | undefined {
-  const value = activeSiteContent().pageCopy?.[language]?.[path];
-  return value?.trim() ? value : undefined;
+  const resolved = resolvePageCopy(language, path);
+  if (resolved === 'default' || resolved === 'hidden') return undefined;
+  return resolved;
 }
 
 const CHARITY_LEGACY_KEYS: Record<string, { dateKey?: string; titleKey: string }> = {
