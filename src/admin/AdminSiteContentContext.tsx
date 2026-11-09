@@ -37,7 +37,7 @@ interface AdminSiteContentContextValue {
   error: string | null;
 }
 
-const AdminSiteContentContext = createContext<AdminSiteContentContextValue | null>(null);
+export const AdminSiteContentContext = createContext<AdminSiteContentContextValue | null>(null);
 
 export function AdminSiteContentProvider({ children }: { children: ReactNode }) {
   const { token } = useAdminAuth();

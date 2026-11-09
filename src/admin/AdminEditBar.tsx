@@ -38,6 +38,24 @@ export function AdminEditBar() {
           >
             Gallery
           </RouterLink>
+          <RouterLink
+            to="/about"
+            className="rounded border border-ink/15 px-3 py-2 text-[0.65rem] tracking-widest text-ink uppercase"
+          >
+            About
+          </RouterLink>
+          <RouterLink
+            to="/charity"
+            className="rounded border border-ink/15 px-3 py-2 text-[0.65rem] tracking-widest text-ink uppercase"
+          >
+            Charity
+          </RouterLink>
+          <RouterLink
+            to="/encounters"
+            className="rounded border border-ink/15 px-3 py-2 text-[0.65rem] tracking-widest text-ink uppercase"
+          >
+            Encounters
+          </RouterLink>
           <button
             type="button"
             disabled={!dirty || saving}

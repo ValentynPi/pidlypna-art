@@ -1,11 +1,13 @@
 import { PageMeta } from '../components/ui/PageMeta';
 import { PageHeader } from '../components/ui/PageHeader';
 import { EncounterList } from '../components/encounters/EncounterList';
-import { notableEncounters } from '../data/encounters';
 import { useLanguage } from '../i18n/LanguageContext';
+import { getNotableEncounters } from '../data/pageContent';
+import { AdminPageEditButton } from '../admin/AdminPageEditButton';
 
 export function EncountersPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const notableEncounters = getNotableEncounters(language);
   return (
     <>
       <PageMeta
@@ -14,6 +16,7 @@ export function EncountersPage() {
         canonical="/encounters"
       />
 
+      <AdminPageEditButton page="encounters" />
       <PageHeader
         label={t('encounters.label')}
         title={t('encounters.title')}

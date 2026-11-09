@@ -11,6 +11,8 @@ import { translations } from './translations';
 import { LANGUAGE_STORAGE_KEY, type Language } from './types';
 import { readInitialLanguage } from './detectLanguage';
 import { getNested, interpolate } from './utils';
+import { getPageCopyOverride } from '../data/pageContent';
+import { AdminSiteContentContext } from '../admin/AdminSiteContentContext';
 
 interface LanguageContextValue {
   language: Language;
@@ -22,6 +24,8 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(readInitialLanguage);
+  const adminContent = useContext(AdminSiteContentContext);
+  const cmsContent = adminContent?.content;
 
   useEffect(() => {
     window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
@@ -34,11 +38,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = useCallback(
     (path: string, params?: Record<string, string>) => {
+      const override =
+        cmsContent?.pageCopy?.[language]?.[path]?.trim() ||
+        getPageCopyOverride(language, path);
       const value =
-        getNested(translations[language], path) ?? getNested(translations.en, path) ?? path;
+        override ||
+        getNested(translations[language], path) ||
+        getNested(translations.en, path) ||
+        path;
       return interpolate(value, params);
     },
-    [language],
+    [language, cmsContent],
   );
 
   const value = useMemo(

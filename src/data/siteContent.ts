@@ -11,7 +11,7 @@ export function setSiteContentOverride(next: SiteContent | null): void {
   siteContentOverride = next;
 }
 
-function activeSiteContent(): SiteContent {
+export function activeSiteContent(): SiteContent {
   return siteContentOverride ?? siteContent;
 }
 
@@ -32,6 +32,13 @@ export function mergeSiteContent(partial: Partial<SiteContent>): SiteContent {
     artworks: { ...siteContent.artworks, ...partial.artworks },
     customArtworks: partial.customArtworks ?? siteContent.customArtworks ?? [],
     deletedArtworkIds: partial.deletedArtworkIds ?? siteContent.deletedArtworkIds ?? [],
+    pageCopy: {
+      en: { ...siteContent.pageCopy?.en, ...partial.pageCopy?.en },
+      uk: { ...siteContent.pageCopy?.uk, ...partial.pageCopy?.uk },
+      es: { ...siteContent.pageCopy?.es, ...partial.pageCopy?.es },
+    },
+    charityEvents: partial.charityEvents ?? siteContent.charityEvents ?? [],
+    notableEncounters: partial.notableEncounters ?? siteContent.notableEncounters ?? [],
   };
 }
 
@@ -138,6 +145,13 @@ export function normalizeSiteContent(raw: unknown): SiteContent {
     artworks: data.artworks ?? {},
     customArtworks: Array.isArray(data.customArtworks) ? data.customArtworks : [],
     deletedArtworkIds: Array.isArray(data.deletedArtworkIds) ? data.deletedArtworkIds : [],
+    pageCopy: {
+      en: data.pageCopy?.en ?? {},
+      uk: data.pageCopy?.uk ?? {},
+      es: data.pageCopy?.es ?? {},
+    },
+    charityEvents: Array.isArray(data.charityEvents) ? data.charityEvents : [],
+    notableEncounters: Array.isArray(data.notableEncounters) ? data.notableEncounters : [],
   };
 }
 

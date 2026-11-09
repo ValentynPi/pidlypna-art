@@ -6,6 +6,7 @@ import { HandLine } from '../components/ui/HandLine';
 import { photos } from '../data/images';
 import { social } from '../data/social';
 import { useLanguage } from '../i18n/LanguageContext';
+import { AdminPageEditButton } from '../admin/AdminPageEditButton';
 
 export function AboutPage() {
   const { t } = useLanguage();
@@ -25,6 +26,7 @@ export function AboutPage() {
         canonical="/about"
       />
 
+      <AdminPageEditButton page="about" />
       <PageHeader
         label={t('about.label')}
         title={t('about.title')}

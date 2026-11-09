@@ -1,6 +1,35 @@
 import type { ArtworkAvailability, ArtworkFraming, ArtworkImage } from '../types';
 import type { Language } from '../i18n/types';
 
+export type LocalizedText = Partial<Record<Language, string>>;
+
+export interface CharityEventPhoto {
+  src: string;
+  alt: string;
+}
+
+export interface CharityEventContent {
+  id: string;
+  date?: LocalizedText;
+  title: LocalizedText;
+  photos: CharityEventPhoto[];
+  instagramUrl?: string;
+}
+
+export interface StoredNotableEncounter {
+  id: string;
+  title: LocalizedText;
+  withWhom: LocalizedText;
+  location?: LocalizedText;
+  date: LocalizedText;
+  description: LocalizedText;
+  image?: string;
+  imageAlt?: string;
+  link?: string;
+}
+
+export type PageCopyByLanguage = Partial<Record<Language, Record<string, string>>>;
+
 export interface ArtworkSizeCm {
   width: number;
   height: number;
@@ -68,6 +97,10 @@ export interface SiteContent {
   artworks: Record<string, ArtworkContentPatch>;
   customArtworks: StoredArtwork[];
   deletedArtworkIds: string[];
+  /** Overrides for `t('about.p1')` etc. — keys use dot paths. */
+  pageCopy?: PageCopyByLanguage;
+  charityEvents?: CharityEventContent[];
+  notableEncounters?: StoredNotableEncounter[];
 }
 
 export const SITE_CONTENT_PATH = 'src/data/site-content.json';
@@ -80,4 +113,7 @@ export const EMPTY_SITE_CONTENT: SiteContent = {
   artworks: {},
   customArtworks: [],
   deletedArtworkIds: [],
+  pageCopy: { en: {}, uk: {}, es: {} },
+  charityEvents: [],
+  notableEncounters: [],
 };

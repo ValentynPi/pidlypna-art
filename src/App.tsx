@@ -30,9 +30,9 @@ function BlossomPathRedirect() {
 export function App() {
   return (
     <HelmetProvider>
-      <LanguageProvider>
-        <AdminAuthProvider>
-          <AdminSiteContentProvider>
+      <AdminAuthProvider>
+        <AdminSiteContentProvider>
+          <LanguageProvider>
             <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
               <Routes>
                 <Route element={<Layout />}>
@@ -69,9 +69,9 @@ export function App() {
               </Routes>
               <AdminEditBar />
             </BrowserRouter>
-          </AdminSiteContentProvider>
-        </AdminAuthProvider>
-      </LanguageProvider>
+          </LanguageProvider>
+        </AdminSiteContentProvider>
+      </AdminAuthProvider>
     </HelmetProvider>
   );
 }

@@ -148,6 +148,13 @@ export function mergeEditorContent(remote: SiteContent): SiteContent {
     artworks: { ...remote.artworks },
     customArtworks: remote.customArtworks ?? [],
     deletedArtworkIds: remote.deletedArtworkIds ?? [],
+    pageCopy: {
+      en: { ...seed.pageCopy?.en, ...remote.pageCopy?.en },
+      uk: { ...seed.pageCopy?.uk, ...remote.pageCopy?.uk },
+      es: { ...seed.pageCopy?.es, ...remote.pageCopy?.es },
+    },
+    charityEvents: remote.charityEvents?.length ? remote.charityEvents : [],
+    notableEncounters: remote.notableEncounters ?? [],
   };
   return prepareSiteContentForPublish(merged);
 }
