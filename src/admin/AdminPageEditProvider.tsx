@@ -14,6 +14,7 @@ import type { EditablePageId } from './pageEditorUtils';
 
 export function editablePageFromPath(pathname: string): EditablePageId | null {
   const path = pathname.replace(/\/$/, '') || '/';
+  if (path === '/') return 'home';
   if (path === '/about') return 'about';
   if (path === '/charity') return 'charity';
   if (path === '/encounters') return 'encounters';

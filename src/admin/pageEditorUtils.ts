@@ -14,7 +14,7 @@ import type { Language } from '../i18n/types';
 
 export { pageCopyEditorValue, pageCopyOverrideState, defaultPageCopy };
 
-export type EditablePageId = 'about' | 'charity' | 'encounters';
+export type EditablePageId = 'home' | 'about' | 'charity' | 'encounters';
 
 export type PageCopyField = {
   path: string;
@@ -23,6 +23,20 @@ export type PageCopyField = {
 };
 
 export const PAGE_COPY_FIELDS: Record<EditablePageId, PageCopyField[]> = {
+  home: [
+    { path: 'home.metaTitle', label: 'SEO title' },
+    { path: 'home.metaDesc', label: 'SEO description', multiline: true },
+    { path: 'hero.tag', label: 'Hero label (top line)' },
+    { path: 'hero.intro', label: 'Hero introduction', multiline: true },
+    { path: 'hero.viewArtwork', label: 'Hero button: View artwork' },
+    { path: 'hero.place', label: 'Hero location line' },
+    { path: 'home.quote', label: 'Mid-page quote', multiline: true },
+    { path: 'home.collectionsLabel', label: 'Collections section label' },
+    { path: 'home.collectionsTitle', label: 'Collections section title' },
+    { path: 'home.commissions', label: 'Commissions label' },
+    { path: 'home.together', label: 'Commissions heading' },
+    { path: 'home.getInTouch', label: 'Commissions button text' },
+  ],
   about: [
     { path: 'about.metaTitle', label: 'SEO title' },
     { path: 'about.metaDesc', label: 'SEO description', multiline: true },
@@ -181,6 +195,25 @@ export function updateCharityInstagram(
     ...event,
     instagramUrl: url.trim() || undefined,
   }));
+}
+
+function newCharityEventId(): string {
+  return `charity-${Date.now().toString(36)}`;
+}
+
+export function addCharityEvent(content: SiteContent): SiteContent {
+  const events = [...getEditableCharityEvents(content)];
+  events.unshift({
+    id: newCharityEventId(),
+    title: { en: 'New charity event' },
+    photos: [],
+  });
+  return setCharityEvents(content, events);
+}
+
+export function removeCharityEvent(content: SiteContent, eventId: string): SiteContent {
+  const events = getEditableCharityEvents(content).filter((event) => event.id !== eventId);
+  return setCharityEvents(content, events);
 }
 
 export function getNotableEncountersList(content: SiteContent): StoredNotableEncounter[] {

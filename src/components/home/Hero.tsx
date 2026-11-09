@@ -8,6 +8,9 @@ import { useLanguage } from '../../i18n/LanguageContext';
 
 export function Hero() {
   const { t } = useLanguage();
+  const tag = t('hero.tag');
+  const intro = t('hero.intro');
+  const place = t('hero.place');
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -30,9 +33,11 @@ export function Hero() {
 
       <div className="relative grid lg:min-h-screen lg:grid-cols-[42%_58%]">
         <div className="relative z-10 flex flex-col justify-end px-5 pt-28 pb-[max(2rem,env(safe-area-inset-bottom))] sm:px-8 sm:pt-32 sm:pb-10 md:px-12 md:pb-12 lg:min-h-screen lg:justify-end lg:px-16 lg:pt-0 lg:pb-14">
-          <p className="max-w-[18rem] text-[0.6rem] font-medium tracking-[0.22em] text-gold uppercase sm:max-w-none sm:text-[0.65rem] sm:tracking-[0.35em] lg:mt-auto lg:pt-[18vh] lg:tracking-[0.4em]">
-            {t('hero.tag')}
-          </p>
+          {tag ? (
+            <p className="max-w-[18rem] text-[0.6rem] font-medium tracking-[0.22em] text-gold uppercase sm:max-w-none sm:text-[0.65rem] sm:tracking-[0.35em] lg:mt-auto lg:pt-[18vh] lg:tracking-[0.4em]">
+              {tag}
+            </p>
+          ) : null}
 
           <h1 className="mt-5 text-[clamp(2.4rem,11vw,3.75rem)] leading-[0.95] sm:mt-10 sm:text-5xl md:mt-14 md:text-6xl lg:mt-16 lg:text-7xl xl:text-8xl">
             <span className="name-viktoria block">Viktoria Paladios</span>
@@ -41,9 +46,11 @@ export function Hero() {
 
           <HandLine variant="swirl" className="mt-5 w-28 text-gold/70 sm:mt-8 sm:w-40" />
 
-          <p className="mt-5 max-w-[20rem] text-[0.95rem] leading-relaxed text-cream/70 sm:mt-8 sm:max-w-sm sm:text-base md:text-lg">
-            {t('hero.intro')}
-          </p>
+          {intro ? (
+            <p className="mt-5 max-w-[20rem] text-[0.95rem] leading-relaxed text-cream/70 sm:mt-8 sm:max-w-sm sm:text-base md:text-lg">
+              {intro}
+            </p>
+          ) : null}
 
           <div className="relative z-20 mt-7 flex w-full flex-col gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:flex-wrap">
             <Button to="/gallery" variant="gold" className="w-full sm:w-auto">
@@ -54,9 +61,11 @@ export function Hero() {
             </Button>
           </div>
 
-          <p className="mt-16 hidden text-xs tracking-[0.3em] text-cream/30 uppercase lg:block">
-            {t('hero.place')}
-          </p>
+          {place ? (
+            <p className="mt-16 hidden text-xs tracking-[0.3em] text-cream/30 uppercase lg:block">
+              {place}
+            </p>
+          ) : null}
         </div>
 
         <div className="relative hidden min-h-screen lg:block">

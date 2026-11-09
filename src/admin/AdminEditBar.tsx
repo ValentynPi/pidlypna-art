@@ -44,6 +44,12 @@ export function AdminEditBar() {
             </button>
           ) : null}
           <RouterLink
+            to="/"
+            className="rounded border border-ink/15 px-3 py-2 text-[0.65rem] tracking-widest text-ink uppercase"
+          >
+            Home
+          </RouterLink>
+          <RouterLink
             to="/gallery"
             className="rounded border border-ink/15 px-3 py-2 text-[0.65rem] tracking-widest text-ink uppercase"
           >

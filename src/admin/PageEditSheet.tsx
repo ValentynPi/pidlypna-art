@@ -7,11 +7,13 @@ import { uploadRepoImage } from './github';
 import { resolvePublicImage } from '../data/siteContent';
 import {
   PAGE_COPY_FIELDS,
+  addCharityEvent,
   addNotableEncounter,
   appendCharityPhotos,
   getEditableCharityEvents,
   getNotableEncountersList,
   hidePageCopyBlock,
+  removeCharityEvent,
   pageCopyEditorValue,
   pageCopyOverrideState,
   removeCharityPhoto,
@@ -99,7 +101,13 @@ export function PageEditSheet({ page, onClose }: PageEditSheetProps) {
   }
 
   const pageTitle =
-    page === 'about' ? 'About page' : page === 'charity' ? 'Charity page' : 'Notable encounters';
+    page === 'home'
+      ? 'Home page'
+      : page === 'about'
+        ? 'About page'
+        : page === 'charity'
+          ? 'Charity page'
+          : 'Notable encounters';
 
   return (
     <motion.div
@@ -225,7 +233,19 @@ export function PageEditSheet({ page, onClose }: PageEditSheetProps) {
 
           {page === 'charity' && (
             <section>
-              <h3 className="font-serif text-lg text-ink">Charity events</h3>
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h3 className="font-serif text-lg text-ink">Charity events</h3>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setContent((prev) => addCharityEvent(prev));
+                    setDirty(true);
+                  }}
+                  className="rounded bg-terracotta px-3 py-2 text-[0.65rem] font-semibold tracking-widest text-white uppercase"
+                >
+                  + Add event
+                </button>
+              </div>
               <div className="mt-4 space-y-8">
                 {charityEvents.map((event) => (
                   <motion.div
@@ -233,7 +253,19 @@ export function PageEditSheet({ page, onClose }: PageEditSheetProps) {
                     key={event.id}
                     className="rounded-lg border border-ink/10 p-4"
                   >
-                    <p className="font-mono text-xs text-ink-soft">{event.id}</p>
+                    <div className="flex flex-wrap items-start justify-between gap-2">
+                      <p className="font-mono text-xs text-ink-soft">{event.id}</p>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setContent((prev) => removeCharityEvent(prev, event.id));
+                          setDirty(true);
+                        }}
+                        className="text-[0.65rem] tracking-wide text-terracotta uppercase"
+                      >
+                        Delete event
+                      </button>
+                    </div>
                     {LANGS.map((lang) => (
                       <div key={lang} className="mt-3 space-y-2">
                         <label className="block">
