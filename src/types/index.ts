@@ -73,6 +73,19 @@ export interface PressItem {
   logoAlt: string;
 }
 
+export interface NotableEncounter {
+  id: string;
+  title: string;
+  /** Person, institution, or occasion */
+  withWhom: string;
+  location?: string;
+  date: string;
+  description: string;
+  image?: string;
+  imageAlt?: string;
+  link?: string;
+}
+
 export interface JourneyEntry {
   id: string;
   title: string;

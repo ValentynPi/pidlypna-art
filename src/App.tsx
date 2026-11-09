@@ -8,6 +8,7 @@ import { GalleryCollectionPage } from './pages/GalleryCollectionPage';
 import { ExhibitionsPage } from './pages/ExhibitionsPage';
 import { PressPage } from './pages/PressPage';
 import { JourneyPage } from './pages/JourneyPage';
+import { EncountersPage } from './pages/EncountersPage';
 import { ContactPage } from './pages/ContactPage';
 import { CharityPage } from './pages/CharityPage';
 import { LanguageProvider } from './i18n/LanguageContext';
@@ -60,6 +61,7 @@ export function App() {
                   <Route path="exhibitions" element={<ExhibitionsPage />} />
                   <Route path="press" element={<PressPage />} />
                   <Route path="journey" element={<JourneyPage />} />
+                  <Route path="encounters" element={<EncountersPage />} />
                   <Route path="contact" element={<ContactPage />} />
                   <Route path="admin" element={<AdminRedirect />} />
                   <Route path="admin/login" element={<AdminLoginPage />} />

@@ -7,6 +7,7 @@ const en: TranslationTree = {
     gallery: 'Gallery',
     workshops: 'Workshops',
     charity: 'Charity',
+    encounters: 'Notable Encounters',
     contact: 'Contact',
     viewArt: 'View Art',
     menu: 'Toggle menu',
@@ -286,6 +287,17 @@ const en: TranslationTree = {
       'Features, reviews, and mentions from publications across Spain, France, and the Ukrainian art community.',
     read: 'Read →',
   },
+  encounters: {
+    metaTitle: 'Notable Encounters',
+    metaDesc:
+      'Meaningful meetings and creative encounters in the life and practice of Viktoria Paladios — artists, communities, and cultural moments.',
+    label: 'Notable Encounters',
+    title: 'Notable Encounters',
+    description:
+      'People, places, and moments that shaped the work — collaborations, invitations, and conversations that leave a trace on the canvas.',
+    empty: 'Stories from notable encounters will appear here soon.',
+    readMore: 'Read more →',
+  },
   collections: {
     'abstract-art': 'Abstract Art',
     'alcohol-ink-art': 'Alcohol Ink Art',
@@ -329,6 +341,7 @@ const es: TranslationTree = {
     gallery: 'Galería',
     workshops: 'Talleres',
     charity: 'Caridad',
+    encounters: 'Reuniones notables',
     contact: 'Contacto',
     viewArt: 'Ver arte',
     menu: 'Abrir menú',
@@ -608,6 +621,17 @@ const es: TranslationTree = {
       'Reportajes, críticas y menciones de publicaciones de España, Francia y la comunidad artística ucraniana.',
     read: 'Leer →',
   },
+  encounters: {
+    metaTitle: 'Reuniones notables',
+    metaDesc:
+      'Encuentros significativos en la trayectoria de Viktoria Paladios — artistas, comunidades y momentos culturales.',
+    label: 'Reuniones notables',
+    title: 'Reuniones notables',
+    description:
+      'Personas, lugares y momentos que han marcado el trabajo — colaboraciones, invitaciones y conversaciones que dejan huella en el lienzo.',
+    empty: 'Pronto aparecerán aquí historias de reuniones notables.',
+    readMore: 'Leer más →',
+  },
   collections: {
     'abstract-art': 'Arte abstracto',
     'alcohol-ink-art': 'Tinta de alcohol',
@@ -651,6 +675,7 @@ const uk: TranslationTree = {
     gallery: 'Галерея',
     workshops: 'Майстер-класи',
     charity: 'Благодійність',
+    encounters: 'Визначні зустрічі',
     contact: 'Контакти',
     viewArt: 'Переглянути галерею',
     menu: 'Відкрити меню',
@@ -929,6 +954,17 @@ const uk: TranslationTree = {
     description:
       'Матеріали, огляди та згадки видань Іспанії, Франції та української мистецької спільноти.',
     read: 'Читати →',
+  },
+  encounters: {
+    metaTitle: 'Визначні зустрічі',
+    metaDesc:
+      'Важливі зустрічі та творчі контакти на шляху Вікторії Паладіос — митці, спільноти й культурні події.',
+    label: 'Визначні зустрічі',
+    title: 'Визначні зустрічі',
+    description:
+      'Люди, місця й моменти, що формували творчість — співпраця, запрошення та розмови, які лишають слід на полотні.',
+    empty: 'Історії визначних зустрічей незабаром з’являться тут.',
+    readMore: 'Докладніше →',
   },
   collections: {
     'abstract-art': 'Абстракція',

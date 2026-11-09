@@ -84,6 +84,10 @@ export function Footer() {
                 {[
                   { to: '/contact', label: t('nav.contact') },
                   { to: '/charity', label: t('nav.charity') },
+                  { to: '/encounters', label: t('nav.encounters') },
+                  { to: '/exhibitions', label: t('exhibitions.label') },
+                  { to: '/press', label: t('press.label') },
+                  { to: '/journey', label: t('journey.label') },
                 ].map((link) => (
                   <li key={link.to}>
                     <RouterLink
