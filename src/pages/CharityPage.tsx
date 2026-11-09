@@ -4,8 +4,6 @@ import { ScrollReveal } from '../components/ui/ScrollReveal';
 import { LazyImage } from '../components/ui/LazyImage';
 import { useLanguage } from '../i18n/LanguageContext';
 import { getCharityEventsForPage } from '../data/pageContent';
-import { AdminPageEditButton } from '../admin/AdminPageEditButton';
-
 export function CharityPage() {
   const { t, language } = useLanguage();
   const events = getCharityEventsForPage(language, t);
@@ -17,7 +15,6 @@ export function CharityPage() {
         description={t('charity.event1Title')}
         canonical="/charity"
       />
-      <AdminPageEditButton page="charity" />
       <PageHeader label={t('charity.label')} title={t('charity.title')} />
 
       <section className="mx-auto max-w-[90rem] space-y-24 px-6 pb-24 md:px-10 lg:px-16">

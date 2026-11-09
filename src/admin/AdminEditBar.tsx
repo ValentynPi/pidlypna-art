@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { RouterLink } from '../components/ui/RouterLink';
 import { useAdminAuth } from './AdminAuthContext';
+import { useAdminPageEdit } from './AdminPageEditProvider';
 import { useAdminSiteContent } from './AdminSiteContentContext';
 
 export function AdminEditBar() {
   const { token, username, logout } = useAdminAuth();
   const { dirty, saving, publish, lastSavedAt } = useAdminSiteContent();
+  const pageEdit = useAdminPageEdit();
   const [status, setStatus] = useState('');
 
   if (!token) return null;
@@ -32,6 +34,15 @@ export function AdminEditBar() {
           {status && <p className="mt-1 text-xs text-terracotta">{status}</p>}
         </div>
         <div className="flex flex-wrap items-center gap-2">
+          {pageEdit?.page ? (
+            <button
+              type="button"
+              onClick={pageEdit.openPageEditor}
+              className="rounded bg-gold/90 px-4 py-2 text-[0.65rem] font-semibold tracking-widest text-ink uppercase"
+            >
+              Edit page
+            </button>
+          ) : null}
           <RouterLink
             to="/gallery"
             className="rounded border border-ink/15 px-3 py-2 text-[0.65rem] tracking-widest text-ink uppercase"

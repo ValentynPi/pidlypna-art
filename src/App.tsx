@@ -17,6 +17,7 @@ import { AdminSiteContentProvider } from './admin/AdminSiteContentContext';
 import { AdminLoginPage } from './admin/AdminLoginPage';
 import { AdminRedirect } from './admin/AdminRedirect';
 import { AdminEditBar } from './admin/AdminEditBar';
+import { AdminPageEditProvider } from './admin/AdminPageEditProvider';
 
 function InspiredByNatureArtworkRedirect() {
   const { artworkSlug } = useParams<{ artworkSlug: string }>();
@@ -34,6 +35,7 @@ export function App() {
         <AdminSiteContentProvider>
           <LanguageProvider>
             <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+              <AdminPageEditProvider>
               <Routes>
                 <Route element={<Layout />}>
                   <Route index element={<HomePage />} />
@@ -68,6 +70,7 @@ export function App() {
                 </Route>
               </Routes>
               <AdminEditBar />
+              </AdminPageEditProvider>
             </BrowserRouter>
           </LanguageProvider>
         </AdminSiteContentProvider>
