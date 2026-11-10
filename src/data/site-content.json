@@ -887,6 +887,90 @@
         "es": "Castellón De La Plana"
       },
       "image": "/images/5447253528159133974.jpg"
+    },
+    {
+      "id": "encounter-mwb3970",
+      "title": {
+        "uk": "Українська громада в гостях у мерії Кастельйона",
+        "en": "The Ukrainian community visits Castellón Town Hall",
+        "es": "La comunidad ucraniana visita el Ayuntamiento de Castellón"
+      },
+      "withWhom": {
+        "uk": "Зустріч з представниками мерії та української громади біля виставки народного мистецтва",
+        "en": "With representatives of the Town Hall and the Ukrainian community at a folk art display",
+        "es": "Con representantes del Ayuntamiento y la comunidad ucraniana junto a una muestra de arte popular"
+      },
+      "date": {
+        "en": "October 2026",
+        "uk": "Жовтень 2026",
+        "es": "Octubre de 2026"
+      },
+      "description": {
+        "en": ""
+      },
+      "location": {
+        "uk": "Кастельон де ла Плана",
+        "en": "Castellón De La Plana",
+        "es": "Castellón De La Plana"
+      },
+      "image": "/images/5447253528159133970.jpg",
+      "imageAlt": "Ukrainian community and Castellón officials at Town Hall folk art exhibition"
+    },
+    {
+      "id": "encounter-mwb3972",
+      "title": {
+        "uk": "Українська громада в гостях у мерії Кастельйона",
+        "en": "The Ukrainian community visits Castellón Town Hall",
+        "es": "La comunidad ucraniana visita el Ayuntamiento de Castellón"
+      },
+      "withWhom": {
+        "uk": "Спільне фото з представниками мерії та української культурної спільноти",
+        "en": "Group meeting with Town Hall representatives and the Ukrainian cultural community",
+        "es": "Encuentro con representantes del Ayuntamiento y la comunidad cultural ucraniana"
+      },
+      "date": {
+        "en": "October 2026",
+        "uk": "Жовтень 2026",
+        "es": "Octubre de 2026"
+      },
+      "description": {
+        "en": ""
+      },
+      "location": {
+        "uk": "Кастельон де ла Плана",
+        "en": "Castellón De La Plana",
+        "es": "Castellón De La Plana"
+      },
+      "image": "/images/5447253528159133972.jpg",
+      "imageAlt": "Officials and Ukrainian community members at Castellón Town Hall"
+    },
+    {
+      "id": "encounter-mwb4082",
+      "title": {
+        "uk": "Українська громада в гостях у мерії Кастельйона",
+        "en": "The Ukrainian community visits Castellón Town Hall",
+        "es": "La comunidad ucraniana visita el Ayuntamiento de Castellón"
+      },
+      "withWhom": {
+        "uk": "Зустріч у резиденції мерії Кастельйона",
+        "en": "Meeting at Castellón Town Hall",
+        "es": "Encuentro en el Ayuntamiento de Castellón"
+      },
+      "date": {
+        "en": "October 2026",
+        "uk": "Жовтень 2026",
+        "es": "Octubre de 2026"
+      },
+      "description": {
+        "en": ""
+      },
+      "location": {
+        "uk": "Кастельон де ла Плана",
+        "en": "Castellón De La Plana",
+        "es": "Castellón De La Plana"
+      },
+      "image": "/images/5447253528159134082.jpg",
+      "imageAlt": "Meeting at Castellón Town Hall marble hall"
     }
   ]
 }

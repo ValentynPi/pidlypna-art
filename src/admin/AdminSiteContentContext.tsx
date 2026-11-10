@@ -21,6 +21,7 @@ import {
   prepareSiteContentForPublish,
   serializeSiteContent,
 } from './siteContentState';
+import { unionNotableEncounters } from './notableEncounterMerge';
 
 interface AdminSiteContentContextValue {
   content: SiteContent;
@@ -101,7 +102,18 @@ export function AdminSiteContentProvider({ children }: { children: ReactNode }) 
       setSaving(true);
       setError(null);
       try {
-        const payload = prepareSiteContentForPublish(override ?? contentRef.current);
+        const latestRemote = await fetchRemoteSiteContent(token);
+        const remoteContent = parseSiteContentJson(latestRemote.json);
+        const base = override ?? contentRef.current;
+        const mergedEncounters = unionNotableEncounters(
+          remoteContent.notableEncounters,
+          base.notableEncounters,
+        );
+        const payload = prepareSiteContentForPublish({
+          ...base,
+          notableEncounters: mergedEncounters,
+        });
+        setRemoteSha(latestRemote.sha);
         setContent(payload);
         const json = serializeSiteContent(payload);
         const newSha = await publishSiteContent(json, token, remoteSha);
