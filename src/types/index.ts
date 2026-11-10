@@ -81,8 +81,10 @@ export interface NotableEncounter {
   location?: string;
   date: string;
   description: string;
+  /** @deprecated prefer photos */
   image?: string;
   imageAlt?: string;
+  photos?: ArtworkImage[];
   link?: string;
 }
 

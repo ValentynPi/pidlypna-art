@@ -1,7 +1,7 @@
 import { PageMeta } from '../components/ui/PageMeta';
 import { PageHeader } from '../components/ui/PageHeader';
 import { ScrollReveal } from '../components/ui/ScrollReveal';
-import { LazyImage } from '../components/ui/LazyImage';
+import { PhotoGalleryCell } from '../components/ui/PhotoGalleryCell';
 import { useLanguage } from '../i18n/LanguageContext';
 import { getCharityEventsForPage } from '../data/pageContent';
 export function CharityPage() {
@@ -45,17 +45,14 @@ export function CharityPage() {
               ) : null}
             </ScrollReveal>
 
-            <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+            <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
               {event.photos.map((photo, index) => (
-                <ScrollReveal key={`${event.id}-${index}`} delay={index * 0.06}>
-                  <LazyImage
-                    src={photo.src}
-                    alt={photo.alt}
-                    wrapperClassName="w-full"
-                    className="!h-auto !w-full !max-h-none"
-                    objectFit="cover"
-                  />
-                </ScrollReveal>
+                <PhotoGalleryCell
+                  key={`${event.id}-${index}`}
+                  src={photo.src}
+                  alt={photo.alt}
+                  delay={index * 0.06}
+                />
               ))}
             </div>
           </div>

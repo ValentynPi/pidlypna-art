@@ -10,10 +10,13 @@ import {
   addCharityEvent,
   addNotableEncounter,
   appendCharityPhotos,
+  appendEncounterPhotos,
+  encounterPhotosForEditor,
   getEditableCharityEvents,
   getNotableEncountersList,
   hidePageCopyBlock,
   removeCharityEvent,
+  removeEncounterPhoto,
   pageCopyEditorValue,
   pageCopyOverrideState,
   removeCharityPhoto,
@@ -23,6 +26,7 @@ import {
   updateCharityLocalizedField,
   updateCharityPhotoAlt,
   updateEncounterLocalized,
+  updateEncounterPhotoAlt,
   updateEncounterScalar,
   updatePageCopy,
   type EditablePageId,
@@ -73,15 +77,22 @@ export function PageEditSheet({ page, onClose }: PageEditSheetProps) {
     }
   }
 
-  async function onUploadEncounterImage(id: string, file: File | undefined) {
-    if (!token || !file) return;
+  async function onUploadEncounterPhotos(id: string, fileList: FileList | null) {
+    if (!token || !fileList?.length) return;
     setUploading(true);
     setMessage('');
     try {
-      const path = await uploadRepoImage(file, token);
-      setLocalPreviews((prev) => ({ ...prev, [path]: URL.createObjectURL(file) }));
-      setContent((prev) => updateEncounterScalar(prev, id, 'image', path));
+      const paths: string[] = [];
+      for (const file of Array.from(fileList)) {
+        const path = await uploadRepoImage(file, token);
+        paths.push(path);
+        setLocalPreviews((prev) => ({ ...prev, [path]: URL.createObjectURL(file) }));
+      }
+      setContent((prev) =>
+        appendEncounterPhotos(prev, id, paths, 'Notable encounter photo'),
+      );
       setDirty(true);
+      setMessage('Photos added — publish when ready.');
     } catch (err) {
       setMessage(err instanceof Error ? err.message : 'Upload failed.');
     } finally {
@@ -333,7 +344,7 @@ export function PageEditSheet({ page, onClose }: PageEditSheetProps) {
                             localSrc={
                               localPreviews[photo.src] ?? resolvePublicImage(photo.src)
                             }
-                            className="aspect-[4/3] w-full object-cover"
+                            className="mx-auto max-h-52 w-full object-contain"
                           />
                           <input
                             value={photo.alt}
@@ -413,38 +424,59 @@ export function PageEditSheet({ page, onClose }: PageEditSheetProps) {
                         Delete
                       </button>
                     </motion.div>
-                    {item.image && (
-                      <AdminPhotoPreview
-                        storagePath={item.image}
-                        localSrc={localPreviews[item.image] ?? resolvePublicImage(item.image)}
-                        className="mt-3 aspect-[16/9] w-full max-w-sm object-cover"
-                      />
-                    )}
-                    <label className="mt-2 inline-block cursor-pointer text-[0.65rem] tracking-widest text-ink uppercase">
-                      {item.image ? 'Replace image' : 'Upload image'}
+                    <motion.div
+                      layout
+                      className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3"
+                    >
+                      {encounterPhotosForEditor(item).map((photo, photoIndex) => (
+                        <div key={`${photo.src}-${photoIndex}`} className="space-y-1">
+                          <AdminPhotoPreview
+                            storagePath={photo.src}
+                            localSrc={
+                              localPreviews[photo.src] ?? resolvePublicImage(photo.src)
+                            }
+                            className="mx-auto max-h-52 w-full object-contain"
+                          />
+                          <input
+                            value={photo.alt}
+                            onChange={(e) => {
+                              setContent((prev) =>
+                                updateEncounterPhotoAlt(
+                                  prev,
+                                  item.id,
+                                  photoIndex,
+                                  e.target.value,
+                                ),
+                              );
+                              setDirty(true);
+                            }}
+                            className="w-full text-[0.65rem] text-ink-soft outline-none"
+                            placeholder="Alt text"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setContent((prev) =>
+                                removeEncounterPhoto(prev, item.id, photoIndex),
+                              );
+                              setDirty(true);
+                            }}
+                            className="text-[0.65rem] tracking-wide text-terracotta uppercase"
+                          >
+                            Remove
+                          </button>
+                        </div>
+                      ))}
+                    </motion.div>
+                    <label className="mt-2 inline-block cursor-pointer rounded border border-ink/15 px-3 py-2 text-[0.65rem] tracking-widest text-ink uppercase">
+                      Add photos
                       <input
                         type="file"
                         accept="image/*"
+                        multiple
                         className="hidden"
                         disabled={uploading}
-                        onChange={(e) =>
-                          void onUploadEncounterImage(item.id, e.target.files?.[0])
-                        }
-                      />
-                    </label>
-                    <label className="mt-2 block">
-                      <span className="text-[0.65rem] tracking-[0.2em] text-ink-soft uppercase">
-                        Image alt
-                      </span>
-                      <input
-                        value={item.imageAlt ?? ''}
-                        onChange={(e) => {
-                          setContent((prev) =>
-                            updateEncounterScalar(prev, item.id, 'imageAlt', e.target.value),
-                          );
-                          setDirty(true);
-                        }}
-                        className="mt-1 w-full border-b border-ink/15 bg-transparent py-2 text-sm text-ink outline-none"
+                        onChange={(e) => void onUploadEncounterPhotos(item.id, e.target.files)}
                       />
                     </label>
                     <label className="mt-2 block">

@@ -133,19 +133,43 @@ export function getCharityEventsForPage(
   });
 }
 
+function encounterPhotoList(
+  item: StoredNotableEncounter,
+): { src: string; alt: string }[] {
+  if (item.photos?.length) {
+    return item.photos.map((p) => ({
+      src: resolvePublicImage(p.src.startsWith('/') ? p.src : `/images/${p.src}`),
+      alt: p.alt,
+    }));
+  }
+  if (item.image) {
+    return [
+      {
+        src: resolvePublicImage(item.image),
+        alt: item.imageAlt ?? '',
+      },
+    ];
+  }
+  return [];
+}
+
 export function getNotableEncounters(language: Language): NotableEncounter[] {
   const stored = activeSiteContent().notableEncounters ?? [];
-  return stored.map((item) => ({
-    id: item.id,
-    title: localizedText(item.title, language),
-    withWhom: localizedText(item.withWhom, language),
-    location: item.location ? localizedText(item.location, language) : undefined,
-    date: localizedText(item.date, language),
-    description: localizedText(item.description, language),
-    image: item.image ? resolvePublicImage(item.image) : undefined,
-    imageAlt: item.imageAlt,
-    link: item.link,
-  }));
+  return stored.map((item) => {
+    const photos = encounterPhotoList(item);
+    return {
+      id: item.id,
+      title: localizedText(item.title, language),
+      withWhom: localizedText(item.withWhom, language),
+      location: item.location ? localizedText(item.location, language) : undefined,
+      date: localizedText(item.date, language),
+      description: localizedText(item.description, language),
+      photos,
+      image: photos[0]?.src,
+      imageAlt: photos[0]?.alt,
+      link: item.link,
+    };
+  });
 }
 
 export type { StoredNotableEncounter };

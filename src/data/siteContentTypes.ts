@@ -23,8 +23,11 @@ export interface StoredNotableEncounter {
   location?: LocalizedText;
   date: LocalizedText;
   description: LocalizedText;
+  /** @deprecated use photos */
   image?: string;
+  /** @deprecated use photos */
   imageAlt?: string;
+  photos?: CharityEventPhoto[];
   link?: string;
 }
 

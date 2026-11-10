@@ -283,11 +283,63 @@ export function updateEncounterLocalized(
 export function updateEncounterScalar(
   content: SiteContent,
   id: string,
-  field: 'image' | 'imageAlt' | 'link',
+  field: 'link',
   value: string,
 ): SiteContent {
   return updateNotableEncounter(content, id, (item) => ({
     ...item,
     [field]: value.trim() || undefined,
+  }));
+}
+
+export function encounterPhotosForEditor(item: StoredNotableEncounter): CharityEventContent['photos'] {
+  if (item.photos?.length) return item.photos;
+  if (item.image) return [{ src: item.image, alt: item.imageAlt ?? '' }];
+  return [];
+}
+
+export function appendEncounterPhotos(
+  content: SiteContent,
+  id: string,
+  paths: string[],
+  defaultAlt: string,
+): SiteContent {
+  return updateNotableEncounter(content, id, (item) => ({
+    ...item,
+    image: undefined,
+    imageAlt: undefined,
+    photos: [
+      ...encounterPhotosForEditor(item),
+      ...paths.map((src) => ({ src, alt: defaultAlt })),
+    ],
+  }));
+}
+
+export function removeEncounterPhoto(
+  content: SiteContent,
+  id: string,
+  photoIndex: number,
+): SiteContent {
+  return updateNotableEncounter(content, id, (item) => ({
+    ...item,
+    photos: encounterPhotosForEditor(item).filter((_, i) => i !== photoIndex),
+    image: undefined,
+    imageAlt: undefined,
+  }));
+}
+
+export function updateEncounterPhotoAlt(
+  content: SiteContent,
+  id: string,
+  photoIndex: number,
+  alt: string,
+): SiteContent {
+  return updateNotableEncounter(content, id, (item) => ({
+    ...item,
+    photos: encounterPhotosForEditor(item).map((photo, i) =>
+      i === photoIndex ? { ...photo, alt } : photo,
+    ),
+    image: undefined,
+    imageAlt: undefined,
   }));
 }
