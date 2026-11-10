@@ -667,6 +667,20 @@
   },
   "charityEvents": [
     {
+      "id": "charity-mwauxxer",
+      "title": {
+        "uk": "Благодійний майстер-клас із петриківського розпису",
+        "en": "Charity master class in Petrykivka painting",
+        "es": "Taller benéfico de pintura Petrykivka"
+      },
+      "photos": [],
+      "date": {
+        "uk": "Жовтень 2026",
+        "en": "October 2026",
+        "es": "Octubre de 2026"
+      }
+    },
+    {
       "id": "charity-pysanka-2025",
       "date": {
         "en": "April 2025",
