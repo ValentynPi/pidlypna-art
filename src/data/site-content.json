@@ -655,17 +655,17 @@
     "en": {
       "about.p1": "I learned to see color before I learned to read. My childhood evenings in Ukraine were spent beside my grandmother: by the light of a lamp, she embroidered shirt after shirt—each stitch was a story, each pattern a quiet prayer. In my art, I still explore this deep connection to my Ukrainian roots, leaving subtle hints of traditional Ukrainian art.",
       "about.p4": "Today, I create from my studio in Castellón, continuing a visual diary of the journeys that feed my practice.\n\nBeyond my art, I am deeply committed to my community. I conduct free charity art workshops for children and adults, and actively participate in solidarity events and civic initiatives in support of Ukraine.",
-      "encounters.readMore": "Read more → With the Mayor of Castellón, Begoña Carrasco."
+      "encounters.readMore": "Read more → "
     },
     "uk": {
       "about.p1": "Я навчилася бачити колір раніше, ніж читати. Мої дитячі вечори в Україні минули біля бабусі: при світлі лампи вона вишивала сорочку за сорочку — кожен стібок був історією, кожен узор — тихою молитвою. У своїй творчості я й досі досліджую цей глибокий зв'язок із моїм українським корінням, залишаючи натяки на традиційне українське мистецтво.\n",
       "about.p4": "Сьогодні я творю у своїй студії в Кастельйоні, продовжуючи вести візуальний щоденник мандрів, які живлять мою творчість.\n\nОкрім творчості, я глибоко віддана своїй громаді. Я проводжу безкоштовні благодійні художні майстер-класи для дітей та дорослих, а також активно беру участь у заходах солідарності та громадських ініціативах на підтримку України.",
-      "encounters.readMore": "Докладніше → З мером Кастельона Бегонією Карско"
+      "encounters.readMore": "Докладніше → "
     },
     "es": {
       "about.p1": "Aprendí a ver el color antes que a leer. Mis tardes de infancia en Ucrania transcurrieron junto a mi abuela: a la luz de una lámpara, ella bordaba camisa tras camisa; cada puntada era una historia, cada patrón, una oración silenciosa. En mi obra sigo explorando esta profunda conexión con mis raíces ucranianas, dejando sutiles guiños al arte tradicional ucraniano.",
       "about.p4": "Hoy sigo creando desde mi estudio en Castellón, continuando un diario visual de los viajes que alimentan mi práctica artística.\n\nAdemás de mi creación artística, estoy profundamente comprometida con mi comunidad. Imparto talleres de arte benéficos y gratuitos para niños y adultos, y participo activamente en eventos de solidaridad e iniciativas cívicas en apoyo a Ucrania.",
-      "encounters.readMore": "Leer más → Con la alcaldesa de Castellón, Begoña Carrasco."
+      "encounters.readMore": "Leer más →"
     }
   },
   "charityEvents": [
@@ -837,20 +837,29 @@
     {
       "id": "encounter-mwavvp5j",
       "title": {
-        "uk": "З мером Кастельона Бегонією Карско",
-        "en": "With the Mayor of Castellón, Begoña Carrasco.",
-        "es": "Con la alcaldesa de Castellón, Begoña Carrasco."
+        "uk": "Українська громада в гостях у мерії Кастельйона",
+        "es": "La comunidad ucraniana visita el Ayuntamiento de Castellón",
+        "en": "The Ukrainian community visits Castellón Town Hall"
       },
       "withWhom": {
-        "en": ""
+        "en": "With the Mayor of Castellón, Begoña Carrasco.",
+        "uk": "З мером Кастельона Бегонією Карско",
+        "es": "Con la alcaldesa de Castellón, Begoña Carrasco."
       },
       "date": {
-        "en": ""
+        "en": "October 2026",
+        "uk": "Жовтень  2026",
+        "es": "Octubre de 2026"
       },
       "description": {
         "en": ""
       },
-      "image": "/images/5447253528159133973.jpg"
+      "image": "/images/5447253528159133973.jpg",
+      "location": {
+        "uk": "Кастельон де ла Плана",
+        "en": "Castellón De La Plana",
+        "es": "Castellón De La Plana"
+      }
     }
   ]
 }
