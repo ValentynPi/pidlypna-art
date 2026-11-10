@@ -11,6 +11,7 @@ export function Navbar() {
     { to: '/about', label: t('nav.about') },
     { to: '/gallery', label: t('nav.gallery') },
     { to: '/charity', label: t('nav.charity') },
+    { to: '/encounters', label: t('nav.encounters') },
     { to: '/contact', label: t('nav.contact') },
   ];
   const [isOpen, setIsOpen] = useState(false);
