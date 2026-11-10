@@ -673,12 +673,30 @@
         "en": "Charity master class in Petrykivka painting",
         "es": "Taller benéfico de pintura Petrykivka"
       },
-      "photos": [],
+      "photos": [
+        {
+          "src": "/images/inshot-20261109-155851015.jpg",
+          "alt": "Charity event photo"
+        },
+        {
+          "src": "/images/inshot-20261109-160504099.jpg",
+          "alt": "Charity event photo"
+        },
+        {
+          "src": "/images/inshot-20261109-160625851.jpg",
+          "alt": "Charity event photo"
+        },
+        {
+          "src": "/images/inshot-20261109-162217108.jpg",
+          "alt": "Charity event photo"
+        }
+      ],
       "date": {
         "uk": "Жовтень 2026",
         "en": "October 2026",
         "es": "Octubre de 2026"
-      }
+      },
+      "instagramUrl": "https://www.instagram.com/p/De6xHvBodnt/?hl=es"
     },
     {
       "id": "charity-pysanka-2025",
@@ -705,7 +723,8 @@
           "src": "/images/charity-pysanka-2025-4.jpg",
           "alt": "Dyeing eggs during the charity pysankarstvo class"
         }
-      ]
+      ],
+      "instagramUrl": "https://www.instagram.com/p/DIZQU1Bo3e2/?hl=es&img_index=1"
     },
     {
       "id": "charity-childhood-without-war",
@@ -776,7 +795,8 @@
         "uk": "Серпень 2025",
         "es": "Agosto de 2025",
         "en": "August 2025"
-      }
+      },
+      "instagramUrl": "https://www.instagram.com/p/DN4vkbliA5b/?hl=es"
     },
     {
       "id": "charity-petrykivka-2024",
