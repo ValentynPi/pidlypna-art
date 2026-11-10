@@ -14,12 +14,7 @@ export function PhotoGalleryCell({ src, alt, delay = 0 }: PhotoGalleryCellProps)
 
   return (
     <ScrollReveal delay={delay} className={wide ? 'sm:col-span-2' : undefined}>
-      <OrientedPhoto
-        src={src}
-        alt={alt}
-        wideSpansColumns={false}
-        onOrient={setOrientation}
-      />
+      <OrientedPhoto src={src} alt={alt} onOrient={setOrientation} />
     </ScrollReveal>
   );
 }

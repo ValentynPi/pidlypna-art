@@ -1,5 +1,6 @@
 import type { NotableEncounter } from '../../types';
 import { ScrollReveal } from '../ui/ScrollReveal';
+import { OrientedPhoto } from '../ui/OrientedPhoto';
 import { PhotoGalleryCell } from '../ui/PhotoGalleryCell';
 import { useLanguage } from '../../i18n/LanguageContext';
 
@@ -30,25 +31,33 @@ export function EncounterList({ encounters }: EncounterListProps) {
     <div className="space-y-px bg-ink/10">
       {encounters.map((item, index) => {
         const images = encounterImages(item);
+        const multiPhoto = images.length > 1;
+
         return (
           <ScrollReveal key={item.id} delay={index * 0.06}>
             <article className="grid gap-8 bg-cream p-8 md:grid-cols-12 md:gap-10 md:p-10">
               {images.length > 0 ? (
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:col-span-5">
-                  {images.map((photo, photoIndex) => (
-                    <PhotoGalleryCell
-                      key={`${item.id}-${photoIndex}`}
-                      src={photo.src}
-                      alt={photo.alt}
-                      delay={photoIndex * 0.04}
-                    />
-                  ))}
-                </div>
+                multiPhoto ? (
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:col-span-5">
+                    {images.map((photo, photoIndex) => (
+                      <PhotoGalleryCell
+                        key={`${item.id}-${photoIndex}`}
+                        src={photo.src}
+                        alt={photo.alt}
+                        delay={0}
+                      />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="md:col-span-4">
+                    <OrientedPhoto src={images[0]!.src} alt={images[0]!.alt} />
+                  </div>
+                )
               ) : null}
               <div
                 className={
                   images.length > 0
-                    ? 'flex flex-col justify-center md:col-span-7'
+                    ? `flex flex-col justify-center ${multiPhoto ? 'md:col-span-7' : 'md:col-span-8'}`
                     : 'md:col-span-12'
                 }
               >
@@ -58,10 +67,12 @@ export function EncounterList({ encounters }: EncounterListProps) {
                 </p>
                 <h2 className="mt-2 font-serif text-2xl text-ink md:text-3xl">{item.title}</h2>
                 <p className="mt-1 text-sm text-ink-soft">{item.withWhom}</p>
-                <p className="mt-4 text-sm leading-relaxed text-ink md:text-base">
-                  {item.description}
-                </p>
-                {item.link && (
+                {item.description ? (
+                  <p className="mt-4 text-sm leading-relaxed text-ink md:text-base">
+                    {item.description}
+                  </p>
+                ) : null}
+                {item.link ? (
                   <a
                     href={item.link}
                     target="_blank"
@@ -70,7 +81,7 @@ export function EncounterList({ encounters }: EncounterListProps) {
                   >
                     {t('encounters.readMore')}
                   </a>
-                )}
+                ) : null}
               </div>
             </article>
           </ScrollReveal>

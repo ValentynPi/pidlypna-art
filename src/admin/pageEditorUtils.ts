@@ -298,21 +298,32 @@ export function encounterPhotosForEditor(item: StoredNotableEncounter): CharityE
   return [];
 }
 
+function syncEncounterPhotoFields(
+  item: StoredNotableEncounter,
+  photos: CharityEventContent['photos'],
+): StoredNotableEncounter {
+  const first = photos[0];
+  return {
+    ...item,
+    photos: photos.length ? photos : undefined,
+    image: first?.src,
+    imageAlt: first?.alt || undefined,
+  };
+}
+
 export function appendEncounterPhotos(
   content: SiteContent,
   id: string,
   paths: string[],
   defaultAlt: string,
 ): SiteContent {
-  return updateNotableEncounter(content, id, (item) => ({
-    ...item,
-    image: undefined,
-    imageAlt: undefined,
-    photos: [
+  return updateNotableEncounter(content, id, (item) => {
+    const photos = [
       ...encounterPhotosForEditor(item),
       ...paths.map((src) => ({ src, alt: defaultAlt })),
-    ],
-  }));
+    ];
+    return syncEncounterPhotoFields(item, photos);
+  });
 }
 
 export function removeEncounterPhoto(
@@ -320,12 +331,10 @@ export function removeEncounterPhoto(
   id: string,
   photoIndex: number,
 ): SiteContent {
-  return updateNotableEncounter(content, id, (item) => ({
-    ...item,
-    photos: encounterPhotosForEditor(item).filter((_, i) => i !== photoIndex),
-    image: undefined,
-    imageAlt: undefined,
-  }));
+  return updateNotableEncounter(content, id, (item) => {
+    const photos = encounterPhotosForEditor(item).filter((_, i) => i !== photoIndex);
+    return syncEncounterPhotoFields(item, photos);
+  });
 }
 
 export function updateEncounterPhotoAlt(
@@ -334,12 +343,10 @@ export function updateEncounterPhotoAlt(
   photoIndex: number,
   alt: string,
 ): SiteContent {
-  return updateNotableEncounter(content, id, (item) => ({
-    ...item,
-    photos: encounterPhotosForEditor(item).map((photo, i) =>
+  return updateNotableEncounter(content, id, (item) => {
+    const photos = encounterPhotosForEditor(item).map((photo, i) =>
       i === photoIndex ? { ...photo, alt } : photo,
-    ),
-    image: undefined,
-    imageAlt: undefined,
-  }));
+    );
+    return syncEncounterPhotoFields(item, photos);
+  });
 }
