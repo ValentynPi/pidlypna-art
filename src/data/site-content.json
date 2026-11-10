@@ -860,6 +860,33 @@
         "en": "Castellón De La Plana",
         "es": "Castellón De La Plana"
       }
+    },
+    {
+      "id": "encounter-mwaxisj3",
+      "title": {
+        "uk": "Українська громада в гостях у мерії Кастельйона",
+        "en": "The Ukrainian community visits Castellón Town Hall",
+        "es": "La comunidad ucraniana visita el Ayuntamiento de Castellón"
+      },
+      "withWhom": {
+        "en": "With the Second Deputy Mayor of Castellón, Vicent Sales.",
+        "uk": "Із другим заступником мера Кастельона Вісентом Салесом",
+        "es": "Con el segundo teniente de alcalde de Castellón, Vicent Sales."
+      },
+      "date": {
+        "en": "October 2026",
+        "uk": "Жовтень 2026",
+        "es": "Octubre de 2026"
+      },
+      "description": {
+        "en": ""
+      },
+      "location": {
+        "uk": "Кастельон де ла Плана",
+        "en": "Castellón De La Plana",
+        "es": "Castellón De La Plana"
+      },
+      "image": "/images/5447253528159133974.jpg"
     }
   ]
 }
