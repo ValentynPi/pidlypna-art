@@ -842,9 +842,9 @@
         "en": "The Ukrainian community visits Castellón Town Hall"
       },
       "withWhom": {
-        "en": "With the Mayor of Castellón, Begoña Carrasco.",
+        "en": "With the Mayor of Castellón, Begoña Carrasco",
         "uk": "З мером Кастельона Бегонією Карско",
-        "es": "Con la alcaldesa de Castellón, Begoña Carrasco."
+        "es": "Con la alcaldesa de Castellón, Begoña Carrasco"
       },
       "date": {
         "en": "October 2026",
@@ -947,14 +947,14 @@
     {
       "id": "encounter-mwb4082",
       "title": {
-        "uk": "Українська громада в гостях у мерії Кастельйона",
-        "en": "The Ukrainian community visits Castellón Town Hall",
-        "es": "La comunidad ucraniana visita el Ayuntamiento de Castellón"
+        "uk": "Офіційний прийом у мерії",
+        "es": "Recepción oficial en el Ayuntamiento",
+        "en": "Official Reception at the Town Hall"
       },
       "withWhom": {
-        "uk": "Зустріч у резиденції мерії Кастельйона",
-        "en": "Meeting at Castellón Town Hall",
-        "es": "Encuentro en el Ayuntamiento de Castellón"
+        "uk": "З мером Кастельона Бегонією Карско",
+        "en": "With the Mayor of Castellón, Begoña Carrasco",
+        "es": "Con la alcaldesa de Castellón, Begoña Carrasco"
       },
       "date": {
         "en": "October 2026",
