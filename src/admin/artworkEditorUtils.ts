@@ -115,15 +115,8 @@ export function updateArtworkListingField(
 ): SiteContent {
   const prev = patchFor(content.artworks, id);
   const listing = { ...prev.listing };
-  const row = { ...listing[key], [lang]: value };
-  if (!value.trim()) {
-    delete row[lang];
-  }
-  if (Object.keys(row).length > 0) {
-    listing[key] = row;
-  } else {
-    delete listing[key];
-  }
+  const row = { ...(listing[key] ?? {}), [lang]: value };
+  listing[key] = row;
   const prevPatch = patchFor(content.artworks, id);
   const nextPatch: ArtworkContentPatch = { ...prevPatch, listing };
   if (Object.keys(listing).length === 0) {

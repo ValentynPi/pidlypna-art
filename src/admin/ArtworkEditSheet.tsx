@@ -6,7 +6,11 @@ import { useAdminAuth } from './AdminAuthContext';
 import { useAdminSiteContent } from './AdminSiteContentContext';
 import { uploadRepoImage } from './github';
 import { listingAutomaticDetailValue } from '../data/listing';
-import { LISTING_DETAIL_KEYS, type ListingDetailKey } from '../data/siteContentTypes';
+import {
+  LISTING_DETAIL_KEYS,
+  type ArtworkContentPatch,
+  type ListingDetailKey,
+} from '../data/siteContentTypes';
 import {
   buildPhotoPatch,
   getArtworkPhotosForEditor,
@@ -85,10 +89,34 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
   }
 
   function applyListingField(key: ListingDetailKey, lang: 'en' | 'uk' | 'es', value: string) {
-    const automatic = automaticListingText(lang, key);
-    const toStore =
-      !value.trim() || value.trim() === automatic.trim() ? '' : value;
-    setContent((prev) => updateArtworkListingField(prev, artwork.id, key, lang, toStore));
+    setContent((prev) => updateArtworkListingField(prev, artwork.id, key, lang, value));
+    setDirty(true);
+  }
+
+  function resetListingField(key: ListingDetailKey, lang: 'en' | 'uk' | 'es') {
+    setContent((prev) => {
+      const prevPatch = patchFor(prev.artworks, artwork.id);
+      const listing = { ...prevPatch.listing };
+      const row = listing[key] ?? {};
+      const nextRow = Object.fromEntries(
+        Object.entries(row).filter(([code]) => code !== lang),
+      ) as Partial<Record<'en' | 'uk' | 'es', string>>;
+      if (Object.keys(nextRow).length > 0) {
+        listing[key] = nextRow;
+      } else {
+        delete listing[key];
+      }
+      const nextPatch: ArtworkContentPatch = { ...prevPatch };
+      if (Object.keys(listing).length > 0) {
+        nextPatch.listing = listing;
+      } else {
+        nextPatch.listing = undefined;
+      }
+      return {
+        ...prev,
+        artworks: { ...prev.artworks, [artwork.id]: nextPatch },
+      };
+    });
     setDirty(true);
   }
 
@@ -344,16 +372,27 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
 
             <div className="space-y-4 border-t border-ink/10 pt-4">
               <p className="text-[0.65rem] tracking-[0.25em] text-terracotta uppercase">
-                Details panel (lightbox) · edit the text directly in each language (no grey
-                placeholders)
+                Details panel (lightbox) · edit or clear any line; use Reset for automatic text
               </p>
               {(['uk', 'en', 'es'] as const).map((lang) => (
                 <div key={`listing-${lang}`} className="space-y-3 rounded border border-ink/10 bg-white/40 p-3">
                   <p className="text-xs font-medium tracking-wider text-ink uppercase">{lang}</p>
                   {LISTING_DETAIL_KEYS.map((key) => (
                     <label key={`${lang}-${key}`} className="block">
-                      <span className="text-[0.6rem] tracking-[0.2em] text-ink-soft uppercase">
-                        {LISTING_FIELD_LABELS[key]}
+                      <span className="flex flex-wrap items-center justify-between gap-2">
+                        <span className="text-[0.6rem] tracking-[0.2em] text-ink-soft uppercase">
+                          {LISTING_FIELD_LABELS[key]}
+                        </span>
+                        {patch.listing?.[key] &&
+                        Object.prototype.hasOwnProperty.call(patch.listing[key], lang) ? (
+                          <button
+                            type="button"
+                            onClick={() => resetListingField(key, lang)}
+                            className="text-[0.55rem] tracking-wide text-terracotta uppercase"
+                          >
+                            Reset
+                          </button>
+                        ) : null}
                       </span>
                       <input
                         value={listingFieldValue(lang, key)}

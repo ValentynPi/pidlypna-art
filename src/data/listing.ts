@@ -220,7 +220,9 @@ function listingDetailValue(
   language: Language,
   computed: string,
 ): string {
-  return getListingDetailOverride(artwork.id, key, language) ?? computed;
+  const override = getListingDetailOverride(artwork.id, key, language);
+  if (override !== undefined) return override;
+  return computed;
 }
 
 /** Translation helper for a specific language (not the site UI language). */

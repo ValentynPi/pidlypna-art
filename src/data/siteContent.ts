@@ -80,9 +80,10 @@ export function getListingDetailOverride(
   language: import('../i18n/types').Language,
 ): string | undefined {
   const listing = activeSiteContent().artworks[artworkId]?.listing?.[key];
-  if (!listing) return undefined;
-  const value = listing[language]?.trim();
-  return value || undefined;
+  if (!listing || !Object.prototype.hasOwnProperty.call(listing, language)) {
+    return undefined;
+  }
+  return listing[language] ?? '';
 }
 
 export function isArtworkHidden(artworkId: string): boolean {
