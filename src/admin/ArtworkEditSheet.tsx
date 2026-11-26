@@ -71,13 +71,25 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
     setDirty(true);
   }
 
-  function applyListingField(key: ListingDetailKey, lang: 'en' | 'uk' | 'es', value: string) {
-    setContent((prev) => updateArtworkListingField(prev, artwork.id, key, lang, value));
-    setDirty(true);
+  function automaticListingText(lang: 'en' | 'uk' | 'es', key: ListingDetailKey): string {
+    return listingAutomaticDetailValue(artwork, lang, key);
   }
 
-  function defaultListingValue(lang: 'en' | 'uk' | 'es', key: ListingDetailKey): string {
-    return listingAutomaticDetailValue(artwork, lang, key);
+  /** Always show editable text (saved override or automatic default) — not grey placeholders. */
+  function listingFieldValue(lang: 'en' | 'uk' | 'es', key: ListingDetailKey): string {
+    const listing = patch.listing?.[key];
+    if (listing && Object.prototype.hasOwnProperty.call(listing, lang)) {
+      return listing[lang] ?? '';
+    }
+    return automaticListingText(lang, key);
+  }
+
+  function applyListingField(key: ListingDetailKey, lang: 'en' | 'uk' | 'es', value: string) {
+    const automatic = automaticListingText(lang, key);
+    const toStore =
+      !value.trim() || value.trim() === automatic.trim() ? '' : value;
+    setContent((prev) => updateArtworkListingField(prev, artwork.id, key, lang, toStore));
+    setDirty(true);
   }
 
   function applyPhotos(cover: string, extras: typeof photoSet.extras) {
@@ -332,8 +344,8 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
 
             <div className="space-y-4 border-t border-ink/10 pt-4">
               <p className="text-[0.65rem] tracking-[0.25em] text-terracotta uppercase">
-                Details panel (lightbox) · each language is separate — blank = automatic text for
-                that language only
+                Details panel (lightbox) · edit the text directly in each language (no grey
+                placeholders)
               </p>
               {(['uk', 'en', 'es'] as const).map((lang) => (
                 <div key={`listing-${lang}`} className="space-y-3 rounded border border-ink/10 bg-white/40 p-3">
@@ -344,10 +356,9 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
                         {LISTING_FIELD_LABELS[key]}
                       </span>
                       <input
-                        value={patch.listing?.[key]?.[lang] ?? ''}
-                        placeholder={defaultListingValue(lang, key)}
+                        value={listingFieldValue(lang, key)}
                         onChange={(e) => applyListingField(key, lang, e.target.value)}
-                        className="mt-1 w-full border-b border-ink/15 bg-transparent py-1.5 text-sm text-ink outline-none placeholder:text-ink-soft/50 focus:border-terracotta"
+                        className="mt-1 w-full border-b border-ink/15 bg-transparent py-1.5 text-sm text-ink outline-none focus:border-terracotta"
                       />
                     </label>
                   ))}
