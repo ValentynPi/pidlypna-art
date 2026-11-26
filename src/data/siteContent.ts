@@ -81,7 +81,7 @@ export function getListingDetailOverride(
 ): string | undefined {
   const listing = activeSiteContent().artworks[artworkId]?.listing?.[key];
   if (!listing) return undefined;
-  const value = listing[language]?.trim() || listing.en?.trim() || listing.uk?.trim() || listing.es?.trim();
+  const value = listing[language]?.trim();
   return value || undefined;
 }
 

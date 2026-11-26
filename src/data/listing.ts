@@ -3,8 +3,10 @@ import { listingHeight, listingWidth } from './artworks';
 import { getListingDetailOverride } from './siteContent';
 import { getArtworkDescription } from '../i18n/artworkDescriptions';
 import { getArtworkTitle } from '../i18n/artworkTitles';
+import { translations } from '../i18n/translations';
 import type { Language } from '../i18n/types';
-import type { ListingDetailKey } from './siteContentTypes';
+import { getNested, interpolate } from '../i18n/utils';
+import { LISTING_DETAIL_KEYS, type ListingDetailKey } from './siteContentTypes';
 
 export type TranslateFn = (path: string, params?: Record<string, string>) => string;
 
@@ -219,6 +221,29 @@ function listingDetailValue(
   computed: string,
 ): string {
   return getListingDetailOverride(artwork.id, key, language) ?? computed;
+}
+
+/** Translation helper for a specific language (not the site UI language). */
+export function translateForLanguage(language: Language): TranslateFn {
+  return (path, params) => {
+    const raw =
+      getNested(translations[language], path) ??
+      getNested(translations.en, path) ??
+      path;
+    return interpolate(raw, params);
+  };
+}
+
+/** Built-in lightbox detail text for one field — never pulls another language’s override. */
+export function listingAutomaticDetailValue(
+  artwork: Artwork,
+  language: Language,
+  key: ListingDetailKey,
+): string {
+  const t = translateForLanguage(language);
+  const rows = listingDetails(artwork, t, language);
+  const index = LISTING_DETAIL_KEYS.indexOf(key) + 1;
+  return rows[index]?.value ?? '';
 }
 
 export function listingDetails(

@@ -5,9 +5,8 @@ import { AdminPhotoPreview } from './AdminPhotoPreview';
 import { useAdminAuth } from './AdminAuthContext';
 import { useAdminSiteContent } from './AdminSiteContentContext';
 import { uploadRepoImage } from './github';
-import { listingDetails } from '../data/listing';
+import { listingAutomaticDetailValue } from '../data/listing';
 import { LISTING_DETAIL_KEYS, type ListingDetailKey } from '../data/siteContentTypes';
-import { useLanguage } from '../i18n/LanguageContext';
 import {
   buildPhotoPatch,
   getArtworkPhotosForEditor,
@@ -36,7 +35,6 @@ interface ArtworkEditSheetProps {
 }
 
 export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
-  const { t } = useLanguage();
   const { token } = useAdminAuth();
   const { content, setContent, setDirty, publish, getContentSnapshot, saving } =
     useAdminSiteContent();
@@ -79,9 +77,7 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
   }
 
   function defaultListingValue(lang: 'en' | 'uk' | 'es', key: ListingDetailKey): string {
-    const rows = listingDetails(artwork, t, lang);
-    const index = LISTING_DETAIL_KEYS.indexOf(key) + 1;
-    return rows[index]?.value ?? '';
+    return listingAutomaticDetailValue(artwork, lang, key);
   }
 
   function applyPhotos(cover: string, extras: typeof photoSet.extras) {
@@ -336,7 +332,8 @@ export function ArtworkEditSheet({ artwork, onClose }: ArtworkEditSheetProps) {
 
             <div className="space-y-4 border-t border-ink/10 pt-4">
               <p className="text-[0.65rem] tracking-[0.25em] text-terracotta uppercase">
-                Details panel (lightbox) · leave blank for automatic text
+                Details panel (lightbox) · each language is separate — blank = automatic text for
+                that language only
               </p>
               {(['uk', 'en', 'es'] as const).map((lang) => (
                 <div key={`listing-${lang}`} className="space-y-3 rounded border border-ink/10 bg-white/40 p-3">
