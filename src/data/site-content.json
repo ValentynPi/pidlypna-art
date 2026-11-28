@@ -488,6 +488,11 @@
           "en": "Acrylic painting with graphic linework",
           "es": "Pintura acrílica con trazos gráficos",
           "uk": "Акриловий живопис із графічною лінією"
+        },
+        "materials": {
+          "uk": "Полотно (бавовна), сосновий підрамник, акрилові фарби, акрилові маркери",
+          "en": "Canvas (cotton), pine stretcher bars, acrylic paints, acrylic markers",
+          "es": "Lienzo (algodón), bastidor de pino, pinturas acrílicas, marcadores acrilicos"
         }
       }
     },
