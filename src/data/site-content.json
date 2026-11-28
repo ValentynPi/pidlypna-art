@@ -476,7 +476,19 @@
           "src": "/images/5440705262105861821.jpg",
           "alt": "Among the spikelets — front view"
         }
-      ]
+      ],
+      "listing": {
+        "technique": {
+          "uk": "Акриловий живопис із графічною лінією",
+          "en": "Acrylic painting with graphic linework",
+          "es": "Pintura acrílica con trazos gráficos"
+        },
+        "materials": {
+          "uk": "Полотно (бавовна), сосновий підрамник, акрилові фарби, фактурна паста, акрилові маркери",
+          "en": "Canvas (cotton), pine stretcher bars, acrylic paints, textured paste, acrilic markers",
+          "es": "Lienzo (algodón), bastidor de pino, pinturas acrílicas, pasta texturizada, marcadores acrilicos"
+        }
+      }
     },
     "ukrainian-symbolism-03": {
       "image": "/images/5440705262105861806.jpg",
