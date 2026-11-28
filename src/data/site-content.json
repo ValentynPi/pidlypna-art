@@ -597,15 +597,17 @@
           "uk": "Оригінальна авторська робота"
         },
         "materials": {
-          "es": "Canvas (cotton), pine stretcher bars, acrylic paints, acrylic markers",
-          "uk": "Полотно (бавовна), сосновий підрамник, акрилові фарби,  акрилові маркери"
+          "es": "Lienzo (algodón), bastidor de pino, pinturas acrílicas, rotuladores acrílicos",
+          "uk": "Полотно (бавовна), сосновий підрамник, акрилові фарби,  акрилові маркери",
+          "en": "Canvas (cotton), pine stretcher bars, acrylic paints, acrylic markers"
         },
         "medium": {
           "uk": "Професійний акрил на полотні"
         },
         "technique": {
-          "es": "Acrylic painting with graphic linework",
-          "uk": "Акриловий живопис із графічною лінією"
+          "es": "Pintura acrílica con trazos gráficos",
+          "uk": "Акриловий живопис із графічною лінією",
+          "en": "Acrylic painting with graphic linework"
         },
         "certification": {
           "uk": "Підписаний і датований сертифікат автентичності (CoA)"
