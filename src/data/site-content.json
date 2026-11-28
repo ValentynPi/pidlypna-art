@@ -446,7 +446,19 @@
           "src": "/images/5440705262105861818.jpg",
           "alt": "Free — front view"
         }
-      ]
+      ],
+      "listing": {
+        "technique": {
+          "uk": "Акриловий живопис ",
+          "en": "Acrylic painting",
+          "es": "Pintura acrílica"
+        },
+        "materials": {
+          "uk": "Полотно (бавовна), сосновий підрамник, акрилові фарби, акрилові маркери",
+          "en": "Canvas (cotton), pine stretcher bars, acrylic paints, acrylic markers",
+          "es": "Lienzo (algodón), bastidor de pino, pinturas acrílicas, marcadores acrilicos"
+        }
+      }
     },
     "ukrainian-symbolism-02": {
       "image": "/images/5440705262105861820.jpg",
